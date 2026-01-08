@@ -28,7 +28,8 @@ export default async function handler(
     // 返回 HTML（HTTPS）
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.status(r.status).send(html);
-  } catch (e) {
-    res.status(500).send('deck proxy error');
+  } catch (e: any) {
+  console.error('deck-proxy error:', e);
+  res.status(500).send(e?.message || 'deck proxy error');
   }
 }
