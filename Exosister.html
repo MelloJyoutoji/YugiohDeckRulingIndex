@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Standard Post - Typerite</title>
+    <title>救祓少女</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/deck-viewer.css">
 
     <!-- script
     ================================================== -->
@@ -25,9 +26,9 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="srds.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="srds.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="srds.png">
     <link rel="manifest" href="site.webmanifest">
 
 </head>
@@ -49,37 +50,6 @@
         <!-- site header
         ================================================== -->
         <div id="header-placeholder"></div>
-
-
-        <!-- search
-        ================================================== -->
-        <div class="s-search">
-
-            <!-- <div class="search-block">
-    
-                <form role="search" method="get" class="search-form" action="#">
-                    <label>
-                        <span class="hide-content">Search for:</span>
-                        <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
-                    </label>
-                    <input type="submit" class="search-submit" value="Search">
-                </form>
-    
-                <a href="#0" title="Close Search" class="search-close">Close</a>
-    
-            </div> -->
-              <!-- end search-block -->
-
-            <!-- search modal trigger -->
-            <!-- <a href="#0" class="search-trigger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path></svg>
-                <span>Search</span>
-            </a>
-            <span class="search-line"></span> -->
-
-        </div>
-         <!-- end s-search -->
-
 
         <!-- site content
         ================================================== -->
@@ -177,56 +147,93 @@
 
                         <h2>卡组预览</h2>
 
-                        <iframe src="http://deck.ourygo.top?name=%E9%A9%B1%E9%AD%94&ygotype=deck&v=1&d=FbprxhaOjnS-8SXNR4-2MkYGlmcqdT3VCjVxHQStRNQYOa0Y7E5hvEdglllSqs5E_qHIXbWgnvHpcaQ-5Sbv1selUFAGA2TKSJau5GZ0tZCGXbF1XXOH99mlCdCqvYI39RhdesqD8fU8z0qhUZJxN-NZTd5pVdYsmsNnIn-SKbn2krR3RQ0WiCENDhtDrI9s93RgSvflpJ4BPsA" 
-                            width="100%" height="800" style="width: 1000px; height: 800px !important;">
-                        </iframe>
+                        <div id="deck-raw" style="display:none;">
+                        #created by ygomobile
+                        #main
+                        91800273
+                        37343995
+                        37343995
+                        37343995
+                        9627299
+                        9627299
+                        9627299
+                        16474916
+                        16474916
+                        16474916
+                        67972302
+                        43863925
+                        5352328
+                        84192580
+                        84192580
+                        84192580
+                        42141493
+                        42141493
+                        42141493
+                        73642297
+                        73642297
+                        14558128
+                        14558128
+                        23434538
+                        94145021
+                        94145021
+                        7477101
+                        84211599
+                        24224830
+                        77913594
+                        77913594
+                        77913594
+                        52335937
+                        52335937
+                        52335937
+                        197042
+                        77891946
+                        97045737
+                        97045737
+                        97045737
+                        #extra
+                        90448279
+                        93039339
+                        59242457
+                        59242457
+                        77675029
+                        77675029
+                        49678559
+                        42741437
+                        42741437
+                        42741437
+                        78135071
+                        41524885
+                        5530780
+                        29301450
+                        98462037
+                        !side
+                        46502744
+                        46502744
+                        46502744
+                        94145022
+                        18144507
+                        19613556
+                        35269904
+                        4408198
+                        35480699
+                        35480699
+                        35480699
+                        83326048
+                        23002292
+                        41420027
+                        41420027
+                        </div>
+
+                        <div id="deck-render"></div>
+
+                        <!-- hover 悬浮 -->
+                        <div id="card-hover">
+                            <iframe></iframe>
+                        </div>
 
                     </div> <!-- end entry content -->
 
-                    <!-- <div class="entry__pagenav">
-                        <div class="entry__nav">
-                            <div class="entry__prev">
-                                <a href="#0" rel="prev">
-                                    <span>Previous Post</span>
-                                    Tips on Minimalist Design 
-                                </a>
-                            </div>
-                            <div class="entry__next">
-                                <a href="#0" rel="next">
-                                    <span>Next Post</span>
-                                    Less Is More 
-                                </a>
-                            </div>
-                        </div>
-                    </div>  -->
-                    <!-- end entry__pagenav -->
-
-                    <!-- <div class="entry__related">
-                        <h3 class="h2">Related Articles</h3>
-
-                        <ul class="related">
-                            <li class="related__item">
-                                <a href="single-standard.html" class="related__link">
-                                    <img src="images/thumbs/masonry/walk-600.jpg" alt="">
-                                </a>
-                                <h5 class="related__post-title">Using Repetition and Patterns in Photography.</h5>
-                            </li>
-                            <li class="related__item">
-                                <a href="single-standard.html" class="related__link">
-                                    <img src="images/thumbs/masonry/dew-600.jpg" alt="">
-                                </a>
-                                <h5 class="related__post-title">Health Benefits Of Morning Dew.</h5>
-                            </li>
-                            <li class="related__item">
-                                <a href="single-standard.html" class="related__link">
-                                    <img src="images/thumbs/masonry/rucksack-600.jpg" alt="">
-                                </a>
-                                <h5 class="related__post-title">The Art Of Visual Storytelling.</h5>
-                            </li>
-                        </ul>
-                    </div> -->
-                     <!-- end entry related -->
-
+                    
                 </article> <!-- end column large-full entry-->
 
             </main>
@@ -246,5 +253,6 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/deck-viewer.js"></script>
 
 </body>
