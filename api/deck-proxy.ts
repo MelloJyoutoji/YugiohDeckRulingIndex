@@ -7,7 +7,7 @@ export default async function handler(
   // 取 ? 后面的参数
   const query = req.url?.split('?')[1] ?? '';
 
-  // 拼目标 HTTP 地址
+  // 目标 HTTP 地址
   const targetUrl = `http://deck.ourygo.top/?${query}`;
 
   try {
@@ -17,7 +17,13 @@ export default async function handler(
       },
     });
 
-    const html = await r.text();
+    let html = await r.text();
+
+    // ⭐ 核心修复：修正 HTML 中的相对资源路径
+    html = html.replace(
+      /(src|href)="\/([^"]+)"/g,
+      '$1="http://deck.ourygo.top/$2"'
+    );
 
     // 返回 HTML（HTTPS）
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
