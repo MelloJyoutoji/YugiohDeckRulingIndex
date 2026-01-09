@@ -14,6 +14,9 @@
     let currentGrid = null;
     let hideTimeout = null;
 
+    const GAP = 12;          // 卡片与浮层间距
+    const VIEW_PADDING = 8;  // 视口安全边距
+
     function createSection(title) {
         const section = document.createElement('div');
         section.className = 'deck-section';
@@ -34,22 +37,56 @@
 
     function showHover(img, id) {
         clearTimeout(hideTimeout);
+
         iframe.src = `https://ygocdb.com/card/${id}`;
         hoverEl.style.display = 'block';
 
         const rect = img.getBoundingClientRect();
-        hoverEl.style.left = rect.right + 12 + 'px';
-        hoverEl.style.top = Math.max(12, rect.top - 20) + 'px';
+
+        const hoverWidth = hoverEl.offsetWidth;
+        const hoverHeight = hoverEl.offsetHeight;
+
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        // 默认放右侧
+        let left = rect.right + GAP;
+
+        // 如果右侧放不下，改为左侧
+        if (left + hoverWidth + VIEW_PADDING > viewportWidth) {
+            left = rect.left - hoverWidth - GAP;
+        }
+
+        // 防止左侧也越界（极小屏）
+        if (left < VIEW_PADDING) {
+            left = VIEW_PADDING;
+        }
+
+        // 垂直位置：尽量对齐卡片顶部
+        let top = rect.top;
+
+        // 防止底部溢出
+        if (top + hoverHeight + VIEW_PADDING > viewportHeight) {
+            top = viewportHeight - hoverHeight - VIEW_PADDING;
+        }
+
+        // 防止顶部溢出
+        if (top < VIEW_PADDING) {
+            top = VIEW_PADDING;
+        }
+
+        hoverEl.style.left = left + 'px';
+        hoverEl.style.top = top + 'px';
     }
 
     function hideHover() {
         hideTimeout = setTimeout(() => {
             hoverEl.style.display = 'none';
             iframe.src = '';
-        }, 150); // 150ms 延迟，方便鼠标移到浮层
+        }, 150);
     }
 
-    // 鼠标悬浮浮层时，取消隐藏
+    // 浮层自身 hover 时不隐藏
     hoverEl.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
     hoverEl.addEventListener('mouseleave', hideHover);
 
