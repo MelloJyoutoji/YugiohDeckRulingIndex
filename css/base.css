@@ -1321,3 +1321,20 @@ textarea {
 .pull-right {
     float : right;
 }
+
+.auto-number {
+  counter-reset: section; /* 初始化计数器 */
+}
+
+.auto-number p {
+  position: relative;
+  padding-left: 2em;
+}
+
+.auto-number p:before {
+  counter-increment: section; /* 递增计数器 */
+  content: counter(section) ". "; /* 显示序号 */
+  position: absolute;
+  left: 0;
+  font-weight: normal;
+}
