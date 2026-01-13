@@ -101,7 +101,7 @@
 
         if (/^\d+$/.test(line) && currentGrid) {
             const img = document.createElement('img');
-            img.src = `https://cdn.233.momobako.com/ygoimg/jp/${line}.webp`;
+            img.src = `https://cdn.233.momobako.com/ygoimg/jp/${line}.webp!half`;
             img.alt = line;
 
             img.addEventListener('mouseenter', () => showHover(img, line));
