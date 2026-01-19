@@ -97,7 +97,7 @@
 
         if (line === '#main') { createSection('MAIN'); return; }
         if (line === '#extra') { createSection('EXTRA'); return; }
-        if (line === '!side') { createSection('SIDE'); return; }
+        if (line === '!spareCards') { createSection('SpareCards'); return; }
 
         if (/^\d+$/.test(line) && currentGrid) {
             const img = document.createElement('img');
