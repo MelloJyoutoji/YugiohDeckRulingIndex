@@ -3614,3 +3614,103 @@ body.search-is-visible {
     opacity    : 1;
     visibility : visible;
 }
+
+/* ------------------------------------------------------------------
+   Mobile: compact article layout
+   - On small screens make each article a horizontal row: small thumb on
+     the left and title/date on the right.
+   - PC styles are untouched; this only applies under 600px.
+   ------------------------------------------------------------------ */
+@media screen and (max-width: 600px) {
+    /* make bricks full-width and use flex row */
+    .masonry .grid-sizer,
+    .masonry__brick {
+        float: none !important;
+        width: 100% !important;
+        padding: 0 6px 12px 6px !important;
+        box-sizing: border-box;
+        display: block;
+    }
+
+    /* layout each article as a row */
+    .masonry__brick.entry,
+    .masonry__brick.entry .entry__thumb,
+    .masonry__brick.entry .entry__text {
+        display: block;
+    }
+
+    .masonry__brick.entry {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: transparent;
+        margin-bottom: 0.8rem;
+    }
+
+    /* thumb: much smaller */
+    .masonry__brick.entry .entry__thumb {
+        flex: 0 0 18%; /* small fixed-ish column */
+        max-width: 90px;
+        min-width: 64px;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background: transparent;
+    }
+
+    .masonry__brick.entry .entry__thumb-link img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    /* text flows to right of image */
+    .masonry__brick.entry .entry__text {
+        flex: 1 1 auto;
+        padding: 0.6rem 0.4rem 0.6rem 0; /* tighter */
+        background: transparent;
+    }
+
+    .masonry__brick.entry .entry__header {
+        padding: 0;
+    }
+
+    .masonry__brick.entry .entry__title {
+        font-size: 1.8rem;
+        margin: 0 0 0.2rem 0;
+    }
+
+    .masonry__brick.entry .entry__title a {
+        display: inline-block;
+        color: #000;
+    }
+
+    .masonry__brick.entry .entry__meta {
+        font-size: 10px;
+        margin: 0;
+        color: rgba(0,0,0,0.6);
+    }
+
+    /* remove extra white card backgrounds so rows are denser */
+    .masonry .entry__text,
+    .masonry .entry {
+        background: transparent;
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* even smaller thumbs and text on very small devices */
+    .masonry__brick.entry .entry__thumb {
+        flex: 0 0 20%;
+        max-width: 72px;
+        min-width: 56px;
+    }
+
+    .masonry__brick.entry .entry__title {
+        font-size: 1.6rem;
+    }
+}
