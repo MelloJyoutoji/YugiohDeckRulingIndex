@@ -191,28 +191,37 @@
     * ------------------------------------------------------ */
     var ssBricksAnimate = function() {
 
+    var didReveal = false;
+
+    function revealOnce() {
+        if (didReveal) return;
+        didReveal = true;
+
         var animateEl = $('.animate-this');
 
-        $WIN.on('load', function() {
+        setTimeout(function() {
+            animateEl.each(function(ctr) {
+                var el = $(this);
+                setTimeout(function() {
+                    el.addClass('animated');
+                }, ctr * 200);
+            });
+        }, 300);
+    }
 
-            setTimeout(function() {
-                animateEl.each(function(ctr) {
-                    var el = $(this);
-                    
-                    setTimeout(function() {
-                        el.addClass('animated');
-                    }, ctr * 200);
-                });
-            }, 300);
+    $WIN.on('load', revealOnce);
 
-        });
+    if (document.readyState === 'complete') {
+        revealOnce();
+    } else {
+        $(revealOnce);
+    }
 
-        $WIN.on('resize', function() {
-            // remove animation classes
-            animateEl.removeClass('animate-this animated');
-        });
+    $WIN.on('resize', function() {
+        $('.animate-this').addClass('animated');
+    });
 
-    };
+};
 
 
    /* slick slider
