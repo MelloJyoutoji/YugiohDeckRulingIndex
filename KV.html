@@ -113,26 +113,25 @@
                             <p>
                                 「斗神的虚像」没有`征服斗魂`字段, 那个①效果是对怪兽适用的效果. 那个②效果是主要阶段才能发动的效果.
                             </p>
-                            <p>
-                                「K9-ØØ号 野狼」的②效果只能在对方回合发动. 必须包含自身作为超量召唤的素材. 有它作为素材的超量怪兽有取对象抗性. 
-                            </p>
-                            <p>
-                                「“K9案件”」有上升攻击力的效果. 
-                            </p>
-                            <p>
-                                「K9-EX强制解除」只能在主要阶段发动. 处理时, 只要不在自己的怪兽区域表侧表示存在就完全不处理. 
-                            </p>
                         </div>
 
                         <h2>自肃</h2>
                         <div class="auto-number">
-                            <p>
-                                「K9-04号 咒」特殊召唤的怪兽在场上表侧表示存在有只能从额外卡组特殊召唤「K9」怪兽的自肃. 
-                            </p>
-                            <p>
-                                「K9-66a号 霜妖」特殊召唤的怪兽不能作为光属性超量怪兽超量召唤的素材. 「K9-66b号 灯鬼」也一样.
-                            </p>
                         </div>
+
+                        <!-- 嵌入K9 -->
+                        <div id="article-container"></div>
+                        <script>
+                            fetch('Embed_K9.html')
+                                .then(response => response.text())
+                                .then(html => {
+                                    document.getElementById('article-container').innerHTML = html;
+                                    // 初始化相关脚本
+                                    if (typeof initDeckViewer === 'function') {
+                                        initDeckViewer();
+                                    }
+                                });
+                        </script>
 
                         <h2>卡组预览</h2>
 
