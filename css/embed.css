@@ -1,0 +1,34 @@
+/* 覆盖嵌入时宽度/溢出问题的样式 */
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.s-content,
+.s-content .entry__content {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.s-content img,
+.s-content iframe,
+.s-content embed,
+.s-content video {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.entry__title,
+.entry__content {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
