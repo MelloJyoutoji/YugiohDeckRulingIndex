@@ -1,0 +1,118 @@
+/* judge-tool.css */
+
+.judge-tool {
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.judge-item {
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.judge-item:last-child {
+    margin-bottom: 0;
+}
+
+.judge-item-title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.judge-switches {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.judge-switch-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #495057;
+}
+
+.judge-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 26px;
+}
+
+.judge-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.judge-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 26px;
+    transition: .4s;
+}
+
+.toggle-slider-inner {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.judge-toggle-switch input:checked + .judge-toggle-slider {
+    background-color: #2196F3 !important;
+}
+
+.judge-toggle-switch input:checked + .judge-toggle-slider .toggle-slider-inner {
+    transform: translateX(26px);
+}
+
+.judge-toggle-switch input:focus + .judge-toggle-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .judge-tool {
+        padding: 12px;
+        margin: 15px 0;
+    }
+    
+    .judge-switches {
+        gap: 12px;
+    }
+}
+
+/* 鼠标悬停效果 */
+.judge-toggle-switch:hover .judge-toggle-slider {
+    opacity: 0.9;
+}
+
+/* 过渡动画 */
+.judge-toggle-slider,
+.toggle-slider-inner {
+    transition: all 0.3s ease;
+}
