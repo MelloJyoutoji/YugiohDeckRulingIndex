@@ -103,19 +103,6 @@
                             </p>
                         </div>
 
-                        <div id="article-container"></div>
-                        <script>
-                            fetch('Embed_Magistus.html')
-                                .then(response => response.text())
-                                .then(html => {
-                                    document.getElementById('article-container').innerHTML = html;
-                                    // 初始化相关脚本
-                                    if (typeof initDeckViewer === 'function') {
-                                        initDeckViewer();
-                                    }
-                                });
-                        </script>
-
                         <h2>卡组预览</h2>
 
                         <div id="deck-raw" style="display:none;">
