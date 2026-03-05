@@ -3,9 +3,9 @@
     const rawEl = document.getElementById('deck-raw');
     const renderEl = document.getElementById('deck-render');
     const hoverEl = document.getElementById('card-hover');
-    const iframe = hoverEl.querySelector('iframe');
-
     if (!rawEl || !renderEl || !hoverEl) return;
+    const iframe = hoverEl.querySelector('iframe');
+    if (!iframe) return;
 
     const lines = rawEl.innerText
         .split(/\r?\n/)

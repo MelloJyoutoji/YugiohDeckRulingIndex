@@ -32,3 +32,9 @@ html, body {
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
 }
+
+/* Do not shrink the deck hover preview iframe inside embedded pages. */
+#card-hover iframe {
+    max-width: none !important;
+    height: 100% !important;
+}
