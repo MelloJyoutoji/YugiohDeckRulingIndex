@@ -177,7 +177,8 @@
             itemSelector: '.masonry__brick',
             columnWidth: '.grid-sizer',
             percentPosition: true,
-            resize: true
+            resize: true,
+            horizontalOrder: true
         });
 
         // layout Masonry after each image loads
