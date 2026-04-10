@@ -46,3 +46,59 @@
     height: 100%;
     border: none;
 }
+
+.card-effect-trigger {
+    border-bottom: 1px dashed rgba(34, 34, 34, 0.35);
+    cursor: help;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card-effect-trigger:hover {
+    color: #1f6feb;
+    border-bottom-color: currentColor;
+}
+
+#card-effect-hover {
+    position: fixed;
+    display: none;
+    width: min(420px, calc(100vw - 16px));
+    max-height: min(70vh, 560px);
+    overflow: auto;
+    padding: 14px 16px;
+    color: #222;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+    z-index: 10000;
+    pointer-events: none;
+}
+
+#card-effect-hover.is-visible {
+    display: block;
+}
+
+#card-effect-hover.is-loading {
+    opacity: 0.92;
+}
+
+.card-effect-hover__name {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.card-effect-hover__meta {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #666;
+    white-space: pre-wrap;
+}
+
+.card-effect-hover__desc {
+    font-size: 13px;
+    line-height: 1.75;
+    white-space: pre-wrap;
+}
