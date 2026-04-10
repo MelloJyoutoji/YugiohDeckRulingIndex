@@ -35,16 +35,53 @@
     height: 80vh;
     max-width: 420px;
     max-height: 600px;
-    background: #000;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.98);
     border-radius: 8px;
     z-index: 9999;
     box-shadow: 0 10px 40px rgba(0,0,0,.45);
 }
 
 #card-hover iframe {
+    position: relative;
     width: 100%;
     height: 100%;
     border: none;
+    background: transparent;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+#card-hover.is-loading iframe {
+    opacity: 0;
+}
+
+.card-hover__loading {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.96);
+}
+
+#card-hover.is-loading .card-hover__loading {
+    display: flex;
+}
+
+.card-hover__spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(31, 111, 235, 0.18);
+    border-top-color: #1f6feb;
+    border-radius: 50%;
+    animation: card-hover-spin 0.8s linear infinite;
+}
+
+@keyframes card-hover-spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .card-effect-trigger {
@@ -75,6 +112,10 @@
 }
 
 #card-effect-hover.is-visible {
+    display: block;
+}
+
+#card-effect-hover.is-pinned {
     display: block;
 }
 
