@@ -15,9 +15,17 @@
         }
 
         const iframe = hoverEl.querySelector('iframe');
+        let loadingEl = hoverEl.querySelector('.card-hover__loading');
 
         if (!iframe) {
             return;
+        }
+
+        if (!loadingEl) {
+            loadingEl = document.createElement('div');
+            loadingEl.className = 'card-hover__loading';
+            loadingEl.innerHTML = '<div class="card-hover__spinner" aria-hidden="true"></div>';
+            hoverEl.appendChild(loadingEl);
         }
 
         const lines = rawEl.innerText
@@ -26,6 +34,8 @@
 
         let currentGrid = null;
         let hideTimeout = null;
+        let activeHoverCardId = '';
+        let pinnedImg = null;
 
         const gap = 12;
         const viewPadding = 8;
@@ -48,13 +58,8 @@
             currentGrid = grid;
         }
 
-        function showHover(img, id) {
-            clearTimeout(hideTimeout);
-
-            iframe.src = `${CARD_PAGE_BASE}/${id}`;
-            hoverEl.style.display = 'block';
-
-            const rect = img.getBoundingClientRect();
+        function positionHover(trigger) {
+            const rect = trigger.getBoundingClientRect();
             const hoverWidth = hoverEl.offsetWidth;
             const hoverHeight = hoverEl.offsetHeight;
             const viewportWidth = window.innerWidth;
@@ -84,15 +89,81 @@
             hoverEl.style.top = `${top}px`;
         }
 
-        function hideHover() {
-            hideTimeout = setTimeout(() => {
+        function showHover(img, id, options) {
+            const shouldPin = Boolean(options?.pin);
+
+            clearTimeout(hideTimeout);
+
+            hoverEl.style.display = 'block';
+            hoverEl.classList.toggle('is-pinned', shouldPin);
+
+            if (shouldPin) {
+                pinnedImg = img;
+            }
+
+            if (activeHoverCardId !== String(id)) {
+                activeHoverCardId = String(id);
+                hoverEl.classList.add('is-loading');
+                iframe.src = `${CARD_PAGE_BASE}/${id}`;
+            }
+
+            positionHover(img);
+        }
+
+        function hideHover(force) {
+            if (!force && pinnedImg) {
+                return;
+            }
+
+            clearTimeout(hideTimeout);
+
+            if (force) {
                 hoverEl.style.display = 'none';
-                iframe.src = '';
+                hoverEl.classList.remove('is-loading', 'is-pinned');
+                pinnedImg = null;
+                return;
+            }
+
+            hideTimeout = setTimeout(() => {
+                if (!force && pinnedImg) {
+                    return;
+                }
+
+                hoverEl.style.display = 'none';
+                hoverEl.classList.remove('is-loading', 'is-pinned');
+                pinnedImg = null;
             }, 150);
         }
 
+        iframe.addEventListener('load', () => {
+            hoverEl.classList.remove('is-loading');
+        });
+
         hoverEl.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
-        hoverEl.addEventListener('mouseleave', hideHover);
+        hoverEl.addEventListener('mouseleave', () => hideHover(false));
+
+        document.addEventListener('click', (event) => {
+            if (!(event.target instanceof Element)) {
+                hideHover(true);
+                return;
+            }
+
+            if (event.target.closest('.card-grid img') || event.target.closest('#card-hover')) {
+                return;
+            }
+
+            hideHover(true);
+        });
+
+        window.addEventListener('scroll', () => hideHover(true), true);
+        window.addEventListener('resize', () => {
+            if (pinnedImg) {
+                positionHover(pinnedImg);
+                return;
+            }
+
+            hideHover(true);
+        });
 
         lines.forEach((line) => {
             if (!line) {
@@ -123,8 +194,21 @@
                 img.src = `https://cdn.233.momobako.com/ygoimg/jp/${line}.webp!half`;
                 img.alt = line;
 
-                img.addEventListener('mouseenter', () => showHover(img, line));
-                img.addEventListener('mouseleave', hideHover);
+                img.addEventListener('mouseenter', () => {
+                    if (pinnedImg && pinnedImg !== img) {
+                        return;
+                    }
+
+                    showHover(img, line);
+                });
+
+                img.addEventListener('mouseleave', () => hideHover(false));
+
+                img.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    showHover(img, line, { pin: true });
+                });
 
                 currentGrid.appendChild(img);
             }
@@ -162,7 +246,7 @@
         ].filter(Boolean);
     }
 
-    function pickBestSearchResult(query, results) {
+    function pickExactSearchResult(query, results) {
         if (!Array.isArray(results) || results.length === 0) {
             return null;
         }
@@ -172,13 +256,11 @@
             getSearchNames(item).some((name) => normalizeCardName(name) === normalizedQuery)
         );
 
-        if (exactMatches.length > 0) {
-            return exactMatches.sort((a, b) => (b.weight || 0) - (a.weight || 0))[0];
+        if (exactMatches.length === 0) {
+            return null;
         }
 
-        const highWeightMatch = results.find((item) => Number(item?.weight) >= 100);
-
-        return highWeightMatch || results[0];
+        return exactMatches.sort((a, b) => (b.weight || 0) - (a.weight || 0))[0];
     }
 
     async function fetchJson(url) {
@@ -205,7 +287,7 @@
         if (!searchCache.has(cacheKey)) {
             const request = (async () => {
                 const searchData = await fetchJson(`${CARD_API_BASE}/?search=${encodeURIComponent(cacheKey)}`);
-                const match = pickBestSearchResult(cacheKey, searchData?.result || []);
+                const match = pickExactSearchResult(cacheKey, searchData?.result || []);
 
                 if (!match?.id) {
                     return null;
@@ -292,7 +374,7 @@
         tooltip.classList.toggle('is-empty', !options.desc);
     }
 
-    function wrapQuotedCardNames(root) {
+    function collectQuotedTextNodes(root) {
         const textNodes = [];
         const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
 
@@ -310,6 +392,54 @@
 
             textNodes.push(node);
         }
+
+        return textNodes;
+    }
+
+    function collectQuotedCardNames(roots) {
+        const names = new Set();
+
+        roots.forEach((root) => {
+            collectQuotedTextNodes(root).forEach((node) => {
+                const text = node.nodeValue || '';
+
+                QUOTED_CARD_PATTERN.lastIndex = 0;
+
+                let match = QUOTED_CARD_PATTERN.exec(text);
+
+                while (match) {
+                    const rawName = match[1].trim();
+
+                    if (isLikelyCardName(rawName)) {
+                        names.add(rawName);
+                    }
+
+                    match = QUOTED_CARD_PATTERN.exec(text);
+                }
+            });
+        });
+
+        return Array.from(names);
+    }
+
+    async function buildResolvedCardMap(cardNames) {
+        const resolvedMap = new Map();
+
+        await Promise.all(
+            cardNames.map(async (cardName) => {
+                const card = await resolveCardByName(cardName);
+
+                if (card?.id && card?.text) {
+                    resolvedMap.set(normalizeCardName(cardName), card);
+                }
+            })
+        );
+
+        return resolvedMap;
+    }
+
+    function wrapQuotedCardNames(root, resolvedCardMap) {
+        const textNodes = collectQuotedTextNodes(root);
 
         textNodes.forEach((node) => {
             const text = node.nodeValue;
@@ -334,10 +464,14 @@
                     fragment.appendChild(document.createTextNode(text.slice(cursor, matchIndex)));
                 }
 
-                if (isLikelyCardName(rawName)) {
+                const resolvedCard = resolvedCardMap.get(normalizeCardName(rawName));
+
+                if (isLikelyCardName(rawName) && resolvedCard) {
                     const trigger = document.createElement('span');
                     trigger.className = 'card-effect-trigger';
-                    trigger.dataset.cardName = rawName;
+                    trigger.dataset.cardKey = normalizeCardName(rawName);
+                    trigger.dataset.cardName = resolvedCard.text.name || rawName;
+                    trigger.dataset.cardId = String(resolvedCard.id);
                     trigger.textContent = fullMatch;
                     fragment.appendChild(trigger);
                     hasReplacement = true;
@@ -361,70 +495,91 @@
         });
     }
 
-    function initQuotedCardEffectHover() {
+    function showEffectTooltip(tooltip, trigger, card, clientX, clientY, options) {
+        updateTooltipContent(tooltip, {
+            name: card.text.name || trigger.dataset.cardName || '',
+            meta: [card.text.types, card.id ? `\u5bc6\u7801\uff1a${card.id}` : ''].filter(Boolean).join('\n'),
+            desc: card.text.desc || ''
+        });
+        tooltip.classList.add('is-visible');
+        tooltip.classList.remove('is-loading');
+        tooltip.classList.toggle('is-pinned', Boolean(options?.pin));
+        setTooltipPosition(tooltip, trigger, clientX, clientY);
+    }
+
+    async function initQuotedCardEffectHover() {
         const contentRoots = document.querySelectorAll('.entry__content');
 
         if (contentRoots.length === 0) {
             return;
         }
 
-        contentRoots.forEach((root) => wrapQuotedCardNames(root));
+        const candidateNames = collectQuotedCardNames(Array.from(contentRoots));
+        const resolvedCardMap = await buildResolvedCardMap(candidateNames);
+
+        if (resolvedCardMap.size === 0) {
+            return;
+        }
+
+        contentRoots.forEach((root) => wrapQuotedCardNames(root, resolvedCardMap));
 
         const tooltip = ensureEffectTooltip();
         const triggers = document.querySelectorAll('.card-effect-trigger');
         let activeTrigger = null;
+        let pinnedTrigger = null;
+        let hideTimeout = null;
 
-        function hideTooltip(trigger) {
-            if (trigger && activeTrigger && activeTrigger !== trigger) {
+        function queueHideTooltip(force) {
+            if (!force && pinnedTrigger) {
                 return;
             }
 
-            activeTrigger = null;
-            tooltip.classList.remove('is-visible', 'is-loading');
+            clearTimeout(hideTimeout);
+
+            if (force) {
+                activeTrigger = null;
+                pinnedTrigger = null;
+                tooltip.classList.remove('is-visible', 'is-loading', 'is-pinned');
+                return;
+            }
+
+            hideTimeout = setTimeout(() => {
+                if (!force && pinnedTrigger) {
+                    return;
+                }
+
+                activeTrigger = null;
+                pinnedTrigger = null;
+                tooltip.classList.remove('is-visible', 'is-loading', 'is-pinned');
+            }, 120);
+        }
+
+        function getResolvedCard(trigger) {
+            const cardId = trigger.dataset.cardId;
+            const cardKey = trigger.dataset.cardKey;
+
+            if (!cardId || !cardKey) {
+                return null;
+            }
+
+            return resolvedCardMap.get(cardKey) || null;
         }
 
         triggers.forEach((trigger) => {
-            trigger.addEventListener('mouseenter', async (event) => {
-                const cardName = trigger.dataset.cardName;
-
-                if (!cardName) {
+            trigger.addEventListener('mouseenter', (event) => {
+                if (pinnedTrigger && pinnedTrigger !== trigger) {
                     return;
                 }
 
-                activeTrigger = trigger;
-                tooltip.classList.add('is-visible', 'is-loading');
-                updateTooltipContent(tooltip, {
-                    name: cardName,
-                    meta: '\u6b63\u5728\u52a0\u8f7d\u6548\u679c...',
-                    desc: ''
-                });
-                setTooltipPosition(tooltip, trigger, event.clientX, event.clientY);
-
-                const card = await resolveCardByName(cardName);
-
-                if (activeTrigger !== trigger) {
-                    return;
-                }
-
-                tooltip.classList.remove('is-loading');
+                const card = getResolvedCard(trigger);
 
                 if (!card?.text) {
-                    updateTooltipContent(tooltip, {
-                        name: cardName,
-                        meta: '\u672a\u627e\u5230\u5bf9\u5e94\u5361\u7247',
-                        desc: ''
-                    });
-                    setTooltipPosition(tooltip, trigger, event.clientX, event.clientY);
                     return;
                 }
 
-                updateTooltipContent(tooltip, {
-                    name: card.text.name || cardName,
-                    meta: [card.text.types, card.id ? `\u5bc6\u7801\uff1a${card.id}` : ''].filter(Boolean).join('\n'),
-                    desc: card.text.desc || ''
-                });
-                trigger.dataset.cardId = String(card.id || '');
-                setTooltipPosition(tooltip, trigger, event.clientX, event.clientY);
+                clearTimeout(hideTimeout);
+                activeTrigger = trigger;
+                showEffectTooltip(tooltip, trigger, card, event.clientX, event.clientY);
             });
 
             trigger.addEventListener('mousemove', (event) => {
@@ -435,19 +590,46 @@
                 setTooltipPosition(tooltip, trigger, event.clientX, event.clientY);
             });
 
-            trigger.addEventListener('mouseleave', () => hideTooltip(trigger));
+            trigger.addEventListener('mouseleave', () => queueHideTooltip(false));
 
-            trigger.addEventListener('click', () => {
-                const cardId = trigger.dataset.cardId;
+            trigger.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
 
-                if (cardId) {
-                    window.open(`${CARD_PAGE_BASE}/${cardId}`, '_blank', 'noopener');
+                const card = getResolvedCard(trigger);
+
+                if (!card?.text) {
+                    return;
                 }
+
+                clearTimeout(hideTimeout);
+                activeTrigger = trigger;
+                pinnedTrigger = trigger;
+                showEffectTooltip(tooltip, trigger, card, undefined, undefined, { pin: true });
             });
         });
 
-        window.addEventListener('scroll', () => hideTooltip(), true);
-        window.addEventListener('resize', () => hideTooltip());
+        document.addEventListener('click', (event) => {
+            if (event.target instanceof Element && event.target.closest('.card-effect-trigger')) {
+                return;
+            }
+
+            queueHideTooltip(true);
+        });
+        window.addEventListener('scroll', () => queueHideTooltip(true), true);
+        window.addEventListener('resize', () => {
+            if (pinnedTrigger && tooltip.classList.contains('is-visible')) {
+                const card = getResolvedCard(pinnedTrigger);
+
+                if (card?.text) {
+                    showEffectTooltip(tooltip, pinnedTrigger, card, undefined, undefined, { pin: true });
+                }
+
+                return;
+            }
+
+            queueHideTooltip(true);
+        });
     }
 
     initDeckViewer();
