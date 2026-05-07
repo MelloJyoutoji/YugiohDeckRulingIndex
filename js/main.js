@@ -55,6 +55,22 @@
         
     };
 
+   /* Load ruling includes
+    * ------------------------------------------------------ */
+    var ssLoadRulingIncludes = function() {
+        $("[data-ruling-source]").each(function() {
+            var include = $(this);
+            var source = include.attr("data-ruling-source");
+
+            include.load(source, function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Error loading ruling:", xhr.status, xhr.statusText);
+                    console.error("尝试的路径:", source);
+                }
+            });
+        });
+    };
+
    /* preloader
     * -------------------------------------------------- */
     var ssPreloader = function() {
@@ -316,6 +332,7 @@
             
             // 先加载公共组件
             ssLoadComponents();
+            ssLoadRulingIncludes();
             
             // 初始化其他功能
             ssPreloader();
