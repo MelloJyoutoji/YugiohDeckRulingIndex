@@ -30,9 +30,48 @@
     <link rel="icon" type="image/png" sizes="16x16" href="srds.jpg">
     <link rel="manifest" href="site.webmanifest">
 
+    <style>
+        .back-home-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background-color: #111111;
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 1;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .back-home-button:hover,
+        .back-home-button:focus {
+            background-color: #333333;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .back-home-button {
+                top: 12px;
+                right: 12px;
+                padding: 9px 14px;
+                font-size: 13px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
+
+    <a class="back-home-button" href="https://ygo.xyk.one/" target="_blank" rel="noopener noreferrer">返回主站</a>
 
     <div id="top" class="s-wrap site-wrapper">
 
