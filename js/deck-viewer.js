@@ -1,6 +1,7 @@
 (function () {
     const CARD_API_BASE = 'https://ygocdb.com/api/v0';
     const CARD_PAGE_BASE = 'https://ygocdb.com/card';
+    const CARD_IMAGE_FALLBACK_BASE = 'https://cdntx.moecube.com/ygopro-super-pre/data/pics';
     const QUOTED_CARD_PATTERN = /\u300c([^\u300c\u300d]+?)\u300d/g;
     const searchCache = new Map();
     const cardCache = new Map();
@@ -193,6 +194,10 @@
                 const img = document.createElement('img');
                 img.src = `https://cdn.233.momobako.com/ygoimg/jp/${line}.webp!half`;
                 img.alt = line;
+
+                img.addEventListener('error', () => {
+                    img.src = `${CARD_IMAGE_FALLBACK_BASE}/${line}.jpg`;
+                }, { once: true });
 
                 img.addEventListener('mouseenter', () => {
                     if (pinnedImg && pinnedImg !== img) {
