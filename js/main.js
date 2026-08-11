@@ -66,7 +66,12 @@
                 if (status == "error") {
                     console.error("Error loading ruling:", xhr.status, xhr.statusText);
                     console.error("尝试的路径:", source);
+                    return;
                 }
+
+                document.dispatchEvent(new CustomEvent("rulinginclude:loaded", {
+                    detail: include.get(0)
+                }));
             });
         });
     };
