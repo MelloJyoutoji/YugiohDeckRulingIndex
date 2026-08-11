@@ -512,8 +512,7 @@
         setTooltipPosition(tooltip, trigger, clientX, clientY);
     }
 
-    async function initQuotedCardEffectHover() {
-        const contentRoots = document.querySelectorAll('.entry__content');
+    async function initQuotedCardEffectHover(contentRoots = Array.from(document.querySelectorAll('.entry__content'))) {
 
         if (contentRoots.length === 0) {
             return;
@@ -529,7 +528,9 @@
         contentRoots.forEach((root) => wrapQuotedCardNames(root, resolvedCardMap));
 
         const tooltip = ensureEffectTooltip();
-        const triggers = document.querySelectorAll('.card-effect-trigger');
+        const triggers = contentRoots.flatMap((root) =>
+            Array.from(root.querySelectorAll('.card-effect-trigger'))
+        );
         let activeTrigger = null;
         let pinnedTrigger = null;
         let hideTimeout = null;
@@ -639,4 +640,9 @@
 
     initDeckViewer();
     initQuotedCardEffectHover();
+    document.addEventListener('rulinginclude:loaded', (event) => {
+        if (event instanceof CustomEvent && event.detail instanceof Element) {
+            initQuotedCardEffectHover([event.detail]);
+        }
+    });
 })();
