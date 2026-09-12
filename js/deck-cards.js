@@ -10,7 +10,6 @@
 
     function createDeckCard(card) {
         var page = card.getAttribute("data-page");
-        var title = card.getAttribute("data-title");
         var updated = card.getAttribute("data-updated");
         var image = card.getAttribute("data-image") || "images/thumbs/masonry/" + page.replace(/\.html$/, "") + "-600.jpg";
 
@@ -37,7 +36,14 @@
         var heading = document.createElement("h2");
         heading.className = "entry__title";
         var titleLink = createLink(page);
-        titleLink.textContent = title;
+        titleLink.textContent = "读取中...";
+
+        if (window.DeckNames) {
+            window.DeckNames.getPageName(page).then(function (name) {
+                titleLink.textContent = name;
+            });
+        }
+
         heading.appendChild(titleLink);
 
         var meta = document.createElement("div");
