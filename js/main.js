@@ -34,6 +34,13 @@
                 console.error("尝试的路径:", "header.html");
             } else {
                 console.log("Header 加载成功");
+
+                if (window.DeckNames) {
+                    window.DeckNames.applyDeckNames(
+                        document.getElementById("header-placeholder")
+                    );
+                }
+
                 // header加载成功后初始化相关功能
                 ssMenu(); // 重新初始化菜单功能
                 ssSearch(); // 重新初始化搜索功能
