@@ -56,6 +56,32 @@
         });
     }
 
+    function getCurrentPageImageName() {
+        var fileName = decodeURIComponent(
+            window.location.pathname.split("/").pop()
+        );
+
+        return fileName.replace(/\.html$/i, "");
+    }
+
+    function applyCurrentPageImage(root) {
+        var pageName = getCurrentPageImageName();
+
+        if (!pageName) {
+            return;
+        }
+
+        var imagePath =
+            "images/thumbs/single/standard/" +
+            pageName +
+            "-2000.jpg";
+
+        root.querySelectorAll("[data-deck-image]").forEach(function (image) {
+            image.src = imagePath;
+            image.srcset = imagePath + " 2000w";
+        });
+    }
+
     function applyHeaderNames(root) {
         root.querySelectorAll("[data-deck-list] a[href]").forEach(function (link) {
             var page = link.getAttribute("href");
@@ -74,6 +100,7 @@
         root = root || document;
 
         applyCurrentPageName(root);
+        applyCurrentPageImage(root);
         applyHeaderNames(root);
     }
 
