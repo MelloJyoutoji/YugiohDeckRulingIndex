@@ -57,6 +57,10 @@
 
             const grid = document.createElement('div');
             grid.className = 'card-grid';
+            // 主卡组使用独立标识，以便手机端按主卡组张数调整列数。
+            if (title === 'MAIN' || title.startsWith('MAIN · ')) {
+                grid.classList.add('card-grid--main');
+            }
 
             section.appendChild(header);
             section.appendChild(grid);
@@ -271,6 +275,10 @@
             }
         });
 
+        // 旧格式卡组按实际渲染的主卡张数判断是否切换为每行 15 张。
+        const mainGrid = renderEl.querySelector('.card-grid--main');
+        renderEl.classList.toggle('deck-layout--main-60', mainGrid?.children.length === 60);
+
         // 折叠卡组首次展开时才解码并渲染，避免一次创建全部卡图。
         document.querySelectorAll('.deck-preview[data-deck-code]').forEach((preview) => {
             if (!(preview instanceof HTMLDetailsElement)) {
@@ -288,7 +296,11 @@
                 }
 
                 try {
-                    decodeDeckCode(preview.dataset.deckCode).forEach(({ title, cardIds }) => {
+                    const sections = decodeDeckCode(preview.dataset.deckCode);
+                    // 折叠预览以当前卡组的主卡张数决定所有分组的手机端列数。
+                    const mainSection = sections.find(({ title }) => title === 'MAIN');
+                    preview.classList.toggle('deck-layout--main-60', mainSection?.cardIds.length === 60);
+                    sections.forEach(({ title, cardIds }) => {
                         if (!cardIds.length) {
                             return;
                         }
