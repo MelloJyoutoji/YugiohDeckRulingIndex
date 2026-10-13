@@ -41,7 +41,13 @@
         const gap = 12;
         const viewPadding = 8;
 
-        function createSection(title) {
+        // 旧卡组和折叠卡组共用分组容器。
+        function createSection(title, container = renderEl) {
+            const target = container || renderEl;
+            if (!target) {
+                return null;
+            }
+
             const section = document.createElement('div');
             section.className = 'deck-section';
 
@@ -54,9 +60,10 @@
 
             section.appendChild(header);
             section.appendChild(grid);
-            renderEl.appendChild(section);
+            target.appendChild(section);
 
             currentGrid = grid;
+            return grid;
         }
 
         function positionHover(trigger) {
@@ -136,6 +143,75 @@
             }, 150);
         }
 
+        // 所有卡组统一创建卡图，包含先行卡图片回退、悬浮和点击固定详情。
+        function createCardImage(cardId, lazy = false) {
+            const img = document.createElement('img');
+            img.src = `https://cdn.233.momobako.com/ygoimg/jp/${cardId}.webp!half`;
+            img.alt = String(cardId);
+            if (lazy) {
+                img.loading = 'lazy';
+            }
+
+            img.addEventListener('error', () => {
+                img.src = `${CARD_IMAGE_FALLBACK_BASE}/${cardId}.jpg`;
+            }, { once: true });
+
+            img.addEventListener('mouseenter', () => {
+                if (pinnedImg && pinnedImg !== img) {
+                    return;
+                }
+
+                showHover(img, cardId, {});
+            });
+
+            img.addEventListener('mouseleave', () => hideHover(false));
+
+            img.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                showHover(img, cardId, { pin: true });
+            });
+
+            return img;
+        }
+
+        // 分享码以位流保存主卡组、额外卡组和副卡组的卡号及张数。
+        function decodeDeckCode(code) {
+            const base64 = code.replace(/-/g, '+').replace(/_/g, '/');
+            const bytes = atob(base64.padEnd(Math.ceil(base64.length / 4) * 4, '='));
+            const bits = Array.from(bytes, (byte) => byte.charCodeAt(0).toString(2).padStart(8, '0')).join('');
+            const sections = [
+                { title: 'MAIN', count: parseInt(bits.slice(0, 8), 2) },
+                { title: 'EXTRA', count: parseInt(bits.slice(8, 12), 2) },
+                { title: 'SIDE', count: parseInt(bits.slice(12, 16), 2) },
+            ];
+            let bitOffset = 16;
+
+            return sections.map(({ title, count }) => {
+                // 当前分组按张数展开后的卡号。
+                const cardIds = Array.from({ length: 0 }, () => 0);
+                for (let index = 0; index < count; index++) {
+                    const record = bits.slice(bitOffset, bitOffset + 29);
+                    if (record.length !== 29) {
+                        throw new Error('Incomplete deck code');
+                    }
+
+                    const copies = parseInt(record.slice(0, 2), 2);
+                    const cardId = parseInt(record.slice(2), 2);
+                    if (!copies || !cardId) {
+                        throw new Error('Invalid deck code');
+                    }
+
+                    for (let copy = 0; copy < copies; copy++) {
+                        cardIds.push(cardId);
+                    }
+                    bitOffset += 29;
+                }
+
+                return { title, cardIds };
+            });
+        }
+
         iframe.addEventListener('load', () => {
             hoverEl.classList.remove('is-loading');
         });
@@ -191,32 +267,42 @@
             }
 
             if (/^\d+$/.test(line) && currentGrid) {
-                const img = document.createElement('img');
-                img.src = `https://cdn.233.momobako.com/ygoimg/jp/${line}.webp!half`;
-                img.alt = line;
-
-                img.addEventListener('error', () => {
-                    img.src = `${CARD_IMAGE_FALLBACK_BASE}/${line}.jpg`;
-                }, { once: true });
-
-                img.addEventListener('mouseenter', () => {
-                    if (pinnedImg && pinnedImg !== img) {
-                        return;
-                    }
-
-                    showHover(img, line);
-                });
-
-                img.addEventListener('mouseleave', () => hideHover(false));
-
-                img.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    showHover(img, line, { pin: true });
-                });
-
-                currentGrid.appendChild(img);
+                currentGrid.appendChild(createCardImage(line));
             }
+        });
+
+        // 折叠卡组首次展开时才解码并渲染，避免一次创建全部卡图。
+        document.querySelectorAll('.deck-preview[data-deck-code]').forEach((preview) => {
+            if (!(preview instanceof HTMLDetailsElement)) {
+                return;
+            }
+
+            preview.addEventListener('toggle', () => {
+                if (!preview.open || preview.dataset.rendered === 'true') {
+                    return;
+                }
+
+                const container = preview.querySelector('.deck-render');
+                if (!(container instanceof HTMLElement)) {
+                    return;
+                }
+
+                try {
+                    decodeDeckCode(preview.dataset.deckCode).forEach(({ title, cardIds }) => {
+                        if (!cardIds.length) {
+                            return;
+                        }
+
+                        const grid = createSection(`${title} · ${cardIds.length}`, container);
+                        if (grid) {
+                            cardIds.forEach((cardId) => grid.appendChild(createCardImage(cardId, true)));
+                        }
+                    });
+                    preview.dataset.rendered = 'true';
+                } catch (error) {
+                    container.textContent = '卡组数据解析失败，请使用原链接查看。';
+                }
+            });
         });
     }
 

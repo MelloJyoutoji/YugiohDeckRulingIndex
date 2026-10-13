@@ -1,3 +1,39 @@
+/* 前排卡组列表默认收起，展开后显示对应的外部卡组。 */
+.deck-previews {
+    margin: 24px 0 32px;
+}
+
+.deck-preview {
+    margin-bottom: 12px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.deck-preview summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.deck-preview .deck-title {
+    margin-top: 16px;
+}
+
+.deck-preview .card-grid {
+    margin-bottom: 12px;
+}
+
+.deck-preview a {
+    display: inline-block;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .deck-preview .card-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
 .deck-section {
     margin-bottom: 32px;
 }
