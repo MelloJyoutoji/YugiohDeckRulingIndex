@@ -28,12 +28,6 @@
     margin-top: 4px;
 }
 
-@media (max-width: 600px) {
-    .deck-preview .card-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-}
-
 .deck-section {
     margin-bottom: 32px;
 }
@@ -61,6 +55,30 @@
 
 .card-grid img:hover {
     transform: scale(1.05);
+}
+
+/* 手机端主卡组默认每行 10 张；额外和副卡组每行 15 张。 */
+@media (max-width: 600px) {
+    .card-grid,
+    .deck-preview .card-grid {
+        grid-template-columns: repeat(15, minmax(0, 1fr));
+    }
+
+    .card-grid--main,
+    .deck-preview .card-grid--main {
+        grid-template-columns: repeat(10, minmax(0, 1fr));
+    }
+
+    /* 主卡组达到 60 张时，三个分组统一为每行 15 张。 */
+    .deck-layout--main-60 .card-grid--main {
+        grid-template-columns: repeat(15, minmax(0, 1fr));
+    }
+
+    /* 清除文章通用图片间距，避免卡图之间出现过大的行距。 */
+    .card-grid img {
+        display: block;
+        margin: 0;
+    }
 }
 
 /* 悬浮卡片信息 */
