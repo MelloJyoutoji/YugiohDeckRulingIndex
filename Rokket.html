@@ -193,19 +193,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="I-lPm3zilOQZGBOHMIVNpPQyo4moElKBcucl7FSmGNmAjpp7427YAJPvwUrubML3PGoMHNeglaiIWxglhvEdfuK91JLLKlTZyJ_VIudI6exXfYxvayzaqcWObzPOd_KFNMvmS9W2S_UEF9GhkChJRfBay7YW1MTKQRSZ_JMXw0DckHF6doRpgrTrmiE0lw_JpFonZWIG63g_EFpCiYiDxhikPw1UpvxrKauu0SjIjOujEO_sXFR5sFNP26UE4QVKEKCz3dGBZbo47Wo0l6U_dPtOMc2A">
-                                <summary>SerikaHusaband【60弹丸】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/Jz9HVRcwonBp" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="HufMItu7AnDmEKm0nqBJSg3LnJfswEdJgpfddGZmNVWwSV8FK7mzC9zwq8HuZaW0LDbF0jdQYOa9BK1EhvEdfuK91JLLKlTZyJ_cDyQ1IqYi7Ui50j1WjtfOR8w0c3mec7-UKdW2S-UXwWtEO3i1VDPO7JHW6mxLYnqd04uWIOXhU65ohNItE7KxA3W8H4gIPGGKbvNKq1ddolGRGdbGId_cuvunYKaft0NFoh3eonNUoQoLPd0YFwYgog">
-                                <summary>戏言杀手@BEA【60阿不思烙印弹丸】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/j4bvSq_YrEB-" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                             手坑: 霆王的闪光, 灵王的波动, 无限泡影, 枪管重启
@@ -242,5 +231,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>

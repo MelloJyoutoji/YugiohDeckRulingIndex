@@ -1,0 +1,42 @@
+# 每天北京时间 06:00 同步 MyCard 前 100 名卡组快照。
+# GitHub cron 使用 UTC，22:00 UTC = 06:00 Asia/Shanghai。
+name: Sync MyCard leaderboard
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-mc-leaderboard
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch MyCard leaderboard
+        run: python scripts/sync-mc-leaderboard.py
+
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mc-leaderboard.json
+          if git diff --cached --quiet; then
+            echo "No leaderboard changes"
+          else
+            git commit -m "chore: 同步 MyCard 前排卡组"
+            git push
+          fi

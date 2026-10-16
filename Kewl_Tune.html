@@ -153,14 +153,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="GnlXYeGXAvfMF8ji8NVAaqR9BvHDeI6-Y0Flc4r3U2MdicMbEFnUoIg8qd7r5LLKlWPvoT0g0w2NnIn97mGVkgJXHiXeonLQT3j-56t-N6lQGZTilyjcX1nEykETcjM6Z9z6sQSqLwU5VjZjvCznqCviylvkUNRmT2ZnxrZi4qPNApp-3u9ROam9GulShCgtyMzpXBiCip4BPsA">
-                                <summary>4658461535【杀手旋律】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/M3Qisr6nDYm5" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                             手坑: 调和之天救龙; 灰流丽; 屋敷童; 效果遮蒙者; 无限泡影; 杀手级调整曲·削波手; 
@@ -197,5 +191,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>

@@ -103,19 +103,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="Fnfox-F3C14acrs4y7gv_KRvEdgjeI7GoPvkSWWVKkWsG3tnIn-TsF_HLvUTloJ7x8c3medMvmS70VJiZIpY4gGnOHR9IL6-Ggbks314TklNLyDi9P065oiii0-3KxA3W74rr1jPrRbF1XZlxUebQVxVuoMHNcFNP2qlCFBZ7ujAp4BPwA">
-                                <summary>盒子w【雷盟】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/KawBunqVi0cb" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="E1box-F2V2cZd8ji8bgv_KhvEdhOK91LoPvkSWWVK0WsG3tnIn-TsF_G0E94-qzDA8c3med6KkxaPpBf7kZnUlm-vCckppfTrmiOKLT7crEDd7viuv2LquvQVxVvGOxOsFNP2yISYo0oJwgle_LQ">
-                                <summary>随风的风_【雷盟】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/im93YfQa4Ej5" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                         </div>
@@ -149,5 +138,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>

@@ -197,3 +197,14 @@
     line-height: 1.75;
     white-space: pre-wrap;
 }
+
+/* 前排卡组动态列表的更新时间与空状态。 */
+.mc-previews-meta {
+    margin: 0 0 12px;
+    color: #666;
+    font-size: 14px;
+}
+
+.mc-previews-empty {
+    color: #888;
+}

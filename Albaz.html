@@ -153,34 +153,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="GchMItu8qa_-lAkpQMOWhxwLbqjx4dzRgpfddGZmNVXg9zLS2hYrYukbqDBzXoJWoiHCL-4bxHXtCQWISyypUhd4_pPhS7yqTsg85HzDRzeZ5QpcNUwrE_dmPwsOgMmxlKBvhKoZ53ZI63U1bB7NL4X7rFN1RlO6cXLEHLwqdc0QzA-ZdlYgbsXFR5aMdicNnIn9gU0_b3eonNCBADCpQhQaU_dPgA">
-                                <summary>十香の鏖杀公【阿不思烙印】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/McFRzjQ75TAP" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="JteMItu60pY51AkpQLlzkvZ1WD8vAu8aeBd47BS-66MzMapJo_albBJWq8HuZaW0LC0toWVpbQtLmClIbYuka2xdI7tAugMSNkltQYOaw3iOwSyypU2cif3A8kNSKmIu8wRuPKFfui0NBp_oaLRFVJ2QbIAK_s5HzDRzeZ5UXhV8zue1hUqYU0Q7eLVKBvhKoZ54pI63U2JbE9q2D2bDRExEvhfusTspOU7pxcsQcvCp1zRDG9Xl2ViBu5cVHmkFcVb0ErUTBTT9td6ic1ShCgpXvy0A">
-                                <summary>Sanae_【60阿不思烙印】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/wrzsgd8nrPyI" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="G9pMItu7Oqwfp4F3jsFL7tozMxqkmj9pVsElarwe5ppbQtLmClJbYukc2gXQFJGyS2oMHNYbxHYJZZUqbORP9AeSGpVJ2Qecj5ho5vM8qLwq-0y-ZLLeaV5nc9rC-Ggbkh28WpBxenVQzzxSR1uphoiYiXwv3WKbqjNOxa-QOjD4p3Ti5Yg5eFTrmiGN6vLsrEDdTCLbutKWOfQVxVqrYJK-glaiKUDfCTfjWWgeSGqu9ROai8KvgA">
-                                <summary>二当家x【阿不思烙印】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/bBTGyO5G3zUx" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="KMmMItu60pY51AkpQLlzkvZ1WD8jqs63eBd43GZmNUk0ftKtgkrVeD3NNLaFlti6RzaBdAUkbJLagwc16CVqJDeI7BcV7qdGOxOUssqVKLiKLbORP8hjKZNFTEXcYI3HlCv3RaGi0RVQXhCqk7INkAFfzNqpxc5HzDRzeZ50XhV8reaV1nc9rCpUwpmb9boJDt4tUoG-EqhnnfkjrdTDRExEGgUOpfC_dYnZScxTdUZA6MPixBy8KnXNEMrEDdZ0PGSxjsTmLr7pyCmn7VbzSuqlCFB35bL-uDEFHlP3T4A">
-                                <summary>Shiloong【60阿不思烙印】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/ba_mXXl6uN_k" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="KdhMItu60pY51y5yXs6rB-3gXeOwUvu2jMzGqSaP2lWwSVqvB7mmltC0uYKUlti6RzaBdAUkbJLagwc16CVqJDeI6-cV7qaWWVKlFxFFtnIn-gPJDUipiLtMEbjyhX7opDRaIyoLwhVSdkGyACv7OR8w0c3meVF4VfSZfMllvNK8zue1hvICoapQhQV8NA3M363QiHbxakHF6dSgb4SqGeeKSOt1MNETES-F-6xTdUZp2LXyndOLliDl4VOuaIY3q8uysQN3Lio80grirYFNP2pFNz8TBG493eonNTwCfdKfunw">
-                                <summary>世10086【60阿不思烙印】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/CCpQEtrsr9JY" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                             手坑: 深渊之兽; 灰流丽; 霆王的闪光; 无限泡影; 
@@ -217,5 +191,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>

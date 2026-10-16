@@ -178,14 +178,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="JPfLio8zUd4lMLlFupJB-uWoX5w0uj7pKXlUHbxVxFwvGAMplf7SsmorqDBzXoJWoiGwYYYbxHYJZZUrYbS2Ah01PFe4NHTZyJ_u5hlZt0bxHRdlXqgcJ9TSkdPu3O7kUNRbzpJuaV0qfWzp29RJfUdH_GQHgVA7feM5Qqej21o8thkGxcUxXSJKItWFcodIPW9LZTQO0v3NmJocWqyaWjiE0fX1Kuyb_RLEqSm_GstR3JQqv8r7FCSrNL-Z1ry4zBXApp-3Q0WiHd6ic1ShCgtGXpLA">
-                                <summary>落下的秋叶【60黑魔导妖精传姬魔女术】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/l8qHGfMhKPSI" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                         </div>
@@ -219,5 +213,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>
