@@ -214,24 +214,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="FufLio82mX7EEv_Kfqa2AeW8tC0ik7YvUGDmqP1hkt3Smot5ZJShvEdelllSpM25jTZyJ_Ut9Pf7J-hkShUMLHN5nmW80r2EcnmsTKQRSZ_JMbKi96wi35RLEIXrWYg0UzuWrMK0y1QaBQ6uakuxp2LXzTrmiFoOIcLfFulRlCXrN1E4roJWoiCmn7VDRaI6sMwV7vUTmqUIUHlP3T4">
-                                <summary>成败【命运英雄】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/AJN2AwhR9uNI" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="GdzLio80mX7EEv_Kfqa2AeW8tC0sF7jxUGDmvQStREfrDJbulNRbyySlDeI7BLLKlSZtzGmzkT-oHCfUS309_sn6GRjG9rLQT3j0oVDCRzeZ5wjk81iZSCOTP5JjZUXvWEW_KNZiDRYVplqg0Ch1c1JdjTrmiJoOIcLfFulTqqIOiDH2teba4E3UTilQYOarivdUYx2J0gpp-1IpufVd6ic5KCcIKlCFBa1Gkule_LRTwCflQ0uAAA">
-                                <summary>男闺蜜047【命运英雄】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/GkTvVhVLsXLc" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="GuvTL9iCX_lP2gJq_Ka2AeW8tC1CPm0dFJ2xeoMHNWglaiI_WGS3dKai3lklKG8R2CWWVKmzkT-pb6e9T6TdNsn6GRjG9rLQT3j0oVDCRzeZ5QvMqBhHJ5qEykEcmfyTGyovesIt-USxCF61mINFhWmWqDQKHVzUl2NOuaIWg4hwtJ2VRb4t0idVRB0k3AgzdROKy4qPNUErURIj92yZtzGklaO6N3qJzUoJwgqUIUFrUaS6ngE-6U_dPg">
-                                <summary>niya4【命运英雄】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/pnBJu8zKC3jO" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                         </div>
@@ -265,5 +249,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>

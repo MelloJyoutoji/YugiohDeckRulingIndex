@@ -112,19 +112,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="FbbMb0Zqjnu3dQYOaszOm_WdFLrDeI6-cV7qSWWVK2zkT-pgjceT6TdRPD1o-hjfN6FEn78SjW85OPDRjm8zzINauqSgnCHAAYfe7kK0tOuaIZWIG7yIxnFN-NZS8GB22PVSEt3mlVRAyJal-k8PeLafzWeQiWglaiUY7E5wU0_b3eonNTwCffKfunw">
-                                <summary>原石人【绚岚闪刀】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/tbpx6BfcV7B6" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="G7lMb0ZqY3ozlHPdvszOm_WdFLrDeI7FcV7qa4r3VGMdidJZZUrSbUKi2cif5MEbjyhotEVUF4Qrw9aQXh60jwxvm-CiT-GJRrecnHhoyDWrqUoJwfwAGH2u5CtLeQFQ4TKQRti6rrWw50FyIxnFeDA7bHqpCW7zSqogZEtRexR8l-k8PeLafzWeQidQYOa9BK1EQU0_bXeonNYbWbSO92b1ShCgqeAT8pT90-A">
-                                <summary>dzdzdomo【绚岚闪刀】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/MdXoFD7U7iSX" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                             手坑: 无限泡影; 效果遮蒙者; 灰流丽; 
@@ -161,5 +150,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>

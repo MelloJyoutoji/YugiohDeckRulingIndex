@@ -150,19 +150,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="GelXYeGXDOTE8uKjzInKaniFT90qda72RS4367ep3W-Q_CNaqYaroS7hqDBzXoJWokN4jr1xXupKUEQeSyypU2cif1MEbjyYeRL8yC2IqMCRsaCe8fI41XhrQzr6zG1NEg4vTpns3ZY5ZWyhaQOphrpBkD4CDGxBsZpvxrLYn4tklRmi1fWR7aeWQ1VzBPG5nxragU0_aoaLRDTL5kqpQhQV8NA3KeAT7VUsMk0NLgA">
-                                <summary>飉【奥义狱神】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/J_2_CyV20E8H" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="H-uhnJieXFR5kTlNT5Cp-6VOtd6opcb9dvU7rfIfhFB4i6LofaBa1Uw1XQl3CUGDmtQStRG515BQ3iOvSyypUlrm8xs5E_qYI3Hkw8iXxkFsRUYEjYxpVIiObzPKBEe7lHGq8LFGtXY6K4UloGhJVSwySzG1NEz2bstOxa-adc0RRyytlC0gdTKxA3WCJA7sNdIMQfAQYm_GspKjNFq-sj2k8shqqgwc1aCVqJApp-1Q0WiNd6ic5KCcHqlCFBa0M6-le_LRTwCfdKfunw">
-                                <summary>无论无论无论【奥义狱神】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/kA2r_nr2M8xZ" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                             手坑: 
@@ -242,5 +231,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>

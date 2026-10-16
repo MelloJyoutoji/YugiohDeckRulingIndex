@@ -137,19 +137,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="G_ySBjL_F066NQYOa1BK1ERjWPmvQNjCG8R16xoLKVxXupMY7E4SOwkgkGex9k0BZDW_XbEssqVIlKnAY5fdg3EyiZs5E_vcwysk-k3UKnNu-jJUd8vqOj_gSwVzWyYFYTKQRJu1LZXj_EGh3pVhfc-rDQ4tVl8yYxJ2MRxVTkd8vw8eVQMOmDWvWaGTAnQLLa9jZfWhqjmxg9M-Na8XFR5k4G9yKPuODQU0_aoaLRBVBeENd6ic5KCcIKlCFBXBiCip4BPs">
-                                <summary>N星尘【同调士废品】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/6xgVXrdjg5V2" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                            <details class="deck-preview" data-deck-code="HPhcvssCkDGX-Lp10dBK1ERjWPmvQNjCnt-tUN4jsWMdicpHYSQSDPY-yaAshrfrtiWWVK0VHR4Ls_V-R9f6miUqcBjl92EXX3TmzkT_J9JupVObd9Fyx8KMlR33AlgrmtkwK68gRyTdqWyvH-INDvSrC-59WGhxarL5kxhTsYjiqnI75QMOmDWvWaGTAnQLLa9jZfWhqqLuwxHNjB6XFR5pBXFW6gwc1gU0_bXeonNfUdICngE_KhpcAg">
-                                <summary>Boximiay【同调士废品】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/XSd8106Zv_Oa" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                             手坑: 调和之天救龙; 屋敷童; 灰流丽; 同调紧急; 耀圣之风诗 蕾吉娜; 
@@ -186,5 +175,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>

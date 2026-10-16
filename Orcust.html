@@ -118,14 +118,8 @@
                         </div>
 
                         <div id="deck-render"></div>
-                        <!-- 前排卡组：每条记录独立折叠，标题保留原始卡组名称。 -->
-                        <div class="deck-previews">
-                            <details class="deck-preview" data-deck-code="G_vLio8tRAZilWw0ftmRykQRzY0g94SlNUADuCYr-OFJ7_bcoDE1Bg5rUErURKOWKMN4jr0ssqVNnIn9bo3iOi7KvVm1U4qVQDxFO3qIssIy6R-GZqzBhwZrFUtsmfyS0BV7MqQRGqaI9KkuKYrpi2Sx7ZgcrWOtVuMieH2bsaB0nVE_9g_HCab8aylm0FrqO5KEX1ke2rpLBdXYeGSgrircuMwVtBK1EUoIg9App-2u9ROa_LZf1wYgopXvy0U1yu2A">
-                                <summary>风【黑魔导黄金柜自奏】</summary>
-                                <div class="deck-render"></div>
-                                <a href="https://ygo.xyk.one/mc/_pBC9EX1I08c" target="_blank" rel="noopener noreferrer">打开卡组</a>
-                            </details>
-                        </div>
+                        <!-- 前排卡组：由 data/mc-leaderboard.json 按主系列动态填充。 -->
+                        <div class="deck-previews" data-mc-previews></div>
 
                         <div>
                             手坑: 屋敷童; 灰流丽; 小丑与锁鸟; 灵王的波动; 霆王的闪光; 
@@ -162,5 +156,6 @@
     <script src="js/deck-names.js"></script>
     <script src="js/main.js?v=0120fix"></script>
     <script src="js/deck-viewer.js"></script>
+    <script src="js/mc-deck-previews.js"></script>
 
 </body>

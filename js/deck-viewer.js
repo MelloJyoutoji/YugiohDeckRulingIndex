@@ -279,12 +279,14 @@
         const mainGrid = renderEl.querySelector('.card-grid--main');
         renderEl.classList.toggle('deck-layout--main-60', mainGrid?.children.length === 60);
 
-        // 折叠卡组首次展开时才解码并渲染，避免一次创建全部卡图。
-        document.querySelectorAll('.deck-preview[data-deck-code]').forEach((preview) => {
-            if (!(preview instanceof HTMLDetailsElement)) {
+        // 给单条折叠预览绑定首次展开解码。动态插入的前排卡组也会复用这里。
+        function bindDeckPreview(preview) {
+            if (!(preview instanceof HTMLDetailsElement) || preview.dataset.previewBound === 'true') {
                 return;
             }
 
+            // previewBound 防止同一节点被重复绑定 toggle。
+            preview.dataset.previewBound = 'true';
             preview.addEventListener('toggle', () => {
                 if (!preview.open || preview.dataset.rendered === 'true') {
                     return;
@@ -315,7 +317,17 @@
                     container.textContent = '卡组数据解析失败，请使用原链接查看。';
                 }
             });
-        });
+        }
+
+        // 扫描根节点下尚未绑定的折叠卡组。
+        function bindDeckPreviews(root) {
+            const scope = root instanceof Element ? root : document;
+            scope.querySelectorAll('.deck-preview[data-deck-code]').forEach(bindDeckPreview);
+        }
+
+        bindDeckPreviews(document);
+        window.DeckViewer = window.DeckViewer || {};
+        window.DeckViewer.bindPreviews = bindDeckPreviews;
     }
 
     function normalizeCardName(value) {
