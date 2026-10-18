@@ -33,6 +33,14 @@
             .split(/\r?\n/)
             .map((line) => line.trim());
 
+        // 无 JSON 历史时保留的静态构筑，使用可见文字标明 old。
+        if (rawEl.dataset.old === 'true' && lines.some((line) => /^\d+$/.test(line))) {
+            const oldLabel = document.createElement('p');
+            oldLabel.className = 'mc-previews-meta';
+            oldLabel.textContent = 'old · 历史构筑';
+            renderEl.appendChild(oldLabel);
+        }
+
         let currentGrid = null;
         let hideTimeout = null;
         let activeHoverCardId = '';

@@ -95,9 +95,10 @@
         }
 
         var summary = document.createElement("summary");
-        var rankLabel = entry.rank == null ? "" : "#" + entry.rank + " ";
+        // 历史构筑不展示过期排名，标题明确标记 old。
+        var rankLabel = entry.old || entry.rank == null ? "" : "#" + entry.rank + " ";
         var deckName = deck.name || "未识别";
-        summary.textContent = rankLabel + (entry.player || "未知玩家") + "【" + deckName + "】";
+        summary.textContent = (entry.old ? "old · " : "") + rankLabel + (entry.player || "未知玩家") + "【" + deckName + "】";
 
         var render = document.createElement("div");
         render.className = "deck-render";
@@ -123,7 +124,7 @@
         }
     }
 
-    function renderPreviews(container, snapshot, labels) {
+    function renderPreviews(container, snapshot, labels, oldDeck) {
         var labelSet = {};
         labels.forEach(function (label) {
             labelSet[label] = true;
@@ -131,7 +132,7 @@
 
         var matched = (snapshot.players || []).filter(function (entry) {
             var deck = entry && entry.deck;
-            return deck && labelSet[deck.main_category];
+            return deck && deck.code && labelSet[deck.main_category];
         });
 
         Array.prototype.forEach.call(container.querySelectorAll("details.deck-preview"), function (node) {
@@ -139,6 +140,14 @@
         });
 
         var updatedText = formatUpdatedAt(snapshot);
+        // 当前系列退出前排后，仍可展开查看同步脚本保留的一份历史构筑。
+        if (!matched.length && oldDeck && oldDeck.deck && oldDeck.deck.code) {
+            var lastSeen = oldDeck.last_seen_at ? " · 最后出现于 " + String(oldDeck.last_seen_at).replace("T", " ") : "";
+            setMeta(container, "当前前排暂无该系列卡组 · 保留 1 份 old 构筑" + lastSeen, false);
+            container.appendChild(createPreview(Object.assign({}, oldDeck, { old: true })));
+            bindPreviews(container);
+            return;
+        }
         if (!matched.length) {
             setMeta(
                 container,
@@ -177,16 +186,17 @@
             }
 
             var existing = document.querySelector("[data-mc-previews]");
+            var oldDeck = snapshot.old_decks && snapshot.old_decks[pageName];
             var labelsSet = {};
             labels.forEach(function (label) {
                 labelsSet[label] = true;
             });
             var matchedCount = (snapshot.players || []).filter(function (entry) {
-                return entry && entry.deck && labelsSet[entry.deck.main_category];
+                return entry && entry.deck && entry.deck.code && labelsSet[entry.deck.main_category];
             }).length;
 
             // 原本没有前排区的页面，没有命中卡组时不新增空区域。
-            if (!existing && matchedCount === 0) {
+            if (!existing && matchedCount === 0 && !(oldDeck && oldDeck.deck && oldDeck.deck.code)) {
                 return;
             }
 
@@ -195,7 +205,7 @@
                 return;
             }
 
-            renderPreviews(container, snapshot, labels);
+            renderPreviews(container, snapshot, labels, oldDeck);
         })
         .catch(function (error) {
             console.error("加载前排卡组失败:", error);
