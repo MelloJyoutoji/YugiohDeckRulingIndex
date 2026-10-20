@@ -34,7 +34,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # 同步提交历史构筑、首页日期及系列页的静态构筑清理。
-          git add data/mc-leaderboard.json '*.html'
+          git add data/mc-leaderboard.json index.html 'decks/*.html'
           if git diff --cached --quiet; then
             echo "No leaderboard changes"
           else

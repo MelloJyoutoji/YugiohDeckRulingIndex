@@ -3,6 +3,9 @@
 
     var pageTitleCache = new Map();
 
+    // 封面仍位于根目录 images 下，以脚本 URL 定位，避免依赖页面层级。
+    var siteRoot = new URL("../", document.currentScript.src).href;
+
     function getFallbackName(page) {
         var fileName = String(page || "").split("/").pop();
 
@@ -71,10 +74,11 @@
             return;
         }
 
-        var imagePath =
+        var imagePath = new URL(
             "images/thumbs/single/standard/" +
             pageName +
-            "-2000.jpg";
+            "-2000.jpg", siteRoot
+        ).href;
 
         root.querySelectorAll("[data-deck-image]").forEach(function (image) {
             image.src = imagePath;

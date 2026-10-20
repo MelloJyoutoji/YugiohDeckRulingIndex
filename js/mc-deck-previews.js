@@ -5,9 +5,10 @@
 (function () {
     "use strict";
 
-    // 快照与系列映射都放在站点 data 目录，随 GitHub Actions 每天覆盖。
-    var LEADERBOARD_URL = "data/mc-leaderboard.json";
-    var SERIES_MAP_URL = "data/mc-series-pages.json";
+    // 从脚本位置定位根目录数据，兼容 decks 子目录和项目路径部署。
+    var siteRoot = new URL("../", document.currentScript.src).href;
+    var LEADERBOARD_URL = new URL("data/mc-leaderboard.json", siteRoot).href;
+    var SERIES_MAP_URL = new URL("data/mc-series-pages.json", siteRoot).href;
 
     function getCurrentPageName() {
         var path = decodeURIComponent(window.location.pathname || "");

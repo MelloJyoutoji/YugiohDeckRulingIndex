@@ -38,8 +38,15 @@ YugiohDeckRulingIndex/
 ├── header.html                   # 公共导航
 ├── footer.html                   # 公共页脚
 ├── page-about.html               # 项目介绍与反馈入口
-├── Maliss.html                   # 卡组裁定页示例
-├── Ars_Magna.html                # 单卡裁定页示例
+├── decks/                       # 卡组裁定页面与卡组共享片段
+│   ├── Maliss.html               # 卡组裁定页示例
+│   ├── Magnet.html               # 磁石战士
+│   ├── Embed_K9.html             # K9 共享片段
+│   └── Embed_Magistus.html       # 大贤者共享片段
+├── cards/                       # 单卡裁定页面
+│   ├── Ars_Magna.html            # 奥艺
+│   ├── Fydraulis Harmonia.html   # 调和之天救龙
+│   └── Time_Dark_Magician.html   # 时间黑魔术师
 ├── css/                          # 网站、卡组预览与标记工具样式
 ├── images/                       # 页面图片与卡组封面
 ├── js/
@@ -65,7 +72,7 @@ YugiohDeckRulingIndex/
 
 ### 更新已有卡组
 
-在对应 HTML 页面中修改裁定内容，并按需更新 `index.html` 中该卡组的 `data-updated` 标记。
+在 `decks/` 中对应的 HTML 页面修改裁定内容，并按需更新 `index.html` 中该卡组的 `data-updated` 标记。单卡裁定在 `cards/` 中维护。
 
 MyCard 构筑由同步脚本自动维护首页日期：按系列比较同步前后的构筑码集合，仅在构筑新增、删除或卡组码变化时，将对应卡组的 `data-updated` 更新为同步当天的北京时间日期（`YYYY-MM-DD`）。排名、积分、排列顺序或相同构筑的重复次数变化不会触发日期更新。首次同步没有旧快照时，按空构筑集合比较。
 
@@ -77,19 +84,21 @@ MyCard 构筑由同步脚本自动维护首页日期：按系列比较同步前�
 
 ### 新增卡组
 
-1. 参考已有卡组页面创建新的 HTML 文件，填写标题及裁定内容。
-2. 在 `index.html` 中添加 `<deck-card>` 入口。
-3. 在 `header.html` 的卡组列表中添加链接。
+1. 参考已有卡组页面，在 `decks/` 中创建新的 HTML 文件，填写标题及裁定内容。页面中的公共样式、脚本和图标使用 `../css/`、`../js/` 等相对路径。
+2. 在 `index.html` 中添加 `<deck-card data-page="decks/页面名.html">` 入口。
+3. 在 `header.html` 的卡组列表中添加 `decks/页面名.html` 链接。公共脚本按导航文件的位置解析链接，兼容根目录与子目录页面。
 4. 添加封面图片；按默认规则使用以下路径：
    - 首页封面：`images/thumbs/masonry/页面名-600.jpg`
    - 详情封面：`images/thumbs/single/standard/页面名-2000.jpg`
-5. 如需展示 MyCard 前排构筑，在 `data/mc-series-pages.json` 中维护系列名称映射。
+5. 如需展示 MyCard 前排构筑，在 `data/mc-series-pages.json` 中维护系列名称映射。映射键使用不带目录的文件名（例如 `Magnet.html`），同步脚本从 `decks/` 读取页面；历史构筑标识保持不变。
 
 默认图片路径中的“页面名”指 HTML 文件名去掉 `.html` 后的部分。
 
 ### 共享单卡裁定
 
-页面可通过 `.ruling-include` 元素的 `data-ruling-source` 指定来源页面与内容选择器。公共脚本负责加载引用内容，便于集中维护多页共用的裁定。
+单卡裁定页面统一放在 `cards/`，导航链接使用 `cards/页面名.html`。卡组页通过 `.ruling-include` 元素的 `data-ruling-source` 指定来源页面与内容选择器，例如 `../cards/Ars_Magna.html #ars-magna-ruling > p`。公共脚本负责加载引用内容，便于集中维护多页共用的裁定。含空格的文件名在 URL 中使用 `%20`。
+
+`Embed_K9.html` 与 `Embed_Magistus.html` 是卡组共享片段，保存在 `decks/`，由同目录的页面加载。图片继续保存在根目录的 `images/`。页面迁移后的访问地址为 `decks/页面名.html` 或 `cards/页面名.html`。
 
 ## MyCard 数据同步
 

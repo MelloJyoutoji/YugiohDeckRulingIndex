@@ -11,7 +11,9 @@
     function createDeckCard(card) {
         var page = card.getAttribute("data-page");
         var updated = card.getAttribute("data-updated");
-        var image = card.getAttribute("data-image") || "images/thumbs/masonry/" + page.replace(/\.html$/, "") + "-600.jpg";
+        // 页面路径包含 decks/，封面只使用文件名，保持现有图片目录不变。
+        var pageName = page.split("/").pop().replace(/\.html$/, "");
+        var image = card.getAttribute("data-image") || "images/thumbs/masonry/" + pageName + "-600.jpg";
 
         var article = document.createElement("article");
         article.className = "masonry__brick entry format-standard animate-this";

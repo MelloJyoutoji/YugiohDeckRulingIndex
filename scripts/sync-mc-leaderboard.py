@@ -31,6 +31,8 @@ SHANGHAI = timezone(timedelta(hours=8))
 
 # 仓库根目录，以及快照、系列映射和首页路径。
 REPO_ROOT = Path(__file__).resolve().parents[1]
+# 页面文件名仍作为构筑标识，实际 HTML 统一保存在卡组目录。
+DECKS_DIR = REPO_ROOT / "decks"
 OUTPUT_PATH = REPO_ROOT / "data" / "mc-leaderboard.json"
 MAPPING_PATH = REPO_ROOT / "data" / "mc-series-pages.json"
 INDEX_PATH = REPO_ROOT / "index.html"
@@ -260,7 +262,8 @@ def update_index_dates(index_html: str, changed_pages: set[str], updated_date: s
         """读取当前卡片的页面属性，避免修改其他系列的更新标记。"""
         tag = match.group(0)
         page_match = re.search(r"""\bdata-page\s*=\s*(["'])(.*?)\1""", tag, re.IGNORECASE)
-        if not page_match or page_match.group(2) not in changed_pages:
+        # 首页链接包含 decks/，与构筑映射比较时只使用文件名。
+        if not page_match or Path(page_match.group(2)).name not in changed_pages:
             return tag
 
         # 保留属性名、空白和引号；新卡片缺少日期属性时自动补齐。
@@ -284,12 +287,12 @@ def main() -> int:
     page_mapping = json.loads(MAPPING_PATH.read_text(encoding="utf-8"))["pages"]
     index_html = INDEX_PATH.read_text(encoding="utf-8")
     snapshot = build_snapshot()
-    # 映射仅允许仓库根目录的 HTML 文件，禁止将数据中的路径用于任意文件写入。
+    # 映射仅允许文件名形式的卡组页，统一从 decks 目录读取，避免路径穿越。
     pages = {}
     for page in page_mapping:
         if Path(page).name != page or not page.endswith(".html"):
             raise ValueError(f"invalid mapped page: {page}")
-        pages[page] = (REPO_ROOT / page).read_text(encoding="utf-8")
+        pages[page] = (DECKS_DIR / page).read_text(encoding="utf-8")
     updated_pages = prepare_deck_updates(previous, snapshot, page_mapping, pages)
     changed_pages = find_changed_deck_pages(previous, snapshot, page_mapping)
     changed_pages.update(updated_pages)
@@ -300,7 +303,7 @@ def main() -> int:
     if updated_index != index_html:
         INDEX_PATH.write_text(updated_index, encoding="utf-8")
     for page, page_html in updated_pages.items():
-        (REPO_ROOT / page).write_text(page_html, encoding="utf-8")
+        (DECKS_DIR / page).write_text(page_html, encoding="utf-8")
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(
         json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n",

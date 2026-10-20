@@ -7,6 +7,21 @@
 (function($) {
 
     "use strict";
+
+    // 以公共脚本的位置确定站点根目录，兼容子目录页面和项目路径部署。
+    var siteRoot = new URL("../", document.currentScript.src).href;
+
+    // 注入公共组件后，其资源地址应相对于组件文件解析，而非当前页面。
+    function resolveComponentUrls(container, componentUrl) {
+        container.querySelectorAll("[href], [src], [action]").forEach(function(element) {
+            ["href", "src", "action"].forEach(function(attribute) {
+                var value = element.getAttribute(attribute);
+                if (value && value.charAt(0) !== "#") {
+                    element.setAttribute(attribute, new URL(value, componentUrl).href);
+                }
+            });
+        });
+    }
     
     var cfg = {
         scrollDuration : 800, // smoothscroll duration
@@ -24,16 +39,21 @@
    /* Load Components
     * ------------------------------------------------------ */
     var ssLoadComponents = function() {
+        // 导航与页脚仍保留在根目录，页面层级不影响组件加载。
+        var headerUrl = new URL("header.html", siteRoot).href;
+        var footerUrl = new URL("footer.html", siteRoot).href;
         
         console.log("开始加载组件..."); // 添加调试信息
         
         // 加载header组件
-        $("#header-placeholder").load("header.html", function(response, status, xhr) {
+        $("#header-placeholder").load(headerUrl, function(response, status, xhr) {
             if (status == "error") {
                 console.error("Error loading header:", xhr.status, xhr.statusText);
-                console.error("尝试的路径:", "header.html");
+                console.error("尝试的路径:", headerUrl);
             } else {
                 console.log("Header 加载成功");
+
+                resolveComponentUrls(this, headerUrl);
 
                 if (window.DeckNames) {
                     window.DeckNames.applyDeckNames(
@@ -48,12 +68,13 @@
         });
         
         // 加载footer组件
-        $("#footer-placeholder").load("footer.html", function(response, status, xhr) {
+        $("#footer-placeholder").load(footerUrl, function(response, status, xhr) {
             if (status == "error") {
                 console.error("Error loading footer:", xhr.status, xhr.statusText);
-                console.error("尝试的路径:", "footer.html");
+                console.error("尝试的路径:", footerUrl);
             } else {
                 console.log("Footer 加载成功");
+                resolveComponentUrls(this, footerUrl);
                 // footer加载成功后初始化相关功能
                 ssBackToTop(); // 重新初始化回到顶部功能
                 ssSmoothScroll(); // 重新初始化平滑滚动功能

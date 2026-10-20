@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>征服斗魂K9</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/deck-viewer.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../srds.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../srds.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="../srds.jpg">
+    <link rel="manifest" href="../site.webmanifest">
+
+</head>
+
+<body class="ss-bg-white">
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+        ================================================== -->
+        <div id="header-placeholder"></div>
+
+        <!-- site content
+        ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+                
+                <article class="column large-full entry format-standard">
+
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb" style="text-align: center;">
+                            <img data-deck-image
+                                sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                        </div>
+                    </div>
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title" data-deck-name></h1>
+                        <ul class="entry__header-meta">
+                            <li class="author">By <a href="https://space.bilibili.com/18234381">梅洛</a></li>
+                            <li class="date">更新至LOCH</li>
+                            <!-- <li class="cat-links">
+                                <a href="#0">Marketing</a><a href="#0">Management</a>
+                            </li> -->
+                        </ul>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+
+                        <h2>裁定</h2>
+                        <div class="auto-number">
+                            <p>
+                                已经公开的卡不能为了发动效果而给双方展示.
+                            </p>
+                            <p>
+                                为了发动卡的效果而给双方展示的卡, 在发动下一个效果之前, 回到非公开状态.
+                            </p>
+                            <p>
+                                为了发动卡的效果而给双方展示的卡, 回到非公开状态的场合, 又在同一个联锁块上因为效果被对方确认手牌的场合, 有必要时必须告知对方是哪张卡发动了效果.
+                            </p>
+                            <p>
+                                「征服斗魂」的`同一连锁上不能发动`只限制一方, 在同一个连锁上自己与对方各能发动①或是②(如果有)任意一个效果.
+                            </p>
+                            <p>
+                                「征服斗魂 蛟龙」的①效果, 「幻创龙 奇幻龙人神」的①效果, 在同一个连锁上自己只能选任意一个发动.
+                            </p>
+                            <p>
+                                「赌上你的灵魂！」特殊召唤的怪兽, 只要不在怪兽区域表侧表示存在, 就不会适用`结束阶段回到手卡`.
+                            </p>
+                            <p>
+                                「向征服斗魂进发！」的①效果在处理时, 作为对象的怪兽不在怪兽区域表侧表示存在的场合, 后续效果全部不处理.
+                            </p>
+                            <p>
+                                「征服斗魂 里螺旋流雪风」的各个●是按顺序处理的效果, 前一个●效果不能处理的场合, 会继续处理之后的●效果.
+                            </p>
+                            <p>
+                                直到进入伤害计算时为止, 才算进行过战斗. 在伤害计算前因为各种原因导致战斗终止的场合, 不能在自己场上的「征服斗魂」怪兽或「斗神的虚像」上面重叠来超量召唤「征服斗魂 洛克斯」.
+                            </p>
+                            <p>
+                                场上存在守备表示的「No.41 泥睡魔兽 睡梦貘」, 「征服斗魂 螺旋流辻风」的效果处理把守备表示的「征服斗魂」怪兽变成攻击表示后, 选「No.41 泥睡魔兽 睡梦貘」变成里侧守备表示的场合, 那只变成攻击表示的「征服斗魂」怪兽就这样保持攻击表示.
+                            </p>
+                            <p>
+                                先攻的第1回合或者不能进行战斗阶段的回合以及主要阶段2, 不能发动「征服斗魂 潘特拉」②的『●地: 』效果.
+                            </p>
+                        </div>
+
+                        <h2>注意</h2>
+                        <div class="auto-number">
+                            <p>
+                                「斗神的虚像」没有`征服斗魂`字段, 那个①效果是对怪兽适用的效果. 那个②效果是主要阶段才能发动的效果.
+                            </p>
+                        </div>
+
+                        <h2>自肃</h2>
+                        <div class="auto-number">
+                        </div>
+
+                        <!-- 嵌入K9 -->
+                        <div id="article-container"></div>
+                        <script>
+                            fetch('Embed_K9.html')
+                                .then(response => response.text())
+                                .then(html => {
+                                    document.getElementById('article-container').innerHTML = html;
+                                    // 初始化相关脚本
+                                    if (typeof initDeckViewer === 'function') {
+                                        initDeckViewer();
+                                    }
+                                });
+                        </script>
+
+                        <h2>卡组预览</h2>
+
+                        <div id="deck-raw" style="display:none;" data-old="true">
+                        #created by ygopro2
+                        #main
+                        93156774
+                        93156774
+                        93156774
+                        9091064
+                        9091064
+                        9091064
+                        47960073
+                        47960073
+                        91800273
+                        29280200
+                        29280200
+                        29280200
+                        28642461
+                        55031170
+                        55031170
+                        92248362
+                        92248362
+                        92895501
+                        91073013
+                        42141493
+                        42141493
+                        42141493
+                        14558127
+                        14558127
+                        91025875
+                        64612053
+                        29302858
+                        38339996
+                        38339996
+                        23434538
+                        84211599
+                        54562327
+                        54562327
+                        54562327
+                        32807846
+                        53792930
+                        24224831
+                        80181649
+                        35550352
+                        60883493
+                        #extra
+                        90303227
+                        67515699
+                        40673853
+                        27420823
+                        27420823
+                        29301450
+                        28168628
+                        28168628
+                        74997493
+                        61374414
+                        34876719
+                        64276752
+                        90448280
+                        2061963
+                        49456901
+                        !spareCards
+                        46502744
+                        46502744
+                        46502744
+                        84192580
+                        84192580
+                        84192580
+                        83326048
+                        83326048
+                        83326048
+                        94145021
+                        94145021
+                        94145021
+                        10045474
+                        10045474
+                        10045474
+                        </div>
+
+                        <div id="deck-render"></div>
+
+                        <div>
+                            手坑: 次元吸引者; 征服斗魂 霍丽·苏; 灰流丽; K9-17号 饭纲; 
+                            <br>
+                            盖放: K9-EX强制解除; 征服斗魂 里螺旋流雪风; 
+                        </div>
+
+                        <!-- hover 悬浮 -->
+                        <div id="card-hover">
+                            <iframe></iframe>
+                        </div>
+
+                    </div> <!-- end entry content -->
+
+                    
+                </article> <!-- end column large-full entry-->
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+        ================================================== -->
+        <div id="footer-placeholder"></div>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/deck-names.js"></script>
+    <script src="../js/main.js?v=0120fix"></script>
+    <script src="../js/deck-viewer.js"></script>
+    <script src="../js/mc-deck-previews.js"></script>
+
+</body>
