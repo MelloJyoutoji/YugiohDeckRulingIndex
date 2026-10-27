@@ -40,6 +40,11 @@
     padding-left: 10px;
 }
 
+/* 手机端使用中文分组名和张数，桌面端继续显示原有标题。 */
+.deck-title__mobile {
+    display: none;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -47,7 +52,10 @@
 }
 
 .card-grid img {
+    /* 清除正文图片的默认外边距，让 PC 和手机端卡图紧凑排列。 */
+    display: block;
     width: 100%;
+    margin: 0;
     border-radius: 6px;
     cursor: pointer;
     transition: transform 0.15s ease;
@@ -57,27 +65,54 @@
     transform: scale(1.05);
 }
 
-/* 手机端主卡组默认每行 10 张；额外和副卡组每行 15 张。 */
+/* 手机端三个分组统一采用圆角面板和每行 10 张的卡图布局。 */
 @media (max-width: 600px) {
+    .deck-section {
+        margin-bottom: 16px;
+        padding: 12px 9px 10px;
+        border: 1px solid #e0e4e8;
+        border-radius: 10px;
+        background: #fff;
+    }
+
+    .deck-title,
+    .deck-preview .deck-title {
+        margin: 0 0 12px;
+        padding: 0;
+        border: 0;
+        color: #384656;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .deck-title__desktop {
+        display: none;
+    }
+
+    .deck-title__mobile {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+    }
+
+    .deck-title__count {
+        color: #737e89;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
     .card-grid,
     .deck-preview .card-grid {
-        grid-template-columns: repeat(15, minmax(0, 1fr));
-    }
-
-    .card-grid--main,
-    .deck-preview .card-grid--main {
         grid-template-columns: repeat(10, minmax(0, 1fr));
-    }
-
-    /* 主卡组达到 60 张时，三个分组统一为每行 15 张。 */
-    .deck-layout--main-60 .card-grid--main {
-        grid-template-columns: repeat(15, minmax(0, 1fr));
-    }
-
-    /* 清除文章通用图片间距，避免卡图之间出现过大的行距。 */
-    .card-grid img {
-        display: block;
+        gap: 2px;
         margin: 0;
+    }
+
+    /* 手机端保留卡图比例，并使用更小的圆角。 */
+    .card-grid img {
+        min-width: 0;
+        height: auto;
+        border-radius: 1px;
     }
 }
 

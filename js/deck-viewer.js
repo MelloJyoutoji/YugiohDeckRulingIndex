@@ -61,12 +61,27 @@
 
             const header = document.createElement('div');
             header.className = 'deck-title';
-            header.innerText = title;
+
+            // 分离两端标题，手机端展示中文名称，桌面端保留原有文字。
+            const desktopTitle = document.createElement('span');
+            desktopTitle.className = 'deck-title__desktop';
+            desktopTitle.textContent = title;
+            const mobileTitle = document.createElement('span');
+            mobileTitle.className = 'deck-title__mobile';
+            // 分享码标题带有张数后缀，先提取分组标识以兼容旧格式卡组。
+            const sectionType = title.split(' · ')[0];
+            const sectionNames = { MAIN: '主卡组', EXTRA: '额外卡组', SIDE: '副卡组', SpareCards: '副卡组' };
+            const sectionName = document.createElement('span');
+            sectionName.textContent = sectionNames[sectionType] || sectionType;
+            const sectionCount = document.createElement('span');
+            sectionCount.className = 'deck-title__count';
+            mobileTitle.append(sectionName, sectionCount);
+            header.append(desktopTitle, mobileTitle);
 
             const grid = document.createElement('div');
             grid.className = 'card-grid';
-            // 主卡组使用独立标识，以便手机端按主卡组张数调整列数。
-            if (title === 'MAIN' || title.startsWith('MAIN · ')) {
+            // 保留主卡组标识，所有分组的手机端列数由统一样式控制。
+            if (sectionType === 'MAIN') {
                 grid.classList.add('card-grid--main');
             }
 
@@ -76,6 +91,17 @@
 
             currentGrid = grid;
             return grid;
+        }
+
+        // 按实际渲染的卡图统计张数，同时兼容静态卡组与首次展开的分享码卡组。
+        function updateSectionCounts(container) {
+            container.querySelectorAll('.deck-section').forEach((section) => {
+                const grid = section.querySelector('.card-grid');
+                const count = section.querySelector('.deck-title__count');
+                if (grid && count) {
+                    count.textContent = `${grid.children.length} 张`;
+                }
+            });
         }
 
         function positionHover(trigger) {
@@ -283,9 +309,7 @@
             }
         });
 
-        // 旧格式卡组按实际渲染的主卡张数判断是否切换为每行 15 张。
-        const mainGrid = renderEl.querySelector('.card-grid--main');
-        renderEl.classList.toggle('deck-layout--main-60', mainGrid?.children.length === 60);
+        updateSectionCounts(renderEl);
 
         // 给单条折叠预览绑定首次展开解码。动态插入的前排卡组也会复用这里。
         function bindDeckPreview(preview) {
@@ -307,9 +331,6 @@
 
                 try {
                     const sections = decodeDeckCode(preview.dataset.deckCode);
-                    // 折叠预览以当前卡组的主卡张数决定所有分组的手机端列数。
-                    const mainSection = sections.find(({ title }) => title === 'MAIN');
-                    preview.classList.toggle('deck-layout--main-60', mainSection?.cardIds.length === 60);
                     sections.forEach(({ title, cardIds }) => {
                         if (!cardIds.length) {
                             return;
@@ -320,6 +341,7 @@
                             cardIds.forEach((cardId) => grid.appendChild(createCardImage(cardId, true)));
                         }
                     });
+                    updateSectionCounts(container);
                     preview.dataset.rendered = 'true';
                 } catch (error) {
                     container.textContent = '卡组数据解析失败，请使用原链接查看。';

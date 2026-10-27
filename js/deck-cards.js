@@ -15,19 +15,21 @@
         var pageName = page.split("/").pop().replace(/\.html$/, "");
         var image = card.getAttribute("data-image") || "images/thumbs/masonry/" + pageName + "-600.jpg";
 
-        var article = document.createElement("article");
-        article.className = "masonry__brick entry format-standard animate-this";
+        // 使用单个原生链接承载整张卡片，空白区域也支持点击和键盘访问。
+        var cardLink = createLink(page, "masonry__brick entry format-standard home-deck-card");
 
         var thumb = document.createElement("div");
         thumb.className = "entry__thumb";
 
-        var thumbLink = createLink(page, "entry__thumb-link");
+        // 卡片内部使用普通容器，避免嵌套链接产生无效结构和重复焦点。
+        var thumbContent = document.createElement("div");
+        thumbContent.className = "entry__thumb-link";
         var img = document.createElement("img");
         img.src = image;
         img.srcset = image + " 1x";
         img.alt = "";
-        thumbLink.appendChild(img);
-        thumb.appendChild(thumbLink);
+        thumbContent.appendChild(img);
+        thumb.appendChild(thumbContent);
 
         var text = document.createElement("div");
         text.className = "entry__text";
@@ -37,37 +39,38 @@
 
         var heading = document.createElement("h2");
         heading.className = "entry__title";
-        var titleLink = createLink(page);
-        titleLink.textContent = "读取中...";
+        var titleText = document.createElement("span");
+        titleText.textContent = "读取中...";
 
         if (window.DeckNames) {
             window.DeckNames.getPageName(page).then(function (name) {
-                titleLink.textContent = name;
+                titleText.textContent = name;
             });
         }
 
-        heading.appendChild(titleLink);
+        heading.appendChild(titleText);
 
         var meta = document.createElement("div");
         meta.className = "entry__meta";
 
         var date = document.createElement("span");
         date.className = "entry__meta-date";
-        var dateLink = createLink(page);
-        dateLink.textContent = updated;
-        date.appendChild(dateLink);
+        date.textContent = updated;
 
         meta.appendChild(date);
         header.appendChild(heading);
         header.appendChild(meta);
         text.appendChild(header);
-        article.appendChild(thumb);
-        article.appendChild(text);
+        // 封面在左，名称和更新时间在右，阅读顺序与横向布局保持一致。
+        cardLink.appendChild(thumb);
+        cardLink.appendChild(text);
 
-        return article;
+        return cardLink;
     }
 
     Array.prototype.forEach.call(document.querySelectorAll("deck-card"), function (card) {
+        // 同步标记列表容器，让公共脚本跳过 Masonry 的动态定位。
+        card.parentNode.classList.add("home-deck-list");
         card.parentNode.replaceChild(createDeckCard(card), card);
     });
 })();

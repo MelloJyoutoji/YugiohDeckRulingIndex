@@ -3624,7 +3624,7 @@ body.search-is-visible {
 @media screen and (max-width: 600px) {
     /* make bricks full-width and use flex row */
     .masonry .grid-sizer,
-    .masonry__brick {
+    .masonry__brick:not(.home-deck-card) {
         float: none !important;
         width: 100% !important;
         padding: 0 6px 12px 6px !important;
@@ -3712,5 +3712,144 @@ body.search-is-visible {
 
     .masonry__brick.entry .entry__title {
         font-size: 1.6rem;
+    }
+}
+
+/* 首页卡组列表：左侧单张封面，右侧紧邻黑色名称与更新时间。 */
+.masonry.home-deck-list {
+    /* 桌面端限制列表宽度并居中，两侧至少各留出 32px 空白。 */
+    width: calc(100% - 64px);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.masonry.home-deck-list .grid-sizer {
+    display: none;
+}
+
+.masonry.home-deck-list .home-deck-card {
+    display: flex;
+    position: static;
+    float: none;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 20px;
+    border: 1px solid #e0e4e8;
+    border-radius: 12px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+}
+
+.masonry.home-deck-list .entry__text {
+    /* 文字按内容占宽，窄屏仍可收缩换行，避免把封面与文字撑到两端。 */
+    flex: 0 1 auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.masonry.home-deck-list .entry__header {
+    padding: 0;
+}
+
+.masonry.home-deck-list .entry__title {
+    margin: 0 0 8px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.masonry.home-deck-list .entry__meta {
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+/* 整卡链接在访问后、悬停和键盘聚焦时也保持黑色。 */
+.masonry.home-deck-list .home-deck-card:visited,
+.masonry.home-deck-list .home-deck-card:hover,
+.masonry.home-deck-list .home-deck-card:focus {
+    color: #000;
+}
+
+/* 键盘访问时明确标出当前卡片，不引入动画。 */
+.masonry.home-deck-list .home-deck-card:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 3px;
+}
+
+.masonry.home-deck-list .entry__thumb {
+    flex: 0 0 160px;
+    width: 160px;
+    min-width: 0;
+    max-width: none;
+    height: 160px;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    background: transparent;
+}
+
+.masonry.home-deck-list .entry__thumb-link,
+.masonry.home-deck-list .entry__thumb-link img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+}
+
+/* 取消首页卡片及封面的动画、缩放和遮罩，内容从首次渲染起可见。 */
+.masonry.home-deck-list .home-deck-card,
+.masonry.home-deck-list .home-deck-card *,
+.masonry.home-deck-list .entry__thumb:hover .entry__thumb-link img {
+    animation: none;
+    transition: none;
+    transform: none;
+}
+
+.masonry.home-deck-list .entry__thumb-link::before,
+.masonry.home-deck-list .entry__thumb-link::after {
+    content: none;
+}
+
+/* 窄屏缩小封面，继续保持左图右文与完整的卡组名称。 */
+@media screen and (max-width: 600px) {
+    /* 首页列表不再重复使用为页面头部预留的大块顶部内边距。 */
+    .s-content.home-decks-content {
+        padding-top: 16px;
+    }
+
+    .masonry.home-deck-list {
+        /* 手机端将新增的左右留白缩至各 16px，保留卡片可用宽度。 */
+        width: calc(100% - 32px);
+    }
+
+    .masonry.home-deck-list .home-deck-card {
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .masonry.home-deck-list .entry__thumb {
+        flex-basis: 84px;
+        width: 84px;
+        height: 84px;
+    }
+
+    .masonry.home-deck-list .entry__title {
+        font-size: 18px;
     }
 }

@@ -220,7 +220,10 @@
     * ---------------------------------------------------- */ 
     var ssMasonryFolio = function () {
         
-        var containerBricks = $('.masonry');
+        // 首页卡组使用普通列表布局，打开时直接显示全部内容。
+        var containerBricks = $('.masonry').not('.home-deck-list');
+
+        if (!containerBricks.length) return;
 
         containerBricks.masonry({
             itemSelector: '.masonry__brick',
