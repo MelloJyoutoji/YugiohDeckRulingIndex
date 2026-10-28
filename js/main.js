@@ -59,6 +59,17 @@
                     window.DeckNames.applyDeckNames(
                         document.getElementById("header-placeholder")
                     );
+                    // 导航与首页共用主系列排序，导航不额外置顶码丽丝。
+                    if (window.DeckNames.sortDeckItems) {
+                        this.querySelectorAll("[data-deck-list]").forEach(function(list) {
+                            window.DeckNames.sortDeckItems(list.children, function(item) {
+                                var link = item.querySelector("a[href]");
+                                return link ? link.getAttribute("href") : "";
+                            }).then(function(items) {
+                                items.forEach(function(item) { list.appendChild(item); });
+                            });
+                        });
+                    }
                 }
 
                 // header加载成功后初始化相关功能

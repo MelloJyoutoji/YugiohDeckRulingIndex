@@ -73,4 +73,15 @@
         card.parentNode.classList.add("home-deck-list");
         card.parentNode.replaceChild(createDeckCard(card), card);
     });
+
+    // 先显示全部卡片，再按快照调整顺序；首页始终将码丽丝排在第一位。
+    if (window.DeckNames && window.DeckNames.sortDeckItems) {
+        document.querySelectorAll(".home-deck-list").forEach(function (list) {
+            window.DeckNames.sortDeckItems(list.querySelectorAll(".home-deck-card"), function (card) {
+                return card.getAttribute("href");
+            }, "Maliss.html").then(function (cards) {
+                cards.forEach(function (card) { list.appendChild(card); });
+            });
+        });
+    }
 })();
