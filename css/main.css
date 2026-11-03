@@ -3826,6 +3826,36 @@ body.search-is-visible {
     content: none;
 }
 
+/* 卡组裁定与注意均默认折叠，入口沿用正文大小与字重。 */
+.entry__content .ruling-fold {
+    margin: 0 0 2.4rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.entry__content .ruling-fold > summary {
+    padding: 1.2rem 1.6rem;
+    cursor: pointer;
+    color: #222;
+    background: #f7f7f7;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+/* 展开后将入口与正文分隔，并为键盘用户提供清晰的焦点提示。 */
+.entry__content .ruling-fold[open] > summary {
+    border-bottom: 1px solid #ddd;
+}
+
+.entry__content .ruling-fold > summary:focus-visible {
+    outline: 2px solid #222;
+    outline-offset: 3px;
+}
+
+.entry__content .ruling-fold__content {
+    padding: 1.6rem;
+}
+
 /* 窄屏缩小封面，继续保持左图右文与完整的卡组名称。 */
 @media screen and (max-width: 600px) {
     /* 首页列表不再重复使用为页面头部预留的大块顶部内边距。 */

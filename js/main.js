@@ -115,6 +115,82 @@
         });
     };
 
+   /* 卡组裁定与注意默认折叠，保留原有内容与编号容器。
+    * ------------------------------------------------------ */
+    var ssFoldRulings = function() {
+        // 只处理卡组页面，避免影响独立卡片资料页的同名栏目。
+        var deckDirectory = new URL("decks/", siteRoot).pathname;
+        if (window.location.pathname.indexOf(deckDirectory) !== 0) return;
+
+        document.querySelectorAll(".entry__content h2").forEach(function(heading) {
+            // 两个栏目独立折叠，条数只用于显示，不影响默认收起状态。
+            var sectionTitle = heading.textContent.trim();
+            if (sectionTitle !== "裁定" && sectionTitle !== "注意") return;
+
+            // 重复检查时复用已有折叠容器，保留用户当前的展开状态。
+            var fold = heading.nextElementSibling;
+            var hasFold = fold && fold.classList.contains("ruling-fold");
+            var content = hasFold ? fold.querySelector(".ruling-fold__content") : null;
+            var nodes = [];
+            if (content) {
+                nodes = Array.prototype.slice.call(content.childNodes);
+            } else {
+                var sibling = heading.nextSibling;
+                while (sibling) {
+                    if (sibling.nodeType === 1 && /^H[12]$/.test(sibling.tagName)) break;
+                    nodes.push(sibling);
+                    sibling = sibling.nextSibling;
+                }
+            }
+
+            // 新版每个ruling-entry算一条；旧版按段落计数，排除效果引用及条目内重复段落。
+            var candidates = [];
+            nodes.forEach(function(node) {
+                if (node.nodeType !== 1) return;
+                if (node.matches(".ruling-entry, p")) candidates.push(node);
+                candidates = candidates.concat(
+                    Array.prototype.slice.call(node.querySelectorAll(".ruling-entry, p"))
+                );
+            });
+            var rulingCount = candidates.filter(function(element) {
+                if (!element.textContent.trim()) return false;
+                if (element.closest("blockquote, .effect-text")) return false;
+                if (element.matches(".ruling-entry")) {
+                    return !element.parentElement.closest(".ruling-entry");
+                }
+                return !element.closest(".ruling-entry");
+            }).length;
+
+            // 即使栏目为空，也创建默认收起的容器，动态加载后继续复用。
+            if (!hasFold) {
+                fold = document.createElement("details");
+                fold.className = "ruling-fold";
+                var summary = document.createElement("summary");
+                content = document.createElement("div");
+                content.className = "ruling-fold__content";
+                fold.appendChild(summary);
+                fold.appendChild(content);
+                heading.parentNode.insertBefore(fold, heading.nextSibling);
+                nodes.forEach(function(node) { content.appendChild(node); });
+
+                // 原生details支持鼠标及键盘操作，切换时同步入口文案。
+                fold.addEventListener("toggle", function() {
+                    updateRulingSummary(fold);
+                });
+            }
+            fold.setAttribute("data-ruling-title", sectionTitle);
+            fold.setAttribute("data-ruling-count", rulingCount);
+            updateRulingSummary(fold);
+        });
+    };
+
+    // 条数可能在公共内容引入后变化，每次使用容器保存的栏目名与最新统计值。
+    function updateRulingSummary(fold) {
+        fold.querySelector("summary").textContent =
+            (fold.open ? "收起" : "展开") + fold.getAttribute("data-ruling-title") +
+            "（共" + fold.getAttribute("data-ruling-count") + "条）";
+    }
+
    /* preloader
     * -------------------------------------------------- */
     var ssPreloader = function() {
@@ -379,6 +455,9 @@
             
             // 先加载公共组件
             ssLoadComponents();
+            // 先绑定动态内容通知，再初始化裁定与注意折叠及启动公共内容加载。
+            document.addEventListener("rulinginclude:loaded", ssFoldRulings);
+            ssFoldRulings();
             ssLoadRulingIncludes();
             
             // 初始化其他功能
