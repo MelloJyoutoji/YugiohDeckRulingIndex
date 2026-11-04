@@ -100,6 +100,10 @@ MyCard 构筑由同步脚本自动维护首页日期：按系列比较同步前�
 
 单卡裁定页面统一放在 `cards/`，导航链接使用 `cards/页面名.html`。卡组页通过 `.ruling-include` 元素的 `data-ruling-source` 指定来源页面与内容选择器，例如 `../cards/Ars_Magna.html #ars-magna-ruling > p`。公共脚本负责加载引用内容，便于集中维护多页共用的裁定。含空格的文件名在 URL 中使用 `%20`。
 
+卡组页还会根据构筑名称自动引用单卡资料：先按 `data/mc-series-pages.json` 的主系列映射收集本页的全部有效前排构筑，无前排构筑时使用本页 `old_decks` 历史构筑。任一构筑的完整名称包含 `data/card-ruling-pages.json` 中某项 `aliases` 的名称，就从其 `page` 页面引入对应栏目。时间黑魔术师兼容“时间之黑魔术师”“城之内”，奥艺兼容“大艺术”，调和之天救龙按本名匹配；仅有卡号、没有名称的静态 YDK 不据此推断。
+
+自动引用保留裁定、注意、持续适用的效果、自肃、召唤条件及待核实的栏目归属、完整效果和来源链接；缺失栏目会自动补建，已有同来源、同栏目手工引用不会重复添加。此功能在浏览器加载时生效，继续读取 `cards/` 原文，不将正文复制写入 `decks/` 文件。新增单卡时，在 `data/card-ruling-pages.json` 的 `cards` 数组中配置 `page`（相对站点根目录的路径）和非空名称数组 `aliases`；源页面栏目使用紧邻 `<h2>` 的带唯一 `id` 的 `.auto-number` 容器。
+
 `Embed_K9.html` 与 `Embed_Magistus.html` 是卡组共享片段，保存在 `decks/`，由同目录的页面加载。图片继续保存在根目录的 `images/`。页面迁移后的访问地址为 `decks/页面名.html` 或 `cards/页面名.html`。
 
 ## MyCard 数据同步

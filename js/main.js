@@ -115,6 +115,146 @@
         });
     };
 
+   /* 根据当前卡组的构筑名称引入单卡资料；内容始终以 cards 页面为准。
+    * ------------------------------------------------------ */
+    var ssLoadMatchedCardRulings = function() {
+        var deckDirectory = new URL("decks/", siteRoot).pathname;
+        if (window.location.pathname.indexOf(deckDirectory) !== 0) return;
+
+        var contentNode = document.querySelector(".entry__content");
+        if (!contentNode) return;
+        // 后续异步函数只使用已确认存在的正文容器。
+        const entryContent = contentNode;
+        var pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "");
+        // 栏目顺序也用于补建原页面没有的栏目；待核实内容不并入确定裁定。
+        var sectionTitles = ["裁定", "注意", "持续适用的效果", "自肃", "召唤条件", "待核实"];
+
+        /** 读取站内资料，失败时保留页面原有内容并在控制台报告。 */
+        function fetchResource(path, asJson) {
+            return fetch(new URL(path, siteRoot).href, { cache: "no-store" }).then(function(response) {
+                if (!response.ok) throw new Error("无法读取 " + path + "：" + response.status);
+                return asJson ? response.json() : response.text();
+            });
+        }
+
+        /** 只收集本页所属构筑的名称，保持与前排预览的主系列归属及历史回退一致。 */
+        function collectDeckNames(snapshot, seriesMap) {
+            var labels = seriesMap.pages && seriesMap.pages[pageName] || [];
+            var entries = (snapshot.players || []).filter(function(entry) {
+                return entry && entry.deck && entry.deck.code && labels.indexOf(entry.deck.main_category) !== -1;
+            });
+            var oldDeck = snapshot.old_decks && snapshot.old_decks[pageName];
+            if (!entries.length && oldDeck && oldDeck.deck && oldDeck.deck.code) entries.push(oldDeck);
+            return entries.map(function(entry) { return String(entry.deck.name || ""); });
+        }
+
+        /** 任一构筑名称包含单卡名或别名时即命中，不仅检查第一份构筑。 */
+        function matchesCardRuling(deckNames, aliases) {
+            return deckNames.some(function(deckName) {
+                return aliases.some(function(alias) {
+                    return typeof alias === "string" && alias.length > 0 && deckName.indexOf(alias) !== -1;
+                });
+            });
+        }
+
+        /** 以来源页面和栏目 ID 去重，兼容已有的“#栏目 > p”手工引用。 */
+        function hasSectionInclude(sourceUrl, sectionId) {
+            return Array.prototype.some.call(entryContent.querySelectorAll("[data-ruling-source]"), function(include) {
+                var source = include.getAttribute("data-ruling-source").trim();
+                var separator = source.search(/\s/);
+                if (separator === -1) return false;
+                var selector = source.slice(separator).trim();
+                var existingUrl = new URL(source.slice(0, separator), document.baseURI).href;
+                return existingUrl === sourceUrl && selector.split(/[\s>+~,.:[\]]/)[0] === "#" + sectionId;
+            });
+        }
+
+        /** 找到目标栏目的编号容器；支持已折叠栏目，也为缺失栏目补建容器。 */
+        function getSectionContainer(title) {
+            var headings = Array.prototype.slice.call(entryContent.querySelectorAll("h2"));
+            var heading = headings.find(function(node) { return node.textContent.trim() === title; });
+            if (!heading) {
+                heading = document.createElement("h2");
+                heading.textContent = title;
+                var following = headings.find(function(node) {
+                    var order = sectionTitles.indexOf(node.textContent.trim());
+                    return order > sectionTitles.indexOf(title) || /^卡组预览/.test(node.textContent.trim());
+                });
+                entryContent.insertBefore(heading, following || null);
+            }
+
+            var sibling = heading.nextElementSibling;
+            var foldContent = sibling && sibling.classList.contains("ruling-fold") &&
+                sibling.querySelector(".ruling-fold__content");
+            if (foldContent) {
+                var numbered = foldContent.querySelector(".auto-number");
+                if (numbered) return numbered;
+                sibling = document.createElement("div");
+                sibling.className = "auto-number";
+                foldContent.appendChild(sibling);
+            } else if (!sibling || !sibling.classList.contains("auto-number")) {
+                sibling = document.createElement("div");
+                sibling.className = "auto-number";
+                heading.insertAdjacentElement("afterend", sibling);
+            }
+            return sibling;
+        }
+
+        /** 整栏复制子节点，保留完整效果、规则条目与来源链接，不只截取说明段落。 */
+        function appendCardSections(card, html) {
+            var sourceUrl = new URL(card.page, siteRoot).href;
+            var sourceDocument = new DOMParser().parseFromString(html, "text/html");
+            sourceDocument.querySelectorAll(".entry__content h2").forEach(function(heading) {
+                var title = heading.textContent.trim();
+                var section = heading.nextElementSibling;
+                if (sectionTitles.indexOf(title) === -1 || !section || !section.id ||
+                    !section.classList.contains("auto-number") || !section.textContent.trim() ||
+                    /^无[。.]?$/.test(section.textContent.trim()) || hasSectionInclude(sourceUrl, section.id)) return;
+
+                var target = getSectionContainer(title);
+                // 原栏目仅写“无”时，用实际引入内容替换占位文字。
+                if (/^无[。.]?$/.test(target.textContent.trim())) target.textContent = "";
+                var include = document.createElement("div");
+                include.className = "ruling-include";
+                include.setAttribute("data-ruling-source", sourceUrl + " #" + section.id + " > *");
+                Array.prototype.forEach.call(section.childNodes, function(node) {
+                    include.appendChild(document.importNode(node, true));
+                });
+                resolveComponentUrls(include, sourceUrl);
+                target.appendChild(include);
+                // 复用现有通知，使折叠条数和卡名悬停在动态引入后同步更新。
+                document.dispatchEvent(new CustomEvent("rulinginclude:loaded", { detail: include }));
+            });
+        }
+
+        Promise.all([
+            fetchResource("data/mc-leaderboard.json", true),
+            fetchResource("data/mc-series-pages.json", true),
+            fetchResource("data/card-ruling-pages.json", true)
+        ]).then(function(results) {
+            var deckNames = collectDeckNames(results[0], results[1]);
+            var cards = (results[2].cards || []).filter(function(card) {
+                return card && typeof card.page === "string" && Array.isArray(card.aliases) &&
+                    matchesCardRuling(deckNames, card.aliases);
+            });
+            // 按配置顺序写入，避免网络响应先后导致栏目内容顺序不稳定。
+            return Promise.all(cards.map(function(card) {
+                return fetchResource(card.page, false).then(function(html) {
+                    return { card: card, html: html };
+                }).catch(function(error) {
+                    console.error("加载单卡资料失败:", card.page, error);
+                    return null;
+                });
+            })).then(function(sources) {
+                sources.forEach(function(source) {
+                    if (source) appendCardSections(source.card, source.html);
+                });
+            });
+        }).catch(function(error) {
+            console.error("按构筑名称引入单卡资料失败:", error);
+        });
+    };
+
    /* 卡组裁定与注意默认折叠，保留原有内容与编号容器。
     * ------------------------------------------------------ */
     var ssFoldRulings = function() {
@@ -459,6 +599,7 @@
             document.addEventListener("rulinginclude:loaded", ssFoldRulings);
             ssFoldRulings();
             ssLoadRulingIncludes();
+            ssLoadMatchedCardRulings();
             
             // 初始化其他功能
             ssPreloader();
