@@ -3826,6 +3826,28 @@ body.search-is-visible {
     content: none;
 }
 
+/* 共享裁定的效果原文随原有段落引用，保持正文字号且不额外编号。 */
+.entry__content .ruling-with-effects > .ruling-summary,
+.entry__content .ruling-with-effects > .effect-text,
+.entry__content .ruling-with-effects .effect-text__item {
+    display: block;
+    color: inherit;
+    font: inherit;
+}
+
+/* 段落已有编号缩进，引用区只添加浅灰竖线和正文间距。 */
+.entry__content .ruling-with-effects > .effect-text {
+    margin: 0.8rem 0 0;
+    padding: 0 0 0 1.2rem;
+    border-left: 3px solid #d9d9d9;
+}
+
+/* 效果条目使用 span，不触发 .auto-number p 的计数器。 */
+.entry__content .ruling-with-effects .effect-text__item {
+    margin: 0;
+    padding: 0;
+}
+
 /* 卡组裁定与注意均默认折叠，入口沿用正文大小与字重。 */
 .entry__content .ruling-fold {
     margin: 0 0 2.4rem;
