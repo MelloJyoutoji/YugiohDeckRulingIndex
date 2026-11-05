@@ -147,7 +147,7 @@
         return groups;
     }
 
-   /* 根据当前卡组的构筑名称引入单卡资料；内容始终以 cards 页面为准。
+   /* 按本页全部构筑引入其他轴；资料仅在各轴自己的页面维护。
     * ------------------------------------------------------ */
     var ssLoadMatchedCardRulings = function() {
         var deckDirectory = new URL("decks/", siteRoot).pathname;
@@ -155,41 +155,57 @@
 
         var contentNode = document.querySelector(".entry__content");
         if (!contentNode) return;
-        // 后续异步函数只使用已确认存在的正文容器。
+        // 闭包仅持有已经确认存在的正文节点。
         const entryContent = contentNode;
         var pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "");
-        // 栏目顺序也用于补建原页面没有的栏目；待核实内容不并入确定裁定。
         var sectionTitles = ["裁定", "注意", "持续适用的效果", "自肃", "召唤条件", "待核实"];
+        // 每个来源只请求一次，五栏复用同一份页面快照。
+        var resources = new Map();
+        var staticDeckNames = Array.prototype.map.call(entryContent.querySelectorAll(".deck-preview > summary"), function(summary) {
+            var label = summary.textContent.trim();
+            // 前排标题包含玩家名；只匹配【】内的构筑名，避免昵称误触发其他轴。
+            var name = label.match(/【([^【】]+)】/);
+            return name ? name[1] : label;
+        });
 
-        /** 读取站内资料，失败时保留页面原有内容并在控制台报告。 */
+        /** 读取站内资料，失败时保留现有正文，不生成空的外轴分组。 */
         function fetchResource(path, asJson) {
-            return fetch(new URL(path, siteRoot).href, { cache: "no-store" }).then(function(response) {
-                if (!response.ok) throw new Error("无法读取 " + path + "：" + response.status);
-                return asJson ? response.json() : response.text();
-            });
+            var url = new URL(path, siteRoot).href;
+            var key = url + (asJson ? ":json" : ":html");
+            if (!resources.has(key)) {
+                resources.set(key, fetch(url, { cache: "no-store" }).then(function(response) {
+                    if (!response.ok) throw new Error("无法读取 " + path + "：" + response.status);
+                    return asJson ? response.json() : response.text();
+                }));
+            }
+            return resources.get(key);
         }
 
-        /** 只收集本页所属构筑的名称，保持与前排预览的主系列归属及历史回退一致。 */
+        /** 合并当前、历史及静态预览构筑名称，避免只检查第一份构筑。 */
         function collectDeckNames(snapshot, seriesMap) {
             var labels = seriesMap.pages && seriesMap.pages[pageName] || [];
             var entries = (snapshot.players || []).filter(function(entry) {
                 return entry && entry.deck && entry.deck.code && labels.indexOf(entry.deck.main_category) !== -1;
             });
             var oldDeck = snapshot.old_decks && snapshot.old_decks[pageName];
-            if (!entries.length && oldDeck && oldDeck.deck && oldDeck.deck.code) entries.push(oldDeck);
-            return entries.map(function(entry) { return String(entry.deck.name || ""); });
+            if (oldDeck && oldDeck.deck && oldDeck.deck.code) entries.push(oldDeck);
+            return Array.from(new Set(staticDeckNames.concat(entries.map(function(entry) {
+                return String(entry.deck.name || "");
+            }))));
         }
 
-        /** 任一构筑名称包含单卡名或别名时即命中，不仅检查第一份构筑。 */
+        /** 按系列名及别名匹配构筑，英文名忽略大小写。 */
         function matchesCardRuling(deckNames, aliases) {
             return deckNames.some(function(deckName) {
+                var name = deckName.toLocaleLowerCase();
                 return aliases.some(function(alias) {
-                    return typeof alias === "string" && alias.length > 0 && deckName.indexOf(alias) !== -1;
+                    return typeof alias === "string" && alias.length > 0 &&
+                        name.indexOf(alias.toLocaleLowerCase()) !== -1;
                 });
             });
         }
 
-        /** 以来源页面和栏目 ID 去重，兼容已有的“#栏目 > p”手工引用。 */
+        /** 以来源页面和自身栏目 ID 去重，重复加载不会追加相同内容。 */
         function hasSectionInclude(sourceUrl, sectionId) {
             return Array.prototype.some.call(entryContent.querySelectorAll("[data-ruling-source]"), function(include) {
                 var source = include.getAttribute("data-ruling-source").trim();
@@ -201,8 +217,8 @@
             });
         }
 
-        /** 找到目标栏目的编号容器；分轴页面按资料来源归组，其他页面沿用原结构。 */
-        function getSectionContainer(title, card, sourceDocument) {
+        /** 五栏各自建立轴分组，已存在的折叠状态不因异步更新而重置。 */
+        function getSectionContainer(title, source, sourceDocument) {
             var headings = Array.prototype.slice.call(entryContent.querySelectorAll("h2"));
             var heading = headings.find(function(node) { return node.textContent.trim() === title; });
             if (!heading) {
@@ -212,78 +228,81 @@
                     var order = sectionTitles.indexOf(node.textContent.trim());
                     return order > sectionTitles.indexOf(title) || /^卡组预览/.test(node.textContent.trim());
                 });
-                // 已有标题可能位于板块外框内，插入位置必须取正文的直接子节点。
                 var followingNode = following && (following.closest(".ruling-section") || following);
                 entryContent.insertBefore(heading, followingNode || null);
             }
 
-            // 五栏都从自身外框或大折叠内部取得轴容器。
-            var sibling = getRulingAxisGroups(heading) || heading.nextElementSibling;
-            if (sibling && sibling.classList.contains("ruling-axes")) {
-                // 使用完整来源地址匹配现有轴，避免把新资料混进第一个轴。
-                var sourceUrl = new URL(card.page, siteRoot).href;
-                var axis = Array.prototype.find.call(sibling.children, function(group) {
-                    var page = group.getAttribute("data-ruling-page");
-                    return page && new URL(page, document.baseURI).href === sourceUrl;
-                });
-                if (!axis) {
-                    axis = document.createElement("details");
-                    axis.className = "ruling-axis";
-                    axis.setAttribute("data-ruling-page", sourceUrl);
-                    // 只在创建时展开，后续异步加载保留用户已切换的状态。
-                    axis.open = true;
-                    var summary = document.createElement("summary");
-                    var sourceTitle = sourceDocument.querySelector(".entry__title, title");
-                    summary.textContent = sourceTitle && sourceTitle.textContent.trim() || card.aliases[0];
-                    var axisContent = document.createElement("div");
-                    axisContent.className = "auto-number";
-                    axis.appendChild(summary);
-                    axis.appendChild(axisContent);
-                    // 动态出现的新轴放在通用及跨轴互动组之前。
-                    var general = sibling.querySelector('[data-ruling-axis="general"]');
-                    sibling.insertBefore(axis, general);
+            var groups = getRulingAxisGroups(heading);
+            if (!groups) {
+                // 单卡页的待核实内容仍保留独立栏目，不混入五栏中的确定结论。
+                var numbered = heading.nextElementSibling;
+                if (!numbered || !numbered.classList.contains("auto-number")) {
+                    numbered = document.createElement("div");
+                    numbered.className = "auto-number";
+                    heading.insertAdjacentElement("afterend", numbered);
                 }
-                return axis.querySelector(".auto-number");
+                return numbered;
             }
-            var foldContent = sibling && sibling.classList.contains("ruling-fold") &&
-                sibling.querySelector(".ruling-fold__content");
-            if (foldContent) {
-                var numbered = foldContent.querySelector(".auto-number");
-                if (numbered) return numbered;
-                sibling = document.createElement("div");
-                sibling.className = "auto-number";
-                foldContent.appendChild(sibling);
-            } else if (!sibling || !sibling.classList.contains("auto-number")) {
-                sibling = document.createElement("div");
-                sibling.className = "auto-number";
-                heading.insertAdjacentElement("afterend", sibling);
+            var sourceUrl = new URL(source.page, siteRoot).href;
+            var axis = Array.prototype.find.call(groups.children, function(group) {
+                var page = group.getAttribute("data-ruling-page");
+                return page && new URL(page, document.baseURI).href === sourceUrl;
+            });
+            if (!axis) {
+                axis = document.createElement("details");
+                axis.className = "ruling-axis";
+                axis.setAttribute("data-ruling-page", sourceUrl);
+                axis.open = true;
+                var summary = document.createElement("summary");
+                var sourceTitle = sourceDocument.querySelector(".entry__title, title");
+                summary.textContent = source.name || sourceTitle && sourceTitle.textContent.trim() || source.aliases[0];
+                var axisContent = document.createElement("div");
+                axisContent.className = "auto-number";
+                axis.appendChild(summary);
+                axis.appendChild(axisContent);
+                // 无对应页面的遗留轴保持原位，新增轴放在通用互动组之前。
+                groups.insertBefore(axis, groups.querySelector('[data-ruling-axis="general"]'));
             }
-            return sibling;
+            // 自身没有条目而外轴有内容时，不展示空的自身轴折叠。
+            groups.querySelectorAll('[data-ruling-own="true"]').forEach(function(own) {
+                if (/^无[。.]?$/.test(own.textContent.trim())) {
+                    var ownAxis = own.closest(".ruling-axis");
+                    if (ownAxis && ownAxis !== axis) ownAxis.hidden = true;
+                }
+            });
+            return axis.querySelector(".auto-number");
         }
 
-        /** 整栏复制子节点，保留完整效果、规则条目与来源链接，不只截取说明段落。 */
-        function appendCardSections(card, html) {
-            var sourceUrl = new URL(card.page, siteRoot).href;
+        /** 只复制来源自身的正文；不执行来源脚本，不追踪其引入的其他轴。 */
+        function appendCardSections(source, html) {
+            var sourceUrl = new URL(source.page, siteRoot).href;
             var sourceDocument = new DOMParser().parseFromString(html, "text/html");
+            var isDeckPage = new URL(sourceUrl).pathname.indexOf(deckDirectory) === 0;
             sourceDocument.querySelectorAll(".entry__content h2").forEach(function(heading) {
                 var title = heading.textContent.trim();
-                var section = heading.nextElementSibling;
-                if (sectionTitles.indexOf(title) === -1 || !section || !section.id ||
-                    !section.classList.contains("auto-number") || !section.textContent.trim() ||
-                    /^无[。.]?$/.test(section.textContent.trim()) || hasSectionInclude(sourceUrl, section.id)) return;
+                if (sectionTitles.indexOf(title) === -1) return;
+                var frame = heading.closest(".ruling-section");
+                // 卡组页必须明确标记自身资料；独立单卡页兼容原有编号容器。
+                var section = frame && frame.querySelector('[data-ruling-own="true"]');
+                if (!section && !isDeckPage) section = heading.nextElementSibling;
+                if (!section || !section.id || !section.classList.contains("auto-number") ||
+                    !section.textContent.trim() || /^无[。.]?$/.test(section.textContent.trim()) ||
+                    hasSectionInclude(sourceUrl, section.id)) return;
 
-                var target = getSectionContainer(title, card, sourceDocument);
-                // 原栏目仅写“无”时，用实际引入内容替换占位文字。
-                if (/^无[。.]?$/.test(target.textContent.trim())) target.textContent = "";
+                var target = getSectionContainer(title, source, sourceDocument);
                 var include = document.createElement("div");
                 include.className = "ruling-include";
                 include.setAttribute("data-ruling-source", sourceUrl + " #" + section.id + " > *");
                 Array.prototype.forEach.call(section.childNodes, function(node) {
                     include.appendChild(document.importNode(node, true));
                 });
+                // 来源中的嵌入入口及脚本不能成为下一层自动加载入口。
+                include.querySelectorAll("script, [data-ruling-source]").forEach(function(node) { node.remove(); });
+                include.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                    link.setAttribute("href", sourceUrl + link.getAttribute("href"));
+                });
                 resolveComponentUrls(include, sourceUrl);
                 target.appendChild(include);
-                // 复用现有通知，使折叠条数和卡名悬停在动态引入后同步更新。
                 document.dispatchEvent(new CustomEvent("rulinginclude:loaded", { detail: include }));
             });
         }
@@ -291,28 +310,36 @@
         Promise.all([
             fetchResource("data/mc-leaderboard.json", true),
             fetchResource("data/mc-series-pages.json", true),
-            fetchResource("data/card-ruling-pages.json", true)
+            fetchResource("data/card-ruling-pages.json", true),
+            fetchResource("data/deck-ruling-pages.json", true)
         ]).then(function(results) {
             var deckNames = collectDeckNames(results[0], results[1]);
-            var cards = (results[2].cards || []).filter(function(card) {
-                return card && typeof card.page === "string" && Array.isArray(card.aliases) &&
-                    matchesCardRuling(deckNames, card.aliases);
+            var currentUrl = new URL(window.location.href);
+            currentUrl.hash = "";
+            currentUrl.search = "";
+            var seen = new Set();
+            var sources = (results[3].pages || []).concat(results[2].cards || []).filter(function(source) {
+                if (!source || typeof source.page !== "string" || !Array.isArray(source.aliases)) return false;
+                var url = new URL(source.page, siteRoot).href;
+                if (url === currentUrl.href || seen.has(url) || !matchesCardRuling(deckNames, source.aliases)) return false;
+                seen.add(url);
+                return true;
             });
-            // 按配置顺序写入，避免网络响应先后导致栏目内容顺序不稳定。
-            return Promise.all(cards.map(function(card) {
-                return fetchResource(card.page, false).then(function(html) {
-                    return { card: card, html: html };
+            // 按配置顺序写入，网络完成顺序不影响页面分组顺序。
+            return Promise.all(sources.map(function(source) {
+                return fetchResource(source.page, false).then(function(html) {
+                    return { source: source, html: html };
                 }).catch(function(error) {
-                    console.error("加载单卡资料失败:", card.page, error);
+                    console.error("加载外轴资料失败:", source.page, error);
                     return null;
                 });
-            })).then(function(sources) {
-                sources.forEach(function(source) {
-                    if (source) appendCardSections(source.card, source.html);
+            })).then(function(loaded) {
+                loaded.forEach(function(item) {
+                    if (item) appendCardSections(item.source, item.html);
                 });
             });
         }).catch(function(error) {
-            console.error("按构筑名称引入单卡资料失败:", error);
+            console.error("按构筑引入资料失败:", error);
         });
     };
 
@@ -355,8 +382,9 @@
                 );
             });
             var rulingCount = candidates.filter(function(element) {
-                if (!element.textContent.trim()) return false;
-                if (element.closest("blockquote, .effect-text")) return false;
+                // “无”及已隐藏的空轴不是有效条目，不计入整栏总数。
+                if (!element.textContent.trim() || /^无[。.]?$/.test(element.textContent.trim())) return false;
+                if (element.closest("blockquote, .effect-text, [hidden]")) return false;
                 if (element.matches(".ruling-entry")) {
                     return !element.parentElement.closest(".ruling-entry");
                 }

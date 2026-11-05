@@ -1,0 +1,378 @@
+{
+  "pages": [
+    {
+      "page": "decks/Albaz.html",
+      "name": "烙印",
+      "aliases": [
+        "烙印",
+        "阿不思"
+      ]
+    },
+    {
+      "page": "decks/Aleister.html",
+      "name": "阿莱斯特/召唤兽",
+      "aliases": [
+        "阿莱斯特",
+        "召唤兽"
+      ]
+    },
+    {
+      "page": "decks/Apophis.html",
+      "name": "王家/利息德",
+      "aliases": [
+        "利希德",
+        "利息德",
+        "王家"
+      ]
+    },
+    {
+      "page": "decks/Artmage.html",
+      "name": "神艺",
+      "aliases": [
+        "神艺",
+        "Artmage"
+      ]
+    },
+    {
+      "page": "decks/Ashtra.html",
+      "name": "艮神鬼",
+      "aliases": [
+        "艮神鬼"
+      ]
+    },
+    {
+      "page": "decks/Atlantis.html",
+      "name": "亚特兰蒂斯",
+      "aliases": [
+        "亚特兰蒂斯"
+      ]
+    },
+    {
+      "page": "decks/Blitzclique.html",
+      "name": "雷盟",
+      "aliases": [
+        "雷盟"
+      ]
+    },
+    {
+      "page": "decks/Chaos.html",
+      "name": "混沌",
+      "aliases": [
+        "混沌"
+      ]
+    },
+    {
+      "page": "decks/ClownClan.html",
+      "name": "道化之一座",
+      "aliases": [
+        "道化",
+        "道化一座",
+        "道化之一座"
+      ]
+    },
+    {
+      "page": "decks/Dark_Magician.html",
+      "name": "黑魔导",
+      "aliases": [
+        "黑魔导",
+        "黑魔术师"
+      ]
+    },
+    {
+      "page": "decks/DDD.html",
+      "name": "DDD",
+      "aliases": [
+        "DDD"
+      ]
+    },
+    {
+      "page": "decks/Destiny_HERO.html",
+      "name": "命运英雄",
+      "aliases": [
+        "命运英雄"
+      ]
+    },
+    {
+      "page": "decks/DoomZ.html",
+      "name": "终刻",
+      "aliases": [
+        "终刻"
+      ]
+    },
+    {
+      "page": "decks/DracotailBranded.html",
+      "name": "星辰",
+      "aliases": [
+        "星辰"
+      ]
+    },
+    {
+      "page": "decks/Elfnote.html",
+      "name": "耀圣",
+      "aliases": [
+        "耀圣"
+      ]
+    },
+    {
+      "page": "decks/Enneacraft.html",
+      "name": "纠罪巧",
+      "aliases": [
+        "纠罪巧"
+      ]
+    },
+    {
+      "page": "decks/Exosister.html",
+      "name": "救祓少女",
+      "aliases": [
+        "救祓少女"
+      ]
+    },
+    {
+      "page": "decks/Fairy.html",
+      "name": "妖精传姬",
+      "aliases": [
+        "妖精传姬"
+      ]
+    },
+    {
+      "page": "decks/Hero.html",
+      "name": "英雄",
+      "aliases": [
+        "英雄",
+        "元素英雄",
+        "新空间侠"
+      ]
+    },
+    {
+      "page": "decks/Hope.html",
+      "name": "霍普",
+      "aliases": [
+        "霍普"
+      ]
+    },
+    {
+      "page": "decks/JackAtlas.html",
+      "name": "红莲魔",
+      "aliases": [
+        "红莲魔"
+      ]
+    },
+    {
+      "page": "decks/Kewl_Tune.html",
+      "name": "杀手旋律",
+      "aliases": [
+        "杀手旋律",
+        "杀手旋乐"
+      ]
+    },
+    {
+      "page": "decks/KV.html",
+      "name": "征服斗魂",
+      "aliases": [
+        "征服斗魂"
+      ]
+    },
+    {
+      "page": "decks/Lunalight.html",
+      "name": "月光",
+      "aliases": [
+        "月光"
+      ]
+    },
+    {
+      "page": "decks/Magnet.html",
+      "name": "磁石战士",
+      "aliases": [
+        "磁石"
+      ]
+    },
+    {
+      "page": "decks/Maliss.html",
+      "name": "码丽丝",
+      "aliases": [
+        "码丽丝",
+        "魔∀丽丝",
+        "M∀LICE",
+        "MALISS"
+      ]
+    },
+    {
+      "page": "decks/Mitsurugi.html",
+      "name": "巳剑",
+      "aliases": [
+        "巳剑"
+      ]
+    },
+    {
+      "page": "decks/Orcust.html",
+      "name": "自奏圣乐",
+      "aliases": [
+        "自奏"
+      ]
+    },
+    {
+      "page": "decks/Power_Patron.html",
+      "name": "狱神",
+      "aliases": [
+        "狱神"
+      ]
+    },
+    {
+      "page": "decks/Radiant_Typhoon.html",
+      "name": "绚岚",
+      "aliases": [
+        "绚岚"
+      ]
+    },
+    {
+      "page": "decks/Raise_Moon.html",
+      "name": "盈彩月夜",
+      "aliases": [
+        "升月",
+        "盈彩月夜",
+        "盈采月夜",
+        "盈月"
+      ]
+    },
+    {
+      "page": "decks/Reindsurm.html",
+      "name": "轮回虫龙",
+      "aliases": [
+        "轮回虫龙"
+      ]
+    },
+    {
+      "page": "decks/Rokket.html",
+      "name": "弹丸",
+      "aliases": [
+        "弹丸"
+      ]
+    },
+    {
+      "page": "decks/Sacred_Beasts.html",
+      "name": "三幻魔",
+      "aliases": [
+        "三幻魔"
+      ]
+    },
+    {
+      "page": "decks/Salamangreat.html",
+      "name": "转生炎兽",
+      "aliases": [
+        "转生炎兽"
+      ]
+    },
+    {
+      "page": "decks/Shaddoll.html",
+      "name": "影依",
+      "aliases": [
+        "影依"
+      ]
+    },
+    {
+      "page": "decks/Sky_Striker.html",
+      "name": "闪刀",
+      "aliases": [
+        "闪刀"
+      ]
+    },
+    {
+      "page": "decks/Solfachord.html",
+      "name": "七音服",
+      "aliases": [
+        "七音服"
+      ]
+    },
+    {
+      "page": "decks/SynchronizeGS.html",
+      "name": "星尘同调",
+      "aliases": [
+        "废品",
+        "同调士",
+        "星尘"
+      ]
+    },
+    {
+      "page": "decks/Tellarknight.html",
+      "name": "星骑士",
+      "aliases": [
+        "星骑士"
+      ]
+    },
+    {
+      "page": "decks/Toon.html",
+      "name": "卡通",
+      "aliases": [
+        "卡通"
+      ]
+    },
+    {
+      "page": "decks/Umbral_Horror.html",
+      "name": "阴影",
+      "aliases": [
+        "阴影"
+      ]
+    },
+    {
+      "page": "decks/Unchained.html",
+      "name": "破械",
+      "aliases": [
+        "破械"
+      ]
+    },
+    {
+      "page": "decks/White_Crow.html",
+      "name": "白鸦",
+      "aliases": [
+        "白鸦"
+      ]
+    },
+    {
+      "page": "decks/Witchcrafter.html",
+      "name": "魔女术",
+      "aliases": [
+        "魔女术"
+      ]
+    },
+    {
+      "page": "decks/Xenovader.html",
+      "name": "异解△",
+      "aliases": [
+        "异解"
+      ]
+    },
+    {
+      "page": "decks/Yummy.html",
+      "name": "Yummy",
+      "aliases": [
+        "黯蜜",
+        "味美喵",
+        "Yummy"
+      ]
+    },
+    {
+      "page": "decks/Zenet.html",
+      "name": "归光",
+      "aliases": [
+        "归光"
+      ]
+    },
+    {
+      "page": "decks/Embed_K9.html",
+      "name": "K9",
+      "aliases": [
+        "K9"
+      ]
+    },
+    {
+      "page": "decks/Embed_Magistus.html",
+      "name": "大贤者",
+      "aliases": [
+        "大贤者",
+        "结晶",
+        "绝火",
+        "Magistus"
+      ]
+    }
+  ]
+}

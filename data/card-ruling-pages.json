@@ -2,15 +2,26 @@
   "cards": [
     {
       "page": "cards/Time_Dark_Magician.html",
-      "aliases": ["时间黑魔术师", "时间之黑魔术师", "城之内"]
+      "aliases": [
+        "时间黑魔术师",
+        "时间之黑魔术师",
+        "城之内"
+      ]
     },
     {
       "page": "cards/Ars_Magna.html",
-      "aliases": ["奥艺", "大艺术"]
+      "aliases": [
+        "奥义",
+        "奥艺",
+        "大艺术",
+        "无垢大艺术"
+      ]
     },
     {
       "page": "cards/Fydraulis Harmonia.html",
-      "aliases": ["调和之天救龙"]
+      "aliases": [
+        "调和之天救龙"
+      ]
     }
   ]
 }
