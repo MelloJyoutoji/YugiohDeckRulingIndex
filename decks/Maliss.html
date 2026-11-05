@@ -18,7 +18,7 @@
     ================================================== -->
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/vendor.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css?v=1105sections">
     <link rel="stylesheet" href="../css/deck-viewer.css">
     <link rel="stylesheet" href="../css/judge-tool.css">
 
@@ -61,89 +61,645 @@
                         <h1 class="display-1 entry__title" data-deck-name></h1>
                         <ul class="entry__header-meta">
                             <li class="author">By <a href="https://space.bilibili.com/18234381">梅洛</a></li>
-                            <!-- <li class="cat-links">
-                                <a href="#0">Marketing</a><a href="#0">Management</a>
-                            </li> -->
                         </ul>
                     </div> <!-- end entry__header -->
 
-                    <div class="entry__content">
-                        <h2>裁定</h2>
-                        <div class="ruling-include" data-ruling-source="../cards/Ars_Magna.html #ars-magna-ruling > p"></div>
-                        <div class="auto-number">
-                            <p>
-                                连锁「暗之诱惑」发动「古遗物-圣枪」的③效果. 处理时需要展示手卡一只暗属性怪兽, 不能展示的场合, 全部手牌送去墓地.
-                            </p>
-                            <p>
-                                「码丽丝梦游地下界」适用中, 对方的「闪刀姬-飒天」不能选择直接攻击. 不受魔法卡效果影响的怪兽可以攻击其他码丽丝怪兽.
-                            </p>
-                            <p>
-                                「三战之号」盖放的码丽丝陷阱卡不能适用「这张卡也能把自己场上1只表侧表示的「码丽丝」怪兽除外，在盖放的回合发动。」
-                            </p>
-                            <p>
-                                「发动无效并除外」类效果, 被无效的卡不在原本的场所存在的场合, 不除外; 处理时适用「不能除外」类效果的场合, 无效适用, 不除外; 「不能除外」类效果适用中,
-                                不能发动这类效果.
-                            </p>
-                            <p>
-                                「青眼精灵龙」的①效果适用中, 「协心代码语者@火灵天星」的①效果也能发动, 这个场合, 只能特殊召唤1只怪兽.
-                            </p>
-                            <p>
-                                只有以墓地的怪兽发动「防火龙」的①效果, 才能连锁发动「屋敷童」.
-                            </p>
-                            <p>
-                                发动过①效果的「防火龙」被表侧表示放置到魔法陷阱区域, 那之后又因为效果被在怪兽区域特殊召唤的场合, 也能再次不在同一回合发动①效果,
-                                可以在没有发动过①效果的回合再次发动①效果.
-                            </p>
-                            <p>
-                                通常盖放的攻击力1000以下的怪兽再反转后, 也能作为素材连接召唤「转生炎兽 独角兔」.
-                            </p>
-                            <p>
-                                不是仪式召唤的「电子界代码魔术师」发动②效果时, 不能连锁发动「神之警告」「灵王的波动」. 
-                            </p>
-                            <p>
-                                「码丽丝<王后>红心加密」的①效果被连锁「发动无效并破坏」或是「效果无效并破坏」时, 是在那个「发动无效并破坏」或是「效果无效并破坏」处理之际判断是否满足「这个发动和这个效果不会被无效」.
-                            </p>
-                            <p>
-                                「码丽丝<王后>红心加密」已经被无效或是被「看透心灵之眼」②效果宣言的场合, 发动①效果, 是在这个①效果处理时判断是否满足「这个发动和这个效果不会被无效」.
-                            </p>
-                        </div>
+                    <div class="entry__content" data-ruling-layout="axes">
+                        <section class="ruling-section" data-ruling-section="ruling">
+                            <h2>裁定</h2>
+                            <!-- 裁定整栏默认收起，内部各轴保留各自的展开状态。 -->
+                            <details class="ruling-fold">
+                                <summary>展开裁定</summary>
+                                <div class="ruling-fold__content">
+                                    <!-- 各轴默认展开，组内独立编号；相关引用随对应条目收起。 -->
+                                    <div id="maliss-append-ruling" class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="maliss" open>
+                                            <summary>码丽丝</summary>
+                                            <div class="auto-number">
+                                                <p>
+                                                    「码丽丝梦游地下界」适用中, 对方的「闪刀姬-飒天」不能选择直接攻击. 不受魔法卡效果影响的怪兽可以攻击其他码丽丝怪兽.
+                                                </p>
+                                                <p>
+                                                    「三战之号」盖放的码丽丝陷阱卡不能适用「这张卡也能把自己场上1只表侧表示的「码丽丝」怪兽除外，在盖放的回合发动。」
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔∀丽丝&lt;王后&gt;红心加密」的①被「鲜花女男爵」的②连锁时，在②无效发动的处理时判断连接端是否有怪兽。「锁缚龙 锁镰」的②把①的效果无效时，在锁镰的②处理时及红心加密自身的①处理时分别判断；即使已经适用了锁镰的无效，红心加密的①处理时连接端有怪兽，①仍正常适用。以红心加密为对象的「无限泡影」的①、「技能抽取」的①或「看透心灵之眼」的②适用时，则在红心加密的①处理时判断连接端是否有怪兽。此条按2026-08-07的官方Q&amp;A补充前文的判断时点。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24353&amp;request_locale=ja">官方Q&amp;A（2026-08-07）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23275&amp;request_locale=ja">官方Q&amp;A（2024-08-29）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;王后&gt;红心加密」①：自己·对方回合，以自己的除外状态的1张「魔∀丽丝」卡为对象才能发动（这张卡所连接区有怪兽存在的场合，这个发动和这个效果不会被无效化）。那张卡回到卡组，场上1张卡除外。</span>
+                                                        <span class="effect-text__item">「鲜花女男爵」②：只在这张卡表侧表示存在才有1次，魔法·陷阱·怪兽的效果发动时才能发动。那个发动无效并破坏。</span>
+                                                        <span class="effect-text__item">「锁缚龙 锁镰」②：连锁卡的效果的发动让魔法·陷阱·怪兽的效果发动时，可以从以下效果选择1个发动。<br>●那个效果无效并破坏。<br>●那个效果连锁的卡的效果无效并破坏。</span>
+                                                        <span class="effect-text__item">「无限泡影」①：以对方场上1只表侧表示怪兽为对象才能发动。那只怪兽的效果直到回合结束时无效。盖放的这张卡发动的场合，再在这个回合中让和这张卡相同纵列的其他的魔法·陷阱卡的效果无效化。</span>
+                                                        <span class="effect-text__item">「技能抽取」①：只要这张卡在魔法与陷阱区域存在，场上的表侧表示怪兽的效果无效化。</span>
+                                                        <span class="effect-text__item">「看透心灵之眼」②：自己的场上·墓地有卡通怪兽以及「卡通」魔法卡存在的场合，宣言1个同一连锁上没有把效果发动的卡名才能发动。这张卡表侧表示存在期间，直到回合结束时原本卡名和宣言的卡相同的卡发动的效果无效化。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 无效·改写 · 效果无效 · 不会被无效：满足条件才能适用的这类效果发动时，连锁发动「鲜花女男爵」的②效果这样把那个发动无效的效果时，在「鲜花女男爵」的②效果处理时判断是否满足条件。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 无效·改写 · 效果无效 · 不会被无效：连锁发动「锁缚龙 锁镰」的②效果这样把那个效果无效的效果时，或者发动「琰魔龙 红莲魔·渊」的①效果以及「看透心灵之眼」②效果这样不入连锁让效果无效的效果时，在这类效果最终处理时如果满足条件，那个效果不会无效。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 无效·改写 · 效果无效 · 不会被无效：宣言「魔∀丽丝&lt;王后&gt;红心加密」发动的「看透心灵之眼」的②效果适用中，「魔∀丽丝&lt;王后&gt;红心加密」的①效果发动的场合，或「魔∀丽丝&lt;王后&gt;红心加密」的①效果发动时，以「魔∀丽丝&lt;王后&gt;红心加密」为对象连锁发动「无限泡影」，让卡片整个无效的场合，在「魔∀丽丝&lt;王后&gt;红心加密」的①效果处理时，仍要再判断『这张卡所连接区有怪兽存在的场合，这个发动和这个效果不会被无效化』，满足条件的场合「魔∀丽丝&lt;王后&gt;红心加密」的①效果处理正常适用。「黄金荣耀-弹球手」判断是否无效的处理也一样。26/8/7</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔∀丽丝&lt;兵卒&gt;睡鼠」的①适用的回合，「魔∀丽丝&lt;王后&gt;红心加密」以②特殊召唤后的攻击力为2500×2＋600＝5600。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24124&amp;request_locale=ja">官方Q&amp;A（2024-12-17）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;兵卒&gt;睡鼠」①：自己主要阶段才能发动。从卡组把1只「魔∀丽丝」怪兽除外。这个回合中，自己场上的「魔∀丽丝」怪兽的攻击力上升600。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;王后&gt;红心加密」②：这张卡被除外的场合，支付900基本分才能发动。这张卡的攻击力变成2倍特殊召唤。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 攻守计算 · 同时适用的场合：特殊召唤成功时其他影响攻击力·守备力的效果也要适用的场合，先适用『这个效果特殊召唤的怪兽攻击力·守备力○○』的效果，再适用怪兽自身以及场上其他卡片的效果。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「看透心灵之眼」的②宣言「魔∀丽丝&lt;王后&gt;红心加密」并适用中，红心加密的①处理时，适用「完美世界 卡通世界」的③把其连接端唯一的卡通怪兽除外，连接端不再有怪兽的场合，红心加密的①被无效。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24354&amp;request_locale=ja">官方Q&amp;A（2026-06-19）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;王后&gt;红心加密」①：自己·对方回合，以自己的除外状态的1张「魔∀丽丝」卡为对象才能发动（这张卡所连接区有怪兽存在的场合，这个发动和这个效果不会被无效化）。那张卡回到卡组，场上1张卡除外。</span>
+                                                        <span class="effect-text__item">「看透心灵之眼」②：自己的场上·墓地有卡通怪兽以及「卡通」魔法卡存在的场合，宣言1个同一连锁上没有把效果发动的卡名才能发动。这张卡表侧表示存在期间，直到回合结束时原本卡名和宣言的卡相同的卡发动的效果无效化。</span>
+                                                        <span class="effect-text__item">「完美世界 卡通世界」③：其他卡发动的效果适用之际，可以把自己场上1只卡通怪兽直到那个效果处理后除外（这个回合，这个卡名的这个效果不能把原本卡名相同的怪兽除外）。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔∀丽丝&lt;代码&gt;TB-11」的①特殊召唤的「魔∀丽丝&lt;王后&gt;红心加密」即使连接端有怪兽，仍不能发动①；不会被无效与不能发动是不同的限制。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24144&amp;request_locale=ja">官方Q&amp;A（2025-02-02）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;代码&gt;TB-11」①：从卡组把1只「魔∀丽丝」怪兽特殊召唤。对方场上有卡3张以上存在的场合，也能作为代替从额外卡组把1只「魔∀丽丝」连接怪兽特殊召唤。这个回合，这个效果特殊召唤的怪兽不能攻击，那个效果不能发动。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;王后&gt;红心加密」①：自己·对方回合，以自己的除外状态的1张「魔∀丽丝」卡为对象才能发动（这张卡所连接区有怪兽存在的场合，这个发动和这个效果不会被无效化）。那张卡回到卡组，场上1张卡除外。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔∀丽丝&lt;兵卒&gt;白兔」的②适用的本家连接怪兽与「大薰风的球风」进行战斗时，先考虑球风的③让战斗伤害由对方代受，再适用白兔的②使己方受到的战斗伤害变成0，结果双方均不受战斗伤害。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23823&amp;request_locale=ja">官方Q&amp;A（2026-09-25）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;兵卒&gt;白兔」②：有这张卡位于所连接区的「魔∀丽丝」连接怪兽的战斗发生的对自己的战斗伤害变成0。</span>
+                                                        <span class="effect-text__item">「大薰风的球风」③：只要这张卡在怪兽区域存在，自己的「薰风」怪兽的战斗发生的对自己的战斗伤害由对方代受。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔∀丽丝梦游地下界」的③和对方「噩梦之苦痛」的②同时适用时，可以攻击的自己怪兽仍须向「于贝尔」怪兽攻击；必须向特定怪兽攻击的要求优先于只能选择特定攻击对象的限制。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=10103&amp;request_locale=ja">官方Q&amp;A（2026-09-04）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝梦游地下界」③：只要自己场上有「魔∀丽丝」连接怪兽存在，对方怪兽只能选择「魔∀丽丝」连接怪兽作为攻击对象。</span>
+                                                        <span class="effect-text__item">「噩梦之苦痛」②：只要自己场上有「于贝尔」怪兽存在，可以攻击的对方怪兽必须向「于贝尔」怪兽作出攻击。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔∀丽丝梦游地下界」发动后，在其发动的连锁块处理前被连锁发动的「旋风」的①破坏而离场，①的除外处理不适用。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=12624&amp;request_locale=ja">官方Q&amp;A（2025-12-01）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝梦游地下界」①：作为这张卡的发动时的效果处理，可以从自己的手卡·卡组·墓地把1张「魔∀丽丝」卡除外。</span>
+                                                        <span class="effect-text__item">「旋风」①：以场上1张魔法·陷阱卡为对象才能发动。那张卡破坏。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">连锁1发动「魔∀丽丝&lt;兵卒&gt;白兔」的③，连锁2以「星辰炮手 宝瓶魔」的①融合召唤「奥秘之龙冠」；只要白兔的③处理时龙冠已在怪兽区域表侧表示存在，之后便能发动龙冠的②，不要求白兔的③发动时龙冠已经在场。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24157&amp;request_locale=ja">官方Q&amp;A（2025-03-22）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;兵卒&gt;白兔」③：这张卡被除外的场合，支付300基本分才能发动。这张卡特殊召唤。这个回合，自己不是连接怪兽不能从额外卡组特殊召唤。</span>
+                                                        <span class="effect-text__item">「星辰炮手 宝瓶魔」①：自己·对方的主要阶段，把这张卡从手卡丢弃才能发动。自己的手卡·场上的怪兽作为融合素材，把1只龙族·魔法师族的融合怪兽融合召唤。</span>
+                                                        <span class="effect-text__item">「奥秘之龙冠」②：怪兽发动的效果让那只怪兽或者原本种族和那只怪兽相同的怪兽特殊召唤的场合，以那之内的1只为对象才能发动。作为对象的怪兽以及原本种族和那只怪兽相同的场上的怪兽全部除外。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">连锁1发动「魔∀丽丝&lt;王后&gt;红心加密」的①，连锁2以其为对象发动「神龙骑士 闪耀」的①，即使红心加密已成为效果无效且不受其他效果影响的状态，连锁1处理时仍可被自身①除外。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;王后&gt;红心加密」①：自己·对方回合，以自己的除外状态的1张「魔∀丽丝」卡为对象才能发动（这张卡所连接区有怪兽存在的场合，这个发动和这个效果不会被无效化）。那张卡回到卡组，场上1张卡除外。</span>
+                                                        <span class="effect-text__item">「神龙骑士 闪耀」①：1回合1次，把这张卡1个超量素材取除，以场上1只表侧表示怪兽为对象才能发动。这个回合，作为对象的怪兽效果无效，不受这张卡以外的效果影响。这个效果在对方回合也能发动。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 不受影响：我方连锁1发动「魔∀丽丝&lt;王后&gt;红心加密」①效果，对方连锁2以该「魔∀丽丝&lt;王后&gt;红心加密」为对象发动「神龙骑士 闪耀」①效果，让「魔∀丽丝&lt;王后&gt;红心加密」不受效果影响的状态的场合，连锁1处理时「魔∀丽丝&lt;王后&gt;红心加密」仍被自身①效果除外。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔∀丽丝&lt;王后&gt;红心加密」发动①时即使连接端有怪兽，连锁以其为对象发动「原石的穿光」的①，仍会效果无效并除外；红心加密的①处理时不再有连接端怪兽，故①无效。之后，在已经正规连接召唤的前提下，可以发动红心加密的②使自身攻击力加倍特殊召唤。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;王后&gt;红心加密」①：自己·对方回合，以自己的除外状态的1张「魔∀丽丝」卡为对象才能发动（这张卡所连接区有怪兽存在的场合，这个发动和这个效果不会被无效化）。那张卡回到卡组，场上1张卡除外。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;王后&gt;红心加密」②：这张卡被除外的场合，支付900基本分才能发动。这张卡的攻击力变成2倍特殊召唤。</span>
+                                                        <span class="effect-text__item">「原石的穿光」①：把「原石的穿光」以外的手卡1张「原石」卡或1只通常怪兽给对方观看，以场上1张表侧表示卡为对象才能发动（除衍生物外的，通常怪兽或者5星以上的「原石」怪兽在自己场上存在的场合，也能不给人观看来发动）。作为对象的卡的效果无效并除外。</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="ars-magna" data-ruling-page="../cards/Ars_Magna.html" open>
+                                            <summary>无垢大艺术</summary>
+                                            <div class="auto-number">
+                                                <div class="ruling-include" data-ruling-source="../cards/Ars_Magna.html #ars-magna-ruling > p"></div>
+                                            </div>
+                                        </details>
 
-                        <h2>持续适用的效果</h2>
-                        <div class="auto-number">
-                            <div class="ruling-include" data-ruling-source="../cards/Ars_Magna.html #ars-magna-continuous-effects > p"></div>
-                        </div>
+                                        <details class="ruling-axis" data-ruling-axis="seraph" open>
+                                            <summary>耀圣</summary>
+                                            <div class="auto-number">
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「耀圣之诗～狂奏之狂想曲～」的①适用中，怪兽向对方中央主要怪兽区域的怪兽攻击宣言后，对方以「耀圣之波诗 狄娜」的③交换该怪兽的位置，会发生战斗步骤的卷回；攻击方可以继续攻击换入中央的狄娜，或取消攻击。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24253&amp;request_locale=ja">官方Q&amp;A（2025-11-27）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「耀圣之诗～狂奏之狂想曲～」①：只要自己的中央的主要怪兽区域有怪兽存在，对方怪兽只能向那只怪兽攻击。</span>
+                                                        <span class="effect-text__item">「耀圣之波诗 狄娜」③：对方回合才能发动。自己的主要怪兽区域的这张卡和中央的怪兽的位置交换。那之后，可以把对方手卡随机选1张直到结束阶段表侧除外。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">连锁1发动「耀圣之波诗 狄娜」的③，连锁2发动「耀圣之风诗 蕾吉娜」的①并将其特殊召唤到中央主要怪兽区域；随后与狄娜交换位置，连锁处理完毕后仍可以发动蕾吉娜的②。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「耀圣之波诗 狄娜」③：对方回合才能发动。自己的主要怪兽区域的这张卡和中央的怪兽的位置交换。那之后，可以把对方手卡随机选1张直到结束阶段表侧除外。</span>
+                                                        <span class="effect-text__item">「耀圣之风诗 蕾吉娜」①：自己·对方回合，从自己的手卡·场上（表侧表示）把这张卡以外的1张「耀圣」卡送去墓地才能发动。这张卡从手卡特殊召唤。</span>
+                                                        <span class="effect-text__item">「耀圣之风诗 蕾吉娜」②：这张卡在中央的主要怪兽区域召唤·特殊召唤的场合才能发动。从卡组把「耀圣之风诗 蕾吉娜」以外的1只「耀圣」怪兽特殊召唤。</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="chaos" open>
+                                            <summary>混沌</summary>
+                                            <div class="auto-number">
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「两颗心灵」进行卡的发动并同时发动①，该连锁块的处理被「加辉瑞月之天 西埃洛-停止下注」的①改为抽1张时，不再进行使永续陷阱留场的处理；连锁处理完毕后送去墓地，且不视为被效果送去墓地。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24388&amp;request_locale=ja">官方Q&amp;A（2026-09-17）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「两颗心灵」①：自己·对方回合可以发动。从卡组把有「光与暗的仪式」的卡名记述的1只怪兽加入手卡。那之后，选自己1张手卡丢弃。</span>
+                                                        <span class="effect-text__item">「加辉瑞月之天 西埃洛-停止下注」①：这张卡只要在额外怪兽区域存在，得到以下效果。<br>●这张卡不受其他卡的效果影响。<br>●包含从卡组把卡加入手卡效果的对方发动的效果的处理时，可以把那个效果变成「自己抽1张」。<br>●自己·对方回合1次，把这张卡1个超量素材取除才能发动。自己抽1张。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 无效·改写 · 效果改写：卡的发动时包含从卡组把卡加入手卡效果的「炎舞-「天玑」」、「壹世坏-珍珠世界」、「亚马逊的秘汤」、「两颗心灵」（同时进行卡的发动和①效果的发动）的连锁块处理时，适用「加辉瑞月之天 西埃洛-停止下注」的『包含从卡组把卡加入手卡效果的对方发动的效果的处理时，可以把那个效果变成「自己抽1张」』效果的场合，任何情况下都不会进行让那张永续魔法·场地魔法·永续陷阱卡留在场上的处理，『自己抽1张』的处理进行后那张卡就作为处理完成的魔法·陷阱卡，与通常魔法或通常陷阱卡一样在一连串连锁处理后被送去墓地，由此送去墓地的那张永续魔法·场地魔法·永续陷阱卡不视为因卡的效果送去墓地。26/9/17</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「超魔剑士 黑混沌」的②或「黑色混沌之魔术师 黑混沌」的②提供的不受对方发动效果影响，并不阻止「技能抽取」的①、「次元障壁」的①、「大逮捕」的①及「强夺」的①持续适用；也不阻止「冰剑龙 幻冰龙」的③在结束阶段破坏怪兽。「光器的瀑布」的①在指定区域无效怪兽发动的效果时不另行组成连锁，也能无效这些怪兽的效果。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23491&amp;request_locale=ja">官方Q&amp;A（2026-10-30）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24397&amp;request_locale=ja">官方Q&amp;A（2026-10-02）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「超魔剑士 黑混沌」②：只要自己墓地有仪式魔法卡存在，这张卡不受对方发动的效果影响。</span>
+                                                        <span class="effect-text__item">「黑色混沌之魔术师 黑混沌」②：只要这张卡在怪兽区域存在，自己场上的魔法·陷阱卡不会被对方的效果破坏，不能用对方的效果除外，这张卡不受除以这张卡为对象的效果以外的对方发动的效果影响。</span>
+                                                        <span class="effect-text__item">「技能抽取」①：只要这张卡在魔法与陷阱区域存在，场上的表侧表示怪兽的效果无效化。</span>
+                                                        <span class="effect-text__item">「次元障壁」①：宣言1个怪兽的种类（仪式·融合·同调·超量·灵摆）才能发动。这个回合中，以下效果适用。<br>●双方不能把宣言的种类的怪兽特殊召唤，场上的宣言种类的怪兽的效果无效化。</span>
+                                                        <span class="effect-text__item">「大逮捕」①：以对方场上1只表侧表示怪兽为对象才能把这张卡发动。得到那只怪兽的控制权。那只怪兽在自己场上存在的场合，不能攻击，不能把效果发动。那只怪兽从场上离开时这张卡破坏。</span>
+                                                        <span class="effect-text__item">「强夺」①：得到装备怪兽的控制权。</span>
+                                                        <span class="effect-text__item">「冰剑龙 幻冰龙」③：融合召唤的这张卡因对方从场上离开的场合才能发动。这个回合的结束阶段，对方场上的怪兽全部破坏。</span>
+                                                        <span class="effect-text__item">「光器的瀑布」①：指定自己场上的通常怪兽以及「塞尼特」仪式怪兽数量的对方的主要怪兽区域才能发动。这个回合中，指定的区域各有1次，发动的怪兽的效果无效化。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 不受影响 · 不受发动的效果影响：「铠皇龙-电子暗黑终结龙」的①效果这样，『不受发动的效果影响』效果适用的场合，不受发动的效果的处理时（那个连锁块的处理时）适用的效果的影响，仍然会受到在那个连锁块的处理时以外所适用的效果影响。24/6/23</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">以「黑色混沌之魔术师 黑混沌」为对象发动「超逸融合」的①时，该怪兽会受到以自身为对象发动的效果影响，可以在特殊召唤符合条件的怪兽后，将二者作为融合素材进行融合召唤。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24328&amp;request_locale=ja">官方Q&amp;A（2026-07-23）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「黑色混沌之魔术师 黑混沌」②：只要这张卡在怪兽区域存在，自己场上的魔法·陷阱卡不会被对方的效果破坏，不能用对方的效果除外，这张卡不受除以这张卡为对象的效果以外的对方发动的效果影响。</span>
+                                                        <span class="effect-text__item">「超逸融合」①：支付2000基本分，以场上1只效果怪兽为对象才能发动。和那只怪兽是等级不同并是种族·属性相同的1只怪兽从额外卡组效果无效特殊召唤。那之后，从以下效果选1个适用。<br>●这个效果特殊召唤的怪兽和作为对象的怪兽作为融合素材，把1只融合怪兽融合召唤。<br>●这个效果特殊召唤的怪兽送去墓地。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 基本用语 · 文本的阅读方法 · 效果的对象 · 取对象：以『这张卡不受除以这张卡为对象的效果以外的对方发动的效果影响』效果适用中的「黑色混沌之魔术师 黑混沌」为对象发动「超逸融合」的场合，可以在特殊召唤魔法师族·暗属性怪兽后，选择『●这个效果特殊召唤的怪兽和作为对象的怪兽作为融合素材，把1只融合怪兽融合召唤』来融合召唤。「黑色混沌之魔术师 黑混沌」会受到以自身为对象发动的效果影响，因此可以作为「超逸融合」效果处理的融合素材。以「光与暗之战士 混沌战士」「闭锁世界的冥神」为对象发动「超逸融合」并适用第1个『●』效果的场合也一样，正常作为融合素材。26/5/11</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">盖放的「两颗心灵」进行卡的发动并在同一连锁块发动①时，不能连锁发动「幽鬼兔」的①；已经表侧表示的「两颗心灵」发动①时，可以连锁发动。「守墓的监视者」的①则仅能对应包含①处理的「两颗心灵」的卡的发动；仅进行卡的发动而不发动①，或已经表侧表示后另行发动①，均不能对应。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=15059&amp;request_locale=ja">官方Q&amp;A（2026-07-23）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24403&amp;request_locale=ja">官方Q&amp;A（2026-10-16）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「两颗心灵」①：自己·对方回合可以发动。从卡组把有「光与暗的仪式」的卡名记述的1只怪兽加入手卡。那之后，选自己1张手卡丢弃。</span>
+                                                        <span class="effect-text__item">「幽鬼兔」①：场上的怪兽的效果发动时或者场上的已是表侧表示存在的魔法·陷阱卡的效果发动时，把手卡·场上的这张卡送去墓地才能发动。场上的那张卡破坏。</span>
+                                                        <span class="effect-text__item">「守墓的监视者」①：对方把包含丢弃自身手卡效果的怪兽的效果·魔法·陷阱卡发动时，把这张卡从手卡送去墓地才能发动。那个发动无效并破坏。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片·效果的发动 · 效果的发动：「幽鬼兔」记述的是『场上的已是表侧表示存在的魔法·陷阱卡的效果发动时』，因此不能对应卡的发动，只能对应『卡的发动之外状况的场上效果的发动』。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">不能把已适用离场时除外处理、因而不能回到手卡的怪兽作为「两颗心灵」②的回手代价。「混沌礼帽」的①特殊召唤的里侧守备表示卡不能作为该代价；这些卡变成表侧表示、作为7星以上怪兽存在后可以作为代价。此时从手卡特殊召唤的怪兽，须与实际回到手卡后的卡名不同。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=10487&amp;request_locale=ja">官方Q&amp;A（2026-06-06）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24325&amp;request_locale=ja">官方Q&amp;A（2026-04-30）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「两颗心灵」②：对方把卡的效果发动时，让自己场上1只7星以上的怪兽回到手卡才能发动。把和回去的怪兽卡名不同的有「光与暗的仪式」的卡名记述的1只怪兽从手卡无视召唤条件特殊召唤。</span>
+                                                        <span class="effect-text__item">「混沌礼帽」①：对方把怪兽的效果·通常魔法·通常陷阱卡发动时才能发动。从卡组把3张卡名不同的魔法·陷阱卡作为卡名当作「混沌礼帽」使用的通常怪兽（魔法师族·暗·8星·攻/守0），和有「光与暗的仪式」的卡名记述的自己的主要怪兽区域1只怪兽混合洗切并里侧守备表示盖放。那之后，那个对方发动的效果变成「对方场上1只里侧守备表示怪兽破坏」。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">已经发动过③的「超魔剑士 黑混沌」变成里侧表示后再变成表侧表示，或一时除外后回到怪兽区域，同一回合可以再次发动③。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=12487&amp;request_locale=ja">官方Q&amp;A（2026-06-01）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「超魔剑士 黑混沌」③：1回合1次，自己主要阶段才能发动。对方场上2张卡除外。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「黑色混沌之魔术师 黑混沌」的②适用中，自己魔法·陷阱卡的发动被「神之宣告」的①无效并破坏时，那张卡仍被破坏；发动被无效的卡不作为场上的卡接受该保护。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23488&amp;request_locale=ja">官方Q&amp;A（2026-05-05）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「黑色混沌之魔术师 黑混沌」②：只要这张卡在怪兽区域存在，自己场上的魔法·陷阱卡不会被对方的效果破坏，不能用对方的效果除外，这张卡不受除以这张卡为对象的效果以外的对方发动的效果影响。</span>
+                                                        <span class="effect-text__item">「神之宣告」①：可以把基本分支付一半把以下效果发动。<br>●魔法·陷阱卡发动时才能发动。那个发动无效并破坏。<br>●自己或对方把怪兽召唤·反转召唤·特殊召唤之际才能发动。那个无效，那些怪兽破坏。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「超魔剑士 黑混沌」的②或「黑色混沌之魔术师 黑混沌」的②抗性适用中，不能作为对方「超融合」的①或「阿不思的落胤」的①的融合素材；若场上不能组成不使用这些怪兽的完整合法素材组合，对方不能发动该融合效果。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23510&amp;request_locale=ja">官方Q&amp;A（2026-10-30）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「超魔剑士 黑混沌」②：只要自己墓地有仪式魔法卡存在，这张卡不受对方发动的效果影响。</span>
+                                                        <span class="effect-text__item">「黑色混沌之魔术师 黑混沌」②：只要这张卡在怪兽区域存在，自己场上的魔法·陷阱卡不会被对方的效果破坏，不能用对方的效果除外，这张卡不受除以这张卡为对象的效果以外的对方发动的效果影响。</span>
+                                                        <span class="effect-text__item">「超融合」①：丢弃1张手卡才能发动。自己·对方场上的怪兽作为融合素材，把1只融合怪兽融合召唤。</span>
+                                                        <span class="effect-text__item">「阿不思的落胤」①：这张卡召唤·特殊召唤的场合，丢弃1张手卡才能发动。包含这张卡的自己·对方场上的怪兽作为融合素材，把1只融合怪兽融合召唤。那个时候，不能把自己场上的其他怪兽作为融合素材。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">对方以「精灵圣贤者」和「混沌之魔王-骸骨恶魔」同调召唤「混沌之双翼」后，连锁1以己方「光与暗之战士 混沌战士」为对象发动双翼的①，连锁2发动骸骨恶魔的②，己方连锁3发动「混沌礼帽」的①，将该仪式怪兽与卡组3张魔法·陷阱混合洗切盖放。连锁2改写后的破坏处理不能识别哪张盖卡是原仪式怪兽；连锁1仍能追踪原本指定的对象，将其除外。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「混沌之双翼」①：这张卡特殊召唤的场合，以场上1张卡为对象才能发动。那张卡除外。</span>
+                                                        <span class="effect-text__item">「混沌之魔王-骸骨恶魔」②：这张卡被送去墓地的场合，从手卡·卡组把1张仪式魔法卡送去墓地才能发动。把1只在那张卡有卡名记述的仪式怪兽从卡组加入手卡。</span>
+                                                        <span class="effect-text__item">「混沌礼帽」①：对方把怪兽的效果·通常魔法·通常陷阱卡发动时才能发动。从卡组把3张卡名不同的魔法·陷阱卡作为卡名当作「混沌礼帽」使用的通常怪兽（魔法师族·暗·8星·攻/守0），和有「光与暗的仪式」的卡名记述的自己的主要怪兽区域1只怪兽混合洗切并里侧守备表示盖放。那之后，那个对方发动的效果变成「对方场上1只里侧守备表示怪兽破坏」。</span>
+                                                        <span class="effect-text__item">「光与暗之战士 混沌战士」②：这张卡只要在怪兽区域存在，不会被战斗破坏，不受除以这张卡为对象的效果以外的对方发动的效果影响。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">对方场上有「异解△审判」、里侧除外有「虚蚀异解△ 哲罕南」，己方有表侧「两颗心灵」，并持有「光与暗之战士 混沌战士」及「黑色混沌之魔术师 黑混沌」；仪式召唤前者后，对方发动审判的①，己方连锁发动两颗心灵的②将其回手并特殊召唤后者。审判是否继续特殊召唤及后续循环处理为调整中。现行审判的①已明确同一回合不能再次选择相同属性的怪兽，不能直接沿用无限循环的前提；具体场面及修订关系仍待核实。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「异解△审判」①：对方把怪兽召唤·特殊召唤的场合，以那之内的1只为对象才能发动。选持有和那只怪兽相同属性的自己的除外状态（里侧）的1只「异解△」怪兽加入手卡或特殊召唤（这个回合，这个卡名的这个效果不能选相同属性的怪兽）。这个回合，自己不能把「异解△」卡以外的卡的效果发动。</span>
+                                                        <span class="effect-text__item">「两颗心灵」②：对方把卡的效果发动时，让自己场上1只7星以上的怪兽回到手卡才能发动。把和回去的怪兽卡名不同的有「光与暗的仪式」的卡名记述的1只怪兽从手卡无视召唤条件特殊召唤。</span>
+                                                        <span class="effect-text__item">「虚蚀异解△ 哲罕南」①：这张卡召唤·特殊召唤的场合发动。从自己卡组上面把8张卡里侧除外。</span>
+                                                        <span class="effect-text__item">「光与暗之战士 混沌战士」「光与暗的仪式」降临<br>这个卡名的①③的效果1回合各能使用1次。</span>
+                                                        <span class="effect-text__item">「光与暗之战士 混沌战士」②：这张卡只要在怪兽区域存在，不会被战斗破坏，不受除以这张卡为对象的效果以外的对方发动的效果影响。</span>
+                                                        <span class="effect-text__item">「黑色混沌之魔术师 黑混沌」「光与暗的仪式」降临<br>这个卡名的①③的效果1回合各能使用1次。</span>
+                                                        <span class="effect-text__item">「黑色混沌之魔术师 黑混沌」②：只要这张卡在怪兽区域存在，自己场上的魔法·陷阱卡不会被对方的效果破坏，不能用对方的效果除外，这张卡不受除以这张卡为对象的效果以外的对方发动的效果影响。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">已经在场上表侧表示存在的「两颗心灵」，其②可以在同一组连锁上发动多次；①与②不能在同一连锁上发动的限制仍须遵守。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「两颗心灵」这个卡名的①的效果1回合只能使用1次，①②的效果在同一连锁上不能发动。</span>
+                                                        <span class="effect-text__item">「两颗心灵」②：对方把卡的效果发动时，让自己场上1只7星以上的怪兽回到手卡才能发动。把和回去的怪兽卡名不同的有「光与暗的仪式」的卡名记述的1只怪兽从手卡无视召唤条件特殊召唤。</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="gold" open>
+                                            <summary>黄金柜</summary>
+                                            <div class="auto-number">
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破坏龙 甘多拉·禁忌」被「黑羽-疾风之盖尔」的②把当前攻击力变成一半后，其攻击力固定为该数值，不因除外状态卡数量变化而重新计算自身②。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=11911&amp;request_locale=ja">官方Q&amp;A（2024-11-23）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破坏龙 甘多拉·禁忌」②：这张卡的攻击力上升除外状态的卡数量×300。</span>
+                                                        <span class="effect-text__item">「黑羽-疾风之盖尔」②：1回合1次，以对方场上1只表侧表示怪兽为对象才能发动。那只对方怪兽的攻击力·守备力变成一半。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 攻守计算 · 发动效果把「攻击力·守备力」『变成』『交换』：这类效果会把处理后的「攻击力·守备力」固定住。也就是说，这类效果处理后，之前所有适用中的影响其「攻击力·守备力」的效果都不再对那些怪兽适用，因此即使是影响自身的效果，被无效后也保持当前数值。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">通过自身①方法特殊召唤、卡名当作「黑魔术少女」的「魔术师的徒弟-黑魔术少女」，可以作为「蒂迈欧之眼」的①或「蒂迈欧之眼光」的①的对象，融合召唤记述「黑魔术少女」为素材的融合怪兽。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=13254&amp;request_locale=ja">官方Q&amp;A（2026-02-27）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔术师的徒弟-黑魔术少女」①：这张卡可以丢弃1张手卡，从手卡特殊召唤。这个方法特殊召唤的这张卡的卡名当作「黑魔术少女」使用。</span>
+                                                        <span class="effect-text__item">「蒂迈欧之眼」①：以自己场上1只「黑魔术」怪兽为对象才能发动。只用那1只怪兽作为融合素材，把有那个卡名作为融合素材记述的1只融合怪兽融合召唤。</span>
+                                                        <span class="effect-text__item">「蒂迈欧之眼光」①：以自己的场上·墓地1只「黑魔术师」或「黑魔术少女」为对象才能发动。只用那1只怪兽作为融合素材回到卡组，把有那个卡名作为融合素材记述的1只融合怪兽当作「蒂迈欧之眼」的效果作融合召唤。这个效果特殊召唤的怪兽在下个回合的结束阶段除外。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「瘴烟之死灵术师」的①把「魔术师的徒弟-黑魔术少女」加入手卡后，该回合不能发动该卡名的效果；以自身①方法特殊召唤并当作「黑魔术少女」后，可以发动②。「亚空间战斗」的①选过徒弟时，该回合双方也不能发动「魔术师的徒弟-黑魔术少女」的怪兽效果，但可以发动卡名已变成「黑魔术少女」后的效果。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24199&amp;request_locale=ja">官方Q&amp;A（2025-08-07）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24261&amp;request_locale=ja">官方Q&amp;A（2026-01-22）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「瘴烟之死灵术师」①：这张卡连接召唤的场合才能发动。从自己墓地把1只5星以上的魔法师族·暗属性怪兽加入手卡。这个回合，自己不能把这个效果加入手卡的卡以及那些同名卡的效果发动。</span>
+                                                        <span class="effect-text__item">「魔术师的徒弟-黑魔术少女」①：这张卡可以丢弃1张手卡，从手卡特殊召唤。这个方法特殊召唤的这张卡的卡名当作「黑魔术少女」使用。</span>
+                                                        <span class="effect-text__item">「魔术师的徒弟-黑魔术少女」②：这张卡召唤·特殊召唤的场合才能发动。从卡组把1张「光之黄金柜」加入手卡。</span>
+                                                        <span class="effect-text__item">「亚空间战斗」①：以下效果3次适用。<br>●双方各自从自身卡组选1只攻击力?以外的怪兽，给双方确认。攻击力较高方的怪兽加入选那只的玩家手卡。攻击力较低方的怪兽破坏，选那只的玩家受到500伤害。攻击力相同的场合，选的怪兽回到卡组。这个回合，双方不能把这个效果让自身选的怪兽以及那些同名怪兽的怪兽效果发动。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「光之黄金柜」进行卡的发动时，其①尚未适用；对方连锁发动「旋风」的①，仍能将其破坏。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24237&amp;request_locale=ja">官方Q&amp;A（2026-03-09）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「光之黄金柜」①：这张卡只要在魔法与陷阱区域存在，不会被怪兽的效果破坏。</span>
+                                                        <span class="effect-text__item">「旋风」①：以场上1张魔法·陷阱卡为对象才能发动。那张卡破坏。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「金满而谦虚之壶」发动的回合，只有在战斗阶段且自己场上同时存在表侧表示的「光之黄金柜」及记述该卡名的怪兽、须进行追加抽卡的情况下，不能发动「对未来的沉默」的①；不在战斗阶段，或不具备上述任一场面条件时仍可以发动。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24052&amp;request_locale=ja">官方Q&amp;A（2024-02-01）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「金满而谦虚之壶」这个卡名的卡在1回合只能发动1张，这张卡发动的回合，自己不能用卡的效果抽卡。</span>
+                                                        <span class="effect-text__item">「金满而谦虚之壶」①：从额外卡组把3张或6张卡里侧除外才能发动。把除外数量的卡从自己卡组上面翻开，从那之中选1张加入手卡，剩下的卡用喜欢的顺序回到卡组下面。这张卡的发动后，直到回合结束时对方受到的全部伤害变成一半。</span>
+                                                        <span class="effect-text__item">「对未来的沉默」①：从卡组把有「光之黄金柜」的卡名记述的1只怪兽加入手卡。自己场上有着「光之黄金柜」以及有那个卡名记述的怪兽存在的状态，把这张卡在自己·对方的战斗阶段发动的场合，再让双方各自直到手卡变成6张为止抽卡。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「技能抽取」的①已适用时，以「魔术师的徒弟-黑魔术少女」自身①方法特殊召唤，卡名仍当作「黑魔术少女」；以该方法特殊召唤后再适用「技能抽取」的①也一样。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24140&amp;request_locale=ja">官方Q&amp;A（2025-01-30）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔术师的徒弟-黑魔术少女」①：这张卡可以丢弃1张手卡，从手卡特殊召唤。这个方法特殊召唤的这张卡的卡名当作「黑魔术少女」使用。</span>
+                                                        <span class="effect-text__item">「技能抽取」①：只要这张卡在魔法与陷阱区域存在，场上的表侧表示怪兽的效果无效化。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破坏龙 甘多拉·禁忌」的③处理时，即使场上其他卡只有衍生物，只破坏并使这些衍生物消灭，仍进行从卡组特殊召唤的处理，等级也上升被破坏衍生物的数量。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破坏龙 甘多拉·禁忌」③：把基本分支付一半才能发动。场上的其他卡全部破坏并除外。那之后，从卡组把有「光之黄金柜」的卡名记述的1只7星以下的怪兽特殊召唤。这个效果特殊召唤的怪兽的等级上升这个效果破坏的卡数量的数值。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破坏龙 甘多拉·禁忌」的③被「古遗物-圣枪」的③连锁，且场上其他卡只有衍生物，实际没有卡被除外时，是否继续特殊召唤、以及召唤后是否上升等级，调整中。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破坏龙 甘多拉·禁忌」③：把基本分支付一半才能发动。场上的其他卡全部破坏并除外。那之后，从卡组把有「光之黄金柜」的卡名记述的1只7星以下的怪兽特殊召唤。这个效果特殊召唤的怪兽的等级上升这个效果破坏的卡数量的数值。</span>
+                                                        <span class="effect-text__item">「古遗物-圣枪」③：对方回合，把手卡·场上的这张卡解放才能发动。这个回合，双方不能把卡除外。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「天球之圣刻印」的②把「破坏龙 甘多拉·禁忌」的攻击力、守备力变成0特殊召唤后，仍适用甘多拉的②；除外状态已有3张卡时攻击力为900，原先没有除外卡、之后出现1张时攻击力为300。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「天球之圣刻印」②：这张卡被解放的场合发动。从手卡·卡组把1只龙族怪兽攻击力·守备力变成0特殊召唤。</span>
+                                                        <span class="effect-text__item">「破坏龙 甘多拉·禁忌」②：这张卡的攻击力上升除外状态的卡数量×300。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 攻守计算 · 同时适用的场合：除外状态没有卡时，「天球之圣刻印」的②效果特殊召唤「破坏龙 甘多拉·禁忌」后，除外状况出现1张卡的场合，「破坏龙 甘多拉·禁忌」的攻击力会因自身②效果上升300。除外状态存在3张卡时，「天球之圣刻印」的②效果特殊召唤「破坏龙 甘多拉·禁忌」的场合，「破坏龙 甘多拉·禁忌」的攻击力会因自身②效果上升900。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">对方战斗阶段以「魔术礼帽」的①将「光之黄金柜」「封印之黄金柜」作为怪兽盖放，再以「沙漠之光」使其表侧表示；「封印之黄金柜」被破坏后，自己怪兽区域只存在「光之黄金柜」时，发动「对未来的沉默」的①仍进行双方抽至6张的处理。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔术礼帽」①：对方战斗阶段才能发动。从卡组选2张魔法·陷阱卡，那2张卡当作通常怪兽卡（攻/守0）使用，和自己的主要怪兽区域1只怪兽混合洗切并里侧守备表示盖放。这个效果从卡组特殊召唤的卡不在战斗阶段内不能存在，战斗阶段结束时破坏。</span>
+                                                        <span class="effect-text__item">「沙漠之光」自己场上的所有怪兽全部变成表侧守备表示。</span>
+                                                        <span class="effect-text__item">「对未来的沉默」①：从卡组把有「光之黄金柜」的卡名记述的1只怪兽加入手卡。自己场上有着「光之黄金柜」以及有那个卡名记述的怪兽存在的状态，把这张卡在自己·对方的战斗阶段发动的场合，再让双方各自直到手卡变成6张为止抽卡。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">对方以「死者苏生」的①特殊召唤「救援ACE队 消防栓」，其场上另有2只「救援ACE队 脉冲灭火员」；对方在连锁1解放那2只怪兽发动墓地「龙血公 吸血鬼」的自身特殊召唤效果时，自己仍不能连锁以消防栓为对象发动「光之黄金柜」的③。「龙血公 吸血鬼」的该效果在来源中为②，现行文本为③，序号差异待核实。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「死者苏生」①：以自己或对方的墓地1只怪兽为对象才能发动。那只怪兽在自己场上特殊召唤。</span>
+                                                        <span class="effect-text__item">「救援ACE队 消防栓」①：只要自己场上有「救援ACE队 消防栓」以外的「救援ACE队」怪兽存在，对方怪兽不能选择这张卡作为攻击对象，对方不能以此作为效果的对象。</span>
+                                                        <span class="effect-text__item">「龙血公 吸血鬼」③：从对方墓地有怪兽特殊召唤的场合，把自己场上2只怪兽解放才能发动。这张卡从墓地特殊召唤。</span>
+                                                        <span class="effect-text__item">「光之黄金柜」③：对方从墓地把怪兽特殊召唤的场合，从手卡丢弃1张魔法卡，以那之内的1只为对象才能发动。那只怪兽送去墓地。</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general" open>
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number">
+                                                <p>
+                                                    连锁「暗之诱惑」发动「古遗物-圣枪」的③效果. 处理时需要展示手卡一只暗属性怪兽, 不能展示的场合, 全部手牌送去墓地.
+                                                </p>
+                                                <p>
+                                                    「发动无效并除外」类效果, 被无效的卡不在原本的场所存在的场合, 不除外; 处理时适用「不能除外」类效果的场合, 无效适用, 不除外; 「不能除外」类效果适用中,
+                                                    不能发动这类效果.
+                                                </p>
+                                                <p>
+                                                    「青眼精灵龙」的①效果适用中, 「协心代码语者@火灵天星」的①效果也能发动, 这个场合, 只能特殊召唤1只怪兽.
+                                                </p>
+                                                <p>
+                                                    只有以墓地的怪兽发动「防火龙」的①效果, 才能连锁发动「屋敷童」.
+                                                </p>
+                                                <p>
+                                                    发动过①效果的「防火龙」被表侧表示放置到魔法陷阱区域, 那之后又因为效果被在怪兽区域特殊召唤的场合, 也能再次不在同一回合发动①效果,
+                                                    可以在没有发动过①效果的回合再次发动①效果.
+                                                </p>
+                                                <p>
+                                                    通常盖放的攻击力1000以下的怪兽再反转后, 也能作为素材连接召唤「转生炎兽 独角兔」.
+                                                </p>
+                                                <p>
+                                                    不是仪式召唤的「电子界代码魔术师」发动②效果时, 不能连锁发动「神之警告」「灵王的波动」.
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔∀丽丝&lt;代码&gt;TB-11」的①从额外卡组特殊召唤的「魔∀丽丝&lt;王后&gt;红心加密」「魔∀丽丝&lt;王后&gt;白棋捆绑」没有经过连接召唤，之后被除外也不能分别发动②、③把自身特殊召唤。「两颗心灵」的②可以从手卡把未仪式召唤过的「黑色混沌之魔术师 黑混沌」无视召唤条件特殊召唤，但这不解除苏生限制。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=163&amp;request_locale=ja">官方Q&amp;A（2026-01-22）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=21297&amp;request_locale=ja">官方Q&amp;A（2024-09-16）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=18104&amp;request_locale=ja">官方Q&amp;A（2026-04-29）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;代码&gt;TB-11」①：从卡组把1只「魔∀丽丝」怪兽特殊召唤。对方场上有卡3张以上存在的场合，也能作为代替从额外卡组把1只「魔∀丽丝」连接怪兽特殊召唤。这个回合，这个效果特殊召唤的怪兽不能攻击，那个效果不能发动。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;王后&gt;红心加密」②：这张卡被除外的场合，支付900基本分才能发动。这张卡的攻击力变成2倍特殊召唤。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;王后&gt;白棋捆绑」③：这张卡被除外的场合，支付900基本分才能发动。这张卡特殊召唤。那之后，自己可以抽1张。</span>
+                                                        <span class="effect-text__item">「两颗心灵」②：对方把卡的效果发动时，让自己场上1只7星以上的怪兽回到手卡才能发动。把和回去的怪兽卡名不同的有「光与暗的仪式」的卡名记述的1只怪兽从手卡无视召唤条件特殊召唤。</span>
+                                                        <span class="effect-text__item">「黑色混沌之魔术师 黑混沌」「光与暗的仪式」降临<br>这个卡名的①③的效果1回合各能使用1次。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 特殊召唤怪兽、召唤限制和苏生限制 · 苏生限制：没有用正规手续出场的特殊召唤怪兽，之后放置到墓地·除外·表侧额外卡组或魔法·陷阱卡区域的场合，不能被正规手续以外的方法特殊召唤。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 特殊召唤怪兽、召唤限制和苏生限制 · 无视召唤条件：「虹之引力」「破限疾驰」等『无视召唤条件特殊召唤』的效果，可以无视怪兽自身记述的召唤限制来特殊召唤那些怪兽。22/7/22</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 特殊召唤怪兽、召唤限制和苏生限制 · 无视召唤条件：这样的效果仍然不能无视苏生限制。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔封的芳香」的①适用中，仍可以发动「超魔剑士 黑混沌」的①或「耀圣之波诗 狄娜」的②，将相应的永续陷阱、永续魔法表侧表示放置；放置不属于该卡的发动。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24051&amp;request_locale=ja">官方Q&amp;A（2026-05-31）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔封的芳香」①：只要这张卡在魔法与陷阱区域存在，双方魔法卡若不盖放则不能发动，直到从盖放的玩家来看的下次的自己回合到来不能发动。</span>
+                                                        <span class="effect-text__item">「超魔剑士 黑混沌」①：把这张卡从手卡丢弃才能发动。从自己的卡组·墓地把有「光与暗的仪式」的卡名记述的1张永续陷阱卡在自己场上表侧表示放置。</span>
+                                                        <span class="effect-text__item">「耀圣之波诗 狄娜」②：自己主要阶段才能发动。从卡组把1张「耀圣」永续魔法卡在自己场上表侧表示放置。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片·效果的发动 · 在效果处理中发动魔法·陷阱卡：「慧眼之魔术师」等效果记述的是『放置』，不是发动，与这段解说无关。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「魔∀丽丝梦游地下界」的①、「魔∀丽丝&lt;兵卒&gt;三月兔」的①和「光与暗的仪式」的①发动时，即使当时墓地没有能被这些效果除外的卡，也可以连锁发动「屋敷童」的①。「魔∀丽丝&lt;代码&gt;GWC-06」的①及「结合与乖离之无垢大艺术」的①也一样，即使墓地没有能被该效果特殊召唤的怪兽，仍能连锁发动「屋敷童」的①。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=9826&amp;request_locale=ja">官方Q&amp;A（2026-07-23）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23215&amp;request_locale=ja">官方Q&amp;A（2026-10-30）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「魔∀丽丝梦游地下界」①：作为这张卡的发动时的效果处理，可以从自己的手卡·卡组·墓地把1张「魔∀丽丝」卡除外。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;兵卒&gt;三月兔」①：这张卡在手卡存在的场合，自己·对方的主要阶段才能发动。从自己的手卡·墓地把这张卡以外的1张「魔∀丽丝」卡除外，这张卡特殊召唤。</span>
+                                                        <span class="effect-text__item">「光与暗的仪式」①：等级合计直到变成仪式召唤的怪兽的等级以上为止，把自己的手卡·场上的怪兽解放或者作为解放的代替而把自己墓地的怪兽除外，从手卡把「黑色混沌之魔术师 黑混沌」或「光与暗之战士 混沌战士」仪式召唤。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;代码&gt;GWC-06」①：自己的墓地·除外状态的1只「魔∀丽丝」怪兽特殊召唤。那之后，自己场上有「魔∀丽丝」连接怪兽存在的场合，可以让自己基本分回复这个效果特殊召唤的怪兽的原本攻击力的数值。</span>
+                                                        <span class="effect-text__item">「结合与乖离之无垢大艺术」①：把这张卡从手卡除外才能发动。从自己的墓地·除外状态把1只魔法师族以外的「无垢大艺术」怪兽特殊召唤。这个回合中，自己的「狱神」连接怪兽在同1次的战斗阶段中最多3次可以向怪兽攻击。</span>
+                                                        <span class="effect-text__item">「屋敷童」①：包含以下其中任意种效果的魔法·陷阱·怪兽的效果发动时，把这张卡从手卡丢弃才能发动。那个发动无效。<br>●从墓地把卡加入手卡·卡组·额外卡组的效果<br>●从墓地把怪兽特殊召唤的效果<br>●从墓地把卡除外的效果</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「三战之号」的①或「梦幻崩影·狮鹫」的①盖放的「魔∀丽丝&lt;代码&gt;MTP-07」「魔∀丽丝&lt;代码&gt;GWC-06」「魔∀丽丝&lt;代码&gt;TB-11」，当回合不能通过除外自己场上表侧表示的本家怪兽来发动。「魔封的芳香」的①适用中，「栗球兽卫」的①盖放的速攻魔法也不能在该回合发动，须等到从盖放者来看的下次自己回合到来。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24152&amp;request_locale=ja">官方Q&amp;A（2026-08-09）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=22287&amp;request_locale=ja">官方Q&amp;A（2026-10-30）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「三战之号」①：这个回合对方是已把怪兽的效果发动的场合才能发动。从卡组把「三战之号」以外的1张通常魔法·通常陷阱卡在自己场上盖放。这个效果盖放的卡在这个回合不能发动。对方场上有怪兽存在的场合，也能不盖放加入手卡。</span>
+                                                        <span class="effect-text__item">「梦幻崩影·狮鹫」①：这张卡连接召唤的场合，丢弃1张手卡，以自己墓地1张魔法·陷阱卡为对象才能发动。那张卡在自己场上盖放。这个效果盖放的卡在这个回合不能发动。这个效果的发动时这张卡是互相连接状态的场合，再让自己可以抽1张。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;代码&gt;MTP-07」这个卡名的卡在1回合只能发动1张。这张卡也能把自己场上1只表侧表示的「魔∀丽丝」怪兽除外，在盖放的回合发动。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;代码&gt;GWC-06」这个卡名的卡在1回合只能发动1张。这张卡也能把自己场上1只表侧表示的「魔∀丽丝」怪兽除外，在盖放的回合发动。</span>
+                                                        <span class="effect-text__item">「魔∀丽丝&lt;代码&gt;TB-11」这个卡名的卡在1回合只能发动1张。这张卡也能把自己场上1只表侧表示的「魔∀丽丝」怪兽除外，在盖放的回合发动。</span>
+                                                        <span class="effect-text__item">「魔封的芳香」①：只要这张卡在魔法与陷阱区域存在，双方魔法卡若不盖放则不能发动，直到从盖放的玩家来看的下次的自己回合到来不能发动。</span>
+                                                        <span class="effect-text__item">「栗球兽卫」①：自己·对方回合，可以把这张卡从手卡丢弃，从以下效果选择1个发动。<br>●这个回合，自己受到的战斗·效果伤害只有1次变成0。<br>●从卡组把有「光与暗的仪式」的卡名记述的1张速攻魔法·陷阱卡在自己场上盖放。这个效果盖放的卡在盖放的回合也能发动。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「看透心灵之眼」的②按原本卡名识别卡片。宣言「魔术师的徒弟-黑魔术少女」或「毁灭之黑魔术师」后，即使其当前卡名分别当作「黑魔术少女」「黑魔术师」，发动的效果仍被无效；只宣言变化后的卡名则不会使其发动的效果无效。无需发动的改名处理也不会被该②无效。 来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24359&amp;request_locale=ja">官方Q&amp;A（2026-11-03）</a>。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「看透心灵之眼」②：自己的场上·墓地有卡通怪兽以及「卡通」魔法卡存在的场合，宣言1个同一连锁上没有把效果发动的卡名才能发动。这张卡表侧表示存在期间，直到回合结束时原本卡名和宣言的卡相同的卡发动的效果无效化。</span>
+                                                        <span class="effect-text__item">「魔术师的徒弟-黑魔术少女」①：这张卡可以丢弃1张手卡，从手卡特殊召唤。这个方法特殊召唤的这张卡的卡名当作「黑魔术少女」使用。</span>
+                                                        <span class="effect-text__item">「魔术师的徒弟-黑魔术少女」②：这张卡召唤·特殊召唤的场合才能发动。从卡组把1张「光之黄金柜」加入手卡。</span>
+                                                        <span class="effect-text__item">「魔术师的徒弟-黑魔术少女」③：这张卡的攻击力上升有「光之黄金柜」的卡名记述的双方墓地的怪兽数量×300。</span>
+                                                        <span class="effect-text__item">「毁灭之黑魔术师」①：这张卡的卡名只要在场上·墓地存在当作「黑魔术师」使用。</span>
+                                                        <span class="effect-text__item">「毁灭之黑魔术师」②：这张卡特殊召唤的场合才能发动。把1只「黑魔术师」或者1张有那个卡名记述的卡从卡组加入手卡。</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </details>
+                        </section>
 
-                        <h2>注意</h2>
-                        <div class="auto-number">
-                            <div class="ruling-include" data-ruling-source="../cards/Ars_Magna.html #ars-magna-notes > p"></div>
-                            <p>
-                                「码丽丝<代码>TB-11」特殊召唤的怪兽在特殊召唤的回合不能攻击, 不能把效果发动.
-                            </p>
-                            <p>
-                                注意码丽丝下级处于码丽丝连接怪兽的连接端时各自的效果.
-                            </p>
-                            <p>
-                                「G石人·水晶心」互相连接的地属性连接怪兽可以攻击两次, 会穿防, 与自身互相连接的地属性连接怪兽会根据它的G石人指示物的数量提升攻击力.
-                            </p>
-                        </div>
+                        <section class="ruling-section" data-ruling-section="notes">
+                            <h2>注意</h2>
+                            <!-- 整栏与内部各轴均可独立折叠，首次显示时全部展开。 -->
+                            <details class="ruling-fold" open>
+                                <summary>收起注意</summary>
+                                <div class="ruling-fold__content">
+                                    <!-- 各轴默认展开，组内独立编号；相关引用随对应条目收起。 -->
+                                    <div id="maliss-append-notes" class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="maliss" open>
+                                            <summary>码丽丝</summary>
+                                            <div class="auto-number">
+                                                <p>
+                                                    「码丽丝<代码>TB-11」特殊召唤的怪兽在特殊召唤的回合不能攻击, 不能把效果发动.
+                                                </p>
+                                                <p>「魔∀丽丝&lt;兵卒&gt;白兔」的①只能盖放同名卡不在自己墓地存在的「魔∀丽丝」陷阱卡。</p>
+                                                <p>「魔∀丽丝&lt;兵卒&gt;柴郡猫」的①只能从手卡选择「魔∀丽丝」卡除外。</p>
+                                                <p>「魔∀丽丝&lt;兵卒&gt;三月兔」的①只能在双方主要阶段使用，除外的必须是自己手卡·墓地中这张卡以外的「魔∀丽丝」卡；③只能以自己除外状态的「魔∀丽丝」怪兽为对象。</p>
+                                                <p>「魔∀丽丝&lt;王后&gt;红心加密」的①只能以自己除外状态的「魔∀丽丝」卡为对象。</p>
+                                                <p>「魔∀丽丝&lt;王后&gt;白棋捆绑」的①只能以双方墓地合计最多3张卡为对象；②只能盖放自己卡组·墓地的「魔∀丽丝」陷阱卡。</p>
+                                                <p>「魔∀丽丝&lt;代码&gt;MTP-07」「魔∀丽丝&lt;代码&gt;GWC-06」「魔∀丽丝&lt;代码&gt;TB-11」在盖放回合发动的手续，必须除外自己场上1只表侧表示的「魔∀丽丝」怪兽。</p>
+                                                <p>「魔∀丽丝&lt;代码&gt;MTP-07」的①只有自己场上存在「魔∀丽丝」连接怪兽时，才能追加除外场上1张卡。</p>
+                                                <p>「魔∀丽丝&lt;代码&gt;GWC-06」的①只能特殊召唤自己墓地·除外状态的「魔∀丽丝」怪兽；追加回复基本分必须自己场上存在「魔∀丽丝」连接怪兽。</p>
+                                                <p>「魔∀丽丝&lt;代码&gt;TB-11」的①只有对方场上存在3张以上的卡，才能改为从额外卡组特殊召唤「魔∀丽丝」连接怪兽。</p>
+                                                <p>「魔∀丽丝梦游地下界」的①只能除外自己手卡·卡组·墓地的「魔∀丽丝」卡。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="ars-magna" data-ruling-page="../cards/Ars_Magna.html" open>
+                                            <summary>无垢大艺术</summary>
+                                            <div class="auto-number">
+                                                <div class="ruling-include" data-ruling-source="../cards/Ars_Magna.html #ars-magna-notes > p"></div>
+                                            </div>
+                                        </details>
 
-                        <h2>自肃</h2>
-                        <div class="auto-number">
-                            <p>
-                                特殊召唤过电子界族怪兽以外的怪兽的回合不能把「转码语者」的②效果发动.
-                            </p>
-                            <p>
-                                「灵王的波动」会影响到: 「防火龙」, 「转码语者」, 「三栅极男巫」.
-                            </p>
-                            <p>
-                                「霆王的闪光」会影响到: 「转码语者」, 「三栅极男巫」, 「盛悴之致命毒蜥」, 「G石人·水晶心」, 「谜式密码大师·紧缩位压缩员」, 「转生炎兽 独角兔」.
-                            </p>
-                        </div>
+                                        <details class="ruling-axis" data-ruling-axis="seraph" open>
+                                            <summary>耀圣</summary>
+                                            <div class="auto-number">
+                                                <p>「耀圣之波诗 狄娜」的①只能往自己的中央主要怪兽区域特殊召唤；②只能表侧放置「耀圣」永续魔法卡；③只能在对方回合，将自己主要怪兽区域的这张卡与中央的怪兽交换位置。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="chaos" open>
+                                            <summary>混沌</summary>
+                                            <div class="auto-number">
+                                                <p>「混沌之魔王-骸骨恶魔」的①只能以自身以外、双方墓地及表侧除外的合计3张卡为对象，其中必须包含记述「光与暗的仪式」卡名的卡。</p>
+                                                <p>「混沌之魔王-骸骨恶魔」的②只能将所送去墓地的仪式魔法卡中记述卡名的仪式怪兽从卡组加入手卡。</p>
+                                                <p>「黑色混沌之魔术师 黑混沌」的①只能将自己墓地的魔法卡加入手卡；③只能以对方场上的卡为对象。</p>
+                                                <p>「超魔剑士 黑混沌」的①只能表侧放置自己卡组·墓地中记述「光与暗的仪式」卡名的永续陷阱卡；③必须除外对方场上2张卡，不能只选择1张。</p>
+                                                <p>「光与暗的仪式」的①只能从手卡仪式召唤「黑色混沌之魔术师 黑混沌」或「光与暗之战士 混沌战士」，解放或代替解放而除外的怪兽等级合计必须达到8以上。</p>
+                                                <p>「光与暗的仪式」的②必须把自身与自己墓地中另1张记述「光与暗的仪式」卡名的卡一同加入手卡。</p>
+                                                <p>「两颗心灵」的①只能检索记述「光与暗的仪式」卡名的怪兽；②只能从手卡特殊召唤记述该卡名、且与回手怪兽卡名不同的怪兽。</p>
+                                                <p>「两颗心灵」的①②不能在同一连锁上发动。</p>
+                                                <p>「栗球兽卫」的①盖放卡的处理只能选择记述「光与暗的仪式」卡名的速攻魔法·陷阱卡；②只能为1只8星仪式怪兽的仪式召唤提供全部解放数值。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="gold" open>
+                                            <summary>黄金柜</summary>
+                                            <div class="auto-number">
+                                                <p>「破坏龙 甘多拉·禁忌」的①必须自己场上存在「光之黄金柜」；③只能从卡组特殊召唤记述「光之黄金柜」卡名的7星以下怪兽。</p>
+                                                <p>「魔术师的徒弟-黑魔术少女」的②只能从卡组将「光之黄金柜」加入手卡。</p>
+                                                <p>「光之黄金柜」的②只能检索自身以外、记述「光之黄金柜」卡名的卡；③只能以对方这次从墓地特殊召唤的怪兽中的1只为对象。</p>
+                                                <p>「对未来的沉默」的①只能检索记述「光之黄金柜」卡名的怪兽；追加抽卡必须在双方战斗阶段发动，且自己场上同时存在「光之黄金柜」及记述该卡名的怪兽。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general" open>
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number">
+                                                <p>
+                                                    「G石人·水晶心」互相连接的地属性连接怪兽可以攻击两次, 会穿防, 与自身互相连接的地属性连接怪兽会根据它的G石人指示物的数量提升攻击力.
+                                                </p>
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </details>
+                        </section>
 
-                        <h2>召唤条件</h2>
-                        <div class="auto-number">
-                            <div class="ruling-include" data-ruling-source="../cards/Ars_Magna.html #ars-magna-summon-conditions > p"></div>
-                        </div>
+                        <section class="ruling-section" data-ruling-section="continuous">
+                            <h2>持续适用的效果</h2>
+                            <!-- 各轴默认展开，组内独立编号；相关引用随对应条目收起。 -->
+                            <div id="maliss-append-continuous" class="ruling-axes">
+                                <details class="ruling-axis" data-ruling-axis="maliss" open>
+                                    <summary>码丽丝</summary>
+                                    <div class="auto-number">
+                                        <p>「魔∀丽丝&lt;兵卒&gt;睡鼠」的②使连接端有这张卡的「魔∀丽丝」连接怪兽不会被效果破坏。</p>
+                                        <p>「魔∀丽丝&lt;兵卒&gt;白兔」的②使连接端有这张卡的「魔∀丽丝」连接怪兽进行战斗时，自己受到的战斗伤害变成0。</p>
+                                        <p>「魔∀丽丝&lt;兵卒&gt;柴郡猫」的②使连接端有这张卡的「魔∀丽丝」连接怪兽战斗破坏的怪兽不去墓地而除外。</p>
+                                        <p>「魔∀丽丝&lt;兵卒&gt;三月兔」的②使对方不能将连接端有这张卡的「魔∀丽丝」连接怪兽作为效果的对象。</p>
+                                        <p>「魔∀丽丝梦游地下界」的②在自己的除外状态存在3种以上「魔∀丽丝」陷阱卡时，使自己场上的「魔∀丽丝」连接怪兽攻击力上升3000；③在自己场上有「魔∀丽丝」连接怪兽时，使对方怪兽只能选择「魔∀丽丝」连接怪兽作为攻击对象。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="ars-magna" data-ruling-page="../cards/Ars_Magna.html" open>
+                                    <summary>无垢大艺术</summary>
+                                    <div class="auto-number">
+                                        <div class="ruling-include" data-ruling-source="../cards/Ars_Magna.html #ars-magna-continuous-effects > p"></div>
+                                    </div>
+                                </details>
+
+                                <details class="ruling-axis" data-ruling-axis="seraph" open>
+                                    <summary>耀圣</summary>
+                                    <div class="auto-number">
+                                        <p>「耀圣之波诗 狄娜」的③将对方手卡暂时表侧除外后，结束阶段那张卡必须回到手卡；该回手处理不另行发动。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="chaos" open>
+                                    <summary>混沌</summary>
+                                    <div class="auto-number">
+                                        <p>「黑色混沌之魔术师 黑混沌」的②在自身位于怪兽区域时，使自己场上的魔法·陷阱卡不会被对方效果破坏或除外；自身不受除以自身为对象的效果以外的对方发动效果影响。</p>
+                                        <p>「超魔剑士 黑混沌」的②在自己墓地有仪式魔法卡时，使自身不受对方发动的效果影响。</p>
+                                        <p>「栗球兽卫」的②在仪式召唤1只8星仪式怪兽时，可以由这1张卡作为仪式召唤所需全部数值的解放。</p>
+                                        <p>「栗球兽卫」的①选择伤害变成0并适用后，本回合第一次自己将受到的战斗伤害或效果伤害必须变成0；不能保留至后一次伤害，该处理不另行发动。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="gold" open>
+                                    <summary>黄金柜</summary>
+                                    <div class="auto-number">
+                                        <p>「破坏龙 甘多拉·禁忌」的②使自身攻击力上升除外状态的卡数量×300。</p>
+                                        <p>「魔术师的徒弟-黑魔术少女」以①方法特殊召唤后，卡名当作「黑魔术少女」；③使自身攻击力上升双方墓地中记述「光之黄金柜」卡名的怪兽数量×300。</p>
+                                        <p>「光之黄金柜」的①在自身位于魔法与陷阱区域时，使自身不会被怪兽效果破坏。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="general" open>
+                                    <summary>通用及跨轴互动</summary>
+                                    <div class="auto-number">
+                                        <p>「幻狱神 米底丘利乌斯」的①在连接端有2只以上怪兽时，使自身不受对方发动的效果影响。</p>
+                                        <p>「毁灭之黑魔术师」的①在场上·墓地把自身卡名当作「黑魔术师」。</p>
+                                        <p>「真血公 吸血鬼」的①使双方不能将场上的自身作为从墓地以外特殊召唤的怪兽效果的对象。</p>
+                                        <p>「梦幻崩影·狮鹫」的②在自身位于怪兽区域时，使双方不能发动场上不在连接状态的特殊召唤怪兽的效果。</p>
+                                        <p>「魔封的芳香」的①使双方魔法卡必须先盖放，直到从盖放者来看的下次自己回合到来才能发动。</p>
+                                        <p>「访问码语者」无需发动的效果，使对方不能对应其效果的发动而发动效果。</p>
+                                        <p>「光道宰制者 基里奥斯」的②在自己卡组的卡被效果送去墓地的场合必须发动，从自己卡组上方再送3张卡去墓地。</p>
+                                        <p>「欢聚友伴·茸茸长尾山雀」「欢聚友伴·抖抖海月水母」的①适用后，结束阶段自己手卡若多于对方场上卡数量＋6张，必须将相差数量的手卡随机返回卡组。该后续处理不另行发动、不组成连锁。</p>
+                                        <p>「决斗者之力」的①适用后，本回合结束阶段检查自己是否在本回合于场上·墓地发动过所宣言的各属性怪兽的效果，也包括该卡发动前已经发动的效果；未全部满足时，必须将自己场上的卡全部送去墓地。此处理不另行发动，是玩家必须执行的处理，不受魔法效果影响的卡也须送去墓地。</p>
+                                        <p>「S：P小夜」的②暂时除外的怪兽，在结束阶段回到原控制者的主要怪兽区域，保留除外前的表示形式；该返回处理不另行发动。</p>
+                                        <p>「红莲之指名者」的①除外的手卡，在下次对方结束阶段必须回到手卡；该返回处理不另行发动。</p>
+                                        <p>「封印之黄金柜」的①除外的卡，在发动后第2次自己准备阶段必须加入手卡；该处理不另行发动。</p>
+                                        <p>「三战之才」的①取得对方怪兽控制权后，结束阶段必须归还控制权；该处理不另行发动。</p>
+                                        <p>「连接解码员」以①特殊召唤后，只要维持在怪兽区域表侧表示，离场时必须除外；变成里侧表示或移到魔法与陷阱区域后，该离场除外处理不再适用。此处理不另行发动。</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </section>
+
+                        <section class="ruling-section" data-ruling-section="restrictions">
+                            <h2>自肃</h2>
+                            <!-- 各轴默认展开，组内独立编号；相关引用随对应条目收起。 -->
+                            <div id="maliss-append-restrictions" class="ruling-axes">
+                                <details class="ruling-axis" data-ruling-axis="maliss" open>
+                                    <summary>码丽丝</summary>
+                                    <div class="auto-number">
+                                        <p>「魔∀丽丝&lt;兵卒&gt;睡鼠」「魔∀丽丝&lt;兵卒&gt;白兔」「魔∀丽丝&lt;兵卒&gt;柴郡猫」的③处理后，直到该回合结束，自己不能从额外卡组特殊召唤连接怪兽以外的怪兽；不是对整个回合追溯适用的限制。</p>
+                                        <p>「魔∀丽丝&lt;代码&gt;TB-11」的①特殊召唤的怪兽，该回合不能攻击、不能发动效果；限制针对该效果特殊召唤的怪兽。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="general" open>
+                                    <summary>通用及跨轴互动</summary>
+                                    <div class="auto-number">
+                                        <p>
+                                            特殊召唤过电子界族怪兽以外的怪兽的回合不能把「转码语者」的②效果发动.
+                                        </p>
+                                        <p>
+                                            「灵王的波动」会影响到: 「防火龙」, 「转码语者」, 「三栅极男巫」.
+                                        </p>
+                                        <p>
+                                            「霆王的闪光」会影响到: 「转码语者」, 「三栅极男巫」, 「盛悴之致命毒蜥」, 「G石人·水晶心」, 「谜式密码大师·紧缩位压缩员」, 「转生炎兽 独角兔」.
+                                        </p>
+                                        <p>「协心代码语者@火灵天星」的①发动后，直到回合结束，自己不能再特殊召唤怪兽。</p>
+                                        <p>「S：P小夜」的①处理后，该回合自己的怪兽不能直接攻击；不受该效果影响的怪兽除外。</p>
+                                        <p>「欢聚友伴·茸茸长尾山雀」效果发动的整个回合，自己只能有1次发动这张卡以外的「欢聚友伴」怪兽的效果。</p>
+                                        <p>「欢聚友伴·抖抖海月水母」效果发动的整个回合，自己只能有1次发动这张卡以外的「欢聚友伴」怪兽的效果。</p>
+                                        <p>「小丑与锁鸟」的①处理后，直到该回合结束，双方都不能从卡组把卡加入手卡，也包括抽卡。</p>
+                                        <p>「大热波」的①处理后，直到下次自己的抽卡阶段，双方都不能召唤·特殊召唤效果怪兽。</p>
+                                        <p>「嗤笑的黑山羊」的①处理后，该回合双方不能从墓地以外特殊召唤原本卡名与宣言卡名相同的怪兽。</p>
+                                        <p>「嗤笑的黑山羊」的②处理后，该回合双方不能发动原本卡名与宣言卡名相同的怪兽在场上发动的效果。</p>
+                                        <p>「访问码语者」的②处理后，该回合自己不能再为发动「访问码语者」的效果而除外与本次代价相同属性的怪兽。</p>
+                                        <p>「三战之号」的①盖放的卡，该回合不能发动。</p>
+                                        <p>「梦幻崩影·狮鹫」的①盖放的卡，该回合不能发动。</p>
+                                        <p>「梦幻崩影·狮鹫」的②也限制自己：自己场上特殊召唤的怪兽不在连接状态时，不能发动其效果。</p>
+                                        <p>「魔封的芳香」的①也限制自己：自己的魔法卡必须先盖放，并等到从自己来看的下次自己回合到来才能发动。</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </section>
+
+                        <section class="ruling-section" data-ruling-section="summons">
+                            <h2>召唤条件</h2>
+                            <!-- 各轴默认展开，召唤条件在组内独立编号。 -->
+                            <div id="maliss-append-summons" class="ruling-axes">
+                                <details class="ruling-axis" data-ruling-axis="maliss" open>
+                                    <summary>码丽丝</summary>
+                                    <div class="auto-number">
+                                        <p>「魔∀丽丝&lt;王后&gt;红心加密」要求3只怪兽，其中必须包含「魔∀丽丝」怪兽。</p>
+                                        <p>「魔∀丽丝&lt;王后&gt;白棋捆绑」要求2只以上怪兽，其中必须包含「魔∀丽丝」怪兽。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="ars-magna" data-ruling-page="../cards/Ars_Magna.html" open>
+                                    <summary>无垢大艺术</summary>
+                                    <div class="auto-number">
+                                        <div class="ruling-include" data-ruling-source="../cards/Ars_Magna.html #ars-magna-summon-conditions > p"></div>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="chaos" open>
+                                    <summary>混沌</summary>
+                                    <div class="auto-number">
+                                        <p>「黑色混沌之魔术师 黑混沌」可由「光与暗的仪式」降临；该仪式魔法须解放自己手卡·场上的怪兽，或作为解放的代替除外自己墓地的怪兽，等级合计达到8以上，从手卡仪式召唤。</p>
+                                        <p>「超魔剑士 黑混沌」不能通常召唤；同名卡每回合1次，必须从自己手卡·墓地将1只魔法师族或战士族的仪式怪兽返回卡组，才能特殊召唤。不能以普通苏生效果特殊召唤；无视召唤条件的效果仍不能无视未正规出场造成的苏生限制。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="general" open>
+                                    <summary>通用及跨轴互动</summary>
+                                    <div class="auto-number">
+                                        <p>「幻狱神 米底丘利乌斯」要求2只以上怪兽，其中至少包含1只融合、同调、超量或连接怪兽。</p>
+                                        <p>「防火龙」要求2只以上怪兽。</p>
+                                        <p>「禅那之追傩仪姬」要求2只以上效果怪兽；连接召唤时，手卡中的1只怪兽也可以作为连接素材。</p>
+                                        <p>「盛悴之致命毒蜥」要求2只卡名不同的怪兽。</p>
+                                        <p>「S：P小夜」要求2只效果怪兽。</p>
+                                        <p>「连接解码员」要求1只4星以下的电子界族怪兽。</p>
+                                        <p>「圣魔之少女 阿耳特弥斯」要求1只4星以下的魔法师族怪兽；自己每回合只能特殊召唤1次该同名卡。</p>
+                                        <p>「协心代码语者@火灵天星」要求3只以上效果怪兽。</p>
+                                        <p>「毁灭之黑魔术师」的融合素材为「黑魔术师」＋光属性或暗属性怪兽；同名卡每回合只能特殊召唤1次，必须通过融合召唤或自身记载的手续特殊召唤。该手续为：在自己已经发动过魔法卡效果的回合，将自己场上1只6星以上的魔法师族·暗属性怪兽除外，从额外卡组特殊召唤。</p>
+                                        <p>「转生炎兽 独角兔」要求1只通常召唤的攻击力1000以下怪兽。</p>
+                                        <p>「梦幻崩影·狮鹫」要求2只以上卡名不同的怪兽。</p>
+                                        <p>「真血公 吸血鬼」要求2只以上8星怪兽；将原本持有者是对方的怪兽作为其超量召唤素材时，那些怪兽的等级当作8星。</p>
+                                        <p>「访问码语者」要求2只以上效果怪兽。</p>
+                                        <p>「光道宰制者 基里奥斯」要求3只属性相同、种族互不相同的怪兽。</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </section>
 
                         <h2>实验功能</h2>
 
@@ -220,7 +776,7 @@
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/deck-names.js"></script>
-    <script src="../js/main.js?v=0120fix"></script>
+    <script src="../js/main.js?v=1105rulingcollapsed"></script>
     <script src="../js/deck-viewer.js"></script>
     <script src="../js/mc-deck-previews.js"></script>
     <script src="../js/judge-tool.js"></script>

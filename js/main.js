@@ -115,6 +115,38 @@
         });
     };
 
+    /** 获取五栏中的轴分组容器，兼容整栏折叠及动态补建的板块外框。 */
+    function getRulingAxisGroups(heading) {
+        var entryContent = heading.closest('.entry__content[data-ruling-layout="axes"]');
+        var titles = ["裁定", "注意", "持续适用的效果", "自肃", "召唤条件"];
+        if (!entryContent || titles.indexOf(heading.textContent.trim()) === -1) return null;
+
+        // 先保存标题后的内容，再将标题和内容放入同一个完整外框。
+        var sibling = heading.nextElementSibling;
+        var frame = heading.parentElement;
+        if (!frame.classList.contains("ruling-section")) {
+            frame = document.createElement("section");
+            frame.className = "ruling-section";
+            heading.parentNode.insertBefore(frame, heading);
+            frame.appendChild(heading);
+            if (sibling && (sibling.classList.contains("ruling-axes") || sibling.classList.contains("ruling-fold"))) {
+                frame.appendChild(sibling);
+            }
+        }
+
+        // 大折叠内部复用原有轴容器，避免另建容器导致重复或混入其他轴。
+        var foldContent = sibling && sibling.classList.contains("ruling-fold") &&
+            sibling.querySelector(".ruling-fold__content");
+        var groups = foldContent ? foldContent.querySelector(".ruling-axes") :
+            sibling && sibling.classList.contains("ruling-axes") ? sibling : null;
+        if (!groups) {
+            groups = document.createElement("div");
+            groups.className = "ruling-axes";
+            (foldContent || frame).appendChild(groups);
+        }
+        return groups;
+    }
+
    /* 根据当前卡组的构筑名称引入单卡资料；内容始终以 cards 页面为准。
     * ------------------------------------------------------ */
     var ssLoadMatchedCardRulings = function() {
@@ -169,8 +201,8 @@
             });
         }
 
-        /** 找到目标栏目的编号容器；支持已折叠栏目，也为缺失栏目补建容器。 */
-        function getSectionContainer(title) {
+        /** 找到目标栏目的编号容器；分轴页面按资料来源归组，其他页面沿用原结构。 */
+        function getSectionContainer(title, card, sourceDocument) {
             var headings = Array.prototype.slice.call(entryContent.querySelectorAll("h2"));
             var heading = headings.find(function(node) { return node.textContent.trim() === title; });
             if (!heading) {
@@ -180,10 +212,39 @@
                     var order = sectionTitles.indexOf(node.textContent.trim());
                     return order > sectionTitles.indexOf(title) || /^卡组预览/.test(node.textContent.trim());
                 });
-                entryContent.insertBefore(heading, following || null);
+                // 已有标题可能位于板块外框内，插入位置必须取正文的直接子节点。
+                var followingNode = following && (following.closest(".ruling-section") || following);
+                entryContent.insertBefore(heading, followingNode || null);
             }
 
-            var sibling = heading.nextElementSibling;
+            // 五栏都从自身外框或大折叠内部取得轴容器。
+            var sibling = getRulingAxisGroups(heading) || heading.nextElementSibling;
+            if (sibling && sibling.classList.contains("ruling-axes")) {
+                // 使用完整来源地址匹配现有轴，避免把新资料混进第一个轴。
+                var sourceUrl = new URL(card.page, siteRoot).href;
+                var axis = Array.prototype.find.call(sibling.children, function(group) {
+                    var page = group.getAttribute("data-ruling-page");
+                    return page && new URL(page, document.baseURI).href === sourceUrl;
+                });
+                if (!axis) {
+                    axis = document.createElement("details");
+                    axis.className = "ruling-axis";
+                    axis.setAttribute("data-ruling-page", sourceUrl);
+                    // 只在创建时展开，后续异步加载保留用户已切换的状态。
+                    axis.open = true;
+                    var summary = document.createElement("summary");
+                    var sourceTitle = sourceDocument.querySelector(".entry__title, title");
+                    summary.textContent = sourceTitle && sourceTitle.textContent.trim() || card.aliases[0];
+                    var axisContent = document.createElement("div");
+                    axisContent.className = "auto-number";
+                    axis.appendChild(summary);
+                    axis.appendChild(axisContent);
+                    // 动态出现的新轴放在通用及跨轴互动组之前。
+                    var general = sibling.querySelector('[data-ruling-axis="general"]');
+                    sibling.insertBefore(axis, general);
+                }
+                return axis.querySelector(".auto-number");
+            }
             var foldContent = sibling && sibling.classList.contains("ruling-fold") &&
                 sibling.querySelector(".ruling-fold__content");
             if (foldContent) {
@@ -211,7 +272,7 @@
                     !section.classList.contains("auto-number") || !section.textContent.trim() ||
                     /^无[。.]?$/.test(section.textContent.trim()) || hasSectionInclude(sourceUrl, section.id)) return;
 
-                var target = getSectionContainer(title);
+                var target = getSectionContainer(title, card, sourceDocument);
                 // 原栏目仅写“无”时，用实际引入内容替换占位文字。
                 if (/^无[。.]?$/.test(target.textContent.trim())) target.textContent = "";
                 var include = document.createElement("div");
@@ -255,7 +316,7 @@
         });
     };
 
-   /* 卡组裁定与注意默认折叠，保留原有内容与编号容器。
+   /* 分轴页面五栏都有外框，裁定整栏默认收起，注意整栏默认展开。
     * ------------------------------------------------------ */
     var ssFoldRulings = function() {
         // 只处理卡组页面，避免影响独立卡片资料页的同名栏目。
@@ -263,7 +324,8 @@
         if (window.location.pathname.indexOf(deckDirectory) !== 0) return;
 
         document.querySelectorAll(".entry__content h2").forEach(function(heading) {
-            // 两个栏目独立折叠，条数只用于显示，不影响默认收起状态。
+            // 先补齐五栏外框，再仅为裁定与注意处理整栏折叠。
+            var axisGroups = getRulingAxisGroups(heading);
             var sectionTitle = heading.textContent.trim();
             if (sectionTitle !== "裁定" && sectionTitle !== "注意") return;
 
@@ -301,10 +363,11 @@
                 return !element.closest(".ruling-entry");
             }).length;
 
-            // 即使栏目为空，也创建默认收起的容器，动态加载后继续复用。
+            // 裁定整栏默认收起；分轴页面的注意默认展开，仅在首次创建时设置。
             if (!hasFold) {
                 fold = document.createElement("details");
                 fold.className = "ruling-fold";
+                fold.open = !!axisGroups && sectionTitle !== "裁定";
                 var summary = document.createElement("summary");
                 content = document.createElement("div");
                 content.className = "ruling-fold__content";
@@ -312,9 +375,12 @@
                 fold.appendChild(content);
                 heading.parentNode.insertBefore(fold, heading.nextSibling);
                 nodes.forEach(function(node) { content.appendChild(node); });
-
-                // 原生details支持鼠标及键盘操作，切换时同步入口文案。
-                fold.addEventListener("toggle", function() {
+            }
+            // 静态及动态创建的大折叠都只绑定一次，异步更新保留大小折叠状态。
+            if (!fold.hasAttribute("data-ruling-toggle-bound")) {
+                fold.setAttribute("data-ruling-toggle-bound", "true");
+                fold.addEventListener("toggle", function(event) {
+                    if (event.target !== fold) return;
                     updateRulingSummary(fold);
                 });
             }

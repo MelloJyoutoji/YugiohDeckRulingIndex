@@ -3848,14 +3848,47 @@ body.search-is-visible {
     padding: 0;
 }
 
-/* 卡组裁定与注意均默认折叠，入口沿用正文大小与字重。 */
-.entry__content .ruling-fold {
+/* 普通栏目及分轴折叠区共用外观，入口沿用正文大小与字重。 */
+.entry__content .ruling-section,
+.entry__content .ruling-fold,
+.entry__content .ruling-axis {
     margin: 0 0 2.4rem;
     border: 1px solid #ddd;
     border-radius: 6px;
 }
 
-.entry__content .ruling-fold > summary {
+/* 板块外框包含标题和全部分组，大折叠的边框由板块统一提供。 */
+.entry__content .ruling-section {
+    overflow: hidden;
+}
+
+.entry__content .ruling-section > h2 {
+    margin: 0;
+    padding: 1.6rem;
+}
+
+.entry__content .ruling-section > .ruling-fold {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+/* 固定外框内的三栏与大折叠内容区使用相同留白。 */
+.entry__content .ruling-section > .ruling-axes {
+    padding: 1.6rem;
+    border-top: 1px solid #ddd;
+}
+
+.entry__content .ruling-section > .ruling-fold > summary {
+    border-top: 1px solid #ddd;
+}
+
+.entry__content .ruling-section .ruling-axes > .ruling-axis:last-child {
+    margin-bottom: 0;
+}
+
+.entry__content .ruling-fold > summary,
+.entry__content .ruling-axis > summary {
     padding: 1.2rem 1.6rem;
     cursor: pointer;
     color: #222;
@@ -3865,17 +3898,25 @@ body.search-is-visible {
 }
 
 /* 展开后将入口与正文分隔，并为键盘用户提供清晰的焦点提示。 */
-.entry__content .ruling-fold[open] > summary {
+.entry__content .ruling-fold[open] > summary,
+.entry__content .ruling-axis[open] > summary {
     border-bottom: 1px solid #ddd;
 }
 
-.entry__content .ruling-fold > summary:focus-visible {
+.entry__content .ruling-fold > summary:focus-visible,
+.entry__content .ruling-axis > summary:focus-visible {
     outline: 2px solid #222;
     outline-offset: 3px;
 }
 
-.entry__content .ruling-fold__content {
+.entry__content .ruling-fold__content,
+.entry__content .ruling-axis > .auto-number {
     padding: 1.6rem;
+}
+
+/* 各轴独立编号；收起一组不会改变其他轴的内容与编号。 */
+.entry__content .ruling-axis > .auto-number > :last-child {
+    margin-bottom: 0;
 }
 
 /* 窄屏缩小封面，继续保持左图右文与完整的卡组名称。 */
