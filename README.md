@@ -41,12 +41,12 @@ YugiohDeckRulingIndex/
 ├── decks/                       # 卡组裁定页面与卡组共享片段
 │   ├── Maliss.html               # 卡组裁定页示例
 │   ├── Magnet.html               # 磁石战士
+│   ├── Time_Dark_Magician.html   # 时间黑魔术师
 │   ├── Embed_K9.html             # K9 共享片段
 │   └── Embed_Magistus.html       # 大贤者共享片段
 ├── cards/                       # 单卡裁定页面
 │   ├── Ars_Magna.html            # 奥艺
-│   ├── Fydraulis Harmonia.html   # 调和之天救龙
-│   └── Time_Dark_Magician.html   # 时间黑魔术师
+│   └── Fydraulis Harmonia.html   # 调和之天救龙
 ├── css/                          # 网站、卡组预览与标记工具样式
 ├── images/                       # 页面图片与卡组封面
 ├── js/
@@ -102,7 +102,7 @@ MyCard 构筑由同步脚本自动维护首页日期：按系列比较同步前�
 
 卡组页还会根据构筑名称自动引用单卡资料：先按 `data/mc-series-pages.json` 的主系列映射收集本页的全部有效前排构筑，无前排构筑时使用本页 `old_decks` 历史构筑。任一构筑的完整名称包含 `data/card-ruling-pages.json` 中某项 `aliases` 的名称，就从其 `page` 页面引入对应栏目。时间黑魔术师兼容“时间之黑魔术师”“城之内”，奥艺兼容“大艺术”，调和之天救龙按本名匹配；仅有卡号、没有名称的静态 YDK 不据此推断。
 
-自动引用保留裁定、注意、持续适用的效果、自肃、召唤条件及待核实的栏目归属、完整效果和来源链接；缺失栏目会自动补建，已有同来源、同栏目手工引用不会重复添加。此功能在浏览器加载时生效，继续读取 `cards/` 原文，不将正文复制写入 `decks/` 文件。新增单卡时，在 `data/card-ruling-pages.json` 的 `cards` 数组中配置 `page`（相对站点根目录的路径）和非空名称数组 `aliases`；源页面栏目使用紧邻 `<h2>` 的带唯一 `id` 的 `.auto-number` 容器。
+自动引用保留裁定、注意、持续适用的效果、自肃、召唤条件及待核实的栏目归属、完整效果和来源链接；缺失栏目会自动补建，已有同来源、同栏目手工引用不会重复添加。此功能在浏览器加载时生效，读取配置指定的来源原文，不将正文复制写入引用方文件。新增来源时，在 `data/card-ruling-pages.json` 的 `cards` 数组中配置 `page`（相对站点根目录的路径）和非空名称数组 `aliases`；`cards/` 源页面栏目使用紧邻 `<h2>` 的带唯一 `id` 的 `.auto-number` 容器。时间黑魔术师在 `decks/Time_Dark_Magician.html` 中维护，各栏目以 `section.ruling-section` 包裹标题与正文，并在带唯一 `id` 的 `.auto-number` 容器上设置 `data-ruling-own="true"`，供其他卡组继续引用。
 
 `Embed_K9.html` 与 `Embed_Magistus.html` 是卡组共享片段，保存在 `decks/`，由同目录的页面加载。图片继续保存在根目录的 `images/`。页面迁移后的访问地址为 `decks/页面名.html` 或 `cards/页面名.html`。
 
