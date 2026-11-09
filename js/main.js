@@ -252,7 +252,8 @@
                 axis = document.createElement("details");
                 axis.className = "ruling-axis";
                 axis.setAttribute("data-ruling-page", sourceUrl);
-                axis.open = true;
+                // 动态引入的轴也默认收起。
+                axis.open = false;
                 var summary = document.createElement("summary");
                 var sourceTitle = sourceDocument.querySelector(".entry__title, title");
                 summary.textContent = source.name || sourceTitle && sourceTitle.textContent.trim() || source.aliases[0];
@@ -343,7 +344,36 @@
         });
     };
 
-   /* 分轴页面五栏都有外框，裁定整栏默认收起，注意整栏默认展开。
+   /* 所有原生折叠框首次出现时默认收起，后续保留用户切换的状态。
+    * ------------------------------------------------------ */
+    var ssDefaultFolds = function() {
+        // 按元素身份记录初始化状态，复制或异步新增的折叠仍会单独初始化。
+        var initializedDetails = new WeakSet();
+
+        function initializeDetail(detail) {
+            if (initializedDetails.has(detail)) return;
+            initializedDetails.add(detail);
+            detail.open = false;
+        }
+
+        // 同时处理新增节点自身及其后代，覆盖轴分组和构筑预览。
+        function initializeTree(root) {
+            if (root.nodeType !== 1 && root.nodeType !== 9) return;
+            if (root.nodeType === 1 && root.matches("details")) initializeDetail(root);
+            root.querySelectorAll("details").forEach(initializeDetail);
+        }
+
+        initializeTree(document);
+        // 只检查新插入的节点，不监听 open 属性，避免重置用户操作。
+        var observer = new MutationObserver(function(records) {
+            records.forEach(function(record) {
+                record.addedNodes.forEach(initializeTree);
+            });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+    };
+
+   /* 五个栏目统一提供整栏大折叠，首次创建时默认收起。
     * ------------------------------------------------------ */
     var ssFoldRulings = function() {
         // 只处理卡组页面，避免影响独立卡片资料页的同名栏目。
@@ -351,10 +381,11 @@
         if (window.location.pathname.indexOf(deckDirectory) !== 0) return;
 
         document.querySelectorAll(".entry__content h2").forEach(function(heading) {
-            // 先补齐五栏外框，再仅为裁定与注意处理整栏折叠。
-            var axisGroups = getRulingAxisGroups(heading);
+            // 先补齐五栏外框，再为五个栏目统一处理整栏折叠。
+            getRulingAxisGroups(heading);
             var sectionTitle = heading.textContent.trim();
-            if (sectionTitle !== "裁定" && sectionTitle !== "注意") return;
+            var foldTitles = ["裁定", "注意", "持续适用的效果", "自肃", "召唤条件"];
+            if (foldTitles.indexOf(sectionTitle) === -1) return;
 
             // 重复检查时复用已有折叠容器，保留用户当前的展开状态。
             var fold = heading.nextElementSibling;
@@ -391,11 +422,11 @@
                 return !element.closest(".ruling-entry");
             }).length;
 
-            // 裁定整栏默认收起；分轴页面的注意默认展开，仅在首次创建时设置。
+            // 仅在首次创建时设置默认收起，异步更新复用原有展开状态。
             if (!hasFold) {
                 fold = document.createElement("details");
                 fold.className = "ruling-fold";
-                fold.open = !!axisGroups && sectionTitle !== "裁定";
+                fold.open = false;
                 var summary = document.createElement("summary");
                 content = document.createElement("div");
                 content.className = "ruling-fold__content";
@@ -687,9 +718,11 @@
         $(document).ready(function() {
             console.log("DOM 已加载，开始初始化组件...");
             
+            // 先初始化默认收起规则，覆盖静态内容及随后异步插入的折叠框。
+            ssDefaultFolds();
             // 先加载公共组件
             ssLoadComponents();
-            // 先绑定动态内容通知，再初始化裁定与注意折叠及启动公共内容加载。
+            // 先绑定动态内容通知，再初始化五栏折叠及启动公共内容加载。
             document.addEventListener("rulinginclude:loaded", ssFoldRulings);
             ssFoldRulings();
             ssLoadRulingIncludes();
