@@ -155,6 +155,8 @@
 
         var contentNode = document.querySelector(".entry__content");
         if (!contentNode) return;
+        // 已逐卡整理全部构筑轴的页面自行维护资料，避免再次自动引入相同条目。
+        if (contentNode.getAttribute("data-ruling-sources") === "manual") return;
         // 闭包仅持有已经确认存在的正文节点。
         const entryContent = contentNode;
         var pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "");
@@ -199,8 +201,13 @@
             return deckNames.some(function(deckName) {
                 var name = deckName.toLocaleLowerCase();
                 return aliases.some(function(alias) {
-                    return typeof alias === "string" && alias.length > 0 &&
-                        name.indexOf(alias.toLocaleLowerCase()) !== -1;
+                    if (typeof alias !== "string" || !alias.length) return false;
+                    var normalizedAlias = alias.toLocaleLowerCase();
+                    // 时间黑魔术师属于城之内轴，先排除完整名称中的黑魔术师子串。
+                    // 其余文字继续参与匹配，保留同时投入黑魔导的混合构筑。
+                    var matchingName = normalizedAlias === "黑魔术师" ?
+                        name.replace(/时间(?:之)?黑魔术师/g, "") : name;
+                    return matchingName.indexOf(normalizedAlias) !== -1;
                 });
             });
         }
@@ -353,6 +360,9 @@
         function initializeDetail(detail) {
             if (initializedDetails.has(detail)) return;
             initializedDetails.add(detail);
+            // 分轴页面保留 HTML 声明的大小折叠状态，构筑预览仍按公共规则初始化。
+            var axisPage = detail.closest('.entry__content[data-ruling-fold-policy="axes"]');
+            if (axisPage && detail.matches(".ruling-axis, .ruling-fold")) return;
             detail.open = false;
         }
 
@@ -384,7 +394,10 @@
             // 先补齐五栏外框，再为五个栏目统一处理整栏折叠。
             getRulingAxisGroups(heading);
             var sectionTitle = heading.textContent.trim();
-            var foldTitles = ["裁定", "注意", "持续适用的效果", "自肃", "召唤条件"];
+            // 显式采用分轴策略时，只为裁定和注意建立整栏折叠，其他三栏保留固定外框。
+            var entry = heading.closest(".entry__content");
+            var usesAxisPolicy = entry && entry.getAttribute("data-ruling-fold-policy") === "axes";
+            var foldTitles = usesAxisPolicy ? ["裁定", "注意"] : ["裁定", "注意", "持续适用的效果", "自肃", "召唤条件"];
             if (foldTitles.indexOf(sectionTitle) === -1) return;
 
             // 重复检查时复用已有折叠容器，保留用户当前的展开状态。
@@ -426,7 +439,8 @@
             if (!hasFold) {
                 fold = document.createElement("details");
                 fold.className = "ruling-fold";
-                fold.open = false;
+                // 只在首次创建时设置默认值；后续异步计数更新不改变用户状态。
+                fold.open = usesAxisPolicy && sectionTitle === "注意";
                 var summary = document.createElement("summary");
                 content = document.createElement("div");
                 content.className = "ruling-fold__content";
