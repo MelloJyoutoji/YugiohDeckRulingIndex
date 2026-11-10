@@ -68,52 +68,294 @@
                     <div class="entry__content" data-ruling-layout="axes">
                         <section class="ruling-section" data-ruling-section="ruling">
                             <h2>裁定</h2>
+                            <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
                             <details class="ruling-fold">
                                 <summary>展开裁定</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-page="Unchained.html" open>
+                                        <details class="ruling-axis" data-ruling-axis="unchained" open>
                                             <summary>破械</summary>
                                             <div class="auto-number" id="unchained-ruling-own" data-ruling-own="true">
-                                        <p>
-                                        自己场上的怪兽被战斗破坏的效果在伤害步骤结束时发动。
-                                        </p>
-                                        <p>
-                                        「破械冥官 篁」只取魔法卡为对象发动①效果，也能对应这个效果发动「灰流丽」。
-                                        </p>
-                                        <p>
-                                        「那张卡破坏」这类文本的那张卡从怪兽区域移动到魔法陷阱区域，或是反过来的场合，都不算那张卡。但是，也作为陷阱卡使用的陷阱怪兽仍是那张卡。
-                                        </p>
-                                        <p>
-                                        上类效果破坏的卡被代替破坏了之后，不再视为因这个效果破坏，后续效果如果是「，」类效果，不会继续适用。
-                                        </p>
-                                        <p>
-                                        被代替破坏的卡视为因代替破坏的那个效果破坏。
-                                        </p>
-                                        <p>
-                                        以「破械」怪兽卡为对象发动的「破械童子 娑罗摩」的①效果可以对应发动「神之警告」。
-                                        </p>
-                                        <p>
-                                        「不能把怪兽特殊召唤」适用中，不能以「破械」怪兽卡为对象发动「破械童子 娑罗摩」的①效果。
-                                        </p>
-                                        <p>
-                                        进行一次连接召唤的效果是包含「把怪兽特殊召唤」的效果，特殊召唤的怪兽不是因为「发动的怪兽的效果而特殊召唤」。因为这个效果从场上离开的怪兽不视为因为效果离场。
-                                        </p>
-                                        <p>
-                                        「A存在的状态，B的场合」类效果，只需要在B的场合满足A状态则可以发动。连锁处理后不再满足也能发动。
-                                        </p>
-                                        <p>
-                                        选1张卡代替破坏，那张卡也能有代替破坏的效果时，如果是必须适用的效果，会正常适用。如果是可选适用的效果，那个效果不能适用。
-                                        </p>
-                                        <p>
-                                        「破械焰魔天 阎摩」不能选不受怪兽效果影响的卡以及不会被效果破坏的卡代破。
-                                        </p>
-                                        <p>
-                                        对方把恶魔族怪兽在我方特召，我方的「破械神双 罗寂刹」此时不是恶魔族，我方没有其他恶魔族的场合。因为我方没有其他恶魔族怪兽可以破坏，这时不能发动「破械神双 罗寂刹」的①效果。
-                                        </p>
-                                        <p>
-                                        对方把恶魔族怪兽在我方特召，「破械神双 罗寂刹」①效果处理时，特殊召唤的怪兽以外没有其他恶魔族怪兽的场合，破坏那只特殊召唤的怪兽。
-                                        </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「双极之破械神」的①与其他能够从手卡发动、将自身特殊召唤的诱发效果同时满足条件时，自己在同一连锁中只能发动其中1个；可在手卡或墓地发动的这类效果，即使从墓地发动，也受此限制。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「双极之破械神」①：自己场上的卡被战斗·效果破坏的场合才能发动。这张卡从手卡特殊召唤。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 诱发类效果 · 从手卡发动的诱发效果 · 一个限制：从手卡 把自身特殊召唤的诱发效果 有多个在自己的手卡存在的场合，一组连锁中即使都满足条件， 自己也只能选择其中1个发动 。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 诱发类效果 · 从手卡发动的诱发效果 · 一个限制：墓地存在「圣炎王 大鹏不死鸟」「黑洞龙」时，怪兽区域炎属性怪兽被破坏的场合，只能从「圣炎王 大鹏不死鸟」的①效果和「黑洞龙」的①效果中选1个发动。把自身特殊召唤的，可以从手卡发动的怪兽的诱发效果，在1组连锁上，只能发动1个，即使从墓地发动这类效果也一样。 23/9/8</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24006&amp;request_locale=ja">官方Q&amp;A（2026-09-25）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械神 萨巴拉」的①、「破械神 萨玛」的②或「破械童子 阿罗汉」的①要破坏「破械焰魔天 阎摩」，但改由阎摩的②破坏另一张卡时，原效果没有成功破坏对象，不会特殊召唤。代替卡是被阎摩的②破坏。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械神 萨巴拉」①：这张卡在手卡存在的场合，自己·对方的主要阶段，以自己场上1只恶魔族怪兽或1张里侧表示卡为对象才能发动。那张卡破坏，这张卡特殊召唤。只要这个效果特殊召唤的这张卡在怪兽区域表侧表示存在，自己不是恶魔族怪兽不能特殊召唤。</span>
+                                                        <span class="effect-text__item">「破械神 萨玛」②：这张卡在墓地存在的场合，以自己场上1只恶魔族怪兽或1张里侧表示卡为对象才能发动。那张卡破坏，这张卡特殊召唤。这个效果特殊召唤的这张卡从场上离开的场合回到卡组最下面。</span>
+                                                        <span class="effect-text__item">「破械童子 阿罗汉」①：这张卡在手卡存在的场合，以自己场上1张卡为对象才能发动。那张卡破坏，这张卡特殊召唤。这个效果的发动后，直到回合结束时自己不是恶魔族怪兽不能特殊召唤。</span>
+                                                        <span class="effect-text__item">「破械焰魔天 阎摩」②：场上的这张卡被战斗·效果破坏的场合，可以作为代替把自己或对方的场上1张表侧表示卡破坏。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 代替破坏：作为破坏的代替，适用的处理也是卡片的效果。影响的是之后行为的进行所涉及的卡片·指示物·X素材等等，与原本要被破坏的卡无关。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 特定效果的处理方法 · 多步效果的适用 · 『A，B』：但是，如果前1步没有正常适用，后1步也不适用。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24345&amp;request_locale=ja">官方Q&amp;A（2026-09-10）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械童子 娑罗摩」的①破坏「破械焰魔天 阎摩」时，阎摩的②改为破坏娑罗摩，可以发动娑罗摩的②。「破械童子 阿罗汉」的①、「破械童子 罗鬼刹」的①、「破械式鬼 萨拉」的①及「破械式鬼 斯玛」的①，通过阎摩的②破坏各自同名怪兽时，各自的②也可以发动。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械童子 娑罗摩」①：以「破械童子 娑罗摩」以外的自己墓地1张「破械」卡为对象才能发动。那张卡在自己场上盖放。那之后，自己场上1张卡破坏。<br>②：场上的这张卡被战斗或者「破械童子 娑罗摩」以外的卡的效果破坏的场合才能发动。从手卡·卡组把「破械童子 娑罗摩」以外的1只「破械」怪兽特殊召唤。</span>
+                                                        <span class="effect-text__item">「破械焰魔天 阎摩」②：场上的这张卡被战斗·效果破坏的场合，可以作为代替把自己或对方的场上1张表侧表示卡破坏。</span>
+                                                        <span class="effect-text__item">「破械童子 阿罗汉」①：这张卡在手卡存在的场合，以自己场上1张卡为对象才能发动。那张卡破坏，这张卡特殊召唤。这个效果的发动后，直到回合结束时自己不是恶魔族怪兽不能特殊召唤。<br>②：场上的这张卡被战斗或者「破械童子 阿罗汉」以外的卡的效果破坏的场合才能发动。从手卡·卡组把「破械童子 阿罗汉」以外的1只「破械」怪兽特殊召唤。</span>
+                                                        <span class="effect-text__item">「破械童子 罗鬼刹」①：自己·对方回合，以自己场上1张卡为对象才能发动。那张卡破坏。这个效果的发动后，直到回合结束时自己不是恶魔族怪兽不能特殊召唤。<br>②：场上的这张卡被战斗或者「破械童子 罗鬼刹」以外的卡的效果破坏的场合才能发动。从手卡·卡组把「破械童子 罗鬼刹」以外的1只「破械」怪兽特殊召唤。</span>
+                                                        <span class="effect-text__item">「破械式鬼 萨拉」①：自己·对方的主要阶段，把这张卡从手卡丢弃才能发动。从手卡把1只恶魔族怪兽特殊召唤。那之后，自己场上1张卡破坏。<br>②：这张卡在墓地存在的状态，场上的卡被战斗或者「破械式鬼 萨拉」以外的卡的效果破坏的场合才能发动。这张卡加入手卡或特殊召唤。这个效果特殊召唤的这张卡从场上离开的场合回到卡组最下面。</span>
+                                                        <span class="effect-text__item">「破械式鬼 斯玛」①：这张卡召唤的场合才能发动。除「破械式鬼 斯玛」外的1只4星以下的「破械」怪兽从卡组特殊召唤。那之后，自己场上1张卡破坏。这个回合，自己不是恶魔族怪兽不能特殊召唤。<br>②：场上的这张卡被战斗或者「破械式鬼 斯玛」以外的卡的效果破坏的场合才能发动。从手卡·卡组把「破械式鬼 斯玛」以外的1只「破械」怪兽特殊召唤。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 代替破坏：「破械童子 娑罗摩」①效果处理时，选择「破械焰魔天 阎摩」作为要破坏的卡，并适用「破械焰魔天 阎摩」的『场上的这张卡被战斗·效果破坏的场合，可以作为代替把自己或对方的场上1张表侧表示卡破坏』效果而让「破械童子 娑罗摩」被破坏的场合，可以发动「破械童子 娑罗摩」②效果。「破械童子 阿罗汉」①、「破械童子 罗鬼刹」①、「破械式鬼 萨拉」①、「破械式鬼 斯玛」①的效果处理时同样。 26/5/29</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24334&amp;request_locale=ja">官方Q&amp;A（2026-05-29）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械双王神 来迎」在结束阶段发动③后，同一结束阶段内对方以「敌人操纵器」取得其控制权，对方还能发动1次来迎的③。（2019-09-27）</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械双王神 来迎」这个卡名的①②③的效果1回合各能使用1次。<br>③：自己·对方的结束阶段以场上1张卡为对象才能发动。那张卡破坏。</span>
+                                                        <span class="effect-text__item">「敌人操纵器」①：可以从以下效果选择1个发动。<br>●以对方场上1只表侧表示怪兽为对象才能发动。那只对方的表侧表示怪兽的表示形式变更。<br>●把自己场上1只怪兽解放，以对方场上1只表侧表示怪兽为对象才能发动。那只表侧表示怪兽的控制权直到结束阶段得到。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 基本用语 · 文本的阅读方法 · 1回合1次：「捕食植物 蜘蛛兰」的①效果、「墨吉斯特里仪术师」的②效果、「破械双王神 来迎」的③效果、在结束阶段发动后，对方用「敌人操纵器」的效果得到其控制权的场合，这个阶段内对方还能再发动1次这些效果。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械焰魔天 阎摩」的②不能选择不受其怪兽效果影响的卡或不会被效果破坏的卡代替破坏；只有1次不会被效果破坏的卡也不能选。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械焰魔天 阎摩」②：场上的这张卡被战斗·效果破坏的场合，可以作为代替把自己或对方的场上1张表侧表示卡破坏。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 代替破坏：适用『代替破坏』的效果时，不能选不受那个效果影响的卡或不会被效果破坏的卡来代替破坏。「代理龙」「破械焰魔天 阎摩」②等也同样。 26/6/12</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 代替破坏：适用「破械焰魔天 阎摩」②效果时，不能选适用了『不受这张卡以外的怪兽效果影响』效果的「始祖龙 古龙」或「积木龙」等作为代替破坏的卡。也不能选因「圣珖神龙 星尘·零」或「微睡的神碑」等效果而只再1次不会被效果破坏状态的卡。 26/6/12</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=20948&amp;request_locale=ja">官方Q&amp;A（2026-06-12）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">双方「破械焰魔天 阎摩」战斗将相互破坏时，回合玩家先决定是否适用②，并在伤害计算后进行代替破坏。若回合玩家先破坏自己仅有的另一张表侧卡，对方已无可选的代替卡，就不能适用②。（2026-05-29）</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械焰魔天 阎摩」②：场上的这张卡被战斗·效果破坏的场合，可以作为代替把自己或对方的场上1张表侧表示卡破坏。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 代替破坏：被战斗破坏时要适用这类效果的场合，是在伤害计算时确定要被战斗破坏的时点适用。在伤害计算后，进行作为破坏的代替而适用的处理。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 代替破坏：『作为代替把○○卡破坏·解放·送去墓地·除外』等的可选效果，都不能选确定被破坏的卡。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 代替破坏：同1时点双方都要适用代替破坏的效果时，回合玩家的先适用，之后非回合玩家持有这类效果的卡已经不在场上存在的场合，不适用。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械焰魔天 阎摩」的①只能选择本回合被破坏并送去墓地、此后一直留在墓地的恶魔族怪兽；被破坏后复活，再作为连接素材送墓的怪兽不能选。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械焰魔天 阎摩」①：自己结束阶段，以这个回合被破坏的自己墓地最多2只恶魔族怪兽为对象才能发动。那些怪兽特殊召唤。只要这个效果特殊召唤的怪兽在自己场上表侧表示存在，自己不是恶魔族怪兽不能特殊召唤。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 基本用语 · 文本的阅读方法 · 『这张卡』『那张卡』：指代的卡片一旦离开了当前区域，就不再当作『这张卡』『那张卡』。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24344&amp;request_locale=ja">官方Q&amp;A（2026-06-06）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「双极之破械神」的③效果被「星遗物的交心」改变的场合，这个结束阶段可以再发动「破械双极」把「双极之破械神」特殊召唤。（2019-11-02）</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「双极之破械神」自己对「双极之破械神」1回合只能有1次特殊召唤。</span>
+                                                        <span class="effect-text__item">「双极之破械神」③：场上的这张卡被破坏送去墓地的回合的结束阶段才能发动。这张卡特殊召唤。这个效果特殊召唤的这张卡从场上离开的场合回到卡组最下面。</span>
+                                                        <span class="effect-text__item">「星遗物的交心」①：自己场上有「机怪虫」怪兽存在，对方怪兽的效果发动时才能发动。那个效果变成「选对方场上1只表侧表示怪兽回到持有者手卡」。</span>
+                                                        <span class="effect-text__item">「破械双极」①：从自己的手卡·墓地把1只「破械」怪兽特殊召唤。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械唱导」的①处理时，任一对象脱离对象范围，两张卡都不破坏；两个对象仍在对象范围内，只是其中一张不受效果影响或不会被破坏时，另一张仍然破坏。（2019-07-15）</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械唱导」①：以自己场上1只「破械」怪兽和场上1张卡为对象才能发动。那2张卡破坏。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 特定效果的处理方法 · 特定记述的适用 · 『那○张卡』：这类记述的效果处理时，如果原定的『那○张卡』中的部分卡变得不存在，这个效果不适用。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 特定效果的处理方法 · 特定记述的适用 · 『那○张卡』：卡片仍然存在，但是不会破坏/不受影响的场合，剩下的卡仍然会适用这个效果，但这1步当作没有正常适用，后续处理不进行；不能无效/除外/特殊召唤/回到卡组等场合，剩下的卡也不适用这个效果。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=4&amp;cid=14696&amp;request_locale=ja">官方补充说明（2019-07-15）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械冥官 篁」的①即使只以魔法·陷阱卡或里侧表示卡为对象，也可以被「灰流丽」的①或「圣王的粉碎」连锁。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械冥官 篁」①：以自己场上最多3张卡为对象才能发动。那些卡破坏，这张卡从手卡特殊召唤。那之后，破坏的卡的原本种类的以下效果各能适用。<br>●怪兽：自己抽1张。<br>●魔法：场上1只怪兽的表示形式变更。<br>●陷阱：场上1张其他卡破坏。</span>
+                                                        <span class="effect-text__item">「灰流丽」①：包含以下其中任意种效果的魔法·陷阱·怪兽的效果发动时，把这张卡从手卡丢弃才能发动。那个效果无效。<br>●从卡组把卡加入手卡的效果<br>●从卡组把怪兽特殊召唤的效果<br>●从卡组把卡送去墓地的效果</span>
+                                                        <span class="effect-text__item">「圣王的粉碎」这个卡名的卡在1回合只能发动1张。对方场上有卡存在的场合，这张卡的发动从手卡也能用。<br>①：包含从卡组把卡加入手卡效果的魔法·陷阱·怪兽的效果发动时才能发动。那个效果无效。自己墓地有陷阱卡存在的场合，再把那张无效的卡破坏。这张卡从手卡发动的场合，发动后，这次决斗中自己不能把暗·水·炎属性怪兽的效果发动。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 「灰流丽」·「星尘龙」 · 『包含○○』：「破械冥官 篁」的①效果发动时，不论作为对象的卡是否包含怪兽卡，即使只以表侧表示的魔法·陷阱卡为对象发动，或只以里侧表示卡为对象发动，也可以连锁发动「圣王的粉碎」或「灰流丽」的效果。「双天的调伏」的场合也一样，不论作为对象的卡的种类如何，都可以连锁发动这些效果。 26/5/29</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23050&amp;request_locale=ja">官方Q&amp;A（2026-05-29）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">手卡的「破械冥官 篁」发动①后，对方连锁「PSY骨架装备·γ」的①或「巳剑大祓」的①，再连锁「破械式鬼 萨拉」的①将该篁特殊召唤并破坏其他卡时，篁的发动或效果仍被无效，但它已不在手卡，不会被破坏。换为「灵王的波动」或「DDD 怒涛大王 决策凯撒」的①，也只无效而不破坏。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械冥官 篁」①：以自己场上最多3张卡为对象才能发动。那些卡破坏，这张卡从手卡特殊召唤。那之后，破坏的卡的原本种类的以下效果各能适用。<br>●怪兽：自己抽1张。<br>●魔法：场上1只怪兽的表示形式变更。<br>●陷阱：场上1张其他卡破坏。</span>
+                                                        <span class="effect-text__item">「PSY骨架装备·γ」①：自己场上没有怪兽存在，对方把怪兽的效果发动时才能发动（同一连锁上最多1次）。手卡的这张卡和自己的手卡·卡组·墓地1只「PSY骨架驱动者」特殊召唤，那个发动无效并破坏。这个效果特殊召唤的怪兽全部在结束阶段除外。</span>
+                                                        <span class="effect-text__item">「巳剑大祓」①：对方把魔法·陷阱·怪兽的效果发动时，把自己场上1只5星以上的爬虫类族怪兽解放才能发动。那个效果无效并破坏。</span>
+                                                        <span class="effect-text__item">「破械式鬼 萨拉」①：自己·对方的主要阶段，把这张卡从手卡丢弃才能发动。从手卡把1只恶魔族怪兽特殊召唤。那之后，自己场上1张卡破坏。</span>
+                                                        <span class="effect-text__item">「灵王的波动」①：包含把怪兽特殊召唤效果的魔法·陷阱·怪兽的效果发动时才能发动。那个效果无效。自己墓地有陷阱卡存在的场合，再把那张无效的卡破坏。这张卡从手卡发动的场合，发动后，这次决斗中自己不能把光·地·风属性怪兽的效果发动。</span>
+                                                        <span class="effect-text__item">「DDD 怒涛大王 决策凯撒」①：包含把怪兽特殊召唤效果的怪兽的效果·魔法·陷阱卡发动时，把这张卡1个超量素材取除才能发动。那个发动无效并破坏。那之后，可以让这张卡和自己场上1只「DD」怪兽的攻击力直到回合结束时上升1800。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 无效·改写 · 发动无效 · 卡的发动无效：『发动无效并破坏·除外』等效果处理时，那张卡已经不在发动时的场所的状况，『破坏·除外』等处理不适用。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 无效·改写 · 发动无效 · 卡的发动无效：像「古圣戴 始龙」「灰流丽」这样， 也当作陷阱卡使用的陷阱怪兽 以外的卡片发动效果，那个处理时不在发动时的场所，就不再是『这』『那』指代的卡。因为不是发动效果的那张，所以『破坏·除外』等处理不适用。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23949&amp;request_locale=ja">官方Q&amp;A（2026-11-08）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械童子 娑罗摩」的①以墓地「破械」怪兽为对象时，是包含特殊召唤的效果，可以被「神之警告」连锁；以「破械」魔法·陷阱卡为对象时不包含特殊召唤，不能被「神之警告」连锁。「虚无空间」的①适用中，只能以墓地「破械」魔法·陷阱卡为对象发动。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械童子 娑罗摩」①：以「破械童子 娑罗摩」以外的自己墓地1张「破械」卡为对象才能发动。那张卡在自己场上盖放。那之后，自己场上1张卡破坏。</span>
+                                                        <span class="effect-text__item">「神之警告」①：可以支付2000基本分把以下效果发动。<br>●包含把怪兽特殊召唤效果的怪兽的效果·魔法·陷阱卡发动时才能发动。那个发动无效并破坏。<br>●自己或对方把怪兽召唤·反转召唤·特殊召唤之际才能发动。那个无效，那些怪兽破坏。</span>
+                                                        <span class="effect-text__item">「虚无空间」①：只要这张卡在魔法与陷阱区域存在，双方不能把怪兽特殊召唤。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 基本用语 · 各种召唤 · 通常召唤 · 盖放：像「巨人轰炸机·大空袭式」这类效果文本中的『把卡盖放』，指的是把卡片里侧表示放置到场上（包含把怪兽里侧表示通常召唤·特殊召唤到怪兽区域和把魔法·陷阱卡盖放到魔法·陷阱卡区域或场地区域2种情况）或把场上表侧表示的怪兽变成里侧表示。而「暗黑神鸟 斯摩夫」这类效果文本中的『不能把卡盖放』，是让这些行动都不能进行。此外，「饼蛙」等效果把怪兽在场上盖放的场合，如无特殊说明，是把怪兽里侧表示特殊召唤到场上（不是通常召唤）。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 「灰流丽」·「星尘龙」 · 前言：「神之警告」「灰流丽」「屋敷童」这样记述『包含○○』的效果，是否可以发动，要看对应效果本身的性质。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 特定效果的处理方法 · 能否发动的判断方法 · 选发效果：是多步效果的场合，如果存在1个或多个必须适用的处理，只要有1个不能适用的场合，基本上不能发动。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=22953&amp;request_locale=ja">官方Q&amp;A（2022-12-30）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=22952&amp;request_locale=ja">官方Q&amp;A（2022-12-30）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械焰魔天 阎摩」的②选对方的阎摩代替破坏时，对方不能再适用那只阎摩的②；选「卡通世界」时，对方也不能以墓地「卡通书签」的代替破坏效果再次代替。 「破械焰魔天 阎摩」的②选择装备「六武众的御灵代」的怪兽时，必须适用御灵代的代替破坏效果，改为破坏御灵代；选择有超量素材的「转生炎兽 烈焰龙」时，必须取除其素材代替破坏，结果没有卡被破坏。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械焰魔天 阎摩」②：场上的这张卡被战斗·效果破坏的场合，可以作为代替把自己或对方的场上1张表侧表示卡破坏。</span>
+                                                        <span class="effect-text__item">「卡通书签」②：自己场上的「卡通世界」被效果破坏的场合，可以作为代替把墓地的这张卡除外。</span>
+                                                        <span class="effect-text__item">「六武众的御灵代」1回合1次，自己的主要阶段时可以当作装备卡使用给自己场上的名字带有「六武众」的怪兽装备，或者把装备解除以表侧攻击表示特殊召唤。只在这个效果当作装备卡使用的场合，装备怪兽的攻击力·守备力上升500。装备怪兽战斗破坏对方怪兽的场合，自己从卡组抽1张卡。（1只怪兽可以装备的同盟最多1张。装备怪兽被破坏的场合，作为代替把这张卡破坏。）</span>
+                                                        <span class="effect-text__item">「转生炎兽 烈焰龙」①：这张卡被战斗·效果破坏的场合，作为代替把这张卡1个超量素材取除。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片的抗性 · 代替破坏：『作为代替把○○卡破坏』的效果适用，要让『○○卡』被破坏时，如果还存在可以代替『○○卡』破坏的效果，必须适用的效果会适用，可选适用的效果不能适用。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24336&amp;request_locale=ja">官方Q&amp;A（2026-07-16）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=13693&amp;request_locale=ja">官方Q&amp;A（2026-05-30）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24343&amp;request_locale=ja">官方Q&amp;A（2026-06-22）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械神 阿罗魃」的①作为连锁1处理后进行连接召唤时，可以发动「神之宣告」无效该次召唤；作为连锁2以上处理后进行连接召唤时，不能在召唤之际发动「神之宣告」。其①仍属于包含特殊召唤的效果，可以被「灵王的波动」「DDD 怒涛大王 决策凯撒」的①或「神之警告」直接连锁。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械神 阿罗魃」①：以对方场上1只表侧表示怪兽为对象才能发动。只用那只对方怪兽和自己场上的这张卡为素材进行「破械神 阿罗魃」以外的1只暗属性连接怪兽的连接召唤。</span>
+                                                        <span class="effect-text__item">「神之宣告」①：可以把基本分支付一半把以下效果发动。<br>●魔法·陷阱卡发动时才能发动。那个发动无效并破坏。<br>●自己或对方把怪兽召唤·反转召唤·特殊召唤之际才能发动。那个无效，那些怪兽破坏。</span>
+                                                        <span class="effect-text__item">「灵王的波动」①：包含把怪兽特殊召唤效果的魔法·陷阱·怪兽的效果发动时才能发动。那个效果无效。自己墓地有陷阱卡存在的场合，再把那张无效的卡破坏。这张卡从手卡发动的场合，发动后，这次决斗中自己不能把光·地·风属性怪兽的效果发动。</span>
+                                                        <span class="effect-text__item">「DDD 怒涛大王 决策凯撒」①：包含把怪兽特殊召唤效果的怪兽的效果·魔法·陷阱卡发动时，把这张卡1个超量素材取除才能发动。那个发动无效并破坏。那之后，可以让这张卡和自己场上1只「DD」怪兽的攻击力直到回合结束时上升1800。</span>
+                                                        <span class="effect-text__item">「神之警告」①：可以支付2000基本分把以下效果发动。<br>●包含把怪兽特殊召唤效果的怪兽的效果·魔法·陷阱卡发动时才能发动。那个发动无效并破坏。<br>●自己或对方把怪兽召唤·反转召唤·特殊召唤之际才能发动。那个无效，那些怪兽破坏。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 条件特殊召唤和发动效果特殊召唤 · 发动效果特殊召唤 · 发动效果地条件特殊召唤：「龙星」「奇妙XYZ」等记述着『把○○S·X·连接召唤』的效果，让玩家可以在其他时点进行条件特殊召唤，但条件特殊召唤本身不入连锁，这些效果是在处理完毕后才进行条件特殊召唤。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 条件特殊召唤和发动效果特殊召唤 · 发动效果特殊召唤 · 发动效果地条件特殊召唤：因此，若是在连锁1发动，其效果处理完毕时，怪兽通常·特殊召唤之际，由于没有其他效果需要处理，这次通常·特殊召唤可以被「神之宣告」等卡的效果无效。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 条件特殊召唤和发动效果特殊召唤 · 发动效果特殊召唤 · 发动效果地条件特殊召唤：连锁2以上发动的场合，其效果处理完毕时，怪兽通常·特殊召唤之际，还有其他效果需要处理，「神之宣告」等卡的效果无法发动，这次特殊召唤不会被无效。 25/9/27</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 条件特殊召唤和发动效果特殊召唤 · 发动效果特殊召唤 · 发动效果地条件特殊召唤：这类效果是『包含把怪兽特殊召唤』的效果。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24054&amp;request_locale=ja">官方Q&amp;A（2026-07-17）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23933&amp;request_locale=ja">官方Q&amp;A（2026-09-04）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械神 阿罗魃」的①进行的连接召唤，在原连锁块处理后立即进行，不当作以发动的怪兽效果特殊召唤，不能使「赫焉龙 大木偶剧场龙」的②满足条件；作为素材离场的怪兽也不是因卡的效果离场。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械神 阿罗魃」①：以对方场上1只表侧表示怪兽为对象才能发动。只用那只对方怪兽和自己场上的这张卡为素材进行「破械神 阿罗魃」以外的1只暗属性连接怪兽的连接召唤。</span>
+                                                        <span class="effect-text__item">「赫焉龙 大木偶剧场龙」②：这张卡在怪兽区域或墓地存在的状态，对方发动的怪兽的效果让怪兽特殊召唤的场合，把这张卡除外才能发动。从卡组把1只「教导」怪兽或者从额外卡组把1只「死狱乡」怪兽特殊召唤。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 条件特殊召唤和发动效果特殊召唤 · 发动效果特殊召唤 · 发动效果地条件特殊召唤：「龙星」「奇妙XYZ」等记述着『把○○S·X·连接召唤』的效果，让玩家可以在其他时点进行条件特殊召唤，但条件特殊召唤本身不入连锁，这些效果是在处理完毕后才进行条件特殊召唤。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 条件特殊召唤和发动效果特殊召唤 · 发动效果特殊召唤 · 发动效果地条件特殊召唤：不过，特殊召唤了怪兽后，不是『卡的效果让怪兽特殊召唤』。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 条件特殊召唤和发动效果特殊召唤 · 发动效果特殊召唤 · 发动效果地条件特殊召唤：『发动的效果让怪兽特殊召唤』指的是发动的效果所在那个连锁块的效果处理进行特殊召唤。这个场合不是『发动的效果让怪兽特殊召唤』。详见发动的效果。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 基本用语 · 文本的阅读方法 · 怪兽的召唤手续：因不入连锁的召唤手续而被解放·送去墓地（或其他处理）的卡片，不是因卡的效果而被解放·送去墓地（或其他处理）。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23173&amp;request_locale=ja">官方Q&amp;A（2025-09-27）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械神王 阎摩」的②破坏卡片是处理时可选的后续处理，发动时不视为破坏卡片的效果，不能被「星尘龙」的①连锁。即使自己墓地没有可特殊召唤的恶魔族怪兽，其②仍包含墓地特殊召唤，可以被「屋敷童」的①连锁。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械神王 阎摩」②：这张卡在墓地存在的状态，自己场上的卡被战斗·效果破坏的场合，把这张卡除外才能发动。从自己的手卡·墓地把1只恶魔族怪兽特殊召唤。那之后，可以把自己场上1张卡破坏。</span>
+                                                        <span class="effect-text__item">「星尘龙」①：要让场上的卡破坏的魔法·陷阱·怪兽的效果发动时，把这张卡解放才能发动。那个发动无效并破坏。</span>
+                                                        <span class="effect-text__item">「屋敷童」①：包含以下其中任意种效果的魔法·陷阱·怪兽的效果发动时，把这张卡从手卡丢弃才能发动。那个发动无效。<br>●从墓地把卡加入手卡·卡组·额外卡组的效果<br>●从墓地把怪兽特殊召唤的效果<br>●从墓地把卡除外的效果</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 「灰流丽」·「星尘龙」 · 前言：「星尘龙」「娱乐法师 伤害杂耍人」这样不是记述『包含○○』，而是记述『持有..』或直接记述『把卡片破坏』『给与伤害』等的效果，只能对应 发动时就会 那样处理的效果。进一步地，「反大革命」这样，只能对应发动时就会破坏2张以上卡片的效果。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 「灰流丽」·「星尘龙」 · 『包含○○』：除上述情况之外，即使当前的效果处理不可能实现『○○』，只要包含了『○○』效果，就可以对应。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23195&amp;request_locale=ja">官方Q&amp;A（2026-08-07）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23215&amp;request_locale=ja">官方Q&amp;A（2026-10-30）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械神 阿罗魃」是对方唯一怪兽，被「双天将 金刚」战斗破坏后，伤害计算后不能发动金刚的②。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械神 阿罗魃」②：场上的这张卡被战斗·效果破坏的场合，以「破械神 阿罗魃」以外的自己墓地1只恶魔族怪兽为对象才能发动。那只怪兽加入手卡。</span>
+                                                        <span class="effect-text__item">「双天将 金刚」②：这张卡攻击的伤害计算后才能发动。选对方场上1只怪兽回到持有者手卡。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 战斗阶段流程 · 伤害步骤 · 伤害计算时 · 确定被战斗破坏：对方场上只有1只怪兽存在，「双天将 金刚」的攻击把那只怪兽战斗破坏的场合，即使②效果不取对象，由于确定被战斗破坏的怪兽不能回到手卡，伤害计算后不能发动②效果。 20/8/7</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23053&amp;request_locale=ja">官方Q&amp;A（2022-12-30）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「破械双王神 来迎」被「混沌幻影」的①复制卡名与效果后，「混沌幻影」发动复制的③破坏卡片，不会使其复制的①满足发动条件，因为仍是「破械双王神 来迎」的效果造成破坏。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械双王神 来迎」①：「破械双王神 来迎」以外的卡的效果让场上的其他卡被破坏的场合，以场上1张卡为对象才能发动。那张卡破坏。<br>③：自己·对方的结束阶段以场上1张卡为对象才能发动。那张卡破坏。</span>
+                                                        <span class="effect-text__item">「混沌幻影」①：1回合1次，以自己墓地1只效果怪兽为对象才能发动。那只怪兽除外，这张卡直到结束阶段当作和那只怪兽同名卡使用，得到相同的原本攻击力和效果。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 复制 · 『得到』类：由于已经是同名卡，发动得到的效果当作那个卡名发动的效果。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=22737&amp;request_locale=ja">官方Q&amp;A（2022-12-30）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「激流葬」处理时会破坏「破械焰魔天 阎摩」，阎摩可以用②选择发动中的「激流葬」代替破坏；「激流葬」的其他破坏处理仍正常进行。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械焰魔天 阎摩」②：场上的这张卡被战斗·效果破坏的场合，可以作为代替把自己或对方的场上1张表侧表示卡破坏。</span>
+                                                        <span class="effect-text__item">「激流葬」①：怪兽召唤·反转召唤·特殊召唤时才能发动。场上的怪兽全部破坏。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片·效果的发动 · 卡的发动：魔法·陷阱卡在发动之际，就 已经在场上 ，可以确定卡名。只是在这时， 不会立即适用效果 ，而是按照 连锁基础 规则，按顺序轮到它处理时才开始适用。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 卡片·效果的发动 · 发动后不能留在场上的魔法·陷阱卡：这种魔法·陷阱卡在连锁途中不能从场上回到手卡·卡组，可以被破坏·除外·送去墓地·变成X素材。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=20056&amp;request_locale=ja">官方Q&amp;A（2026-08-06）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">我方连锁1发动「破械转生」，对方连锁2发动「误出荷」，对方连锁3发动「锁缚龙 锁镰」效果（选择『那个效果连锁的卡的效果无效并破坏』）的场合，我方适用「代理龙」①效果，「破械转生」效果被无效但未被破坏，之后连锁2和连锁1如何处理，「破械转生」是否作为处理完毕的卡送去墓地，调整中。（2026-06-19）</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械转生」①：作为这张卡的发动时的效果处理，可以从卡组把1张「破械转生」以外的「破械」魔法卡或「双王之械」加入手卡。</span>
+                                                        <span class="effect-text__item">「误出荷」①：包含从卡组把卡加入手卡效果的魔法·陷阱·怪兽的效果发动时才能发动。那个效果变成「对方从自身卡组选1张卡。自己把那张卡加入手卡。自己把这个效果加入手卡的卡持续公开，这个回合的结束阶段，公开中的那张卡回到原本持有者的卡组，自己抽1张。」。</span>
+                                                        <span class="effect-text__item">「锁缚龙 锁镰」②：连锁卡的效果的发动让魔法·陷阱·怪兽的效果发动时，可以从以下效果选择1个发动。<br>●那个效果无效并破坏。<br>●那个效果连锁的卡的效果无效并破坏。</span>
+                                                        <span class="effect-text__item">「代理龙」①：自己场上的卡被战斗·效果破坏的场合，可以作为代替把这张卡所连接区1只自己怪兽破坏。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">我方连锁1发动「破械转生」，对方连锁2发动「地中族妖魔」①效果，对方连锁3发动「锁缚龙 锁镰」效果（选择『那个效果连锁的卡的效果无效并破坏』）的场合，我方适用「代理龙」①效果，「破械转生」效果被无效但未被破坏，之后连锁2的效果正常适用。『之后把对象怪兽变成里侧守备表示』的处理会进行。（2026-06-19）</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「破械转生」①：作为这张卡的发动时的效果处理，可以从卡组把1张「破械转生」以外的「破械」魔法卡或「双王之械」加入手卡。</span>
+                                                        <span class="effect-text__item">「地中族妖魔」①：对方把魔法·陷阱·怪兽的效果发动时，把手卡·场上的这张卡送去墓地，以自己场上1只「地中族」怪兽为对象才能发动。那个发动无效。那之后，作为对象的怪兽变成里侧守备表示。</span>
+                                                        <span class="effect-text__item">「锁缚龙 锁镰」②：连锁卡的效果的发动让魔法·陷阱·怪兽的效果发动时，可以从以下效果选择1个发动。<br>●那个效果无效并破坏。<br>●那个效果连锁的卡的效果无效并破坏。</span>
+                                                        <span class="effect-text__item">「代理龙」①：自己场上的卡被战斗·效果破坏的场合，可以作为代替把这张卡所连接区1只自己怪兽破坏。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 无效·改写 · 效果无效 · 多个效果无效同时适用的场合 · 同时存在：我方连锁1发动「破械转生」、对方连锁2发动「地中族妖魔」①效果、对方连锁3发动「锁缚龙 锁镰」效果（选择『那个效果连锁的卡的效果无效并破坏』）的场合，我方适用「代理龙」①效果，「破械转生」效果被无效但未被破坏，之后连锁2的效果正常适用。『之后把对象怪兽变成里侧守备表示』的处理会进行。</span>
+
+                                                </p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
+                                            <summary>刻魔</summary>
+                                            <div class="auto-number" id="unchained-ruling-fiendsmith" data-ruling-own="true">
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「红泪之魔 落泪」在规则上也当作「刻魔」卡，因此也当作「刻魔」怪兽；被效果改为不含「刻魔」的其他卡名后，不再当作「刻魔」卡。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「红泪之魔 落泪」这个卡名在规则上也当作「刻魔」卡使用。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 基本用语 · 卡名 · 这个卡名在规则上（也）当作「○○」（卡）使用：「奇迹除外士」「羽翼栗子球 LV6」记述的是『这个卡名在规则上也当作「元素英雄」卡使用』，因此是「元素英雄」怪兽，「E-紧急呼唤」的①效果处理时可以选这些卡加入手卡。 26/2/5</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 基本用语 · 卡名 · 这个卡名在规则上（也）当作「○○」（卡）使用：这类文本应当看成是那些卡的卡名栏附加的文本。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 基本用语 · 卡名 · 这个卡名在规则上（也）当作「○○」（卡）使用：适用改变卡名的效果后，当前卡名只是那个效果适用后的卡名，这类文本不再适用。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24282&amp;request_locale=ja">官方Q&amp;A（2026-04-29）</a>、<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=19063&amp;request_locale=ja">官方Q&amp;A（2026-10-30）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「刻魔的大圣棺」的①不能先把墓地的融合怪兽作为素材回到额外卡组，再在同次处理中融合召唤刚返回的那张卡；发动时必须已有可用的一组素材及额外卡组中的另1张可融合召唤的恶魔族融合怪兽。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「刻魔的大圣棺」①：自己主要阶段才能发动。自己墓地的怪兽作为融合素材回到卡组，把1只恶魔族融合怪兽融合召唤。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 只能有○○存在 · 「群雄割据」类 · 『双方场上各自只能有1种类的种族的怪兽表侧表示存在』：融合召唤和仪式召唤相关的效果是在把素材送去墓地·把怪兽解放前就要选定特殊召唤出场的融合怪兽·仪式怪兽，因此，即使在把素材送去墓地·把怪兽解放后场上不存在怪兽，也不能再更改要融合召唤·仪式召唤的怪兽。</span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 特定效果的处理方法 · 能否发动的判断方法 · 选发效果：是多步效果的场合，如果存在1个或多个必须适用的处理，只要有1个不能适用的场合，基本上不能发动。</span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=23502&amp;request_locale=ja">官方Q&amp;A（2026-07-25）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「刻魔的神圣棺」的①特殊召唤等级低于8、攻击力1500的怪兽，随后装备而升至3300时，不能使「宿心的青眼龙」的③满足发动条件；召唤成功时尚不满足等级或攻击力要求。</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「刻魔的神圣棺」①：自己·对方回合1次，以连接怪兽以外的自己墓地1只恶魔族·光属性怪兽为对象才能发动。那只怪兽特殊召唤，自己场上的这张卡当作持有以下效果的装备魔法卡使用给那只怪兽装备。<br>●装备怪兽的攻击力上升给自身装备的连接怪兽的连接标记合计×600。<br>●装备怪兽向守备表示怪兽攻击的场合，给与对方为攻击力超过那个守备力的数值的战斗伤害。</span>
+                                                        <span class="effect-text__item">「宿心的青眼龙」③：这张卡在墓地存在的状态，对方把8星以上或攻击力3000以上的怪兽召唤·特殊召唤的场合才能发动。那些怪兽送去墓地，这张卡特殊召唤。</span>
+                                                    </span>
+                                                    <span class="ruling-summary">来源：<a href="https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&amp;fid=24105&amp;request_locale=ja">官方Q&amp;A（2024-10-03）</a>。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">「刻魔的神圣棺」的①效果把攻击力是1200的怪兽特殊召唤，装备后因『●』效果攻击力上升到超过3000的状况，对方可以发动「连锁破坏」。（2024-11-02）</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「刻魔的神圣棺」①：自己·对方回合1次，以连接怪兽以外的自己墓地1只恶魔族·光属性怪兽为对象才能发动。那只怪兽特殊召唤，自己场上的这张卡当作持有以下效果的装备魔法卡使用给那只怪兽装备。<br>●装备怪兽的攻击力上升给自身装备的连接怪兽的连接标记合计×600。<br>●装备怪兽向守备表示怪兽攻击的场合，给与对方为攻击力超过那个守备力的数值的战斗伤害。</span>
+                                                        <span class="effect-text__item">「连锁破坏」①：攻击力2000以下的怪兽召唤·反转召唤·特殊召唤时，以那1只表侧表示怪兽为对象才能发动。从那只表侧表示怪兽的控制者的手卡·卡组把作为对象的怪兽的同名卡全部破坏。</span>
+                                                    </span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">我方场上存在「刻魔 落泪」，对方场上存在「“K9案件”」的状况，对方发动效果特殊召唤「K9-66a号 霜妖」时（攻击力因「刻魔 落泪」的②效果下降600是1400），我方发动「疯帽黑客」的①效果，这时对方「“K9案件”」的②效果立即适用，「K9-66a号 霜妖」的攻击力上升900是2300的状况，这个时点「断绝的落穴」的效果不能适用，而组成连锁之前不满足「奈落的落穴」的发动条件，结果我方不能连锁发动「奈落的落穴」也不能连锁发动「断绝的落穴」。同一时点可以连锁发动「地狱的暴走召唤」。（2025-11-21）</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「刻魔 落泪」②：只要这张卡在怪兽区域存在，对方场上的怪兽的攻击力下降600。</span>
+                                                        <span class="effect-text__item">「“K9案件”」②：对方把手卡·墓地的怪兽的效果发动的回合，自己场上的「K9」怪兽的攻击力上升900。</span>
+                                                        <span class="effect-text__item">「K9-66a号 霜妖」②：把手卡的这张卡和手卡1只5星怪兽给对方观看才能发动。那2只特殊召唤。这个效果特殊召唤的怪兽不能作为光属性超量怪兽的超量召唤的素材。</span>
+                                                        <span class="effect-text__item">「疯帽黑客」①：对方场上有怪兽特殊召唤的场合才能发动。这张卡从手卡特殊召唤。</span>
+                                                        <span class="effect-text__item">「断绝的落穴」①：对方把攻击力1500以下的怪兽召唤·反转召唤·特殊召唤时才能发动。那些攻击力1500以下的怪兽里侧除外。</span>
+                                                        <span class="effect-text__item">「奈落的落穴」①：对方把攻击力1500以上的怪兽召唤·反转召唤·特殊召唤时才能发动。那些攻击力1500以上的怪兽破坏并除外。</span>
+                                                        <span class="effect-text__item">「地狱的暴走召唤」①：对方场上有表侧表示怪兽存在，自己场上只有攻击力1500以下的怪兽1只特殊召唤时才能发动。那只特殊召唤的怪兽的同名怪兽从自己的手卡·卡组·墓地尽可能攻击表示特殊召唤，对方选自身场上1只表侧表示怪兽，那只怪兽的同名怪兽从自身的手卡·卡组·墓地尽可能特殊召唤。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 诱发类效果 · 同一时点发动多个诱发类效果：我方场上存在「刻魔 落泪」，对方场上存在「“K9案件”」的状况，对方发动效果特殊召唤「K9-66a号 霜妖」时（攻击力因「刻魔 落泪」的②效果下降600是1400），我方发动「疯帽黑客」的①效果，这时对方「“K9案件”」的②效果立即适用，「K9-66a号 霜妖」的攻击力上升900是2300的状况，这个时点「断绝的落穴」的效果不能适用，而组成连锁之前不满足「奈落的落穴」的发动条件，结果我方不能连锁发动「奈落的落穴」也不能连锁发动「断绝的落穴」。不过，这个时点可以对这只「K9-66a号 霜妖」发动「地狱的暴走召唤」。</span>
+                                                </p>
+                                                <p class="ruling-with-effects">
+                                                    <span class="ruling-summary">自己场上的「娱乐法师 秋千大魔术家」的②尚可适用，且自己已在本回合适用「机炮食人魔」的①时，对方发动「刻魔 落泪」的③，仍由对方代受1200伤害。（2026-03-30）</span>
+                                                    <span class="effect-text" role="note" aria-label="相关效果原文">
+                                                        <span class="effect-text__item">「刻魔 落泪」③：这张卡被送去墓地的场合，从自己墓地让1只其他的恶魔族·光属性怪兽回到卡组·额外卡组才能发动。给与对方1200伤害。</span>
+                                                        <span class="effect-text__item">「娱乐法师 秋千大魔术家」②：只要这张卡在怪兽区域存在，自己受到的效果伤害由对方代受（这个效果在1回合可以适用最多有这张卡的超量素材数量的次数）。</span>
+                                                        <span class="effect-text__item">「机炮食人魔」①：把自己的魔法与陷阱区域的里侧表示卡任意数量送去墓地才能发动。给与对方送去墓地的数量×800伤害。这个效果的发动后，直到回合结束时恶魔族以外的怪兽的效果让对方受到的全部效果伤害变成0。</span>
+                                                    </span>
+                                                    <span class="ruling-summary ruling-rule">OCG Rule 战斗阶段流程 · 伤害步骤 · 伤害计算时 · 战斗伤害计算：效果伤害的适用顺序也类似：先适用「No.14 强欲之死神犬」的『效果伤害由对方代受』等效果，适用的场合不会再适用「死亡袋熊」的『效果伤害变成0』等效果。17/3/24</span>
+                                                </p>
                                             </div>
                                         </details>
                                     </div>
@@ -123,34 +365,48 @@
 
                         <section class="ruling-section" data-ruling-section="notes">
                             <h2>注意</h2>
+                            <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
                             <details class="ruling-fold" open>
                                 <summary>收起注意</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-page="Unchained.html" open>
+                                        <details class="ruling-axis" data-ruling-axis="unchained" open>
                                             <summary>破械</summary>
                                             <div class="auto-number" id="unchained-notes-own" data-ruling-own="true">
-                                        <p>
-                                        「破械式鬼 斯玛」①效果只有NS才能发动。必须处理炸自己卡。炸自己不能发动②效果。
-                                        </p>
-                                        <p>
-                                        「双极之破械神」③效果特召的自己从场上离开会回卡组最下方。「破械神 萨玛」②效果，「破械式鬼 萨拉」②效果也一样。
-                                        </p>
-                                        <p>
-                                        「破械转生」②效果不能炸自身。
-                                        </p>
-                                        <p>
-                                        「破械唱导」①效果处理必须要能炸到两张才会正常处理。
-                                        </p>
-                                        <p>
-                                        「破械神 罗寂刹」只能吃特殊召唤的表侧表示怪兽。「破械神 阿罗魃」没这个限制，可以吃不是特殊召唤的怪兽，但一样只能是表侧怪兽。
-                                        </p>
-                                        <p>
-                                        「破械神双 罗寂刹」②效果只有在自己场上存在Link4以上的「破械」连接怪兽才能发动。
-                                        </p>
-                                        <p>
-                                        「破械焰魔天 阎摩」只能用表侧表示卡代破。那个①效果只能特召这个回合被破坏的怪兽。
-                                        </p>
+                                                <p>「双极之破械神」的①必须是自己场上的卡被战斗或效果破坏；③必须是场上的自身被破坏送墓后，一直留在墓地至该回合结束阶段。</p>
+                                                <p>「破械冥官 篁」的①只能以自己场上的1至3张卡为对象；可适用的追加效果按被破坏卡的原本种类确定。</p>
+                                                <p>「破械冥官 篁」的②必须是场上的这张卡被效果破坏。</p>
+                                                <p>「破械神 萨巴拉」的①只能在自己或对方主要阶段，以自己场上1只恶魔族怪兽或1张里侧表示卡为对象。</p>
+                                                <p>「破械神 萨巴拉」的②只能从卡组盖放「破械」魔法·陷阱卡。</p>
+                                                <p>「破械神 萨玛」的①只能以自己场上的卡为对象，后续只能破坏魔法·陷阱卡；②只能以自己场上1只恶魔族怪兽或1张里侧表示卡为对象。</p>
+                                                <p>「破械式鬼 斯玛」的①必须是自身召唤，只能从卡组特殊召唤同名卡以外的4星以下「破械」怪兽。</p>
+                                                <p>「破械式鬼 斯玛」的②必须是场上的这张卡被战斗或同名卡以外的卡的效果破坏，只能从手卡·卡组特殊召唤同名卡以外的「破械」怪兽。</p>
+                                                <p>「破械式鬼 萨拉」的①只能在自己或对方主要阶段从手卡特殊召唤恶魔族怪兽；②必须是这张卡已在墓地时，场上的卡被战斗或同名卡以外的卡的效果破坏。</p>
+                                                <p>「破械童子 阿罗汉」的①只能以自己场上的卡为对象。</p>
+                                                <p>「破械童子 娑罗摩」的①只能以自己墓地中同名卡以外的「破械」卡为对象。</p>
+                                                <p>「破械童子 罗鬼刹」的①只能以自己场上的卡为对象。</p>
+                                                <p>「破械唱导」的①只能以自己怪兽区域1只表侧表示的「破械」怪兽和场上另1张卡为对象，不能选择发动中的自身。</p>
+                                                <p>「破械转生」的①只能加入同名卡以外的「破械」魔法卡或「双王之械」；②只能以自己墓地中同名卡以外的1至3张「破械」卡为对象，后续最多破坏回到卡组数量的自己场上的其他卡。</p>
+                                                <p>「破械双王神 来迎」的①必须是同名卡以外的卡的效果破坏场上的其他卡；②必须是其他怪兽被战斗破坏。</p>
+                                                <p>「破械焰魔天 阎摩」的①只能在自己结束阶段，以本回合被破坏的自己墓地1至2只恶魔族怪兽为对象；②只能选自己或对方场上的表侧表示卡代替破坏。</p>
+                                                <p>「破械神 阿罗魃」的①只能以对方场上的表侧表示怪兽为对象，且只能用该怪兽与这张卡连接召唤同名卡以外的暗属性连接怪兽；②只能以自己墓地中同名卡以外的恶魔族怪兽为对象。</p>
+                                                <p>「破械神王 阎摩」的①只能从自己卡组·墓地加入「破械」怪兽；②必须是这张卡已在墓地时，自己场上的卡被战斗或效果破坏，只能从自己手卡·墓地特殊召唤恶魔族怪兽。</p>
+                                                <p>「破械童子 阿罗汉」「破械童子 娑罗摩」「破械童子 罗鬼刹」各自的②，必须是场上的自身被战斗或各自同名卡以外的卡的效果破坏，且只能从手卡·卡组特殊召唤各自同名卡以外的「破械」怪兽。</p>
+                                                <p>「双王之械」「破械唱导」各自的②，必须是盖放的自身被效果破坏。</p>
+                                                <p>「双王之械」的①只能从卡组将「破械」卡加入手卡。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
+                                            <summary>刻魔</summary>
+                                            <div class="auto-number" id="unchained-notes-fiendsmith" data-ruling-own="true">
+                                                <p>「刻印群魔的刻魔锻冶师」的①只能检索「刻魔」魔法·陷阱卡；②必须以自己场上1张「刻魔」装备卡和场上1只怪兽为对象；③必须让自己墓地其他的恶魔族·光属性怪兽回到卡组·额外卡组。</p>
+                                                <p>「红泪之魔 落泪」的①只能从卡组送去墓地同名卡以外的「刻魔」卡；②只能在对方回合，以自己墓地的「刻魔」连接怪兽为对象。</p>
+                                                <p>「刻魔的赞圣」的①必须是自己场上没有表侧表示怪兽，或表侧表示怪兽只有恶魔族·光属性怪兽；②必须是这张卡已在墓地时，自己场上的表侧表示「刻魔」怪兽被对方的效果破坏。</p>
+                                                <p>「刻魔 震怒之日」的①只能选场上的表侧表示卡，数量最多为给这张卡装备的连接怪兽的连接标记合计；②必须让自己墓地其他的恶魔族·光属性怪兽回到卡组·额外卡组。</p>
+                                                <p>「刻魔 落泪」的①只能在融合召唤的场合，以自己的墓地或除外状态的恶魔族·光属性怪兽为对象；③必须让自己墓地其他的恶魔族·光属性怪兽回到卡组·额外卡组。</p>
+                                                <p>「刻魔的神圣棺」的①只能以自己墓地中连接怪兽以外的恶魔族·光属性怪兽为对象。</p>
+                                                <p>「刻魔的大圣棺」的①只能用自己墓地的怪兽作为素材融合召唤恶魔族融合怪兽；②只能以自己场上连接怪兽以外的恶魔族·光属性怪兽为对象。</p>
+                                                <p>「刻魔的镇魂棺」的①只能在自己或对方主要阶段，从手卡·卡组特殊召唤「刻魔」怪兽；②只能以自己场上连接怪兽以外的恶魔族·光属性怪兽为对象。</p>
                                             </div>
                                         </details>
                                     </div>
@@ -158,13 +414,32 @@
                             </details>
                         </section>
 
-                        <section class="ruling-section" data-ruling-section="continuous-effects">
+                        <section class="ruling-section" data-ruling-section="continuous">
                             <h2>持续适用的效果</h2>
+                            <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
                             <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-page="Unchained.html" open>
+                                <details class="ruling-axis" data-ruling-axis="unchained" open>
                                     <summary>破械</summary>
                                     <div class="auto-number" id="unchained-continuous-effects-own" data-ruling-own="true">
-                                        <p>无</p>
+                                        <p>「破械焰魔天 阎摩」战斗时的②在伤害计算确定适用，伤害计算后破坏代替卡。</p>
+                                        <p>「双极之破械神」的③、「破械神 萨玛」的②及「破械式鬼 萨拉」的②特殊召唤自身后，自身从场上离开时必须回到卡组最下面；适用后不再于怪兽区域表侧表示存在时，该回卡组处理的适用消失。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
+                                    <summary>刻魔</summary>
+                                    <div class="auto-number" id="unchained-continuous-fiendsmith" data-ruling-own="true">
+                                        <p>「刻魔 落泪」的②在其于怪兽区域表侧表示存在期间，对方场上怪兽的攻击力下降600。</p>
+                                        <p>「刻魔的神圣棺」作为装备魔法卡时：装备怪兽的攻击力上升给自身装备的连接怪兽的连接标记合计×600；向守备表示怪兽攻击时，给与超过守备力数值的贯通战斗伤害。</p>
+                                        <p>「刻魔的大圣棺」作为装备魔法卡时，对方不能把装备怪兽作为效果的对象。</p>
+                                        <p>「刻魔的镇魂棺」作为装备魔法卡时，装备怪兽的攻击力上升600。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="general" open>
+                                    <summary>通用及跨轴互动</summary>
+                                    <div class="auto-number" id="unchained-continuous-general" data-ruling-own="true">
+                                        <p>「梦幻崩影·狮鹫」的②在其于怪兽区域表侧表示存在期间，双方不能发动场上处于非连接状态的特殊召唤怪兽的效果。</p>
+                                        <p>「No.80 狂装霸王 狂想战曲王」作为装备卡时，装备怪兽的攻击力上升1200。</p>
+                                        <p>「No.60 刻不知之杜加雷斯」的①处理后，按所选效果跳过下次自己抽卡阶段、下次自己主要阶段1，或下次自己回合的战斗阶段；该跳过不另行发动，不组成连锁。</p>
                                     </div>
                                 </details>
                             </div>
@@ -172,42 +447,69 @@
 
                         <section class="ruling-section" data-ruling-section="restrictions">
                             <h2>自肃</h2>
+                            <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
                             <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-page="Unchained.html" open>
+                                <details class="ruling-axis" data-ruling-axis="unchained" open>
                                     <summary>破械</summary>
                                     <div class="auto-number" id="unchained-restrictions-own" data-ruling-own="true">
-                                        <p>
-                                        「破械式鬼 斯玛」①效果(卡组拉人)发动后有恶魔族自肃。
-                                        </p>
-                                        <p>
-                                        「破械神 萨巴拉」①效果特召的自己只要在怪兽区域表侧表示存在就有恶魔族自肃。「破械焰魔天 阎摩」的①效果特殊召唤的怪兽也一样。
-                                        </p>
-                                        <p>
-                                        「破械童子 罗鬼刹」①效果(炸自己卡)发动后有恶魔族自肃。
-                                        </p>
-                                        <p>
-                                        「破械童子 阿罗汉」①效果(炸自己卡，自身特召)发动后有恶魔族自肃。
-                                        </p>
+                                        <p>「破械童子 阿罗汉」的①、「破械童子 罗鬼刹」的①及「破械式鬼 斯玛」的①处理后，直到回合结束时，自己不能特殊召唤恶魔族以外的怪兽。</p>
+                                        <p>「破械神 萨巴拉」的①特殊召唤的这张卡在任意一方怪兽区域表侧表示存在期间，使用该效果的自己只能特殊召唤恶魔族怪兽。</p>
+                                        <p>「破械焰魔天 阎摩」的①特殊召唤的怪兽在自己场上表侧表示存在期间，自己只能特殊召唤恶魔族怪兽。</p>
+                                        <p>自己对「双极之破械神」每回合只能有1次特殊召唤。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
+                                    <summary>刻魔</summary>
+                                    <div class="auto-number" id="unchained-restrictions-fiendsmith" data-ruling-own="true">
+                                        <p>「刻魔的赞圣」的①处理后，直到回合结束时，自己只能用恶魔族怪兽攻击宣言。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="general" open>
+                                    <summary>通用及跨轴互动</summary>
+                                    <div class="auto-number" id="unchained-restrictions-general" data-ruling-own="true">
+                                        <p>「魔界特派员 死亡主播」在连接召唤的回合不能作为连接素材；其②处理后，直到回合结束时，自己只能特殊召唤恶魔族怪兽。</p>
+                                        <p>「梦幻崩影·狮鹫」的①盖放的魔法·陷阱卡在该回合不能发动；其②使自己场上非连接状态的特殊召唤怪兽不能发动效果。</p>
+                                        <p>「No.60 刻不知之杜加雷斯」的①按所选「●」使自己跳过对应阶段，具体时点见“持续适用的效果”。</p>
                                     </div>
                                 </details>
                             </div>
                         </section>
 
-                        <section class="ruling-section" data-ruling-section="summon-conditions">
+                        <section class="ruling-section" data-ruling-section="summons">
                             <h2>召唤条件</h2>
+                            <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
                             <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-page="Unchained.html" open>
+                                <details class="ruling-axis" data-ruling-axis="unchained" open>
                                     <summary>破械</summary>
                                     <div class="auto-number" id="unchained-summon-conditions-own" data-ruling-own="true">
-                                        <p>
-                                        「破械神 罗寂刹」(蓝狗)素材必须包含「破械神」。「破械神 阿罗魃」，「破械焰魔天 阎摩」也一样。
-                                        </p>
+                                        <p>「破械双王神 来迎」要求包含连接怪兽的怪兽2只以上。</p>
+                                        <p>「破械焰魔天 阎摩」要求包含「破械神」怪兽的怪兽2只以上。</p>
+                                        <p>「破械神 阿罗魃」要求包含「破械神」怪兽的怪兽2只以上。</p>
+                                        <p>「破械神王 阎摩」要求恶魔族怪兽2只。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
+                                    <summary>刻魔</summary>
+                                    <div class="auto-number" id="unchained-summons-fiendsmith" data-ruling-own="true">
+                                        <p>「刻魔 震怒之日」要求「刻印群魔的刻魔锻冶师」＋恶魔族·光属性怪兽×2。</p>
+                                        <p>「刻魔 落泪」要求恶魔族·光属性怪兽×2。</p>
+                                        <p>「刻魔的神圣棺」要求包含恶魔族·光属性怪兽的怪兽2只以上。</p>
+                                        <p>「刻魔的大圣棺」要求包含恶魔族·光属性怪兽的怪兽2只。</p>
+                                        <p>「刻魔的镇魂棺」要求恶魔族·光属性怪兽1只。</p>
+                                        <p>自己对「刻魔的镇魂棺」每回合只能有1次特殊召唤。</p>
+                                    </div>
+                                </details>
+                                <details class="ruling-axis" data-ruling-axis="general" open>
+                                    <summary>通用及跨轴互动</summary>
+                                    <div class="auto-number" id="unchained-summons-general" data-ruling-own="true">
+                                        <p>「DDD 怒涛大王 决策凯撒」要求2只恶魔族6星怪兽。</p>
+                                        <p>「梦幻崩影·狮鹫」要求2只以上卡名不同的怪兽。</p>
+                                        <p>「魔界特派员 死亡主播」要求2只效果怪兽。</p>
+                                        <p>「大气吸收者」要求2只属性相同的恶魔族怪兽。</p>
                                     </div>
                                 </details>
                             </div>
                         </section>
-
-                        <h2>卡组预览: MC: 肘卫兵</h2>
 
                         <div id="deck-raw" style="display:none;">
                         </div>
