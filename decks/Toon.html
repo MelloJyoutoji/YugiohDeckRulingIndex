@@ -72,7 +72,7 @@
                                 <summary>展开裁定</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-page="Toon.html" open>
+                                        <details class="ruling-axis" data-ruling-page="Toon.html">
                                             <summary>卡通</summary>
                                             <div class="auto-number" id="toon-ruling-own" data-ruling-own="true">
                                         <p>
@@ -141,11 +141,11 @@
 
                         <section class="ruling-section" data-ruling-section="notes">
                             <h2>注意</h2>
-                            <details class="ruling-fold" open>
+                            <details class="ruling-fold">
                                 <summary>收起注意</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-page="Toon.html" open>
+                                        <details class="ruling-axis" data-ruling-page="Toon.html">
                                             <summary>卡通</summary>
                                             <div class="auto-number" id="toon-notes-own" data-ruling-own="true">
                                         <p>
@@ -205,52 +205,70 @@
 
                         <section class="ruling-section" data-ruling-section="continuous-effects">
                             <h2>持续适用的效果</h2>
-                            <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-page="Toon.html" open>
-                                    <summary>卡通</summary>
-                                    <div class="auto-number" id="toon-continuous-effects-own" data-ruling-own="true">
-                                        <p>无</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>持续适用的效果</summary>
+                                <div class="ruling-fold__content">
+                                    <div class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-page="Toon.html">
+                                            <summary>卡通</summary>
+                                            <div class="auto-number" id="toon-continuous-effects-own" data-ruling-own="true">
+                                                <p>无</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="restrictions">
                             <h2>自肃</h2>
-                            <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-page="Toon.html" open>
-                                    <summary>卡通</summary>
-                                    <div class="auto-number" id="toon-restrictions-own" data-ruling-own="true">
-                                        <p>
-                                        「魔界特派员 死亡主播」在连接召唤的回合不能作为连接素材.
-                                        </p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>自肃</summary>
+                                <div class="ruling-fold__content">
+                                    <div class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-page="Toon.html">
+                                            <summary>卡通</summary>
+                                            <div class="auto-number" id="toon-restrictions-own" data-ruling-own="true">
+                                                <p>
+                                                「魔界特派员 死亡主播」在连接召唤的回合不能作为连接素材.
+                                                </p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="summon-conditions">
                             <h2>召唤条件</h2>
-                            <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-page="Toon.html" open>
-                                    <summary>卡通</summary>
-                                    <div class="auto-number" id="toon-summon-conditions-own" data-ruling-own="true">
-                                        <p>
-                                        「重铠装-希望鳍条枪兵」需要3只等级4怪兽才能叠放.
-                                        </p>
-                                        <p>
-                                        「完美电子多元驱动蛇·神龙」的素材必须全是连接怪兽.
-                                        </p>
-                                        <p>
-                                        「连接解码员」必须是等级4以下的电子界族怪兽.
-                                        </p>
-                                        <p>
-                                        「纳祭之魔·阿尼玛」必须是Token以外的等级1怪兽.
-                                        </p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>召唤条件</summary>
+                                <div class="ruling-fold__content">
+                                    <div class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-page="Toon.html">
+                                            <summary>卡通</summary>
+                                            <div class="auto-number" id="toon-summon-conditions-own" data-ruling-own="true">
+                                                <p>
+                                                「重铠装-希望鳍条枪兵」需要3只等级4怪兽才能叠放.
+                                                </p>
+                                                <p>
+                                                「完美电子多元驱动蛇·神龙」的素材必须全是连接怪兽.
+                                                </p>
+                                                <p>
+                                                「连接解码员」必须是等级4以下的电子界族怪兽.
+                                                </p>
+                                                <p>
+                                                「纳祭之魔·阿尼玛」必须是Token以外的等级1怪兽.
+                                                </p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         </div> <!-- end entry content -->
 
@@ -274,7 +292,7 @@
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/deck-names.js"></script>
-    <script src="../js/main.js?v=20261105-axis-sources"></script>
+    <script src="../js/main.js?v=20261112-all-folds-closed"></script>
     <script src="../js/deck-viewer.js"></script>
     <script src="../js/mc-deck-previews.js"></script>
 

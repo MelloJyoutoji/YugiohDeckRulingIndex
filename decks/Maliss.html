@@ -71,9 +71,9 @@
                             <details class="ruling-fold">
                                 <summary>展开裁定</summary>
                                 <div class="ruling-fold__content">
-                                    <!-- 各轴默认展开，组内独立编号；相关引用随对应条目收起。 -->
+                                    <!-- 各轴默认收起，组内独立编号；相关引用随对应条目收起。 -->
                                     <div id="maliss-append-ruling" class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-axis="maliss" open>
+                                        <details class="ruling-axis" data-ruling-axis="maliss">
                                             <summary>码丽丝</summary>
                                             <div class="auto-number" id="maliss-ruling-own" data-ruling-own="true">
                                                 <p>
@@ -166,7 +166,7 @@
                                                 </p>
                                             </div>
                                         </details>
-                                        <details class="ruling-axis" data-ruling-axis="gold" open>
+                                        <details class="ruling-axis" data-ruling-axis="gold">
                                             <summary>黄金柜</summary>
                                             <div class="auto-number">
                                                 <p class="ruling-with-effects">
@@ -256,7 +256,7 @@
                                                 </p>
                                             </div>
                                         </details>
-                                        <details class="ruling-axis" data-ruling-axis="general" open>
+                                        <details class="ruling-axis" data-ruling-axis="general">
                                             <summary>通用及跨轴互动</summary>
                                             <div class="auto-number">
                                                 <p>
@@ -348,12 +348,12 @@
                         <section class="ruling-section" data-ruling-section="notes">
                             <h2>注意</h2>
                             <!-- 整栏与内部各轴均可独立折叠，首次显示时全部展开。 -->
-                            <details class="ruling-fold" open>
+                            <details class="ruling-fold">
                                 <summary>收起注意</summary>
                                 <div class="ruling-fold__content">
-                                    <!-- 各轴默认展开，组内独立编号；相关引用随对应条目收起。 -->
+                                    <!-- 各轴默认收起，组内独立编号；相关引用随对应条目收起。 -->
                                     <div id="maliss-append-notes" class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-axis="maliss" open>
+                                        <details class="ruling-axis" data-ruling-axis="maliss">
                                             <summary>码丽丝</summary>
                                             <div class="auto-number" id="maliss-notes-own" data-ruling-own="true">
                                                 <p>
@@ -371,7 +371,7 @@
                                                 <p>「魔∀丽丝梦游地下界」的①只能除外自己手卡·卡组·墓地的「魔∀丽丝」卡。</p>
                                             </div>
                                         </details>
-                                        <details class="ruling-axis" data-ruling-axis="gold" open>
+                                        <details class="ruling-axis" data-ruling-axis="gold">
                                             <summary>黄金柜</summary>
                                             <div class="auto-number">
                                                 <p>「破坏龙 甘多拉·禁忌」的①必须自己场上存在「光之黄金柜」；③只能从卡组特殊召唤记述「光之黄金柜」卡名的7星以下怪兽。</p>
@@ -380,7 +380,7 @@
                                                 <p>「对未来的沉默」的①只能检索记述「光之黄金柜」卡名的怪兽；追加抽卡必须在双方战斗阶段发动，且自己场上同时存在「光之黄金柜」及记述该卡名的怪兽。</p>
                                             </div>
                                         </details>
-                                        <details class="ruling-axis" data-ruling-axis="general" open>
+                                        <details class="ruling-axis" data-ruling-axis="general">
                                             <summary>通用及跨轴互动</summary>
                                             <div class="auto-number">
                                                 <p>
@@ -395,121 +395,139 @@
 
                         <section class="ruling-section" data-ruling-section="continuous">
                             <h2>持续适用的效果</h2>
-                            <!-- 各轴默认展开，组内独立编号；相关引用随对应条目收起。 -->
-                            <div id="maliss-append-continuous" class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-axis="maliss" open>
-                                    <summary>码丽丝</summary>
-                                    <div class="auto-number" id="maliss-continuous-effects-own" data-ruling-own="true">
-                                        <p>「魔∀丽丝&lt;兵卒&gt;睡鼠」的②使连接端有这张卡的「魔∀丽丝」连接怪兽不会被效果破坏。</p>
-                                        <p>「魔∀丽丝&lt;兵卒&gt;白兔」的②使连接端有这张卡的「魔∀丽丝」连接怪兽进行战斗时，自己受到的战斗伤害变成0。</p>
-                                        <p>「魔∀丽丝&lt;兵卒&gt;柴郡猫」的②使连接端有这张卡的「魔∀丽丝」连接怪兽战斗破坏的怪兽不去墓地而除外。</p>
-                                        <p>「魔∀丽丝&lt;兵卒&gt;三月兔」的②使对方不能将连接端有这张卡的「魔∀丽丝」连接怪兽作为效果的对象。</p>
-                                        <p>「魔∀丽丝梦游地下界」的②在自己的除外状态存在3种以上「魔∀丽丝」陷阱卡时，使自己场上的「魔∀丽丝」连接怪兽攻击力上升3000；③在自己场上有「魔∀丽丝」连接怪兽时，使对方怪兽只能选择「魔∀丽丝」连接怪兽作为攻击对象。</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>持续适用的效果</summary>
+                                <div class="ruling-fold__content">
+                                    <!-- 各轴默认收起，组内独立编号；相关引用随对应条目收起。 -->
+                                    <div id="maliss-append-continuous" class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="maliss">
+                                            <summary>码丽丝</summary>
+                                            <div class="auto-number" id="maliss-continuous-effects-own" data-ruling-own="true">
+                                                <p>「魔∀丽丝&lt;兵卒&gt;睡鼠」的②使连接端有这张卡的「魔∀丽丝」连接怪兽不会被效果破坏。</p>
+                                                <p>「魔∀丽丝&lt;兵卒&gt;白兔」的②使连接端有这张卡的「魔∀丽丝」连接怪兽进行战斗时，自己受到的战斗伤害变成0。</p>
+                                                <p>「魔∀丽丝&lt;兵卒&gt;柴郡猫」的②使连接端有这张卡的「魔∀丽丝」连接怪兽战斗破坏的怪兽不去墓地而除外。</p>
+                                                <p>「魔∀丽丝&lt;兵卒&gt;三月兔」的②使对方不能将连接端有这张卡的「魔∀丽丝」连接怪兽作为效果的对象。</p>
+                                                <p>「魔∀丽丝梦游地下界」的②在自己的除外状态存在3种以上「魔∀丽丝」陷阱卡时，使自己场上的「魔∀丽丝」连接怪兽攻击力上升3000；③在自己场上有「魔∀丽丝」连接怪兽时，使对方怪兽只能选择「魔∀丽丝」连接怪兽作为攻击对象。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="gold">
+                                            <summary>黄金柜</summary>
+                                            <div class="auto-number">
+                                                <p>「破坏龙 甘多拉·禁忌」的②使自身攻击力上升除外状态的卡数量×300。</p>
+                                                <p>「魔术师的徒弟-黑魔术少女」以①方法特殊召唤后，卡名当作「黑魔术少女」；③使自身攻击力上升双方墓地中记述「光之黄金柜」卡名的怪兽数量×300。</p>
+                                                <p>「光之黄金柜」的①在自身位于魔法与陷阱区域时，使自身不会被怪兽效果破坏。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general">
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number">
+                                                <p>「幻狱神 米底丘利乌斯」的①在连接端有2只以上怪兽时，使自身不受对方发动的效果影响。</p>
+                                                <p>「毁灭之黑魔术师」的①在场上·墓地把自身卡名当作「黑魔术师」。</p>
+                                                <p>「真血公 吸血鬼」的①使双方不能将场上的自身作为从墓地以外特殊召唤的怪兽效果的对象。</p>
+                                                <p>「梦幻崩影·狮鹫」的②在自身位于怪兽区域时，使双方不能发动场上不在连接状态的特殊召唤怪兽的效果。</p>
+                                                <p>「魔封的芳香」的①使双方魔法卡必须先盖放，直到从盖放者来看的下次自己回合到来才能发动。</p>
+                                                <p>「访问码语者」无需发动的效果，使对方不能对应其效果的发动而发动效果。</p>
+                                                <p>「光道宰制者 基里奥斯」的②在自己卡组的卡被效果送去墓地的场合必须发动，从自己卡组上方再送3张卡去墓地。</p>
+                                                <p>「欢聚友伴·茸茸长尾山雀」「欢聚友伴·抖抖海月水母」的①适用后，结束阶段自己手卡若多于对方场上卡数量＋6张，必须将相差数量的手卡随机返回卡组。该后续处理不另行发动、不组成连锁。</p>
+                                                <p>「决斗者之力」的①适用后，本回合结束阶段检查自己是否在本回合于场上·墓地发动过所宣言的各属性怪兽的效果，也包括该卡发动前已经发动的效果；未全部满足时，必须将自己场上的卡全部送去墓地。此处理不另行发动，是玩家必须执行的处理，不受魔法效果影响的卡也须送去墓地。</p>
+                                                <p>「S：P小夜」的②暂时除外的怪兽，在结束阶段回到原控制者的主要怪兽区域，保留除外前的表示形式；该返回处理不另行发动。</p>
+                                                <p>「红莲之指名者」的①除外的手卡，在下次对方结束阶段必须回到手卡；该返回处理不另行发动。</p>
+                                                <p>「封印之黄金柜」的①除外的卡，在发动后第2次自己准备阶段必须加入手卡；该处理不另行发动。</p>
+                                                <p>「三战之才」的①取得对方怪兽控制权后，结束阶段必须归还控制权；该处理不另行发动。</p>
+                                                <p>「连接解码员」以①特殊召唤后，只要维持在怪兽区域表侧表示，离场时必须除外；变成里侧表示或移到魔法与陷阱区域后，该离场除外处理不再适用。此处理不另行发动。</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="gold" open>
-                                    <summary>黄金柜</summary>
-                                    <div class="auto-number">
-                                        <p>「破坏龙 甘多拉·禁忌」的②使自身攻击力上升除外状态的卡数量×300。</p>
-                                        <p>「魔术师的徒弟-黑魔术少女」以①方法特殊召唤后，卡名当作「黑魔术少女」；③使自身攻击力上升双方墓地中记述「光之黄金柜」卡名的怪兽数量×300。</p>
-                                        <p>「光之黄金柜」的①在自身位于魔法与陷阱区域时，使自身不会被怪兽效果破坏。</p>
-                                    </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="general" open>
-                                    <summary>通用及跨轴互动</summary>
-                                    <div class="auto-number">
-                                        <p>「幻狱神 米底丘利乌斯」的①在连接端有2只以上怪兽时，使自身不受对方发动的效果影响。</p>
-                                        <p>「毁灭之黑魔术师」的①在场上·墓地把自身卡名当作「黑魔术师」。</p>
-                                        <p>「真血公 吸血鬼」的①使双方不能将场上的自身作为从墓地以外特殊召唤的怪兽效果的对象。</p>
-                                        <p>「梦幻崩影·狮鹫」的②在自身位于怪兽区域时，使双方不能发动场上不在连接状态的特殊召唤怪兽的效果。</p>
-                                        <p>「魔封的芳香」的①使双方魔法卡必须先盖放，直到从盖放者来看的下次自己回合到来才能发动。</p>
-                                        <p>「访问码语者」无需发动的效果，使对方不能对应其效果的发动而发动效果。</p>
-                                        <p>「光道宰制者 基里奥斯」的②在自己卡组的卡被效果送去墓地的场合必须发动，从自己卡组上方再送3张卡去墓地。</p>
-                                        <p>「欢聚友伴·茸茸长尾山雀」「欢聚友伴·抖抖海月水母」的①适用后，结束阶段自己手卡若多于对方场上卡数量＋6张，必须将相差数量的手卡随机返回卡组。该后续处理不另行发动、不组成连锁。</p>
-                                        <p>「决斗者之力」的①适用后，本回合结束阶段检查自己是否在本回合于场上·墓地发动过所宣言的各属性怪兽的效果，也包括该卡发动前已经发动的效果；未全部满足时，必须将自己场上的卡全部送去墓地。此处理不另行发动，是玩家必须执行的处理，不受魔法效果影响的卡也须送去墓地。</p>
-                                        <p>「S：P小夜」的②暂时除外的怪兽，在结束阶段回到原控制者的主要怪兽区域，保留除外前的表示形式；该返回处理不另行发动。</p>
-                                        <p>「红莲之指名者」的①除外的手卡，在下次对方结束阶段必须回到手卡；该返回处理不另行发动。</p>
-                                        <p>「封印之黄金柜」的①除外的卡，在发动后第2次自己准备阶段必须加入手卡；该处理不另行发动。</p>
-                                        <p>「三战之才」的①取得对方怪兽控制权后，结束阶段必须归还控制权；该处理不另行发动。</p>
-                                        <p>「连接解码员」以①特殊召唤后，只要维持在怪兽区域表侧表示，离场时必须除外；变成里侧表示或移到魔法与陷阱区域后，该离场除外处理不再适用。此处理不另行发动。</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="restrictions">
                             <h2>自肃</h2>
-                            <!-- 各轴默认展开，组内独立编号；相关引用随对应条目收起。 -->
-                            <div id="maliss-append-restrictions" class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-axis="maliss" open>
-                                    <summary>码丽丝</summary>
-                                    <div class="auto-number" id="maliss-restrictions-own" data-ruling-own="true">
-                                        <p>「魔∀丽丝&lt;兵卒&gt;睡鼠」「魔∀丽丝&lt;兵卒&gt;白兔」「魔∀丽丝&lt;兵卒&gt;柴郡猫」的③处理后，直到该回合结束，自己不能从额外卡组特殊召唤连接怪兽以外的怪兽；不是对整个回合追溯适用的限制。</p>
-                                        <p>「魔∀丽丝&lt;代码&gt;TB-11」的①特殊召唤的怪兽，该回合不能攻击、不能发动效果；限制针对该效果特殊召唤的怪兽。</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>自肃</summary>
+                                <div class="ruling-fold__content">
+                                    <!-- 各轴默认收起，组内独立编号；相关引用随对应条目收起。 -->
+                                    <div id="maliss-append-restrictions" class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="maliss">
+                                            <summary>码丽丝</summary>
+                                            <div class="auto-number" id="maliss-restrictions-own" data-ruling-own="true">
+                                                <p>「魔∀丽丝&lt;兵卒&gt;睡鼠」「魔∀丽丝&lt;兵卒&gt;白兔」「魔∀丽丝&lt;兵卒&gt;柴郡猫」的③处理后，直到该回合结束，自己不能从额外卡组特殊召唤连接怪兽以外的怪兽；不是对整个回合追溯适用的限制。</p>
+                                                <p>「魔∀丽丝&lt;代码&gt;TB-11」的①特殊召唤的怪兽，该回合不能攻击、不能发动效果；限制针对该效果特殊召唤的怪兽。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general">
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number">
+                                                <p>
+                                                    特殊召唤过电子界族怪兽以外的怪兽的回合不能把「转码语者」的②效果发动.
+                                                </p>
+                                                <p>
+                                                    「灵王的波动」会影响到: 「防火龙」, 「转码语者」, 「三栅极男巫」.
+                                                </p>
+                                                <p>
+                                                    「霆王的闪光」会影响到: 「转码语者」, 「三栅极男巫」, 「盛悴之致命毒蜥」, 「G石人·水晶心」, 「谜式密码大师·紧缩位压缩员」, 「转生炎兽 独角兔」.
+                                                </p>
+                                                <p>「协心代码语者@火灵天星」的①发动后，直到回合结束，自己不能再特殊召唤怪兽。</p>
+                                                <p>「S：P小夜」的①处理后，该回合自己的怪兽不能直接攻击；不受该效果影响的怪兽除外。</p>
+                                                <p>「欢聚友伴·茸茸长尾山雀」效果发动的整个回合，自己只能有1次发动这张卡以外的「欢聚友伴」怪兽的效果。</p>
+                                                <p>「欢聚友伴·抖抖海月水母」效果发动的整个回合，自己只能有1次发动这张卡以外的「欢聚友伴」怪兽的效果。</p>
+                                                <p>「小丑与锁鸟」的①处理后，直到该回合结束，双方都不能从卡组把卡加入手卡，也包括抽卡。</p>
+                                                <p>「大热波」的①处理后，直到下次自己的抽卡阶段，双方都不能召唤·特殊召唤效果怪兽。</p>
+                                                <p>「嗤笑的黑山羊」的①处理后，该回合双方不能从墓地以外特殊召唤原本卡名与宣言卡名相同的怪兽。</p>
+                                                <p>「嗤笑的黑山羊」的②处理后，该回合双方不能发动原本卡名与宣言卡名相同的怪兽在场上发动的效果。</p>
+                                                <p>「访问码语者」的②处理后，该回合自己不能再为发动「访问码语者」的效果而除外与本次代价相同属性的怪兽。</p>
+                                                <p>「三战之号」的①盖放的卡，该回合不能发动。</p>
+                                                <p>「梦幻崩影·狮鹫」的①盖放的卡，该回合不能发动。</p>
+                                                <p>「梦幻崩影·狮鹫」的②也限制自己：自己场上特殊召唤的怪兽不在连接状态时，不能发动其效果。</p>
+                                                <p>「魔封的芳香」的①也限制自己：自己的魔法卡必须先盖放，并等到从自己来看的下次自己回合到来才能发动。</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="general" open>
-                                    <summary>通用及跨轴互动</summary>
-                                    <div class="auto-number">
-                                        <p>
-                                            特殊召唤过电子界族怪兽以外的怪兽的回合不能把「转码语者」的②效果发动.
-                                        </p>
-                                        <p>
-                                            「灵王的波动」会影响到: 「防火龙」, 「转码语者」, 「三栅极男巫」.
-                                        </p>
-                                        <p>
-                                            「霆王的闪光」会影响到: 「转码语者」, 「三栅极男巫」, 「盛悴之致命毒蜥」, 「G石人·水晶心」, 「谜式密码大师·紧缩位压缩员」, 「转生炎兽 独角兔」.
-                                        </p>
-                                        <p>「协心代码语者@火灵天星」的①发动后，直到回合结束，自己不能再特殊召唤怪兽。</p>
-                                        <p>「S：P小夜」的①处理后，该回合自己的怪兽不能直接攻击；不受该效果影响的怪兽除外。</p>
-                                        <p>「欢聚友伴·茸茸长尾山雀」效果发动的整个回合，自己只能有1次发动这张卡以外的「欢聚友伴」怪兽的效果。</p>
-                                        <p>「欢聚友伴·抖抖海月水母」效果发动的整个回合，自己只能有1次发动这张卡以外的「欢聚友伴」怪兽的效果。</p>
-                                        <p>「小丑与锁鸟」的①处理后，直到该回合结束，双方都不能从卡组把卡加入手卡，也包括抽卡。</p>
-                                        <p>「大热波」的①处理后，直到下次自己的抽卡阶段，双方都不能召唤·特殊召唤效果怪兽。</p>
-                                        <p>「嗤笑的黑山羊」的①处理后，该回合双方不能从墓地以外特殊召唤原本卡名与宣言卡名相同的怪兽。</p>
-                                        <p>「嗤笑的黑山羊」的②处理后，该回合双方不能发动原本卡名与宣言卡名相同的怪兽在场上发动的效果。</p>
-                                        <p>「访问码语者」的②处理后，该回合自己不能再为发动「访问码语者」的效果而除外与本次代价相同属性的怪兽。</p>
-                                        <p>「三战之号」的①盖放的卡，该回合不能发动。</p>
-                                        <p>「梦幻崩影·狮鹫」的①盖放的卡，该回合不能发动。</p>
-                                        <p>「梦幻崩影·狮鹫」的②也限制自己：自己场上特殊召唤的怪兽不在连接状态时，不能发动其效果。</p>
-                                        <p>「魔封的芳香」的①也限制自己：自己的魔法卡必须先盖放，并等到从自己来看的下次自己回合到来才能发动。</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="summons">
                             <h2>召唤条件</h2>
-                            <!-- 各轴默认展开，召唤条件在组内独立编号。 -->
-                            <div id="maliss-append-summons" class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-axis="maliss" open>
-                                    <summary>码丽丝</summary>
-                                    <div class="auto-number" id="maliss-summon-conditions-own" data-ruling-own="true">
-                                        <p>「魔∀丽丝&lt;王后&gt;红心加密」要求3只怪兽，其中必须包含「魔∀丽丝」怪兽。</p>
-                                        <p>「魔∀丽丝&lt;王后&gt;白棋捆绑」要求2只以上怪兽，其中必须包含「魔∀丽丝」怪兽。</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>召唤条件</summary>
+                                <div class="ruling-fold__content">
+                                    <!-- 各轴默认收起，召唤条件在组内独立编号。 -->
+                                    <div id="maliss-append-summons" class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="maliss">
+                                            <summary>码丽丝</summary>
+                                            <div class="auto-number" id="maliss-summon-conditions-own" data-ruling-own="true">
+                                                <p>「魔∀丽丝&lt;王后&gt;红心加密」要求3只怪兽，其中必须包含「魔∀丽丝」怪兽。</p>
+                                                <p>「魔∀丽丝&lt;王后&gt;白棋捆绑」要求2只以上怪兽，其中必须包含「魔∀丽丝」怪兽。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general">
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number">
+                                                <p>「幻狱神 米底丘利乌斯」要求2只以上怪兽，其中至少包含1只融合、同调、超量或连接怪兽。</p>
+                                                <p>「防火龙」要求2只以上怪兽。</p>
+                                                <p>「禅那之追傩仪姬」要求2只以上效果怪兽；连接召唤时，手卡中的1只怪兽也可以作为连接素材。</p>
+                                                <p>「盛悴之致命毒蜥」要求2只卡名不同的怪兽。</p>
+                                                <p>「S：P小夜」要求2只效果怪兽。</p>
+                                                <p>「连接解码员」要求1只4星以下的电子界族怪兽。</p>
+                                                <p>「圣魔之少女 阿耳特弥斯」要求1只4星以下的魔法师族怪兽；自己每回合只能特殊召唤1次该同名卡。</p>
+                                                <p>「协心代码语者@火灵天星」要求3只以上效果怪兽。</p>
+                                                <p>「毁灭之黑魔术师」的融合素材为「黑魔术师」＋光属性或暗属性怪兽；同名卡每回合只能特殊召唤1次，必须通过融合召唤或自身记载的手续特殊召唤。该手续为：在自己已经发动过魔法卡效果的回合，将自己场上1只6星以上的魔法师族·暗属性怪兽除外，从额外卡组特殊召唤。</p>
+                                                <p>「转生炎兽 独角兔」要求1只通常召唤的攻击力1000以下怪兽。</p>
+                                                <p>「梦幻崩影·狮鹫」要求2只以上卡名不同的怪兽。</p>
+                                                <p>「真血公 吸血鬼」要求2只以上8星怪兽；将原本持有者是对方的怪兽作为其超量召唤素材时，那些怪兽的等级当作8星。</p>
+                                                <p>「访问码语者」要求2只以上效果怪兽。</p>
+                                                <p>「光道宰制者 基里奥斯」要求3只属性相同、种族互不相同的怪兽。</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="general" open>
-                                    <summary>通用及跨轴互动</summary>
-                                    <div class="auto-number">
-                                        <p>「幻狱神 米底丘利乌斯」要求2只以上怪兽，其中至少包含1只融合、同调、超量或连接怪兽。</p>
-                                        <p>「防火龙」要求2只以上怪兽。</p>
-                                        <p>「禅那之追傩仪姬」要求2只以上效果怪兽；连接召唤时，手卡中的1只怪兽也可以作为连接素材。</p>
-                                        <p>「盛悴之致命毒蜥」要求2只卡名不同的怪兽。</p>
-                                        <p>「S：P小夜」要求2只效果怪兽。</p>
-                                        <p>「连接解码员」要求1只4星以下的电子界族怪兽。</p>
-                                        <p>「圣魔之少女 阿耳特弥斯」要求1只4星以下的魔法师族怪兽；自己每回合只能特殊召唤1次该同名卡。</p>
-                                        <p>「协心代码语者@火灵天星」要求3只以上效果怪兽。</p>
-                                        <p>「毁灭之黑魔术师」的融合素材为「黑魔术师」＋光属性或暗属性怪兽；同名卡每回合只能特殊召唤1次，必须通过融合召唤或自身记载的手续特殊召唤。该手续为：在自己已经发动过魔法卡效果的回合，将自己场上1只6星以上的魔法师族·暗属性怪兽除外，从额外卡组特殊召唤。</p>
-                                        <p>「转生炎兽 独角兔」要求1只通常召唤的攻击力1000以下怪兽。</p>
-                                        <p>「梦幻崩影·狮鹫」要求2只以上卡名不同的怪兽。</p>
-                                        <p>「真血公 吸血鬼」要求2只以上8星怪兽；将原本持有者是对方的怪兽作为其超量召唤素材时，那些怪兽的等级当作8星。</p>
-                                        <p>「访问码语者」要求2只以上效果怪兽。</p>
-                                        <p>「光道宰制者 基里奥斯」要求3只属性相同、种族互不相同的怪兽。</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <h2>实验功能</h2>
 
@@ -586,7 +604,7 @@
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/deck-names.js"></script>
-    <script src="../js/main.js?v=20261105-axis-sources"></script>
+    <script src="../js/main.js?v=20261112-all-folds-closed"></script>
     <script src="../js/deck-viewer.js"></script>
     <script src="../js/mc-deck-previews.js"></script>
     <script src="../js/judge-tool.js"></script>

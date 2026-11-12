@@ -73,7 +73,7 @@
                                 <summary>展开裁定</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-axis="unchained" open>
+                                        <details class="ruling-axis" data-ruling-axis="unchained">
                                             <summary>破械</summary>
                                             <div class="auto-number" id="unchained-ruling-own" data-ruling-own="true">
                                                 <p class="ruling-with-effects">
@@ -297,7 +297,7 @@
                                                 </p>
                                             </div>
                                         </details>
-                                        <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
+                                        <details class="ruling-axis" data-ruling-axis="fiendsmith">
                                             <summary>刻魔</summary>
                                             <div class="auto-number" id="unchained-ruling-fiendsmith" data-ruling-own="true">
                                                 <p class="ruling-with-effects">
@@ -366,11 +366,11 @@
                         <section class="ruling-section" data-ruling-section="notes">
                             <h2>注意</h2>
                             <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
-                            <details class="ruling-fold" open>
+                            <details class="ruling-fold">
                                 <summary>收起注意</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-axis="unchained" open>
+                                        <details class="ruling-axis" data-ruling-axis="unchained">
                                             <summary>破械</summary>
                                             <div class="auto-number" id="unchained-notes-own" data-ruling-own="true">
                                                 <p>「双极之破械神」的①必须是自己场上的卡被战斗或效果破坏；③必须是场上的自身被破坏送墓后，一直留在墓地至该回合结束阶段。</p>
@@ -396,7 +396,7 @@
                                                 <p>「双王之械」的①只能从卡组将「破械」卡加入手卡。</p>
                                             </div>
                                         </details>
-                                        <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
+                                        <details class="ruling-axis" data-ruling-axis="fiendsmith">
                                             <summary>刻魔</summary>
                                             <div class="auto-number" id="unchained-notes-fiendsmith" data-ruling-own="true">
                                                 <p>「刻印群魔的刻魔锻冶师」的①只能检索「刻魔」魔法·陷阱卡；②必须以自己场上1张「刻魔」装备卡和场上1只怪兽为对象；③必须让自己墓地其他的恶魔族·光属性怪兽回到卡组·额外卡组。</p>
@@ -416,100 +416,118 @@
 
                         <section class="ruling-section" data-ruling-section="continuous">
                             <h2>持续适用的效果</h2>
-                            <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
-                            <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-axis="unchained" open>
-                                    <summary>破械</summary>
-                                    <div class="auto-number" id="unchained-continuous-effects-own" data-ruling-own="true">
-                                        <p>「破械焰魔天 阎摩」战斗时的②在伤害计算确定适用，伤害计算后破坏代替卡。</p>
-                                        <p>「双极之破械神」的③、「破械神 萨玛」的②及「破械式鬼 萨拉」的②特殊召唤自身后，自身从场上离开时必须回到卡组最下面；适用后不再于怪兽区域表侧表示存在时，该回卡组处理的适用消失。</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>持续适用的效果</summary>
+                                <div class="ruling-fold__content">
+                                    <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
+                                    <div class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="unchained">
+                                            <summary>破械</summary>
+                                            <div class="auto-number" id="unchained-continuous-effects-own" data-ruling-own="true">
+                                                <p>「破械焰魔天 阎摩」战斗时的②在伤害计算确定适用，伤害计算后破坏代替卡。</p>
+                                                <p>「双极之破械神」的③、「破械神 萨玛」的②及「破械式鬼 萨拉」的②特殊召唤自身后，自身从场上离开时必须回到卡组最下面；适用后不再于怪兽区域表侧表示存在时，该回卡组处理的适用消失。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="fiendsmith">
+                                            <summary>刻魔</summary>
+                                            <div class="auto-number" id="unchained-continuous-fiendsmith" data-ruling-own="true">
+                                                <p>「刻魔 落泪」的②在其于怪兽区域表侧表示存在期间，对方场上怪兽的攻击力下降600。</p>
+                                                <p>「刻魔的神圣棺」作为装备魔法卡时：装备怪兽的攻击力上升给自身装备的连接怪兽的连接标记合计×600；向守备表示怪兽攻击时，给与超过守备力数值的贯通战斗伤害。</p>
+                                                <p>「刻魔的大圣棺」作为装备魔法卡时，对方不能把装备怪兽作为效果的对象。</p>
+                                                <p>「刻魔的镇魂棺」作为装备魔法卡时，装备怪兽的攻击力上升600。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general">
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number" id="unchained-continuous-general" data-ruling-own="true">
+                                                <p>「梦幻崩影·狮鹫」的②在其于怪兽区域表侧表示存在期间，双方不能发动场上处于非连接状态的特殊召唤怪兽的效果。</p>
+                                                <p>「No.80 狂装霸王 狂想战曲王」作为装备卡时，装备怪兽的攻击力上升1200。</p>
+                                                <p>「No.60 刻不知之杜加雷斯」的①处理后，按所选效果跳过下次自己抽卡阶段、下次自己主要阶段1，或下次自己回合的战斗阶段；该跳过不另行发动，不组成连锁。</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
-                                    <summary>刻魔</summary>
-                                    <div class="auto-number" id="unchained-continuous-fiendsmith" data-ruling-own="true">
-                                        <p>「刻魔 落泪」的②在其于怪兽区域表侧表示存在期间，对方场上怪兽的攻击力下降600。</p>
-                                        <p>「刻魔的神圣棺」作为装备魔法卡时：装备怪兽的攻击力上升给自身装备的连接怪兽的连接标记合计×600；向守备表示怪兽攻击时，给与超过守备力数值的贯通战斗伤害。</p>
-                                        <p>「刻魔的大圣棺」作为装备魔法卡时，对方不能把装备怪兽作为效果的对象。</p>
-                                        <p>「刻魔的镇魂棺」作为装备魔法卡时，装备怪兽的攻击力上升600。</p>
-                                    </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="general" open>
-                                    <summary>通用及跨轴互动</summary>
-                                    <div class="auto-number" id="unchained-continuous-general" data-ruling-own="true">
-                                        <p>「梦幻崩影·狮鹫」的②在其于怪兽区域表侧表示存在期间，双方不能发动场上处于非连接状态的特殊召唤怪兽的效果。</p>
-                                        <p>「No.80 狂装霸王 狂想战曲王」作为装备卡时，装备怪兽的攻击力上升1200。</p>
-                                        <p>「No.60 刻不知之杜加雷斯」的①处理后，按所选效果跳过下次自己抽卡阶段、下次自己主要阶段1，或下次自己回合的战斗阶段；该跳过不另行发动，不组成连锁。</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="restrictions">
                             <h2>自肃</h2>
-                            <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
-                            <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-axis="unchained" open>
-                                    <summary>破械</summary>
-                                    <div class="auto-number" id="unchained-restrictions-own" data-ruling-own="true">
-                                        <p>「破械童子 阿罗汉」的①、「破械童子 罗鬼刹」的①及「破械式鬼 斯玛」的①处理后，直到回合结束时，自己不能特殊召唤恶魔族以外的怪兽。</p>
-                                        <p>「破械神 萨巴拉」的①特殊召唤的这张卡在任意一方怪兽区域表侧表示存在期间，使用该效果的自己只能特殊召唤恶魔族怪兽。</p>
-                                        <p>「破械焰魔天 阎摩」的①特殊召唤的怪兽在自己场上表侧表示存在期间，自己只能特殊召唤恶魔族怪兽。</p>
-                                        <p>自己对「双极之破械神」每回合只能有1次特殊召唤。</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>自肃</summary>
+                                <div class="ruling-fold__content">
+                                    <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
+                                    <div class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="unchained">
+                                            <summary>破械</summary>
+                                            <div class="auto-number" id="unchained-restrictions-own" data-ruling-own="true">
+                                                <p>「破械童子 阿罗汉」的①、「破械童子 罗鬼刹」的①及「破械式鬼 斯玛」的①处理后，直到回合结束时，自己不能特殊召唤恶魔族以外的怪兽。</p>
+                                                <p>「破械神 萨巴拉」的①特殊召唤的这张卡在任意一方怪兽区域表侧表示存在期间，使用该效果的自己只能特殊召唤恶魔族怪兽。</p>
+                                                <p>「破械焰魔天 阎摩」的①特殊召唤的怪兽在自己场上表侧表示存在期间，自己只能特殊召唤恶魔族怪兽。</p>
+                                                <p>自己对「双极之破械神」每回合只能有1次特殊召唤。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="fiendsmith">
+                                            <summary>刻魔</summary>
+                                            <div class="auto-number" id="unchained-restrictions-fiendsmith" data-ruling-own="true">
+                                                <p>「刻魔的赞圣」的①处理后，直到回合结束时，自己只能用恶魔族怪兽攻击宣言。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general">
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number" id="unchained-restrictions-general" data-ruling-own="true">
+                                                <p>「魔界特派员 死亡主播」在连接召唤的回合不能作为连接素材；其②处理后，直到回合结束时，自己只能特殊召唤恶魔族怪兽。</p>
+                                                <p>「梦幻崩影·狮鹫」的①盖放的魔法·陷阱卡在该回合不能发动；其②使自己场上非连接状态的特殊召唤怪兽不能发动效果。</p>
+                                                <p>「No.60 刻不知之杜加雷斯」的①按所选「●」使自己跳过对应阶段，具体时点见“持续适用的效果”。</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
-                                    <summary>刻魔</summary>
-                                    <div class="auto-number" id="unchained-restrictions-fiendsmith" data-ruling-own="true">
-                                        <p>「刻魔的赞圣」的①处理后，直到回合结束时，自己只能用恶魔族怪兽攻击宣言。</p>
-                                    </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="general" open>
-                                    <summary>通用及跨轴互动</summary>
-                                    <div class="auto-number" id="unchained-restrictions-general" data-ruling-own="true">
-                                        <p>「魔界特派员 死亡主播」在连接召唤的回合不能作为连接素材；其②处理后，直到回合结束时，自己只能特殊召唤恶魔族怪兽。</p>
-                                        <p>「梦幻崩影·狮鹫」的①盖放的魔法·陷阱卡在该回合不能发动；其②使自己场上非连接状态的特殊召唤怪兽不能发动效果。</p>
-                                        <p>「No.60 刻不知之杜加雷斯」的①按所选「●」使自己跳过对应阶段，具体时点见“持续适用的效果”。</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="summons">
                             <h2>召唤条件</h2>
-                            <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
-                            <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-axis="unchained" open>
-                                    <summary>破械</summary>
-                                    <div class="auto-number" id="unchained-summon-conditions-own" data-ruling-own="true">
-                                        <p>「破械双王神 来迎」要求包含连接怪兽的怪兽2只以上。</p>
-                                        <p>「破械焰魔天 阎摩」要求包含「破械神」怪兽的怪兽2只以上。</p>
-                                        <p>「破械神 阿罗魃」要求包含「破械神」怪兽的怪兽2只以上。</p>
-                                        <p>「破械神王 阎摩」要求恶魔族怪兽2只。</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>召唤条件</summary>
+                                <div class="ruling-fold__content">
+                                    <!-- 整栏折叠与各轴独立控制；各组从1开始编号，引用随对应条目展示。 -->
+                                    <div class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="unchained">
+                                            <summary>破械</summary>
+                                            <div class="auto-number" id="unchained-summon-conditions-own" data-ruling-own="true">
+                                                <p>「破械双王神 来迎」要求包含连接怪兽的怪兽2只以上。</p>
+                                                <p>「破械焰魔天 阎摩」要求包含「破械神」怪兽的怪兽2只以上。</p>
+                                                <p>「破械神 阿罗魃」要求包含「破械神」怪兽的怪兽2只以上。</p>
+                                                <p>「破械神王 阎摩」要求恶魔族怪兽2只。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="fiendsmith">
+                                            <summary>刻魔</summary>
+                                            <div class="auto-number" id="unchained-summons-fiendsmith" data-ruling-own="true">
+                                                <p>「刻魔 震怒之日」要求「刻印群魔的刻魔锻冶师」＋恶魔族·光属性怪兽×2。</p>
+                                                <p>「刻魔 落泪」要求恶魔族·光属性怪兽×2。</p>
+                                                <p>「刻魔的神圣棺」要求包含恶魔族·光属性怪兽的怪兽2只以上。</p>
+                                                <p>「刻魔的大圣棺」要求包含恶魔族·光属性怪兽的怪兽2只。</p>
+                                                <p>「刻魔的镇魂棺」要求恶魔族·光属性怪兽1只。</p>
+                                                <p>自己对「刻魔的镇魂棺」每回合只能有1次特殊召唤。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general">
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number" id="unchained-summons-general" data-ruling-own="true">
+                                                <p>「DDD 怒涛大王 决策凯撒」要求2只恶魔族6星怪兽。</p>
+                                                <p>「梦幻崩影·狮鹫」要求2只以上卡名不同的怪兽。</p>
+                                                <p>「魔界特派员 死亡主播」要求2只效果怪兽。</p>
+                                                <p>「大气吸收者」要求2只属性相同的恶魔族怪兽。</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="fiendsmith" open>
-                                    <summary>刻魔</summary>
-                                    <div class="auto-number" id="unchained-summons-fiendsmith" data-ruling-own="true">
-                                        <p>「刻魔 震怒之日」要求「刻印群魔的刻魔锻冶师」＋恶魔族·光属性怪兽×2。</p>
-                                        <p>「刻魔 落泪」要求恶魔族·光属性怪兽×2。</p>
-                                        <p>「刻魔的神圣棺」要求包含恶魔族·光属性怪兽的怪兽2只以上。</p>
-                                        <p>「刻魔的大圣棺」要求包含恶魔族·光属性怪兽的怪兽2只。</p>
-                                        <p>「刻魔的镇魂棺」要求恶魔族·光属性怪兽1只。</p>
-                                        <p>自己对「刻魔的镇魂棺」每回合只能有1次特殊召唤。</p>
-                                    </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="general" open>
-                                    <summary>通用及跨轴互动</summary>
-                                    <div class="auto-number" id="unchained-summons-general" data-ruling-own="true">
-                                        <p>「DDD 怒涛大王 决策凯撒」要求2只恶魔族6星怪兽。</p>
-                                        <p>「梦幻崩影·狮鹫」要求2只以上卡名不同的怪兽。</p>
-                                        <p>「魔界特派员 死亡主播」要求2只效果怪兽。</p>
-                                        <p>「大气吸收者」要求2只属性相同的恶魔族怪兽。</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <div id="deck-raw" style="display:none;">
                         </div>
@@ -546,7 +564,7 @@
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/deck-names.js"></script>
-    <script src="../js/main.js?v=20261105-axis-sources"></script>
+    <script src="../js/main.js?v=20261112-all-folds-closed"></script>
     <script src="../js/deck-viewer.js"></script>
     <script src="../js/mc-deck-previews.js"></script>
 

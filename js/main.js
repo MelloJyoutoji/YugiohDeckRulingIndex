@@ -97,20 +97,43 @@
    /* Load ruling includes
     * ------------------------------------------------------ */
     var ssLoadRulingIncludes = function() {
-        $("[data-ruling-source]").each(function() {
-            var include = $(this);
-            var source = include.attr("data-ruling-source");
-
-            include.load(source, function(response, status, xhr) {
-                if (status == "error") {
-                    console.error("Error loading ruling:", xhr.status, xhr.statusText);
-                    console.error("尝试的路径:", source);
-                    return;
-                }
-
-                document.dispatchEvent(new CustomEvent("rulinginclude:loaded", {
-                    detail: include.get(0)
+        // 同一来源只请求一次；按稳定条目标识筛选，避免把未投入的卡片资料全部带入。
+        var requests = new Map();
+        document.querySelectorAll(".ruling-include[data-ruling-source]").forEach(function(include) {
+            var source = include.getAttribute("data-ruling-source").trim();
+            var separator = source.search(/\s/);
+            if (separator === -1) return;
+            var sourceUrl = new URL(source.slice(0, separator), document.baseURI).href;
+            var selector = source.slice(separator).trim();
+            var selectedEntries = (include.getAttribute("data-ruling-entries") || "").split(/\s+/).filter(Boolean);
+            if (!requests.has(sourceUrl)) {
+                requests.set(sourceUrl, fetch(sourceUrl, { cache: "no-store" }).then(function(response) {
+                    if (!response.ok) throw new Error("无法读取裁定来源：" + response.status);
+                    return response.text();
                 }));
+            }
+            requests.get(sourceUrl).then(function(html) {
+                // jQuery选择器兼容旧页面中的 :contains；来源脚本始终不执行。
+                var sourceDocument = new DOMParser().parseFromString(html, "text/html");
+                var nodes = $(sourceDocument).find(selector).toArray().filter(function(node) {
+                    return !selectedEntries.length || selectedEntries.indexOf(node.getAttribute("data-ruling-entry")) !== -1;
+                });
+                if (!nodes.length) throw new Error("裁定来源未匹配条目：" + source);
+                var fragment = document.createDocumentFragment();
+                nodes.forEach(function(node) {
+                    var copy = document.importNode(node, true);
+                    copy.querySelectorAll("script, [data-ruling-source]").forEach(function(nested) { nested.remove(); });
+                    // 来源页的锚点也应返回来源页，避免跳到引用页的同名位置。
+                    copy.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                        link.setAttribute("href", sourceUrl + link.getAttribute("href"));
+                    });
+                    resolveComponentUrls(copy, sourceUrl);
+                    fragment.appendChild(copy);
+                });
+                include.replaceChildren(fragment);
+                document.dispatchEvent(new CustomEvent("rulinginclude:loaded", { detail: include }));
+            }).catch(function(error) {
+                console.error("加载裁定失败：", source, error);
             });
         });
     };
@@ -155,8 +178,6 @@
 
         var contentNode = document.querySelector(".entry__content");
         if (!contentNode) return;
-        // 已逐卡整理全部构筑轴的页面自行维护资料，避免再次自动引入相同条目。
-        if (contentNode.getAttribute("data-ruling-sources") === "manual") return;
         // 闭包仅持有已经确认存在的正文节点。
         const entryContent = contentNode;
         var pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "");
@@ -220,7 +241,9 @@
                 if (separator === -1) return false;
                 var selector = source.slice(separator).trim();
                 var existingUrl = new URL(source.slice(0, separator), document.baseURI).href;
-                return existingUrl === sourceUrl && selector.split(/[\s>+~,.:[\]]/)[0] === "#" + sectionId;
+                return existingUrl === sourceUrl && selector.split(",").some(function(part) {
+                    return part.trim().split(/[\s>+~,.:[\]]/)[0] === "#" + sectionId;
+                });
             });
         }
 
@@ -259,7 +282,7 @@
                 axis = document.createElement("details");
                 axis.className = "ruling-axis";
                 axis.setAttribute("data-ruling-page", sourceUrl);
-                // 动态引入的轴也默认收起。
+                // 动态新增轴默认收起；已经存在的轴不重新设置状态。
                 axis.open = false;
                 var summary = document.createElement("summary");
                 var sourceTitle = sourceDocument.querySelector(".entry__title, title");
@@ -351,7 +374,7 @@
         });
     };
 
-   /* 所有原生折叠框首次出现时默认收起，后续保留用户切换的状态。
+   /* 分轴栏目保留声明的状态；构筑预览首次收起，后续保留用户切换的状态。
     * ------------------------------------------------------ */
     var ssDefaultFolds = function() {
         // 按元素身份记录初始化状态，复制或异步新增的折叠仍会单独初始化。
@@ -360,9 +383,7 @@
         function initializeDetail(detail) {
             if (initializedDetails.has(detail)) return;
             initializedDetails.add(detail);
-            // 分轴页面保留 HTML 声明的大小折叠状态，构筑预览仍按公共规则初始化。
-            var axisPage = detail.closest('.entry__content[data-ruling-fold-policy="axes"]');
-            if (axisPage && detail.matches(".ruling-axis, .ruling-fold")) return;
+            // 大折叠、轴内子模块及构筑预览均只在首次初始化时收起。
             detail.open = false;
         }
 
@@ -383,7 +404,7 @@
         observer.observe(document.body, { childList: true, subtree: true });
     };
 
-   /* 五个栏目统一提供整栏大折叠，首次创建时默认收起。
+   /* 五个板块统一提供整栏折叠，首次加载全部收起。
     * ------------------------------------------------------ */
     var ssFoldRulings = function() {
         // 只处理卡组页面，避免影响独立卡片资料页的同名栏目。
@@ -394,10 +415,8 @@
             // 先补齐五栏外框，再为五个栏目统一处理整栏折叠。
             getRulingAxisGroups(heading);
             var sectionTitle = heading.textContent.trim();
-            // 显式采用分轴策略时，只为裁定和注意建立整栏折叠，其他三栏保留固定外框。
-            var entry = heading.closest(".entry__content");
-            var usesAxisPolicy = entry && entry.getAttribute("data-ruling-fold-policy") === "axes";
-            var foldTitles = usesAxisPolicy ? ["裁定", "注意"] : ["裁定", "注意", "持续适用的效果", "自肃", "召唤条件"];
+            // 五栏共用大折叠规则，兼容静态容器及异步新增的栏目。
+            var foldTitles = ["裁定", "注意", "持续适用的效果", "自肃", "召唤条件"];
             if (foldTitles.indexOf(sectionTitle) === -1) return;
 
             // 重复检查时复用已有折叠容器，保留用户当前的展开状态。
@@ -440,7 +459,7 @@
                 fold = document.createElement("details");
                 fold.className = "ruling-fold";
                 // 只在首次创建时设置默认值；后续异步计数更新不改变用户状态。
-                fold.open = usesAxisPolicy && sectionTitle === "注意";
+                fold.open = false;
                 var summary = document.createElement("summary");
                 content = document.createElement("div");
                 content.className = "ruling-fold__content";

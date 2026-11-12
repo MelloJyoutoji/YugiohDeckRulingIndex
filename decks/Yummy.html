@@ -74,7 +74,7 @@
                                 <summary>展开裁定</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-page="Yummy.html" open>
+                                        <details class="ruling-axis" data-ruling-page="Yummy.html">
                                             <summary>Yummy</summary>
                                             <div class="auto-number" id="yummy-ruling-own" data-ruling-own="true">
                                                 <p>
@@ -82,7 +82,7 @@
                                                 </p>
                                             </div>
                                         </details>
-                                        <details class="ruling-axis" data-ruling-axis="general" open>
+                                        <details class="ruling-axis" data-ruling-axis="general">
                                             <summary>通用及跨轴互动</summary>
                                             <div class="auto-number">
                                                 <p>
@@ -100,11 +100,11 @@
 
                         <section class="ruling-section" data-ruling-section="notes">
                             <h2>注意</h2>
-                            <details class="ruling-fold" open>
+                            <details class="ruling-fold">
                                 <summary>收起注意</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-page="Yummy.html" open>
+                                        <details class="ruling-axis" data-ruling-page="Yummy.html">
                                             <summary>Yummy</summary>
                                             <div class="auto-number" id="yummy-notes-own" data-ruling-own="true">
                                                 <p>
@@ -118,15 +118,14 @@
                                                 </p>
                                             </div>
                                         </details>
-                                        <details class="ruling-axis" data-ruling-axis="dark-magician" data-ruling-page="Dark_Magician.html" open>
+                                        <details class="ruling-axis" data-ruling-axis="dark-magician" data-ruling-page="Dark_Magician.html">
                                             <summary>黑魔导</summary>
                                             <div class="auto-number">
-                                                <p>
-                                                    「王之仆人-黑魔术师」的②③效果不能在同一个回合发动.
-                                                </p>
-                                            </div>
+                            <!-- 副轴正文由对应来源页面集中维护，条目标识保留本页选取范围。 -->
+                            <div class="ruling-include" data-ruling-source="Dark_Magician.html #dark-magician-notes-own &gt; [data-ruling-entry]" data-ruling-entries="2695c9042a2d7704"></div>
+                        </div>
                                         </details>
-                                        <details class="ruling-axis" data-ruling-axis="general" open>
+                                        <details class="ruling-axis" data-ruling-axis="general">
                                             <summary>通用及跨轴互动</summary>
                                             <div class="auto-number">
                                                 <p>
@@ -141,102 +140,120 @@
 
                         <section class="ruling-section" data-ruling-section="continuous-effects">
                             <h2>持续适用的效果</h2>
-                            <div id="yummy-append-continuous" class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-axis="yummy" data-ruling-page="Yummy.html" open>
-                                    <summary>黯蜜</summary>
-                                    <div class="auto-number" id="yummy-continuous-effects-own" data-ruling-own="true">
-                                        <p>「味美喵娱乐☆小巧可爱箱庭」的①使自己场上的「味美喵」怪兽攻击力上升场上的兽族·光属性怪兽数量×500。</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>持续适用的效果</summary>
+                                <div class="ruling-fold__content">
+                                    <div id="yummy-append-continuous" class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="yummy" data-ruling-page="Yummy.html">
+                                            <summary>黯蜜</summary>
+                                            <div class="auto-number" id="yummy-continuous-effects-own" data-ruling-own="true">
+                                                <p>「味美喵娱乐☆小巧可爱箱庭」的①使自己场上的「味美喵」怪兽攻击力上升场上的兽族·光属性怪兽数量×500。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="dark-magician" data-ruling-page="Dark_Magician.html">
+                                            <summary>黑魔导</summary>
+                                            <div class="auto-number">
+                                                <div class="ruling-include" data-ruling-source="Dark_Magician.html #dark-magician-continuous-effects-own &gt; *"></div>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="time-dark-magician" data-ruling-page="Time_Dark_Magician.html">
+                                            <summary>时间黑魔术师</summary>
+                                            <div class="auto-number">
+                                                <div class="ruling-include" data-ruling-source="Time_Dark_Magician.html #time-dark-magician-continuous-effects &gt; p:contains('「时间黑魔术师」的①'), #time-dark-magician-continuous-effects &gt; p:contains('「真红眼超越黑龙」的②')"></div>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general">
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number">
+                                                <p>「黑森林的魔女」的①在自身从场上送去墓地的场合必须发动，从卡组将1只守备力1500以下的怪兽加入手卡。</p>
+                                                <p>「强袭黑羽-丛云之草薙剑鸟」的①使使用「黑羽」怪兽为素材同调召唤的自身当作调整；②在同调召唤成功时无需发动便适用，直到回合结束，攻击力上升作为其同调素材的同调怪兽原本攻击力的合计数值。</p>
+                                                <p>「强袭黑羽-丛云之草薙剑鸟」的③使自身可以向对方全部怪兽各攻击1次，攻击守备表示怪兽时给予攻击力超过守备力数值的战斗伤害。</p>
+                                                <p>「锁缚龙 锁镰」的①使自己将场上的这张卡作为同调素材时，可以将其当作调整以外的怪兽使用。</p>
+                                                <p>「虹光之宣告者」的①在自身位于怪兽区域时，使从双方手卡·卡组送去墓地的怪兽改为除外。</p>
+                                                <p>「重力控制者」的①使额外怪兽区域的自身不会被与主要怪兽区域怪兽的战斗破坏。</p>
+                                                <p>「俱利伽罗天童」的①使自身攻击力上升因其特殊召唤手续而解放的怪兽数量×1500。</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="dark-magician" data-ruling-page="Dark_Magician.html" open>
-                                    <summary>黑魔导</summary>
-                                    <div class="auto-number">
-                                        <div class="ruling-include" data-ruling-source="Dark_Magician.html #dark-magician-continuous-effects-own &gt; *"></div>
-                                    </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="time-dark-magician" data-ruling-page="Time_Dark_Magician.html" open>
-                                    <summary>时间黑魔术师</summary>
-                                    <div class="auto-number">
-                                        <div class="ruling-include" data-ruling-source="Time_Dark_Magician.html #time-dark-magician-continuous-effects &gt; p:contains('「时间黑魔术师」的①'), #time-dark-magician-continuous-effects &gt; p:contains('「真红眼超越黑龙」的②')"></div>
-                                    </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="general" open>
-                                    <summary>通用及跨轴互动</summary>
-                                    <div class="auto-number">
-                                        <p>「黑森林的魔女」的①在自身从场上送去墓地的场合必须发动，从卡组将1只守备力1500以下的怪兽加入手卡。</p>
-                                        <p>「强袭黑羽-丛云之草薙剑鸟」的①使使用「黑羽」怪兽为素材同调召唤的自身当作调整；②在同调召唤成功时无需发动便适用，直到回合结束，攻击力上升作为其同调素材的同调怪兽原本攻击力的合计数值。</p>
-                                        <p>「强袭黑羽-丛云之草薙剑鸟」的③使自身可以向对方全部怪兽各攻击1次，攻击守备表示怪兽时给予攻击力超过守备力数值的战斗伤害。</p>
-                                        <p>「锁缚龙 锁镰」的①使自己将场上的这张卡作为同调素材时，可以将其当作调整以外的怪兽使用。</p>
-                                        <p>「虹光之宣告者」的①在自身位于怪兽区域时，使从双方手卡·卡组送去墓地的怪兽改为除外。</p>
-                                        <p>「重力控制者」的①使额外怪兽区域的自身不会被与主要怪兽区域怪兽的战斗破坏。</p>
-                                        <p>「俱利伽罗天童」的①使自身攻击力上升因其特殊召唤手续而解放的怪兽数量×1500。</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="restrictions">
                             <h2>自肃</h2>
-                            <div id="yummy-append-restrictions" class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-axis="yummy" data-ruling-page="Yummy.html" open>
-                                    <summary>黯蜜</summary>
-                                    <div class="auto-number" id="yummy-restrictions-own" data-ruling-own="true">
-                                        <p>「味美喵★点心抓取猫」的①效果处理后，直到本回合结束，自己不能把连接3以上的连接怪兽连接召唤；即使未成功放置场地，只要发动和效果未被无效，该限制仍适用。</p>
-                                        <p>「味美喵☆惊喜奖品」的①选择第二个「●」特殊召唤的怪兽，本回合不能直接攻击。</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>自肃</summary>
+                                <div class="ruling-fold__content">
+                                    <div id="yummy-append-restrictions" class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="yummy" data-ruling-page="Yummy.html">
+                                            <summary>黯蜜</summary>
+                                            <div class="auto-number" id="yummy-restrictions-own" data-ruling-own="true">
+                                                <p>「味美喵★点心抓取猫」的①效果处理后，直到本回合结束，自己不能把连接3以上的连接怪兽连接召唤；即使未成功放置场地，只要发动和效果未被无效，该限制仍适用。</p>
+                                                <p>「味美喵☆惊喜奖品」的①选择第二个「●」特殊召唤的怪兽，本回合不能直接攻击。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="dark-magician" data-ruling-page="Dark_Magician.html">
+                                            <summary>黑魔导</summary>
+                                            <div class="auto-number">
+                                                <div class="ruling-include" data-ruling-source="Dark_Magician.html #dark-magician-restrictions-own &gt; [data-ruling-card='41350417']"></div>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general">
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number">
+                                                <p>「黑森林的魔女」的①成功将怪兽加入手卡后，直到本回合结束，自己不能发动该卡及其同名卡的效果。</p>
+                                                <p>「皮里·雷斯地图」的①发动后，直到下个回合结束，自己在该效果加入手卡的怪兽或其同名卡召唤成功前，不能发动该怪兽及其同名卡的效果。</p>
+                                                <p>「重力控制者」在连接召唤的回合不能作为连接素材。</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="dark-magician" data-ruling-page="Dark_Magician.html" open>
-                                    <summary>黑魔导</summary>
-                                    <div class="auto-number">
-                                        <div class="ruling-include" data-ruling-source="Dark_Magician.html #dark-magician-restrictions-own &gt; [data-ruling-card='41350417']"></div>
-                                    </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="general" open>
-                                    <summary>通用及跨轴互动</summary>
-                                    <div class="auto-number">
-                                        <p>「黑森林的魔女」的①成功将怪兽加入手卡后，直到本回合结束，自己不能发动该卡及其同名卡的效果。</p>
-                                        <p>「皮里·雷斯地图」的①发动后，直到下个回合结束，自己在该效果加入手卡的怪兽或其同名卡召唤成功前，不能发动该怪兽及其同名卡的效果。</p>
-                                        <p>「重力控制者」在连接召唤的回合不能作为连接素材。</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="summon-conditions">
                             <h2>召唤条件</h2>
-                            <!-- 各轴默认展开，组内独立编号；共享资料仅引入对应卡片的条目。 -->
-                            <div id="yummy-append-summons" class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-axis="yummy" data-ruling-page="Yummy.html" open>
-                                    <summary>黯蜜</summary>
-                                    <div class="auto-number" id="yummy-summon-conditions-own" data-ruling-own="true">
-                                        <p>「味美喵★点心抓取猫」要求1只4星以下的兽族·光属性怪兽。</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>召唤条件</summary>
+                                <div class="ruling-fold__content">
+                                    <!-- 各轴默认收起，组内独立编号；共享资料仅引入对应卡片的条目。 -->
+                                    <div id="yummy-append-summons" class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-axis="yummy" data-ruling-page="Yummy.html">
+                                            <summary>黯蜜</summary>
+                                            <div class="auto-number" id="yummy-summon-conditions-own" data-ruling-own="true">
+                                                <p>「味美喵★点心抓取猫」要求1只4星以下的兽族·光属性怪兽。</p>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="dark-magician" data-ruling-page="Dark_Magician.html">
+                                            <summary>黑魔导</summary>
+                                            <div class="auto-number">
+                                                <div class="ruling-include" data-ruling-source="Dark_Magician.html #dark-magician-summon-conditions-own &gt; *"></div>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="time-dark-magician" data-ruling-page="Time_Dark_Magician.html">
+                                            <summary>时间黑魔术师</summary>
+                                            <div class="auto-number">
+                                                <div class="ruling-include" data-ruling-source="Time_Dark_Magician.html #time-dark-magician-summon-conditions &gt; p:contains('「真红眼超越黑龙」')"></div>
+                                            </div>
+                                        </details>
+                                        <details class="ruling-axis" data-ruling-axis="general">
+                                            <summary>通用及跨轴互动</summary>
+                                            <div class="auto-number">
+                                                <p>「锁缚龙 锁镰」要求1只调整＋1只以上同调怪兽。</p>
+                                                <p>「S：P小夜」要求2只效果怪兽。</p>
+                                                <p>「圣魔之少女 阿耳特弥斯」要求1只4星以下的魔法师族怪兽；自己每回合只能特殊召唤1次该同名卡。</p>
+                                                <p>「重力控制者」要求1只位于额外怪兽区域的连接怪兽以外的怪兽。</p>
+                                                <p>「电子界契约魔女」要求2只种族相同的怪兽。</p>
+                                                <p>「俱利伽罗天童」不能通常召唤；必须将本回合曾在对方怪兽区域发动过效果、且目前位于自己·对方场上的表侧表示怪兽全部解放，才能从手卡特殊召唤。只能通过该手续特殊召唤。</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="dark-magician" data-ruling-page="Dark_Magician.html" open>
-                                    <summary>黑魔导</summary>
-                                    <div class="auto-number">
-                                        <div class="ruling-include" data-ruling-source="Dark_Magician.html #dark-magician-summon-conditions-own &gt; *"></div>
-                                    </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="time-dark-magician" data-ruling-page="Time_Dark_Magician.html" open>
-                                    <summary>时间黑魔术师</summary>
-                                    <div class="auto-number">
-                                        <div class="ruling-include" data-ruling-source="Time_Dark_Magician.html #time-dark-magician-summon-conditions &gt; p:contains('「真红眼超越黑龙」')"></div>
-                                    </div>
-                                </details>
-                                <details class="ruling-axis" data-ruling-axis="general" open>
-                                    <summary>通用及跨轴互动</summary>
-                                    <div class="auto-number">
-                                        <p>「锁缚龙 锁镰」要求1只调整＋1只以上同调怪兽。</p>
-                                        <p>「S：P小夜」要求2只效果怪兽。</p>
-                                        <p>「圣魔之少女 阿耳特弥斯」要求1只4星以下的魔法师族怪兽；自己每回合只能特殊召唤1次该同名卡。</p>
-                                        <p>「重力控制者」要求1只位于额外怪兽区域的连接怪兽以外的怪兽。</p>
-                                        <p>「电子界契约魔女」要求2只种族相同的怪兽。</p>
-                                        <p>「俱利伽罗天童」不能通常召唤；必须将本回合曾在对方怪兽区域发动过效果、且目前位于自己·对方场上的表侧表示怪兽全部解放，才能从手卡特殊召唤。只能通过该手续特殊召唤。</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <h2>卡组预览</h2>
 
@@ -274,7 +291,7 @@
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/deck-names.js"></script>
-    <script src="../js/main.js?v=20261110-axis-boundaries"></script>
+    <script src="../js/main.js?v=20261112-all-folds-closed"></script>
     <script src="../js/deck-viewer.js"></script>
     <script src="../js/mc-deck-previews.js"></script>
 

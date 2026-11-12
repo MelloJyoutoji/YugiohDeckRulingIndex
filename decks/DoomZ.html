@@ -72,7 +72,7 @@
                                 <summary>展开裁定</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-page="DoomZ.html" open>
+                                        <details class="ruling-axis" data-ruling-page="DoomZ.html">
                                             <summary>终刻</summary>
                                             <div class="auto-number" id="doomz-ruling-own" data-ruling-own="true">
                                         <p>
@@ -103,11 +103,11 @@
 
                         <section class="ruling-section" data-ruling-section="notes">
                             <h2>注意</h2>
-                            <details class="ruling-fold" open>
+                            <details class="ruling-fold">
                                 <summary>收起注意</summary>
                                 <div class="ruling-fold__content">
                                     <div class="ruling-axes">
-                                        <details class="ruling-axis" data-ruling-page="DoomZ.html" open>
+                                        <details class="ruling-axis" data-ruling-page="DoomZ.html">
                                             <summary>终刻</summary>
                                             <div class="auto-number" id="doomz-notes-own" data-ruling-own="true">
                                         <p>
@@ -147,45 +147,63 @@
 
                         <section class="ruling-section" data-ruling-section="continuous-effects">
                             <h2>持续适用的效果</h2>
-                            <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-page="DoomZ.html" open>
-                                    <summary>终刻</summary>
-                                    <div class="auto-number" id="doomz-continuous-effects-own" data-ruling-own="true">
-                                        <p>无</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>持续适用的效果</summary>
+                                <div class="ruling-fold__content">
+                                    <div class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-page="DoomZ.html">
+                                            <summary>终刻</summary>
+                                            <div class="auto-number" id="doomz-continuous-effects-own" data-ruling-own="true">
+                                                <p>无</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="restrictions">
                             <h2>自肃</h2>
-                            <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-page="DoomZ.html" open>
-                                    <summary>终刻</summary>
-                                    <div class="auto-number" id="doomz-restrictions-own" data-ruling-own="true">
-                                        <p>
-                                        「狱神机 终刻龙-Z」有存续期间超量自肃.
-                                        </p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>自肃</summary>
+                                <div class="ruling-fold__content">
+                                    <div class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-page="DoomZ.html">
+                                            <summary>终刻</summary>
+                                            <div class="auto-number" id="doomz-restrictions-own" data-ruling-own="true">
+                                                <p>
+                                                「狱神机 终刻龙-Z」有存续期间超量自肃.
+                                                </p>
 
-                                        <p>
-                                        「终刻击针」(永续)①效果发动后有超量自肃.
-                                        </p>
+                                                <p>
+                                                「终刻击针」(永续)①效果发动后有超量自肃.
+                                                </p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <section class="ruling-section" data-ruling-section="summon-conditions">
                             <h2>召唤条件</h2>
-                            <div class="ruling-axes">
-                                <details class="ruling-axis" data-ruling-page="DoomZ.html" open>
-                                    <summary>终刻</summary>
-                                    <div class="auto-number" id="doomz-summon-conditions-own" data-ruling-own="true">
-                                        <p>无</p>
+                            <!-- 五栏统一使用整栏折叠，首次加载默认收起。 -->
+                            <details class="ruling-fold">
+                                <summary>召唤条件</summary>
+                                <div class="ruling-fold__content">
+                                    <div class="ruling-axes">
+                                        <details class="ruling-axis" data-ruling-page="DoomZ.html">
+                                            <summary>终刻</summary>
+                                            <div class="auto-number" id="doomz-summon-conditions-own" data-ruling-own="true">
+                                                <p>无</p>
+                                            </div>
+                                        </details>
                                     </div>
-                                </details>
-                            </div>
-                        </section>
+                                </div>
+                            </details>
+                            </section>
 
                         <h2>卡组预览</h2>
 
@@ -284,7 +302,7 @@
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/deck-names.js"></script>
-    <script src="../js/main.js?v=20261105-axis-sources"></script>
+    <script src="../js/main.js?v=20261112-all-folds-closed"></script>
     <script src="../js/deck-viewer.js"></script>
     <script src="../js/mc-deck-previews.js"></script>
 
