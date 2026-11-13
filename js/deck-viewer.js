@@ -2,14 +2,42 @@
     const CARD_API_BASE = 'https://ygocdb.com/api/v0';
     const CARD_PAGE_BASE = 'https://ygocdb.com/card';
     const CARD_IMAGE_FALLBACK_BASE = 'https://cdntx.moecube.com/ygopro-super-pre/data/pics';
+    // 统一回退链的补充图源，按卡片密码覆盖旧图床缺失的新卡。
+    const CARD_IMAGE_SECONDARY_FALLBACK_BASE = 'https://images.ygoprodeck.com/images/cards';
     const QUOTED_CARD_PATTERN = /\u300c([^\u300c\u300d]+?)\u300d/g;
     const searchCache = new Map();
     const cardCache = new Map();
 
     function initDeckViewer() {
-        const rawEl = document.getElementById('deck-raw');
-        const renderEl = document.getElementById('deck-render');
-        const hoverEl = document.getElementById('card-hover');
+        let rawEl = document.getElementById('deck-raw');
+        let renderEl = document.getElementById('deck-render');
+        let hoverEl = document.getElementById('card-hover');
+
+        // 无静态构筑的卡组页也需要渲染入口；单卡页和共享片段不自动补建。
+        const deckPath = new URL('../decks/', document.currentScript.src).pathname;
+        const content = document.querySelector('.entry__content');
+        if (window.location.pathname.startsWith(deckPath) && content && document.querySelector('[data-deck-name]')) {
+            if (!renderEl) {
+                renderEl = document.createElement('div');
+                renderEl.id = 'deck-render';
+                // 卡组预览置于裁定、注意、持续适用的效果、自肃和召唤条件之后。
+                content.appendChild(renderEl);
+            }
+            if (!rawEl) {
+                rawEl = document.createElement('div');
+                rawEl.id = 'deck-raw';
+                rawEl.hidden = true;
+                renderEl.before(rawEl);
+            }
+            if (!hoverEl) {
+                hoverEl = document.createElement('div');
+                hoverEl.id = 'card-hover';
+                const frame = document.createElement('iframe');
+                frame.title = '卡片详情';
+                hoverEl.appendChild(frame);
+                document.body.appendChild(hoverEl);
+            }
+        }
 
         if (!rawEl || !renderEl || !hoverEl) {
             return;
@@ -190,8 +218,12 @@
                 img.loading = 'lazy';
             }
 
+            // 复用统一错误回退；仅在两个原有图源都缺图时尝试补充图源。
             img.addEventListener('error', () => {
                 img.src = `${CARD_IMAGE_FALLBACK_BASE}/${cardId}.jpg`;
+                img.addEventListener('error', () => {
+                    img.src = `${CARD_IMAGE_SECONDARY_FALLBACK_BASE}/${cardId}.jpg`;
+                }, { once: true });
             }, { once: true });
 
             img.addEventListener('mouseenter', () => {
@@ -355,9 +387,45 @@
             scope.querySelectorAll('.deck-preview[data-deck-code]').forEach(bindDeckPreview);
         }
 
+        // 搜索结果每种卡片只展示一次，沿用构筑卡图的详情交互及手机端张数显示。
+        function renderSearchCards(container, cards) {
+            const groups = [
+                { title: '主卡组卡片', cards: [] },
+                { title: '额外卡组卡片', cards: [] }
+            ];
+            cards.forEach((card) => {
+                const types = card.text?.types || card.additionalTexts?.sc?.types || '';
+                const isExtra = Boolean(Number(card.data?.type) & (0x40 | 0x2000 | 0x800000 | 0x4000000))
+                    || /融合|同调|超量|连接/.test(types);
+                groups[isExtra ? 1 : 0].cards.push(card);
+            });
+            container.replaceChildren();
+            groups.forEach((group) => {
+                if (!group.cards.length) {
+                    return;
+                }
+                const grid = createSection(`${group.title} · ${group.cards.length}`, container);
+                group.cards.forEach((card) => {
+                    const name = card.cn_name || card.sc_name || card.nwbbs_n || card.jp_name || String(card.cid);
+                    if (Number(card.id) > 0) {
+                        const img = createCardImage(card.id, true);
+                        img.alt = name;
+                        grid.appendChild(img);
+                    } else {
+                        // 没有卡片密码时保留名称，避免生成外部搜索链接或破图。
+                        const label = document.createElement('span');
+                        label.textContent = name;
+                        grid.appendChild(label);
+                    }
+                });
+            });
+            updateSectionCounts(container);
+        }
+
         bindDeckPreviews(document);
         window.DeckViewer = window.DeckViewer || {};
         window.DeckViewer.bindPreviews = bindDeckPreviews;
+        window.DeckViewer.renderSearchCards = renderSearchCards;
     }
 
     function normalizeCardName(value) {
@@ -466,6 +534,7 @@
         tooltip = document.createElement('div');
         tooltip.id = 'card-effect-hover';
         tooltip.innerHTML = [
+            '<img class="card-effect-hover__image" alt="">',
             '<div class="card-effect-hover__name"></div>',
             '<div class="card-effect-hover__meta"></div>',
             '<div class="card-effect-hover__desc"></div>'
@@ -641,6 +710,8 @@
     }
 
     function showEffectTooltip(tooltip, trigger, card, clientX, clientY, options) {
+        // 普通悬浮及其他栏目继续显示卡片效果文本。
+        tooltip.classList.remove('is-card-image');
         updateTooltipContent(tooltip, {
             name: card.text.name || trigger.dataset.cardName || '',
             meta: [card.text.types, card.id ? `\u5bc6\u7801\uff1a${card.id}` : ''].filter(Boolean).join('\n'),
@@ -650,6 +721,49 @@
         tooltip.classList.remove('is-loading');
         tooltip.classList.toggle('is-pinned', Boolean(options?.pin));
         setTooltipPosition(tooltip, trigger, clientX, clientY);
+    }
+
+    /**
+     * 设置卡图预览的统一回退链，避免指定栏目因图源缺失而出现空白。
+     * @param {HTMLImageElement} image 卡图元素
+     * @param {string|number} cardId 卡片密码
+     */
+    function setEffectCardImage(image, cardId) {
+        if (!image || !cardId) {
+            return;
+        }
+
+        image.onerror = () => {
+            image.onerror = () => {
+                image.onerror = null;
+                image.src = `${CARD_IMAGE_SECONDARY_FALLBACK_BASE}/${cardId}.jpg`;
+            };
+            image.src = `${CARD_IMAGE_FALLBACK_BASE}/${cardId}.jpg`;
+        };
+        image.src = `https://cdn.233.momobako.com/ygoimg/jp/${cardId}.webp!half`;
+    }
+
+    /** 指定三栏悬浮或点击卡名时显示紧凑卡图，而不是效果正文。 */
+    function showCardImageTooltip(tooltip, trigger, card, options) {
+        const image = tooltip.querySelector('.card-effect-hover__image');
+
+        if (!image || !card?.id) {
+            return;
+        }
+
+        tooltip.classList.add('is-card-image', 'is-visible');
+        tooltip.classList.remove('is-loading');
+        tooltip.classList.toggle('is-pinned', Boolean(options?.pin));
+        image.alt = card.text?.name || trigger.dataset.cardName || '';
+        setEffectCardImage(image, card.id);
+        setTooltipPosition(tooltip, trigger);
+    }
+
+    /** 判断卡名是否位于需要点击显示卡图的三个栏目。 */
+    function shouldShowCardImage(trigger) {
+        const section = trigger.closest('.ruling-section');
+        const title = section?.querySelector(':scope > h2')?.textContent.trim();
+        return ['持续适用的效果', '召唤条件', '自肃'].includes(title);
     }
 
     async function initQuotedCardEffectHover(contentRoots = Array.from(document.querySelectorAll('.entry__content'))) {
@@ -725,7 +839,12 @@
 
                 clearTimeout(hideTimeout);
                 activeTrigger = trigger;
-                showEffectTooltip(tooltip, trigger, card, event.clientX, event.clientY);
+                // 三个指定栏目在桌面端悬浮时直接显示卡图，其他栏目仍显示效果文本。
+                if (shouldShowCardImage(trigger)) {
+                    showCardImageTooltip(tooltip, trigger, card, { pin: false });
+                } else {
+                    showEffectTooltip(tooltip, trigger, card, event.clientX, event.clientY);
+                }
             });
 
             trigger.addEventListener('mousemove', (event) => {
@@ -751,7 +870,12 @@
                 clearTimeout(hideTimeout);
                 activeTrigger = trigger;
                 pinnedTrigger = trigger;
-                showEffectTooltip(tooltip, trigger, card, undefined, undefined, { pin: true });
+                // 只切换指定栏目，裁定、注意等位置沿用原来的效果弹窗。
+                if (shouldShowCardImage(trigger)) {
+                    showCardImageTooltip(tooltip, trigger, card, { pin: true });
+                } else {
+                    showEffectTooltip(tooltip, trigger, card, undefined, undefined, { pin: true });
+                }
             });
         });
 
@@ -765,12 +889,8 @@
         window.addEventListener('scroll', () => queueHideTooltip(true), true);
         window.addEventListener('resize', () => {
             if (pinnedTrigger && tooltip.classList.contains('is-visible')) {
-                const card = getResolvedCard(pinnedTrigger);
-
-                if (card?.text) {
-                    showEffectTooltip(tooltip, pinnedTrigger, card, undefined, undefined, { pin: true });
-                }
-
+                // 缩放时只重新定位，保留已经选择的卡图或效果显示模式。
+                setTooltipPosition(tooltip, pinnedTrigger);
                 return;
             }
 

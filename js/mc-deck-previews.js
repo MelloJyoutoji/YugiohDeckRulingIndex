@@ -1,6 +1,6 @@
 /**
- * 卡组页前排预览：读取每日同步的 MyCard 快照，按主系列填入折叠卡组。
- * 无映射的系列会被跳过；解码与展开渲染仍交给 deck-viewer.js。
+ * 卡组页前排预览：读取定时同步的 MyCard 快照，按主系列填入折叠卡组。
+ * 无可用构筑时展示相关卡片；卡图及详情交互交给 deck-viewer.js。
  */
 (function () {
     "use strict";
@@ -9,6 +9,11 @@
     var siteRoot = new URL("../", document.currentScript.src).href;
     var LEADERBOARD_URL = new URL("data/mc-leaderboard.json", siteRoot).href;
     var SERIES_MAP_URL = new URL("data/mc-series-pages.json", siteRoot).href;
+    var CARD_SEARCH_URL = "https://ygocdb.com/api/v0/";
+    // 只轮询本站快照，复用现有后台同步；后台标签页恢复可见时立即补查。
+    var REFRESH_INTERVAL_MS = 60 * 1000;
+    var refreshing = false;
+    var renderedState = "";
 
     function getCurrentPageName() {
         var path = decodeURIComponent(window.location.pathname || "");
@@ -17,11 +22,16 @@
     }
 
     function fetchJson(url) {
-        return fetch(url, { cache: "no-store" }).then(function (response) {
+        // 请求超时后释放刷新锁，使下一轮能够重试，避免网络挂起后永久停止更新。
+        var controller = new AbortController();
+        var timeout = window.setTimeout(function () { controller.abort(); }, 15000);
+        return fetch(url, { cache: "no-store", signal: controller.signal }).then(function (response) {
             if (!response.ok) {
                 throw new Error("无法读取 " + url);
             }
             return response.json();
+        }).finally(function () {
+            window.clearTimeout(timeout);
         });
     }
 
@@ -125,7 +135,81 @@
         }
     }
 
+    // 静态 YDK、分享码和构筑链接均视为已有构筑，不用搜索结果覆盖。
+    function hasStaticDeck() {
+        var raw = document.getElementById("deck-raw");
+        return Boolean(raw && /(^|\n)\s*\d+\s*(\n|$)/.test(raw.textContent))
+            || Array.prototype.some.call(document.querySelectorAll(".deck-preview[data-deck-code], .card-grid img, .deck-previews a[href], #deck-render a[href]"), function (node) {
+                // 动态卡片和动态构筑都不是静态来源，不能阻止下一次快照检查。
+                return !node.closest("[data-mc-previews]");
+            });
+    }
+
+    // 只读取初始结果，不跟随 next 加载更多相关性较低的结果。
+    async function searchInitialCards(queries) {
+        var cards = new Map();
+        for (var query of queries) {
+            var url = new URL(CARD_SEARCH_URL);
+            url.searchParams.set("search", query);
+            var data = await fetchJson(url.href);
+            if (!Array.isArray(data.result)) {
+                throw new Error("相关卡片搜索结果格式无效");
+            }
+            data.result.forEach(function (card) {
+                // cid 标识卡片身份，合并异画和多个搜索词的重复结果。
+                var key = card.cid ? "cid:" + card.cid : "id:" + card.id;
+                if ((card.cid || Number(card.id) > 0) && !cards.has(key)) {
+                    cards.set(key, card);
+                }
+            });
+        }
+        return Array.from(cards.values());
+    }
+
+    // 仅在确实没有构筑时调用，构筑出现后由 renderPreviews 清空这里的内容。
+    async function renderRelatedCards(container, queries) {
+        var requestId = String(Date.now()) + Math.random();
+        container.dataset.previewRequest = requestId;
+        setMeta(container, "正在加载相关卡片…", false);
+        var render = document.createElement("div");
+        render.className = "deck-render";
+        container.appendChild(render);
+        try {
+            var cards = await searchInitialCards(queries);
+            // 新构筑已经渲染时，丢弃较早的异步搜索结果，避免兜底内容回流。
+            if (container.dataset.previewRequest !== requestId) {
+                return;
+            }
+            if (!window.DeckViewer || typeof window.DeckViewer.renderSearchCards !== "function") {
+                throw new Error("卡片展示功能尚未初始化");
+            }
+            window.DeckViewer.renderSearchCards(render, cards);
+            setMeta(container, cards.length ? "相关卡片 · " + cards.length + " 种" : "未搜索到相关卡片", !cards.length);
+        } catch (error) {
+            if (container.dataset.previewRequest === requestId) {
+                setMeta(container, "相关卡片加载失败。", true);
+                renderedState = "";
+                console.error("加载相关卡片失败:", error);
+            }
+        }
+    }
+
+    // 清除搜索兜底及旧构筑，保留顶部状态文字，避免新构筑与旧内容同时出现。
+    function clearPreviewContent(container) {
+        Array.from(container.children).forEach(function (node) {
+            if (!node.classList.contains("mc-previews-meta")) {
+                node.remove();
+            }
+        });
+        delete container.dataset.previewRequest;
+    }
+
     function renderPreviews(container, snapshot, labels, oldDeck) {
+        // 构筑内容更新时仍保留同一构筑已切换的展开状态。
+        var openedCodes = new Set(Array.from(container.querySelectorAll("details.deck-preview[open]"), function (node) {
+            return node.getAttribute("data-deck-code");
+        }));
+        clearPreviewContent(container);
         var labelSet = {};
         labels.forEach(function (label) {
             labelSet[label] = true;
@@ -136,16 +220,14 @@
             return deck && deck.code && labelSet[deck.main_category];
         });
 
-        Array.prototype.forEach.call(container.querySelectorAll("details.deck-preview"), function (node) {
-            node.parentNode.removeChild(node);
-        });
-
         var updatedText = formatUpdatedAt(snapshot);
         // 当前系列退出前排后，仍可展开查看同步脚本保留的一份历史构筑。
         if (!matched.length && oldDeck && oldDeck.deck && oldDeck.deck.code) {
             var lastSeen = oldDeck.last_seen_at ? " · 最后出现于 " + String(oldDeck.last_seen_at).replace("T", " ") : "";
             setMeta(container, "当前前排暂无该系列卡组 · 保留 1 份 old 构筑" + lastSeen, false);
-            container.appendChild(createPreview(Object.assign({}, oldDeck, { old: true })));
+            var oldPreview = createPreview(Object.assign({}, oldDeck, { old: true }));
+            oldPreview.open = openedCodes.has(oldDeck.deck.code);
+            container.appendChild(oldPreview);
             bindPreviews(container);
             return;
         }
@@ -165,26 +247,32 @@
         );
 
         matched.forEach(function (entry) {
-            container.appendChild(createPreview(entry));
+            var preview = createPreview(entry);
+            preview.open = openedCodes.has(entry.deck.code);
+            container.appendChild(preview);
         });
         bindPreviews(container);
     }
 
     var pageName = getCurrentPageName();
-    if (!pageName) {
+    if (!pageName || !window.location.pathname.startsWith(new URL("decks/", siteRoot).pathname)
+        || !document.querySelector("[data-deck-name]")) {
         return;
     }
 
-    Promise.all([fetchJson(SERIES_MAP_URL), fetchJson(LEADERBOARD_URL)])
+    // 读取和渲染分离于搜索请求，新的快照不必等待旧搜索返回才能替换兜底。
+    function refreshPreviews() {
+        if (refreshing) {
+            return;
+        }
+        refreshing = true;
+        return Promise.all([fetchJson(SERIES_MAP_URL), fetchJson(LEADERBOARD_URL)])
         .then(function (results) {
             var seriesMap = results[0] || {};
             var snapshot = results[1] || {};
             var labels = seriesMap.pages && seriesMap.pages[pageName];
 
-            // 没有映射的页面保持原样，不插入前排区域。
-            if (!Array.isArray(labels) || labels.length === 0) {
-                return;
-            }
+            labels = Array.isArray(labels) ? labels : [];
 
             var existing = document.querySelector("[data-mc-previews]");
             var oldDeck = snapshot.old_decks && snapshot.old_decks[pageName];
@@ -196,8 +284,10 @@
                 return entry && entry.deck && entry.deck.code && labelsSet[entry.deck.main_category];
             }).length;
 
-            // 原本没有前排区的页面，没有命中卡组时不新增空区域。
-            if (!existing && matchedCount === 0 && !(oldDeck && oldDeck.deck && oldDeck.deck.code)) {
+            var hasSnapshotDeck = matchedCount > 0 || Boolean(oldDeck && oldDeck.deck && oldDeck.deck.code);
+            var hasStatic = hasStaticDeck();
+            // 有静态构筑而没有快照构筑时，继续保留原本的静态展示。
+            if (!existing && !hasSnapshotDeck && hasStatic) {
                 return;
             }
 
@@ -206,9 +296,45 @@
                 return;
             }
 
+            // 相同构筑保留原节点及展开状态；仅更新时间变化也不重建卡组。
+            var state = JSON.stringify({ labels: labels, decks: (snapshot.players || []).filter(function (entry) {
+                return entry && entry.deck && entry.deck.code && labelsSet[entry.deck.main_category];
+            }).map(function (entry) {
+                return { rank: entry.rank, player: entry.player, deck: entry.deck };
+            }), oldDeck: oldDeck || null, hasStatic: hasStatic });
+            if (state === renderedState) {
+                return;
+            }
+            renderedState = state;
+            if (!hasSnapshotDeck && !hasStatic) {
+                clearPreviewContent(container);
+                var queries = labels.length ? labels : [document.title.trim()];
+                queries = Array.from(new Set(queries.map(function (query) { return query.trim(); }).filter(Boolean)));
+                if (queries.length) {
+                    renderRelatedCards(container, queries);
+                    return;
+                }
+                return;
+            }
             renderPreviews(container, snapshot, labels, oldDeck);
         })
         .catch(function (error) {
             console.error("加载前排卡组失败:", error);
+        })
+        .finally(function () {
+            refreshing = false;
         });
+    }
+
+    refreshPreviews();
+    window.setInterval(function () {
+        if (!document.hidden) {
+            refreshPreviews();
+        }
+    }, REFRESH_INTERVAL_MS);
+    document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) {
+            refreshPreviews();
+        }
+    });
 })();
