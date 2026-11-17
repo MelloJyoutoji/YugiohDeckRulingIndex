@@ -291,8 +291,8 @@
                 axisContent.className = "auto-number";
                 axis.appendChild(summary);
                 axis.appendChild(axisContent);
-                // 无对应页面的遗留轴保持原位，新增轴放在通用互动组之前。
-                groups.insertBefore(axis, groups.querySelector('[data-ruling-axis="general"]'));
+                // 无对应页面的遗留轴保持原位，新增轴按配置顺序追加。
+                groups.appendChild(axis);
             }
             // 自身没有条目而外轴有内容时，不展示空的自身轴折叠。
             groups.querySelectorAll('[data-ruling-own="true"]').forEach(function(own) {
