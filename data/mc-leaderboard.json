@@ -1,33 +1,32 @@
 {
   "source": "https://ygo.xyk.one/mc",
-  "updated_at": 1794888998.5734272,
-  "synced_at": "2026-11-17T12:22:03+08:00",
+  "updated_at": 1794971811.932551,
+  "synced_at": "2026-11-18T11:24:29+08:00",
   "total": 100,
   "players": [
     {
       "rank": 1,
       "player": "亚翁",
-      "score": 1622,
-      "month_games": 190,
-      "month_win_rate": 69.47368421052632,
+      "score": 1635,
+      "month_games": 191,
+      "month_win_rate": 69.63350785340315,
       "deck": {
-        "name": "狱神奥义耀圣",
-        "main_category": "耀圣",
+        "name": "鹰身亚马逊",
+        "main_category": "亚马逊",
         "categories": [
-          "狱神",
-          "奥义",
-          "耀圣"
+          "鹰身",
+          "亚马逊"
         ],
-        "code": "GPqhnJicZ8a19FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2CWWVKoXmqAtnIn-7mGVkmHkS9XPaldgnSu5HGq8L2BDqxMpBGlvoHhCpqiTQ4tVk7WIvL5kxiaZMtcnYxHFVOR3zBQwXVQr4xta9ZoQ-TG44J0qVB8BBib8ay08shqpnxrXROU1PGOA72cV7qVGOxOYFNP2uCdK7U8An3UNLgBsHQuI",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GPqhnJicZ8a19FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2CWWVKoXmqAtnIn-7mGVkmHkS9XPaldgnSu5HGq8L2BDqxMpBGlvoHhCpqiTQ4tVk7WIvL5kxiaZMtcnYxHFVOR3zBQwXVQr4xta9ZoQ-TG44J0qVB8BBib8ay08shqpnxrXROU1PGOA72cV7qVGOxOYFNP2uCdK7U8An3UNLgBsHQuI&name=%E4%BA%9A%E7%BF%81"
+        "code": "E-aM-Na-wJcEbBOk_OCdKA1Bg5q0J-IDwTpP8N4jr6MdicJZZUqbORP73MMrJPpN0zgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2taWnYte2CdKYT4Lz2hqkJ9fef7rZO9IGPC96oTDCjTfjWUi9-RdwTpVS-sj2lf5X1pnxrX3Fe6l4J0rtUoQoKngE--U_dPg",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E-aM-Na-wJcEbBOk_OCdKA1Bg5q0J-IDwTpP8N4jr6MdicJZZUqbORP73MMrJPpN0zgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2taWnYte2CdKYT4Lz2hqkJ9fef7rZO9IGPC96oTDCjTfjWUi9-RdwTpVS-sj2lf5X1pnxrX3Fe6l4J0rtUoQoKngE--U_dPg&name=%E4%BA%9A%E7%BF%81"
       }
     },
     {
       "rank": 2,
       "player": "葬夜",
-      "score": 1606,
-      "month_games": 52,
-      "month_win_rate": 78.84615384615384,
+      "score": 1612,
+      "month_games": 55,
+      "month_win_rate": 78.18181818181819,
       "deck": {
         "name": "60城之内道化混沌",
         "main_category": "混沌",
@@ -42,27 +41,10 @@
     },
     {
       "rank": 3,
-      "player": "WL无泪",
-      "score": 1603,
-      "month_games": 252,
-      "month_win_rate": 67.06349206349206,
-      "deck": {
-        "name": "60闪刀混沌",
-        "main_category": "混沌",
-        "categories": [
-          "闪刀",
-          "混沌"
-        ],
-        "code": "I-dM-NbXeHNPKiAzFJb5FgTG9GXGN6M5Rz3b-oMHNamLlgw3iOxXFe6pRjsTpLLKlfc8paGzkT-1zDKybo3iOqfasrLqgFy8PWj14etIs2qnHUAWLahRJ_DEo1vOTjw0Y5vM8qDWrqkoJwgyd5ECu5CtPgnSu0fhma4mUgjS800cuKYrpp1zRDKxA3WPC960iMZxTfjWWvBgdtj1UhLd5pVUQMiWpfpPDXi2n6vFtP5rPIRMZ8a2suKjzNMXLBwU0_bXeonNnu6MHKfunw",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=I-dM-NbXeHNPKiAzFJb5FgTG9GXGN6M5Rz3b-oMHNamLlgw3iOxXFe6pRjsTpLLKlfc8paGzkT-1zDKybo3iOqfasrLqgFy8PWj14etIs2qnHUAWLahRJ_DEo1vOTjw0Y5vM8qDWrqkoJwgyd5ECu5CtPgnSu0fhma4mUgjS800cuKYrpp1zRDKxA3WPC960iMZxTfjWWvBgdtj1UhLd5pVUQMiWpfpPDXi2n6vFtP5rPIRMZ8a2suKjzNMXLBwU0_bXeonNnu6MHKfunw&name=WL%E6%97%A0%E6%B3%AA"
-      }
-    },
-    {
-      "rank": 4,
       "player": "灵sama",
-      "score": 1566,
-      "month_games": 115,
-      "month_win_rate": 73.04347826086956,
+      "score": 1581,
+      "month_games": 116,
+      "month_win_rate": 73.27586206896552,
       "deck": {
         "name": "狱神奥义耀圣",
         "main_category": "耀圣",
@@ -76,27 +58,44 @@
       }
     },
     {
+      "rank": 4,
+      "player": "WL无泪",
+      "score": 1566,
+      "month_games": 264,
+      "month_win_rate": 66.28787878787878,
+      "deck": {
+        "name": "60闪刀混沌",
+        "main_category": "混沌",
+        "categories": [
+          "闪刀",
+          "混沌"
+        ],
+        "code": "I-dM-NbXeHNPKiAzFJb5FgTG9GXGN6M5Rz3b-oMHNamLlgw3iOxXFe6pRjsTpLLKlfc8paGzkT-1zDKybo3iOqfasrLqgFy8PWj14etIs2qnHUAWLahRJ_DEo1vOTjw0Y5vM8qDWrqkoJwgyd5ECu5CtPgnSu0fhma4mUgjS800cuKYrpp1zRDKxA3WPC960iMZxTfjWWvBgdtj1UhLd5pVUQMiWpfpPDXi2n6vFtP5rPIRMZ8a2suKjzNMXLBwU0_bXeonNnu6MHKfunw",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=I-dM-NbXeHNPKiAzFJb5FgTG9GXGN6M5Rz3b-oMHNamLlgw3iOxXFe6pRjsTpLLKlfc8paGzkT-1zDKybo3iOqfasrLqgFy8PWj14etIs2qnHUAWLahRJ_DEo1vOTjw0Y5vM8qDWrqkoJwgyd5ECu5CtPgnSu0fhma4mUgjS800cuKYrpp1zRDKxA3WPC960iMZxTfjWWvBgdtj1UhLd5pVUQMiWpfpPDXi2n6vFtP5rPIRMZ8a2suKjzNMXLBwU0_bXeonNnu6MHKfunw&name=WL%E6%97%A0%E6%B3%AA"
+      }
+    },
+    {
       "rank": 5,
       "player": "混沌球体",
-      "score": 1550,
-      "month_games": 83,
-      "month_win_rate": 72.28915662650603,
+      "score": 1563,
+      "month_games": 84,
+      "month_win_rate": 72.61904761904762,
       "deck": {
         "name": "三幻魔",
         "main_category": "三幻魔",
         "categories": [
           "三幻魔"
         ],
-        "code": "E_pM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R184r3UkssqVbhmHCbORP73MMrLSfWxPVmGB3BOld4EzmLn2ey1iZSCJX6Y86Hh2skdKp0MNdIMRkvP43ZTrpDnwVSEzzQlWC6Kpo-vqW6yAKm_GspQrysqc77vFzBPGtnkmxTPjWulxUeWoJWojGOxOIFNP25gjcecE6V2qUIUFTwCfdQ0uAA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E_pM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R184r3UkssqVbhmHCbORP73MMrLSfWxPVmGB3BOld4EzmLn2ey1iZSCJX6Y86Hh2skdKp0MNdIMRkvP43ZTrpDnwVSEzzQlWC6Kpo-vqW6yAKm_GspQrysqc77vFzBPGtnkmxTPjWulxUeWoJWojGOxOIFNP25gjcecE6V2qUIUFTwCfdQ0uAA&name=%E6%B7%B7%E6%B2%8C%E7%90%83%E4%BD%93"
+        "code": "EvKM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R16WWVKtwzDhNnIn97mGVlpPrYnqzDA9gnSu8CZzFz7PZaxMpBEr9MedDw7WSOlU6GGukGIyXn8bsp10hz4KpCZ5oSrBdFU0fX1LdZAFTfjWUoV5WVOd93i5gnjWzyTY1BK1EXFe6k",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=EvKM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R16WWVKtwzDhNnIn97mGVlpPrYnqzDA9gnSu8CZzFz7PZaxMpBEr9MedDw7WSOlU6GGukGIyXn8bsp10hz4KpCZ5oSrBdFU0fX1LdZAFTfjWUoV5WVOd93i5gnjWzyTY1BK1EXFe6k&name=%E6%B7%B7%E6%B2%8C%E7%90%83%E4%BD%93"
       }
     },
     {
       "rank": 6,
       "player": "Ksar牛逼",
-      "score": 1529,
-      "month_games": 90,
-      "month_win_rate": 71.11111111111111,
+      "score": 1550,
+      "month_games": 92,
+      "month_win_rate": 71.73913043478261,
       "deck": {
         "name": "60黑魔导阿不思烙印混沌",
         "main_category": "混沌",
@@ -113,25 +112,42 @@
     {
       "rank": 7,
       "player": "轉生",
-      "score": 1526,
-      "month_games": 149,
-      "month_win_rate": 67.78523489932886,
+      "score": 1539,
+      "month_games": 150,
+      "month_win_rate": 68.0,
       "deck": {
         "name": "三幻魔",
         "main_category": "三幻魔",
         "categories": [
           "三幻魔"
         ],
-        "code": "EvdM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R16WWVKtwzDhNnIn97mGVlpPrYnqzDA_gnSu8CZzFz7PZaxMpBEr9MedDw7WSOlU6GGukGIyXn8bsp10hz4KpCZ5oSrBdFU0fX1LdZAFTfjWUoV5WVOd93i5gnjWzyTY5cVHl6CVqJRjsTiBTT9qpQhQVPAJ98p-6f",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=EvdM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R16WWVKtwzDhNnIn97mGVlpPrYnqzDA_gnSu8CZzFz7PZaxMpBEr9MedDw7WSOlU6GGukGIyXn8bsp10hz4KpCZ5oSrBdFU0fX1LdZAFTfjWUoV5WVOd93i5gnjWzyTY5cVHl6CVqJRjsTiBTT9qpQhQVPAJ98p-6f&name=%E8%BD%89%E7%94%9F"
+        "code": "EviM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R16WWVKtwzDhNnIn97mGVlpPrYnqzDA9gnSu8CZzFz7PZaxMpBEr9MedDw7WSOlU6GGukGIyXn8bsp10hz4KpCZ5oSrBdFU0fX1LdZAFTfjWUoV5WVOd93i5gnjWzyTYxcVHlqCVqJOK91JjHYnECmn7VShCgqeAT75T90-A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=EviM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R16WWVKtwzDhNnIn97mGVlpPrYnqzDA9gnSu8CZzFz7PZaxMpBEr9MedDw7WSOlU6GGukGIyXn8bsp10hz4KpCZ5oSrBdFU0fX1LdZAFTfjWUoV5WVOd93i5gnjWzyTYxcVHlqCVqJOK91JjHYnECmn7VShCgqeAT75T90-A&name=%E8%BD%89%E7%94%9F"
       }
     },
     {
       "rank": 8,
+      "player": "s9hy_sky",
+      "score": 1519,
+      "month_games": 265,
+      "month_win_rate": 65.66037735849056,
+      "deck": {
+        "name": "杀手旋律耀圣",
+        "main_category": "耀圣",
+        "categories": [
+          "杀手旋律",
+          "耀圣"
+        ],
+        "code": "G-xgXvmCM98WVxpIUNH-YMWwOGVRPkMLUGDmtQStRGqgNVI-g3jhvEdiuK91SjHYnSp3uvkssqVw--hPheaoCkGmGxs5E_3cwys29SoDMpxS58E6V3PYEOpG4vrKJlIIkt9A8L7n1YQqaok0OLVZO1iLydjEcVU5HfJ6PaDQlUXgwUMF1UK-ManKsbEd4WctQV8WlGZPZGfGtdMcB3q4r3VEFNP2yGi0RaCe8fXeonNHe7N6PEaBlShCgrgxBRU8An2A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=G-xgXvmCM98WVxpIUNH-YMWwOGVRPkMLUGDmtQStRGqgNVI-g3jhvEdiuK91SjHYnSp3uvkssqVw--hPheaoCkGmGxs5E_3cwys29SoDMpxS58E6V3PYEOpG4vrKJlIIkt9A8L7n1YQqaok0OLVZO1iLydjEcVU5HfJ6PaDQlUXgwUMF1UK-ManKsbEd4WctQV8WlGZPZGfGtdMcB3q4r3VEFNP2yGi0RaCe8fXeonNHe7N6PEaBlShCgrgxBRU8An2A&name=s9hy_sky"
+      }
+    },
+    {
+      "rank": 9,
       "player": "久 远",
-      "score": 1517,
-      "month_games": 278,
-      "month_win_rate": 66.90647482014388,
+      "score": 1512,
+      "month_games": 286,
+      "month_win_rate": 66.78321678321679,
       "deck": {
         "name": "60巨大战舰水晶机巧地机",
         "main_category": "地机",
@@ -145,7 +161,7 @@
       }
     },
     {
-      "rank": 9,
+      "rank": 10,
       "player": "无情飞",
       "score": 1503,
       "month_games": 71,
@@ -163,11 +179,11 @@
       }
     },
     {
-      "rank": 10,
+      "rank": 11,
       "player": "料理鼠王",
-      "score": 1499,
-      "month_games": 129,
-      "month_win_rate": 72.09302325581395,
+      "score": 1498,
+      "month_games": 131,
+      "month_win_rate": 71.7557251908397,
       "deck": {
         "name": "鹰身亚马逊",
         "main_category": "亚马逊",
@@ -180,11 +196,11 @@
       }
     },
     {
-      "rank": 11,
+      "rank": 12,
       "player": "珏瑜",
-      "score": 1495,
-      "month_games": 150,
-      "month_win_rate": 69.33333333333333,
+      "score": 1493,
+      "month_games": 152,
+      "month_win_rate": 69.07894736842105,
       "deck": {
         "name": "60阿不思烙印",
         "main_category": "烙印",
@@ -197,11 +213,11 @@
       }
     },
     {
-      "rank": 12,
+      "rank": 13,
       "player": "落下的秋叶",
-      "score": 1480,
-      "month_games": 39,
-      "month_win_rate": 79.48717948717949,
+      "score": 1493,
+      "month_games": 40,
+      "month_win_rate": 80.0,
       "deck": {
         "name": "60黑魔导混沌魔女术",
         "main_category": "魔女术",
@@ -210,12 +226,80 @@
           "混沌",
           "魔女术"
         ],
-        "code": "IviM-Na_eHNPGhNwqJb5FgwuUW6lLyqBKyaiuoMHNYbxHXpZZUqYbS2Ah01PFe4NHXc8paGzkT_dzDKzbo3iOwyS4pU-1ZSKmIu8uqAXRgjcekpHT7tzu5FQBYtqGot50qgHicZAeBZO8iB4J0rvPbWj2JlII0vNNHMKEYlUgiNWuKYrpElEWrCuUOkrlZHqF6GCaQomImj6-pCYYUarsm_0Pw1UoliVJTfjWWr_K-xQkqzTfn36suMwV1BK1EgU0_aoaLRCu9ROaq4qC1ShCgg",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=IviM-Na_eHNPGhNwqJb5FgwuUW6lLyqBKyaiuoMHNYbxHXpZZUqYbS2Ah01PFe4NHXc8paGzkT_dzDKzbo3iOwyS4pU-1ZSKmIu8uqAXRgjcekpHT7tzu5FQBYtqGot50qgHicZAeBZO8iB4J0rvPbWj2JlII0vNNHMKEYlUgiNWuKYrpElEWrCuUOkrlZHqF6GCaQomImj6-pCYYUarsm_0Pw1UoliVJTfjWWr_K-xQkqzTfn36suMwV1BK1EgU0_aoaLRCu9ROaq4qC1ShCgg&name=%E8%90%BD%E4%B8%8B%E7%9A%84%E7%A7%8B%E5%8F%B6"
+        "code": "IfqM-Na_eHNPGhNwqJb5FgwuUW6lLyqBKyaiuoMHNWglaiQ3iOvSyypUw2lsBDpqeK9waOu55S0NnIn-7mGVm3RvEdhklxSp9qysuqAXRgjcekpHT7tzu5GQBYtqGot50qgHicZAeBZO8iB4J0rvPbWj2JlII0vNNHKQRGrXFMV0iSiLVhXKHSVysj1C9DBNIUTETR9fUhMMKNV2Tf6H4aqUSxKkpvxrLV_lfYoSVZpM-Na7fn36suMwV1BK1EgU0_aoaLRCu9ROaq4qC1ShCgsKEYlA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=IfqM-Na_eHNPGhNwqJb5FgwuUW6lLyqBKyaiuoMHNWglaiQ3iOvSyypUw2lsBDpqeK9waOu55S0NnIn-7mGVm3RvEdhklxSp9qysuqAXRgjcekpHT7tzu5GQBYtqGot50qgHicZAeBZO8iB4J0rvPbWj2JlII0vNNHKQRGrXFMV0iSiLVhXKHSVysj1C9DBNIUTETR9fUhMMKNV2Tf6H4aqUSxKkpvxrLV_lfYoSVZpM-Na7fn36suMwV1BK1EgU0_aoaLRCu9ROaq4qC1ShCgsKEYlA&name=%E8%90%BD%E4%B8%8B%E7%9A%84%E7%A7%8B%E5%8F%B6"
       }
     },
     {
-      "rank": 13,
+      "rank": 14,
+      "player": "强丶少",
+      "score": 1485,
+      "month_games": 206,
+      "month_win_rate": 60.679611650485434,
+      "deck": {
+        "name": "狱神奥义耀圣",
+        "main_category": "耀圣",
+        "categories": [
+          "狱神",
+          "奥义",
+          "耀圣"
+        ],
+        "code": "G_lhnJieXFR5UTlNT6KXG_nb1O63yH4RGe-LK40kKGj_MGbYHDKa1Uw1XQl3DUGDmsN4jr1xXupMY7E5SyypUiUqcDF5qgLZyJ_Uw8iXqMCRsVz2pWo41XhewIdTgnStUt9A8Jns3ZQqaok0OLVZY9qAqdrEXl8yYwrCYG4TsYjiqnI79UK-Maj7jg0PkxuOCdKlQfAQYnlkNWM-NbMXGYK-glaiQKaftsE6V2qUIUFK9-WingE_GhpcAg",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=G_lhnJieXFR5UTlNT6KXG_nb1O63yH4RGe-LK40kKGj_MGbYHDKa1Uw1XQl3DUGDmsN4jr1xXupMY7E5SyypUiUqcDF5qgLZyJ_Uw8iXqMCRsVz2pWo41XhewIdTgnStUt9A8Jns3ZQqaok0OLVZY9qAqdrEXl8yYwrCYG4TsYjiqnI79UK-Maj7jg0PkxuOCdKlQfAQYnlkNWM-NbMXGYK-glaiQKaftsE6V2qUIUFK9-WingE_GhpcAg&name=%E5%BC%BA%E4%B8%B6%E5%B0%91"
+      }
+    },
+    {
+      "rank": 15,
+      "player": "影之诗好玩",
+      "score": 1479,
+      "month_games": 115,
+      "month_win_rate": 71.30434782608695,
+      "deck": {
+        "name": "绚岚城之内K9",
+        "main_category": "K9",
+        "categories": [
+          "绚岚",
+          "城之内",
+          "K9"
+        ],
+        "code": "G-dM-Na6Z8a2mtnjpq29AJq_zJUm1DJ1aPawWEp71WTyVVagwc1XyOLwzM6b9Z0UusN4jr0ssqVNnIn-QX4FuhRJ-_Jx4aOmXzJVmmhRMABh9pIpY54J0rtmO8yK-Ggbu5GZ1JBxemsE6U41kIZdrD1fbMGGT11D_nKhuuvYDGpmmiaJhQoWl6EN-JkOfBVMeF71RcEKw0LdJeoJWolGOxOsFNP26sMwVxMpBGqUIUE",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=G-dM-Na6Z8a2mtnjpq29AJq_zJUm1DJ1aPawWEp71WTyVVagwc1XyOLwzM6b9Z0UusN4jr0ssqVNnIn-QX4FuhRJ-_Jx4aOmXzJVmmhRMABh9pIpY54J0rtmO8yK-Ggbu5GZ1JBxemsE6U41kIZdrD1fbMGGT11D_nKhuuvYDGpmmiaJhQoWl6EN-JkOfBVMeF71RcEKw0LdJeoJWolGOxOsFNP26sMwVxMpBGqUIUE&name=%E5%BD%B1%E4%B9%8B%E8%AF%97%E5%A5%BD%E7%8E%A9"
+      }
+    },
+    {
+      "rank": 16,
+      "player": "你可认得此阵",
+      "score": 1478,
+      "month_games": 69,
+      "month_win_rate": 75.3623188405797,
+      "deck": {
+        "name": "城之内",
+        "main_category": "城之内",
+        "categories": [
+          "城之内"
+        ],
+        "code": "FMfM-NbSmaODsJT3q8nkqqZI3ulYJ0onUGDmsN4jsJjQWVTivdTox2JylllSts5E_zQT3j8F-BbxzeZ50y-ZLSRSxxfDQN0CfFUYg4vT-CdKcadc0QysQN1fef7qMl5_G7KddsUrdVQVzVIm_GstfWR7qoDbtIuKjzaCuKtqCVqJgpp-3VhmCqpQhQUr35aA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FMfM-NbSmaODsJT3q8nkqqZI3ulYJ0onUGDmsN4jsJjQWVTivdTox2JylllSts5E_zQT3j8F-BbxzeZ50y-ZLSRSxxfDQN0CfFUYg4vT-CdKcadc0QysQN1fef7qMl5_G7KddsUrdVQVzVIm_GstfWR7qoDbtIuKjzaCuKtqCVqJgpp-3VhmCqpQhQUr35aA&name=%E4%BD%A0%E5%8F%AF%E8%AE%A4%E5%BE%97%E6%AD%A4%E9%98%B5"
+      }
+    },
+    {
+      "rank": 17,
+      "player": "lustttt",
+      "score": 1471,
+      "month_games": 138,
+      "month_win_rate": 66.66666666666667,
+      "deck": {
+        "name": "三幻魔",
+        "main_category": "三幻魔",
+        "categories": [
+          "三幻魔"
+        ],
+        "code": "FPZXYeGWv7FJe3w4wJbATLStc-fqDBzWG8R16lBEHkssqVbhmHCbORP73MMrJDW-6Wk-tiWrMMD-CdK7wJnMXPs9lrEykESv0x50PDtZI6VToYa6QYjJefxuynXSHPgqkJnmhKsF0VTR9fUt1kAVN-NZShXlZU533eLmCeNbPJNjmfGtfcV7qUCmn7VPAJ98p-6fqGlwAA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FPZXYeGWv7FJe3w4wJbATLStc-fqDBzWG8R16lBEHkssqVbhmHCbORP73MMrJDW-6Wk-tiWrMMD-CdK7wJnMXPs9lrEykESv0x50PDtZI6VToYa6QYjJefxuynXSHPgqkJnmhKsF0VTR9fUt1kAVN-NZShXlZU533eLmCeNbPJNjmfGtfcV7qUCmn7VPAJ98p-6fqGlwAA&name=lustttt"
+      }
+    },
+    {
+      "rank": 18,
       "player": "祈祈巧",
       "score": 1468,
       "month_games": 175,
@@ -232,7 +316,24 @@
       }
     },
     {
-      "rank": 14,
+      "rank": 19,
+      "player": "不要01要41",
+      "score": 1464,
+      "month_games": 127,
+      "month_win_rate": 66.92913385826772,
+      "deck": {
+        "name": "鹰身亚马逊",
+        "main_category": "亚马逊",
+        "categories": [
+          "鹰身",
+          "亚马逊"
+        ],
+        "code": "FelM-NbWwJcEbBOk_WCdKAaE_EB4J0n-G8R164r3U2MdicJZZUqYCiY22cif7uYZWafSbpnBOlW7aoRNsE6VdYJ0rvEykEfcjM6vBOlhJba1psE6Uwn6kvVDVIT6-8_3V6ifcoyXn8bsp10mj6-pCYYUab8ay3BOlVL6yPaV_lfWrsPDJM-NbUoMHNWNiCzqUEQegU0_aqUIUFTwCffKfunw",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FelM-NbWwJcEbBOk_WCdKAaE_EB4J0n-G8R164r3U2MdicJZZUqYCiY22cif7uYZWafSbpnBOlW7aoRNsE6VdYJ0rvEykEfcjM6vBOlhJba1psE6Uwn6kvVDVIT6-8_3V6ifcoyXn8bsp10mj6-pCYYUab8ay3BOlVL6yPaV_lfWrsPDJM-NbUoMHNWNiCzqUEQegU0_aqUIUFTwCffKfunw&name=%E4%B8%8D%E8%A6%8101%E8%A6%8141"
+      }
+    },
+    {
+      "rank": 20,
       "player": "lijiong262",
       "score": 1463,
       "month_games": 47,
@@ -250,55 +351,25 @@
       }
     },
     {
-      "rank": 15,
-      "player": "集换社Pro123",
-      "score": 1461,
-      "month_games": 223,
-      "month_win_rate": 64.12556053811659,
-      "deck": {
-        "name": "召唤师",
-        "main_category": "召唤师",
-        "categories": [
-          "召唤师"
-        ],
-        "code": "EuvoMRt-2o9vOkQyX6gwc1RRbdfDeI7DcV7qiWWVK2zkT_dzDKz3nt9IxqHLpjUOXcjsrC_BOld614m_xMpBG0lI2SP0J26Kv4XEM6rkMfMheZnM6u07Fr5uZYCzDH3O1T5yhq84LMbre2Um_GspF78i65gnjVdh4ZRnxrXYx2JxRsQWdSgiDyXX3ToFNP2qlCFBSvflop4BPylP3T4",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=EuvoMRt-2o9vOkQyX6gwc1RRbdfDeI7DcV7qiWWVK2zkT_dzDKz3nt9IxqHLpjUOXcjsrC_BOld614m_xMpBG0lI2SP0J26Kv4XEM6rkMfMheZnM6u07Fr5uZYCzDH3O1T5yhq84LMbre2Um_GspF78i65gnjVdh4ZRnxrXYx2JxRsQWdSgiDyXX3ToFNP2qlCFBSvflop4BPylP3T4&name=%E9%9B%86%E6%8D%A2%E7%A4%BEPro123"
-      }
-    },
-    {
-      "rank": 16,
-      "player": "你可认得此阵",
+      "rank": 21,
+      "player": "此恨绵绵无绝期",
       "score": 1457,
-      "month_games": 67,
-      "month_win_rate": 74.6268656716418,
+      "month_games": 88,
+      "month_win_rate": 69.31818181818181,
       "deck": {
-        "name": "城之内",
-        "main_category": "城之内",
+        "name": "狱神奥义耀圣",
+        "main_category": "耀圣",
         "categories": [
-          "城之内"
+          "狱神",
+          "奥义",
+          "耀圣"
         ],
-        "code": "FMfM-NbSmaODsJT3q8nkqqZI3ulYJ0onUGDmsN4jsJjQWVTivdTox2JylllSts5E_zQT3j8F-BbxzeZ50y-ZLSRSxxfDQN0CfFUYg4vT-CdKcadc0QysQN1fef7qMl5_G7KddsUrdVQVzVIm_GstfWR7qoDbtIuKjzaCuKtqCVqJgpp-3VhmCqpQhQUr35aA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FMfM-NbSmaODsJT3q8nkqqZI3ulYJ0onUGDmsN4jsJjQWVTivdTox2JylllSts5E_zQT3j8F-BbxzeZ50y-ZLSRSxxfDQN0CfFUYg4vT-CdKcadc0QysQN1fef7qMl5_G7KddsUrdVQVzVIm_GstfWR7qoDbtIuKjzaCuKtqCVqJgpp-3VhmCqpQhQUr35aA&name=%E4%BD%A0%E5%8F%AF%E8%AE%A4%E5%BE%97%E6%AD%A4%E9%98%B5"
+        "code": "GvtXYeGTDOTE9FLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R16xoLKmNiCzqUEQeSyypVi81QFs5E_tcwyskw8iXqMCRssE6V3I41XhewIdSW-geEKmqJNDi1WWPagKnaxF5fMmMSdjEcVU5HfMFDBdVCvjG1r1mhD5MbjgnSpUHwEGJvxrLTyyGqmfGteLio8yJymp5BXFW1BK1EXFe6mxjsTmBTT9qpQhQWtDOvqeAT7A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GvtXYeGTDOTE9FLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R16xoLKmNiCzqUEQeSyypVi81QFs5E_tcwyskw8iXqMCRssE6V3I41XhewIdSW-geEKmqJNDi1WWPagKnaxF5fMmMSdjEcVU5HfMFDBdVCvjG1r1mhD5MbjgnSpUHwEGJvxrLTyyGqmfGteLio8yJymp5BXFW1BK1EXFe6mxjsTmBTT9qpQhQWtDOvqeAT7A&name=%E6%AD%A4%E6%81%A8%E7%BB%B5%E7%BB%B5%E6%97%A0%E7%BB%9D%E6%9C%9F"
       }
     },
     {
-      "rank": 17,
-      "player": "liberal",
-      "score": 1457,
-      "month_games": 151,
-      "month_win_rate": 66.2251655629139,
-      "deck": {
-        "name": "60混沌",
-        "main_category": "混沌",
-        "categories": [
-          "混沌"
-        ],
-        "code": "KPdTLpAKX_lP68OaeK_h68S3yLBiPm0fG7msaalCu43SP56gwc1WN8mWzUgGJebsGur8DwmsfFR5ha8p59kEKor1BqG8R16WWVKkNq169zyloS4wLi2cif1ujeI7DJLiVT7VkoqYi7i6oBcn0m6hdnR6jNqpxVAFi2-CdK7YcYbg0U7KhvH-5qXmmjkwt_5JXvy0XFMV0gYvaVHuQszK0KhEZLz-Ic-CqQmeaEmj6-puxoHSkkOv0y6ZQquyb_XJRA6jIJpFb_XdkZ8a11PAq9RcVHlox2JxApp-3SgnB_EVOJg",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=KPdTLpAKX_lP68OaeK_h68S3yLBiPm0fG7msaalCu43SP56gwc1WN8mWzUgGJebsGur8DwmsfFR5ha8p59kEKor1BqG8R16WWVKkNq169zyloS4wLi2cif1ujeI7DJLiVT7VkoqYi7i6oBcn0m6hdnR6jNqpxVAFi2-CdK7YcYbg0U7KhvH-5qXmmjkwt_5JXvy0XFMV0gYvaVHuQszK0KhEZLz-Ic-CqQmeaEmj6-puxoHSkkOv0y6ZQquyb_XJRA6jIJpFb_XdkZ8a11PAq9RcVHlox2JxApp-3SgnB_EVOJg&name=liberal"
-      }
-    },
-    {
-      "rank": 18,
+      "rank": 22,
       "player": "宋五皇的子弟兵二號",
       "score": 1456,
       "month_games": 24,
@@ -315,96 +386,63 @@
       }
     },
     {
-      "rank": 19,
-      "player": "s9hy_sky",
-      "score": 1451,
-      "month_games": 259,
-      "month_win_rate": 64.86486486486487,
-      "deck": {
-        "name": "杀手旋律耀圣",
-        "main_category": "耀圣",
-        "categories": [
-          "杀手旋律",
-          "耀圣"
-        ],
-        "code": "G-xgXvmCM98WVxpIUNH-YMWwOGVRPkMLUGDmtQStRGqgNVI-g3jhvEdiuK91SjHYnSp3uvkssqVw--hPheaoCkGmGxs5E_3cwys29SoDMpxS58E6V3PYEOpG4vrKJlIIkt9A8L7n1YQqaok0OLVZO1iLydjEcVU5HfJ6PaDQlUXgwUMF1UK-ManKsbEd4WctQV8WlGZPZGfGtdMcB3q4r3VEFNP2yGi0RaCe8fXeonNHe7N6PEaBlShCgrgxBRU8An2A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=G-xgXvmCM98WVxpIUNH-YMWwOGVRPkMLUGDmtQStRGqgNVI-g3jhvEdiuK91SjHYnSp3uvkssqVw--hPheaoCkGmGxs5E_3cwys29SoDMpxS58E6V3PYEOpG4vrKJlIIkt9A8L7n1YQqaok0OLVZO1iLydjEcVU5HfJ6PaDQlUXgwUMF1UK-ManKsbEd4WctQV8WlGZPZGfGtdMcB3q4r3VEFNP2yGi0RaCe8fXeonNHe7N6PEaBlShCgrgxBRU8An2A&name=s9hy_sky"
-      }
-    },
-    {
-      "rank": 20,
-      "player": "不要01要41",
-      "score": 1450,
-      "month_games": 126,
-      "month_win_rate": 66.66666666666667,
-      "deck": {
-        "name": "鹰身亚马逊",
-        "main_category": "亚马逊",
-        "categories": [
-          "鹰身",
-          "亚马逊"
-        ],
-        "code": "FelM-NbWwJcEbBOk_WCdKAaE_EB4J0n-G8R164r3U2MdicJZZUqYCiY22cif7uYZWafSbpnBOlW7aoRNsE6VdYJ0rvEykEfcjM6vBOlhJba1psE6Uwn6kvVDVIT6-8_3V6ifcoyXn8bsp10mj6-pCYYUab8ay3BOlVL6yPaV_lfWrsPDJM-NbUoMHNWNiCzqUEQegU0_aqUIUFTwCffKfunw",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FelM-NbWwJcEbBOk_WCdKAaE_EB4J0n-G8R164r3U2MdicJZZUqYCiY22cif7uYZWafSbpnBOlW7aoRNsE6VdYJ0rvEykEfcjM6vBOlhJba1psE6Uwn6kvVDVIT6-8_3V6ifcoyXn8bsp10mj6-pCYYUab8ay3BOlVL6yPaV_lfWrsPDJM-NbUoMHNWNiCzqUEQegU0_aqUIUFTwCffKfunw&name=%E4%B8%8D%E8%A6%8101%E8%A6%8141"
-      }
-    },
-    {
-      "rank": 21,
-      "player": "lustttt",
-      "score": 1445,
-      "month_games": 136,
-      "month_win_rate": 66.17647058823529,
-      "deck": {
-        "name": "三幻魔",
-        "main_category": "三幻魔",
-        "categories": [
-          "三幻魔"
-        ],
-        "code": "FPZXYeGWv7FJe3w4wJbATLStc-fqDBzWG8R16lBEHkssqVbhmHCbORP73MMrJDW-6Wk-tiWrMMD-CdK7wJnMXPs9lrEykESv0x50PDtZI6VToYa6QYjJefxuynXSHPgqkJnmhKsF0VTR9fUt1kAVN-NZShXlZU533eLmCeNbPJNjmfGtfcV7qUCmn7VPAJ98p-6fqGlwAA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FPZXYeGWv7FJe3w4wJbATLStc-fqDBzWG8R16lBEHkssqVbhmHCbORP73MMrJDW-6Wk-tiWrMMD-CdK7wJnMXPs9lrEykESv0x50PDtZI6VToYa6QYjJefxuynXSHPgqkJnmhKsF0VTR9fUt1kAVN-NZShXlZU533eLmCeNbPJNjmfGtfcV7qUCmn7VPAJ98p-6fqGlwAA&name=lustttt"
-      }
-    },
-    {
-      "rank": 22,
-      "player": "洛花依人",
-      "score": 1445,
-      "month_games": 77,
-      "month_win_rate": 74.02597402597402,
-      "deck": {
-        "name": "鹰身亚马逊",
-        "main_category": "亚马逊",
-        "categories": [
-          "鹰身",
-          "亚马逊"
-        ],
-        "code": "FOdM-NbWwJcEXBOk-2CdJ-sE6UBqDBzVoT8QHgnSf4bxHYpZZUrbORP73MMrJwTpVqXLHwttUImtK9VasE6Vd4J0rvuRmdPgnSwktta0oRg6SsE6Uwv3NmJNItE7DXSDENUhPot1NEX3n-6mj6-pN-NZTgnSql9ZHtK_yvsgU0_b3eonOSgnCCpQhQVwYgoqeAT8pT90-A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FOdM-NbWwJcEXBOk-2CdJ-sE6UBqDBzVoT8QHgnSf4bxHYpZZUrbORP73MMrJwTpVqXLHwttUImtK9VasE6Vd4J0rvuRmdPgnSwktta0oRg6SsE6Uwv3NmJNItE7DXSDENUhPot1NEX3n-6mj6-pN-NZTgnSql9ZHtK_yvsgU0_b3eonOSgnCCpQhQVwYgoqeAT8pT90-A&name=%E6%B4%9B%E8%8A%B1%E4%BE%9D%E4%BA%BA"
-      }
-    },
-    {
       "rank": 23,
-      "player": "影之诗好玩",
-      "score": 1445,
-      "month_games": 112,
-      "month_win_rate": 70.53571428571429,
+      "player": "星尘编年史、",
+      "score": 1452,
+      "month_games": 74,
+      "month_win_rate": 77.02702702702703,
       "deck": {
-        "name": "绚岚城之内K9",
-        "main_category": "K9",
+        "name": "60罪宝混沌太阳神",
+        "main_category": "太阳神",
         "categories": [
-          "绚岚",
-          "城之内",
-          "K9"
+          "罪宝",
+          "混沌",
+          "太阳神"
         ],
-        "code": "G-dM-Na6Z8a2mtnjpq29AJq_zJUm1DJ1aPawWEp71WTyVVagwc1XyOLwzM6b9Z0UusN4jr0ssqVNnIn-QX4FuhRJ-_Jx4aOmXzJVmmhRMABh9pIpY54J0rtmO8yK-Ggbu5GZ1JBxemsE6U41kIZdrD1fbMGGT11D_nKhuuvYDGpmmiaJhQoWl6EN-JkOfBVMeF71RcEKw0LdJeoJWolGOxOsFNP26sMwVxMpBGqUIUE",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=G-dM-Na6Z8a2mtnjpq29AJq_zJUm1DJ1aPawWEp71WTyVVagwc1XyOLwzM6b9Z0UusN4jr0ssqVNnIn-QX4FuhRJ-_Jx4aOmXzJVmmhRMABh9pIpY54J0rtmO8yK-Ggbu5GZ1JBxemsE6U41kIZdrD1fbMGGT11D_nKhuuvYDGpmmiaJhQoWl6EN-JkOfBVMeF71RcEKw0LdJeoJWolGOxOsFNP26sMwVxMpBGqUIUE&name=%E5%BD%B1%E4%B9%8B%E8%AF%97%E5%A5%BD%E7%8E%A9"
+        "code": "JeZExLbUXFR5WCa_2w8KlXRMS0UiYltDvDmniqn6r6J2ECRb5Fg8E6Tz4J0npwTpPmoMHNWglaiQ3iOwSyypV3PKWhs5E_rdG8R2GSXEqn2rJRUxF3F1QC5PpN1CwBjFWbVTjtpzqUUAWLazRmOqwTpVeLDPVl-gukeCdKscE6WBF5po6wTpYNgnSlnBOlLrimK6Vh-Z0letUBhrpBiEgzh0HwEGITDCjbsaB0m_GspAuoey-sj21QG3aJcVHlRkE0jApp-1Q0WiHd6ic1KCcHg",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=JeZExLbUXFR5WCa_2w8KlXRMS0UiYltDvDmniqn6r6J2ECRb5Fg8E6Tz4J0npwTpPmoMHNWglaiQ3iOwSyypV3PKWhs5E_rdG8R2GSXEqn2rJRUxF3F1QC5PpN1CwBjFWbVTjtpzqUUAWLazRmOqwTpVeLDPVl-gukeCdKscE6WBF5po6wTpYNgnSlnBOlLrimK6Vh-Z0letUBhrpBiEgzh0HwEGITDCjbsaB0m_GspAuoey-sj21QG3aJcVHlRkE0jApp-1Q0WiHd6ic1KCcHg&name=%E6%98%9F%E5%B0%98%E7%BC%96%E5%B9%B4%E5%8F%B2%E3%80%81"
       }
     },
     {
       "rank": 24,
-      "player": "强丶少",
-      "score": 1444,
-      "month_games": 200,
-      "month_win_rate": 60.0,
+      "player": "dzdzdomo",
+      "score": 1451,
+      "month_games": 240,
+      "month_win_rate": 63.333333333333336,
+      "deck": {
+        "name": "阿不思混沌",
+        "main_category": "混沌",
+        "categories": [
+          "阿不思",
+          "混沌"
+        ],
+        "code": "FujvDmnnC14aYt8iwMFL7rozMxqtLaFjX4IEOoMHNWglaiQ3iOvSyypV3PKWhs5E_rDJLiVT7Vk5dUAukAWLbHN5nnTL5krJ3kQF8NA3ReaaOSDi9MqhnndkjrdSndOLliDl4NOuaIWbxP-lcrI5ii0-zKxA3aSLGZN3xXXbGfWir_K-uM-NbMXFR5ZBXFW1BK1EQU0_bXeonPCBADCngE-w",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FujvDmnnC14aYt8iwMFL7rozMxqtLaFjX4IEOoMHNWglaiQ3iOvSyypV3PKWhs5E_rDJLiVT7Vk5dUAukAWLbHN5nnTL5krJ3kQF8NA3ReaaOSDi9MqhnndkjrdSndOLliDl4NOuaIWbxP-lcrI5ii0-zKxA3aSLGZN3xXXbGfWir_K-uM-NbMXFR5ZBXFW1BK1EQU0_bXeonPCBADCngE-w&name=dzdzdomo"
+      }
+    },
+    {
+      "rank": 25,
+      "player": "原石人",
+      "score": 1443,
+      "month_games": 125,
+      "month_win_rate": 64.0,
+      "deck": {
+        "name": "鹰身亚马逊",
+        "main_category": "亚马逊",
+        "categories": [
+          "鹰身",
+          "亚马逊"
+        ],
+        "code": "E-mM-Na-wJcEbBOk_WCdKAaE_EB4J0n-G8R1-4r3UmMdicJZZUqbORP73MMrJPpN1LgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2tabBOlMIapCfX3n-6jJefxuynXbSFExFJIdgIK5qkbpGgim_GstwTpVS-sj21f5X2K7DwyTPjWvqDBzWjHYnDGxBZ1KCIPQKaftU8An3yn7p8A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E-mM-Na-wJcEbBOk_WCdKAaE_EB4J0n-G8R1-4r3UmMdicJZZUqbORP73MMrJPpN1LgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2tabBOlMIapCfX3n-6jJefxuynXbSFExFJIdgIK5qkbpGgim_GstwTpVS-sj21f5X2K7DwyTPjWvqDBzWjHYnDGxBZ1KCIPQKaftU8An3yn7p8A&name=%E5%8E%9F%E7%9F%B3%E4%BA%BA"
+      }
+    },
+    {
+      "rank": 26,
+      "player": "w87209",
+      "score": 1442,
+      "month_games": 148,
+      "month_win_rate": 67.56756756756756,
       "deck": {
         "name": "狱神奥义耀圣",
         "main_category": "耀圣",
@@ -413,16 +451,66 @@
           "奥义",
           "耀圣"
         ],
-        "code": "G_lhnJieXFR5UTlNT6KXG_nb1O63yH4RGe-LK40kKGj_MGbYHDKa1Uw1XQl3DUGDmsN4jr1xXupMY7E5SyypUiUqcDF5qgLZyJ_Uw8iXqMCRsVz2pWo41XhewIdTgnStUt9A8Jns3ZQqaok0OLVZY9qAqdrEXl8yYwrCYG4TsYjiqnI79UK-Maj7jg0PkxuOCdKlQfAQYnlkNWM-NbMXGYK-glaiQKaftsE6V2qUIUFK9-WingE_GhpcAg",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=G_lhnJieXFR5UTlNT6KXG_nb1O63yH4RGe-LK40kKGj_MGbYHDKa1Uw1XQl3DUGDmsN4jr1xXupMY7E5SyypUiUqcDF5qgLZyJ_Uw8iXqMCRsVz2pWo41XhewIdTgnStUt9A8Jns3ZQqaok0OLVZY9qAqdrEXl8yYwrCYG4TsYjiqnI79UK-Maj7jg0PkxuOCdKlQfAQYnlkNWM-NbMXGYK-glaiQKaftsE6V2qUIUFK9-WingE_GhpcAg&name=%E5%BC%BA%E4%B8%B6%E5%B0%91"
+        "code": "GPRhnJicZ8a2tFLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R16WWVKoXmqAtnIn-7mGVkmHkS9XPaldgnSu5HGq8L2BDqxMpBGlvoHhCpqiTQ4tVk7WIvL5kxiaZMtcnYxHFVOR3zBQwXVQr4xta9ZoQ-TG44J0qVB8BBib8ayk8shqzivdUox2J0gpp-1K9-Wg",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GPRhnJicZ8a2tFLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R16WWVKoXmqAtnIn-7mGVkmHkS9XPaldgnSu5HGq8L2BDqxMpBGlvoHhCpqiTQ4tVk7WIvL5kxiaZMtcnYxHFVOR3zBQwXVQr4xta9ZoQ-TG44J0qVB8BBib8ayk8shqzivdUox2J0gpp-1K9-Wg&name=w87209"
       }
     },
     {
-      "rank": 25,
+      "rank": 27,
+      "player": "可爱的小杏酱",
+      "score": 1438,
+      "month_games": 243,
+      "month_win_rate": 63.37448559670782,
+      "deck": {
+        "name": "60珠泪混沌影依",
+        "main_category": "影依",
+        "categories": [
+          "珠泪",
+          "混沌",
+          "影依"
+        ],
+        "code": "IqeM-Na_eHNPK1Vj0Jb5FgQcXEIyh9_tARe2Wc7GvFfggQ5ukfzboARpqDBzVYVGWCEtgcobxHYzivdSSyypX3PKWhs5E_vcwysmGSXEqn2rJRUxF3l1QC5VKzm-6gQCWbVTjqALFtgw9lUyd5EDwTpXehVMMEoE0yReaaOz3tQGx1sxmJth4UwjJNkQ4lfVqTz1bkccg3ZTrppdJuiv8r6-glaiUY7E4gU0_b3eonNUoQoKngE_OU_dPg",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=IqeM-Na_eHNPK1Vj0Jb5FgQcXEIyh9_tARe2Wc7GvFfggQ5ukfzboARpqDBzVYVGWCEtgcobxHYzivdSSyypX3PKWhs5E_vcwysmGSXEqn2rJRUxF3l1QC5VKzm-6gQCWbVTjqALFtgw9lUyd5EDwTpXehVMMEoE0yReaaOz3tQGx1sxmJth4UwjJNkQ4lfVqTz1bkccg3ZTrppdJuiv8r6-glaiUY7E4gU0_b3eonNUoQoKngE_OU_dPg&name=%E5%8F%AF%E7%88%B1%E7%9A%84%E5%B0%8F%E6%9D%8F%E9%85%B1"
+      }
+    },
+    {
+      "rank": 28,
+      "player": "Shwijdhwiwihd",
+      "score": 1436,
+      "month_games": 261,
+      "month_win_rate": 60.91954022988506,
+      "deck": {
+        "name": "三幻魔",
+        "main_category": "三幻魔",
+        "categories": [
+          "三幻魔"
+        ],
+        "code": "FPpXYeGWv7FJe3w4wJbATLStc-fqDBzWG8R2G4r3UlKCIPJZZUr3DMOE2cif3uYZWSGt90tJ9bE9WYYHwJnMXPs9lpEykESv0x50PDtZI6VToYa6QYjJefxDnwVSEzzQlWC6Kpo-vqW6yAKm_GspQrysreZMaU533eKgNu0bPJNjGfGteLio81QStREFNP2pFNz8jBG483eonNUoQoKngE_KhpcAgA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FPpXYeGWv7FJe3w4wJbATLStc-fqDBzWG8R2G4r3UlKCIPJZZUr3DMOE2cif3uYZWSGt90tJ9bE9WYYHwJnMXPs9lpEykESv0x50PDtZI6VToYa6QYjJefxDnwVSEzzQlWC6Kpo-vqW6yAKm_GspQrysreZMaU533eKgNu0bPJNjGfGteLio81QStREFNP2pFNz8jBG483eonNUoQoKngE_KhpcAgA&name=Shwijdhwiwihd"
+      }
+    },
+    {
+      "rank": 29,
+      "player": "集换社Pro123",
+      "score": 1436,
+      "month_games": 233,
+      "month_win_rate": 63.51931330472103,
+      "deck": {
+        "name": "召唤师",
+        "main_category": "召唤师",
+        "categories": [
+          "召唤师"
+        ],
+        "code": "EuvoMRt-2o9vOkQyX6gwc1RRbdfDeI7DcV7qiWWVK2zkT_dzDKz3nt9IxqHLpjUOXcjsrC_BOld614m_xMpBG0lI2SP0J26Kv4XEM6rkMfMheZnM6u07Fr5uZYCzDH3O1T5yhq84LMbre2Um_GspF78i65gnjVdh4ZRnxrXYx2JxRsQWdSgiDyXX3ToFNP2qlCFBSvflop4BPylP3T4",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=EuvoMRt-2o9vOkQyX6gwc1RRbdfDeI7DcV7qiWWVK2zkT_dzDKz3nt9IxqHLpjUOXcjsrC_BOld614m_xMpBG0lI2SP0J26Kv4XEM6rkMfMheZnM6u07Fr5uZYCzDH3O1T5yhq84LMbre2Um_GspF78i65gnjVdh4ZRnxrXYx2JxRsQWdSgiDyXX3ToFNP2qlCFBSvflop4BPylP3T4&name=%E9%9B%86%E6%8D%A2%E7%A4%BEPro123"
+      }
+    },
+    {
+      "rank": 30,
       "player": "放过我!导导爆大人",
-      "score": 1442,
-      "month_games": 181,
-      "month_win_rate": 61.87845303867403,
+      "score": 1434,
+      "month_games": 185,
+      "month_win_rate": 61.62162162162162,
       "deck": {
         "name": "60混沌耀圣刻魔奥义",
         "main_category": "奥义",
@@ -437,78 +525,7 @@
       }
     },
     {
-      "rank": 26,
-      "player": "星尘编年史、",
-      "score": 1439,
-      "month_games": 73,
-      "month_win_rate": 76.71232876712328,
-      "deck": {
-        "name": "60罪宝混沌太阳神",
-        "main_category": "太阳神",
-        "categories": [
-          "罪宝",
-          "混沌",
-          "太阳神"
-        ],
-        "code": "JelM-Na6JiW2ouKjysE1_th4VKuiYlopExLaHeHNPFVP1X0TsIEi3yLB4J0nnwTpPTgnSfNQYOatBK1EhvEdglllSrueUtDZyJ_W6N4jsMkuJVPtWSipiLuLqgFyfSbplgDGKtpzqUUAWLazRmOqwTpVeLDPVl-gukeCdKscE6WBF5po6wTpYNgnSlnBOlLrimK6Vh-Z0letUBhrpBiEgzh0HwEGITDCjbsaB0m_GspAuoey-sj21QG3aJcVHlcE6Ua0ErUSBTT9qhotENWGYK93qJzUoJwe359_UA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=JelM-Na6JiW2ouKjysE1_th4VKuiYlopExLaHeHNPFVP1X0TsIEi3yLB4J0nnwTpPTgnSfNQYOatBK1EhvEdglllSrueUtDZyJ_W6N4jsMkuJVPtWSipiLuLqgFyfSbplgDGKtpzqUUAWLazRmOqwTpVeLDPVl-gukeCdKscE6WBF5po6wTpYNgnSlnBOlLrimK6Vh-Z0letUBhrpBiEgzh0HwEGITDCjbsaB0m_GspAuoey-sj21QG3aJcVHlcE6Ua0ErUSBTT9qhotENWGYK93qJzUoJwe359_UA&name=%E6%98%9F%E5%B0%98%E7%BC%96%E5%B9%B4%E5%8F%B2%E3%80%81"
-      }
-    },
-    {
-      "rank": 27,
-      "player": "布吚布吚",
-      "score": 1439,
-      "month_games": 164,
-      "month_win_rate": 64.63414634146342,
-      "deck": {
-        "name": "60城之内道化混沌",
-        "main_category": "混沌",
-        "categories": [
-          "城之内",
-          "道化",
-          "混沌"
-        ],
-        "code": "I-rvDmnlOWn3-Frw0xb5FgSUtIRhKe9Vk8lVSvwQIZQYOa9BK1EhvEdglllSrueUtDZyJ_m6N4jsMkuKVPtWVKMdxlFTEXaMcamEnAHL5dUAubh_QZIAsW2ObzPOmXzJaSKWOMneRAp7BERNnVmJblW8q-GgbmFoFMtAjj4i800csxtTRIOL064piumnXNEJ4SmhSuVkexRafZlYgbtY2012X1oati6rra4Ft6nLbwVR3JQqZ8a2YuKjzKgwc1qYuWCsaCypc6scSCmn7azC74N3qJzsE6V2",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=I-rvDmnlOWn3-Frw0xb5FgSUtIRhKe9Vk8lVSvwQIZQYOa9BK1EhvEdglllSrueUtDZyJ_m6N4jsMkuKVPtWVKMdxlFTEXaMcamEnAHL5dUAubh_QZIAsW2ObzPOmXzJaSKWOMneRAp7BERNnVmJblW8q-GgbmFoFMtAjj4i800csxtTRIOL064piumnXNEJ4SmhSuVkexRafZlYgbtY2012X1oati6rra4Ft6nLbwVR3JQqZ8a2YuKjzKgwc1qYuWCsaCypc6scSCmn7azC74N3qJzsE6V2&name=%E5%B8%83%E5%90%9A%E5%B8%83%E5%90%9A"
-      }
-    },
-    {
-      "rank": 28,
-      "player": "娱乐玩家@杏花鸟窝",
-      "score": 1437,
-      "month_games": 42,
-      "month_win_rate": 76.19047619047619,
-      "deck": {
-        "name": "60绚岚闪刀混沌",
-        "main_category": "混沌",
-        "categories": [
-          "绚岚",
-          "闪刀",
-          "混沌"
-        ],
-        "code": "IdeM-Na_eHNPEt8iwZjejLUc927qDBzVmZ036zopdYbxHXzivdSSyypUk2oVHueUtDZyJ_W6N4jqn2rJy6oBcn0m6ieHrR7NqpxVAFi2oUSfvxKNbzk48NGObzPKg1q6lj1NucABh9ZO8iB3chWnwTpXeJlIIkvNNHLimK6adc0QysQN1jwveq2HOgqRGM4rwYHbY9VIS3eaVVEDIliX6Tw54tp-tZ5CI6CVqJApp-3u9ROalBOD1ShCgqeAT75T90-A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=IdeM-Na_eHNPEt8iwZjejLUc927qDBzVmZ036zopdYbxHXzivdSSyypUk2oVHueUtDZyJ_W6N4jqn2rJy6oBcn0m6ieHrR7NqpxVAFi2oUSfvxKNbzk48NGObzPKg1q6lj1NucABh9ZO8iB3chWnwTpXeJlIIkvNNHLimK6adc0QysQN1jwveq2HOgqRGM4rwYHbY9VIS3eaVVEDIliX6Tw54tp-tZ5CI6CVqJApp-3u9ROalBOD1ShCgqeAT75T90-A&name=%E5%A8%B1%E4%B9%90%E7%8E%A9%E5%AE%B6%40%E6%9D%8F%E8%8A%B1%E9%B8%9F%E7%AA%9D"
-      }
-    },
-    {
-      "rank": 29,
-      "player": "ywkk",
-      "score": 1436,
-      "month_games": 142,
-      "month_win_rate": 66.90140845070422,
-      "deck": {
-        "name": "黑魔导黯蜜",
-        "main_category": "黯蜜",
-        "categories": [
-          "黑魔导",
-          "黯蜜"
-        ],
-        "code": "F_pqO8SjKZX-9QYOa1BK1EhvEdhOK91JLLKlVBn2w0U6rTwQFGMzvwmQ2cif3uYZWTdG8R0XZV66BWFfTgEXHp29RJfUdH9eQFQ1_vrytkJMIxMpBGuKYrpocWqydrEXkJVF4MvrQ1VfZIKv_2RFscAyCeI6WU341lN5kxpUJKs2nSo2FUBt2i5gnjYz41somwBBgU0_bXeonOSgnCCpQhQVwYgopXvy0U8An5Sn7p8",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=F_pqO8SjKZX-9QYOa1BK1EhvEdhOK91JLLKlVBn2w0U6rTwQFGMzvwmQ2cif3uYZWTdG8R0XZV66BWFfTgEXHp29RJfUdH9eQFQ1_vrytkJMIxMpBGuKYrpocWqydrEXkJVF4MvrQ1VfZIKv_2RFscAyCeI6WU341lN5kxpUJKs2nSo2FUBt2i5gnjYz41somwBBgU0_bXeonOSgnCCpQhQVwYgopXvy0U8An5Sn7p8&name=ywkk"
-      }
-    },
-    {
-      "rank": 30,
+      "rank": 31,
       "player": "吕paul",
       "score": 1433,
       "month_games": 77,
@@ -524,7 +541,43 @@
       }
     },
     {
-      "rank": 31,
+      "rank": 32,
+      "player": "E珹",
+      "score": 1432,
+      "month_games": 164,
+      "month_win_rate": 64.63414634146342,
+      "deck": {
+        "name": "奥义神艺狱神",
+        "main_category": "狱神",
+        "categories": [
+          "奥义",
+          "神艺",
+          "狱神"
+        ],
+        "code": "GuhhnJicXFR5chU_dKnWu9kUuN-u3qd1vkPwig8RdF0PtAtaqYaroS7hqDBzVoJWokN4jsEssqVJa5vMbORP6mHkS_MgtiKjAkbPBOldoER7uUcarxiZSCJLQNCSqlhkk_QnbrMbU0TPZuywrTLWjllbK80CznBOlSpo-vqQfAQYhMMKNN-NZTE_FsnBOlTJ5ZDVjPjWvRjsTiBTT9qpQhQWtDOvpXvy0U8An3Sn7p8",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GuhhnJicXFR5chU_dKnWu9kUuN-u3qd1vkPwig8RdF0PtAtaqYaroS7hqDBzVoJWokN4jsEssqVJa5vMbORP6mHkS_MgtiKjAkbPBOldoER7uUcarxiZSCJLQNCSqlhkk_QnbrMbU0TPZuywrTLWjllbK80CznBOlSpo-vqQfAQYhMMKNN-NZTE_FsnBOlTJ5ZDVjPjWvRjsTiBTT9qpQhQWtDOvpXvy0U8An3Sn7p8&name=E%E7%8F%B9"
+      }
+    },
+    {
+      "rank": 33,
+      "player": "娱乐玩家@杏花鸟窝",
+      "score": 1431,
+      "month_games": 54,
+      "month_win_rate": 72.22222222222223,
+      "deck": {
+        "name": "60绚岚闪刀混沌",
+        "main_category": "混沌",
+        "categories": [
+          "绚岚",
+          "闪刀",
+          "混沌"
+        ],
+        "code": "IdeM-Na_eHNPEt8iwZjejLUc927qDBzVmZ036zopdYbxHXzivdSSyypUk2oVHueUtDZyJ_W6N4jqn2rJy6oBcn0m6ieHrR7NqpxVAFi2oUSfvxKNbzk48NGObzPKg1q6lj1NucABh9ZO8iB3chWnwTpXeJlIIkvNNHLimK6adc0QysQN1jwveq2HOgqRGM4rwYHbY9VIS3eaVVEDIliX6Tw54tp-tZ5CIkFcVb0ErUSBTT9vd6ic1ShCgqeAT75T90-A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=IdeM-Na_eHNPEt8iwZjejLUc927qDBzVmZ036zopdYbxHXzivdSSyypUk2oVHueUtDZyJ_W6N4jqn2rJy6oBcn0m6ieHrR7NqpxVAFi2oUSfvxKNbzk48NGObzPKg1q6lj1NucABh9ZO8iB3chWnwTpXeJlIIkvNNHLimK6adc0QysQN1jwveq2HOgqRGM4rwYHbY9VIS3eaVVEDIliX6Tw54tp-tZ5CIkFcVb0ErUSBTT9vd6ic1ShCgqeAT75T90-A&name=%E5%A8%B1%E4%B9%90%E7%8E%A9%E5%AE%B6%40%E6%9D%8F%E8%8A%B1%E9%B8%9F%E7%AA%9D"
+      }
+    },
+    {
+      "rank": 34,
       "player": "Night.Star.",
       "score": 1431,
       "month_games": 164,
@@ -542,7 +595,42 @@
       }
     },
     {
-      "rank": 32,
+      "rank": 35,
+      "player": "克利西亚·米泽·凛",
+      "score": 1428,
+      "month_games": 240,
+      "month_win_rate": 67.08333333333333,
+      "deck": {
+        "name": "烙印阿不思星辰",
+        "main_category": "星辰",
+        "categories": [
+          "烙印",
+          "阿不思",
+          "星辰"
+        ],
+        "code": "G7iVNf_VDlocUC26owFt1S48O5owUvuyjMzGq0toWW2LpGtsXSO1Bg5qhwi_tG8R2CN4jsWMdictCQWISyypW2cif7uYZWaF3j-k-FLvKpOyDjm8zz4J0rtClw1TCsT92Y_Cw6AybGUoG-EqhnndkjrdVVsHs0GgUOqd04uWIOXhU65ohmB8y7KxA3Yz41tVBK1EqYuWCuK91OBTT9rd6ic-U_dP1DS4BA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=G7iVNf_VDlocUC26owFt1S48O5owUvuyjMzGq0toWW2LpGtsXSO1Bg5qhwi_tG8R2CN4jsWMdictCQWISyypW2cif7uYZWaF3j-k-FLvKpOyDjm8zz4J0rtClw1TCsT92Y_Cw6AybGUoG-EqhnndkjrdVVsHs0GgUOqd04uWIOXhU65ohmB8y7KxA3Yz41tVBK1EqYuWCuK91OBTT9rd6ic-U_dP1DS4BA&name=%E5%85%8B%E5%88%A9%E8%A5%BF%E4%BA%9A%C2%B7%E7%B1%B3%E6%B3%BD%C2%B7%E5%87%9B"
+      }
+    },
+    {
+      "rank": 36,
+      "player": "血魔者",
+      "score": 1428,
+      "month_games": 106,
+      "month_win_rate": 66.98113207547169,
+      "deck": {
+        "name": "鹰身亚马逊",
+        "main_category": "亚马逊",
+        "categories": [
+          "鹰身",
+          "亚马逊"
+        ],
+        "code": "EujYEuCNgnSfrBOlAagwc1aE_EB4J0n-G8R2G4r3U0ssqVtnIn-7mGVkn0m6dwTpVu2qETbBOlXYmUgj7kZnT4J0sJLbWtNgnSmF-5sxNDi1WRfVsK2HK-RDVIT6-8_3WGgv9po-vqXy96-3I6h9wTpVSv8r64z41tdBK1EwU0_aoaLRFUoQoK4MQUVPAJ-cp-6f",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=EujYEuCNgnSfrBOlAagwc1aE_EB4J0n-G8R2G4r3U0ssqVtnIn-7mGVkn0m6dwTpVu2qETbBOlXYmUgj7kZnT4J0sJLbWtNgnSmF-5sxNDi1WRfVsK2HK-RDVIT6-8_3WGgv9po-vqXy96-3I6h9wTpVSv8r64z41tdBK1EwU0_aoaLRFUoQoK4MQUVPAJ-cp-6f&name=%E8%A1%80%E9%AD%94%E8%80%85"
+      }
+    },
+    {
+      "rank": 37,
       "player": "天笑君",
       "score": 1428,
       "month_games": 177,
@@ -559,25 +647,91 @@
       }
     },
     {
-      "rank": 33,
-      "player": "1板蓝根",
-      "score": 1424,
-      "month_games": 178,
-      "month_win_rate": 64.04494382022472,
+      "rank": 38,
+      "player": "liberal",
+      "score": 1427,
+      "month_games": 165,
+      "month_win_rate": 64.84848484848484,
       "deck": {
-        "name": "狱神奥义耀圣",
-        "main_category": "耀圣",
+        "name": "60混沌",
+        "main_category": "混沌",
         "categories": [
-          "狱神",
-          "奥义",
-          "耀圣"
+          "混沌"
         ],
-        "code": "GfhhnJiaJymp9FLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R1-4r3UkssqVQvNUBbORP6mHkS9RgSNi-o6P_BOldyONV4XsCHU4J0rVLfQPCZ7N2UKmqJNDi1WWPagKnaxF5fMmMKdjEcVU5HfMFDBdVCvjG1r1mhwTpUqD4CDGJ-LZJ5ZDVjPjWvIK4q3oJWomCmn7VShCgpXvy0U8An3UNLgA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GfhhnJiaJymp9FLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R1-4r3UkssqVQvNUBbORP6mHkS9RgSNi-o6P_BOldyONV4XsCHU4J0rVLfQPCZ7N2UKmqJNDi1WWPagKnaxF5fMmMKdjEcVU5HfMFDBdVCvjG1r1mhwTpUqD4CDGJ-LZJ5ZDVjPjWvIK4q3oJWomCmn7VShCgpXvy0U8An3UNLgA&name=1%E6%9D%BF%E8%93%9D%E6%A0%B9"
+        "code": "KPhTLpAKX_lP68OaeK_h68S3yLBiPm0fG7msaalCu43SP56gwc1WN8mWzUgGJebsGur8DwmsfFR5ha8p59kEKor1BqG8R16WWVKkNq16rYxQn7nlLQ2cif1ujeI7DJLiVT7VkoqYi7i6oBcn0m6hdnR6jNqpxVAFi2-CdK7YcYbg0U7KhvH-5qXmmjkwt_5JXvy0XFMV0gYvaVHuQszK0KhEZLz-Ic-CqQmeaEmj6-puxoHSkkOv0y6ZQquyb_XJRA6jIJpFb_XdkZ8a11PAq9RcVHlgU0_akU3PtQ0WiGlBOD-IqcTA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=KPhTLpAKX_lP68OaeK_h68S3yLBiPm0fG7msaalCu43SP56gwc1WN8mWzUgGJebsGur8DwmsfFR5ha8p59kEKor1BqG8R16WWVKkNq16rYxQn7nlLQ2cif1ujeI7DJLiVT7VkoqYi7i6oBcn0m6hdnR6jNqpxVAFi2-CdK7YcYbg0U7KhvH-5qXmmjkwt_5JXvy0XFMV0gYvaVHuQszK0KhEZLz-Ic-CqQmeaEmj6-puxoHSkkOv0y6ZQquyb_XJRA6jIJpFb_XdkZ8a11PAq9RcVHlgU0_akU3PtQ0WiGlBOD-IqcTA&name=liberal"
       }
     },
     {
-      "rank": 34,
+      "rank": 39,
+      "player": "zaijiuke",
+      "score": 1426,
+      "month_games": 63,
+      "month_win_rate": 73.01587301587301,
+      "deck": {
+        "name": "烙印阿不思星辰",
+        "main_category": "星辰",
+        "categories": [
+          "烙印",
+          "阿不思",
+          "星辰"
+        ],
+        "code": "F9pM-Na8qa_-qHLQ44Ft1R48O5owUvuujMzGs0toWK2LpG6gwc1Q4Rf3DeI69LLKlTZyJ_q5hlZwHkhqQu8f0nwpd5VJ2Qcc3mefBOldoUuGqZj8LCn6E7eQGTYyqGed2SOt1NWwezQaBQ6xTdUZTunFyxBy8KnXNEMwPmXWbxP-ysQN2M-Na7gnSjVAkpQdBK1E6YuWC3MMrNA8kNSCmn7W71E5sKxP3A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=F9pM-Na8qa_-qHLQ44Ft1R48O5owUvuujMzGs0toWK2LpG6gwc1Q4Rf3DeI69LLKlTZyJ_q5hlZwHkhqQu8f0nwpd5VJ2Qcc3mefBOldoUuGqZj8LCn6E7eQGTYyqGed2SOt1NWwezQaBQ6xTdUZTunFyxBy8KnXNEMwPmXWbxP-ysQN2M-Na7gnSjVAkpQdBK1E6YuWC3MMrNA8kNSCmn7W71E5sKxP3A&name=zaijiuke"
+      }
+    },
+    {
+      "rank": 40,
+      "player": "洛花依人",
+      "score": 1426,
+      "month_games": 84,
+      "month_win_rate": 71.42857142857143,
+      "deck": {
+        "name": "鹰身亚马逊",
+        "main_category": "亚马逊",
+        "categories": [
+          "鹰身",
+          "亚马逊"
+        ],
+        "code": "FOdM-NbWwJcEXBOk-2CdJ-sE6UBqDBzVoT8QHgnSf4bxHYpZZUrbORP73MMrJwTpVu2qETV9R0ftK9VasE6Vd4J0rvuRmdPgnSwktta02CdKYX7mzEmkWidhrpBiGqQn195_ut2U67TR9fUm_GspuR1D7gnSql9ZHtK_yvsgU0_b3eonOSgnCCpQhQVwYgoqeAT8pT90-A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FOdM-NbWwJcEXBOk-2CdJ-sE6UBqDBzVoT8QHgnSf4bxHYpZZUrbORP73MMrJwTpVu2qETV9R0ftK9VasE6Vd4J0rvuRmdPgnSwktta02CdKYX7mzEmkWidhrpBiGqQn195_ut2U67TR9fUm_GspuR1D7gnSql9ZHtK_yvsgU0_b3eonOSgnCCpQhQVwYgoqeAT8pT90-A&name=%E6%B4%9B%E8%8A%B1%E4%BE%9D%E4%BA%BA"
+      }
+    },
+    {
+      "rank": 41,
+      "player": "_Orochi_",
+      "score": 1426,
+      "month_games": 91,
+      "month_win_rate": 67.03296703296704,
+      "deck": {
+        "name": "三幻魔",
+        "main_category": "三幻魔",
+        "categories": [
+          "三幻魔"
+        ],
+        "code": "E_NM-NbOv7FJe3w4wJbATLStc-fqDBzWG8R16WWVKtwzDhNnIn97mGVkhrfdLSfWxNVmGB_BOld4EzmLn2ey1iZSCJX6Y86Hh2s0dKp0MNdIMRkvP43ZTrtDnwVSEzzQlWC6Kpo-vqW6yAKh-GqlN-NZShXlZU533eKgNu0TPjWzFxUeaBTT9oA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E_NM-NbOv7FJe3w4wJbATLStc-fqDBzWG8R16WWVKtwzDhNnIn97mGVkhrfdLSfWxNVmGB_BOld4EzmLn2ey1iZSCJX6Y86Hh2s0dKp0MNdIMRkvP43ZTrtDnwVSEzzQlWC6Kpo-vqW6yAKh-GqlN-NZShXlZU533eKgNu0TPjWzFxUeaBTT9oA&name=_Orochi_"
+      }
+    },
+    {
+      "rank": 42,
+      "player": "ywkk",
+      "score": 1424,
+      "month_games": 155,
+      "month_win_rate": 65.80645161290323,
+      "deck": {
+        "name": "黑魔导黯蜜",
+        "main_category": "黯蜜",
+        "categories": [
+          "黑魔导",
+          "黯蜜"
+        ],
+        "code": "F_pqO8SjKZX-9QYOa1BK1EhvEdhOK91JLLKlVBn2w0U6rTwQFGMzvwmQ2cif3uYZWTdG8R0XZV66BWFfTgEXHp29RJfUdH9eQFQ1_vrytkJMIxMpBGuKYrpocWqydrEXkJVF4MvrQ1VfZIKv_2RFscAyCeI6WU341lN5kxpUJKs2nSo2FUBt2i5gnjYz41somwBBgU0_bXeonOSgnCCpQhQVwYgopXvy0U8An5Sn7p8",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=F_pqO8SjKZX-9QYOa1BK1EhvEdhOK91JLLKlVBn2w0U6rTwQFGMzvwmQ2cif3uYZWTdG8R0XZV66BWFfTgEXHp29RJfUdH9eQFQ1_vrytkJMIxMpBGuKYrpocWqydrEXkJVF4MvrQ1VfZIKv_2RFscAyCeI6WU341lN5kxpUJKs2nSo2FUBt2i5gnjYz41somwBBgU0_bXeonOSgnCCpQhQVwYgopXvy0U8An5Sn7p8&name=ywkk"
+      }
+    },
+    {
+      "rank": 43,
       "player": "雨雨雨1",
       "score": 1424,
       "month_games": 20,
@@ -595,7 +749,7 @@
       }
     },
     {
-      "rank": 35,
+      "rank": 44,
       "player": "永恒欲望的金苹果",
       "score": 1423,
       "month_games": 143,
@@ -611,25 +765,24 @@
       }
     },
     {
-      "rank": 36,
-      "player": "克利西亚·米泽·凛",
+      "rank": 45,
+      "player": "超高校级の雷火大王",
       "score": 1423,
-      "month_games": 234,
-      "month_win_rate": 67.09401709401709,
+      "month_games": 58,
+      "month_win_rate": 70.6896551724138,
       "deck": {
-        "name": "烙印阿不思星辰",
-        "main_category": "星辰",
+        "name": "黑魔导混沌",
+        "main_category": "混沌",
         "categories": [
-          "烙印",
-          "阿不思",
-          "星辰"
+          "黑魔导",
+          "混沌"
         ],
-        "code": "G7iVNf_VDlocUC26owFt1S48O5owUvuyjMzGq0toWW2LpGtsXSO1Bg5qhwi_tG8R2CN4jsWMdictCQWISyypW2cif7uYZWaF3j-k-FLvKpOyDjm8zz4J0rtClw1TCsT92Y_Cw6AybGUoG-EqhnndkjrdVVsHs0GgUOqd04uWIOXhU65ohmB8y7KxA3Yz41tVBK1EqYuWCuK91OBTT9rd6ic-U_dP1DS4BA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=G7iVNf_VDlocUC26owFt1S48O5owUvuyjMzGq0toWW2LpGtsXSO1Bg5qhwi_tG8R2CN4jsWMdictCQWISyypW2cif7uYZWaF3j-k-FLvKpOyDjm8zz4J0rtClw1TCsT92Y_Cw6AybGUoG-EqhnndkjrdVVsHs0GgUOqd04uWIOXhU65ohmB8y7KxA3Yz41tVBK1EqYuWCuK91OBTT9rd6ic-U_dP1DS4BA&name=%E5%85%8B%E5%88%A9%E8%A5%BF%E4%BA%9A%C2%B7%E7%B1%B3%E6%B3%BD%C2%B7%E5%87%9B"
+        "code": "GfhWZ6WqXFR5q8OaeNR3iTS3yLBqDBzXoJWoiGwYYYbxHXpZZUq7nlLQ2cif1ujeI7DJLiVT7Vkouyr1y6oBcoAsW1KoB4mmXzJdO3qIsneRAVoR4QvhoG6LzTRyQcXp1IIjVtEelSXFMV0v3NmJocWqyHPgqmkKJiJo-vqQmGFGq7Jv9N-NZSjuShF9ZHtK_yvri4qPNApp-3VhmCvd6ic1ShCgpXvy0U8An3Sn7p8",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GfhWZ6WqXFR5q8OaeNR3iTS3yLBqDBzXoJWoiGwYYYbxHXpZZUq7nlLQ2cif1ujeI7DJLiVT7Vkouyr1y6oBcoAsW1KoB4mmXzJdO3qIsneRAVoR4QvhoG6LzTRyQcXp1IIjVtEelSXFMV0v3NmJocWqyHPgqmkKJiJo-vqQmGFGq7Jv9N-NZSjuShF9ZHtK_yvri4qPNApp-3VhmCvd6ic1ShCgpXvy0U8An3Sn7p8&name=%E8%B6%85%E9%AB%98%E6%A0%A1%E7%BA%A7%E3%81%AE%E9%9B%B7%E7%81%AB%E5%A4%A7%E7%8E%8B"
       }
     },
     {
-      "rank": 37,
+      "rank": 46,
       "player": "KCI",
       "score": 1422,
       "month_games": 27,
@@ -647,11 +800,11 @@
       }
     },
     {
-      "rank": 38,
-      "player": "火渡凯",
-      "score": 1419,
-      "month_games": 119,
-      "month_win_rate": 69.74789915966386,
+      "rank": 47,
+      "player": "南工程小新",
+      "score": 1418,
+      "month_games": 145,
+      "month_win_rate": 62.758620689655174,
       "deck": {
         "name": "鹰身亚马逊",
         "main_category": "亚马逊",
@@ -659,30 +812,12 @@
           "鹰身",
           "亚马逊"
         ],
-        "code": "FOvYEuCNgnSfvBOlAagwc1qCVqI0J-IDwTpP8N4jr1xXupsY7E5SyypU2cif5uYZWTgnSrdtUIm2CdKu8E6V3iZSCLwTpYTgnSw0tta02CdKYaHFqsybtMlF9Wwq-8_3UZLz-N2U66YaC_2vl719N-NZTgnSqlf5X1rf67sTPjWyoK4q1oJWoi4r3U2MdicwKaftrvUTmpQTg9UoQoKngE_OU_dPgA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FOvYEuCNgnSfvBOlAagwc1qCVqI0J-IDwTpP8N4jr1xXupsY7E5SyypU2cif5uYZWTgnSrdtUIm2CdKu8E6V3iZSCLwTpYTgnSw0tta02CdKYaHFqsybtMlF9Wwq-8_3UZLz-N2U66YaC_2vl719N-NZTgnSqlf5X1rf67sTPjWyoK4q1oJWoi4r3U2MdicwKaftrvUTmpQTg9UoQoKngE_OU_dPgA&name=%E7%81%AB%E6%B8%A1%E5%87%AF"
+        "code": "FPbYEuCNgnSfrBOlAagwc1aE_EB4J0n-G8R184r3UmMdicpZZUrbORP6n0m6ZwTpVu2qETbBOlXeCdK7hMpBF3IzOnwTpYTgnSw0tta0uCdKYaQa6C0OLVZF9WwrYcr5ENUhPoyXn8bsp12w0F_tfL3r6b8ay3BOlVK_yvrW_13ZGfGtfoJWojGOxOYuvunKeAT7pT90-A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FPbYEuCNgnSfrBOlAagwc1aE_EB4J0n-G8R184r3UmMdicpZZUrbORP6n0m6ZwTpVu2qETbBOlXeCdK7hMpBF3IzOnwTpYTgnSw0tta0uCdKYaQa6C0OLVZF9WwrYcr5ENUhPoyXn8bsp12w0F_tfL3r6b8ay3BOlVK_yvrW_13ZGfGtfoJWojGOxOYuvunKeAT7pT90-A&name=%E5%8D%97%E5%B7%A5%E7%A8%8B%E5%B0%8F%E6%96%B0"
       }
     },
     {
-      "rank": 39,
-      "player": "E珹",
-      "score": 1419,
-      "month_games": 163,
-      "month_win_rate": 64.41717791411043,
-      "deck": {
-        "name": "奥义神艺狱神",
-        "main_category": "狱神",
-        "categories": [
-          "奥义",
-          "神艺",
-          "狱神"
-        ],
-        "code": "GethnJieQqfulTrXeyKXG_Xb1O63yH4RQeIui6H2gWtVMNV0Jdw1Bg5r0ErUSG8R2CWWVKktc3mNnIn9TDyJfmQWxFRgSNngnSu0CI93KONV4xMpBEloGhJVSwySfoTt1mNqaJns3ZYVplrRyytleaBZzgnSpU0fX1IPgIMQmGFGm_Gspifi2TgnSpk8shqxnxrXi4qPLIK4q1cV7qTGOxOIFNP2qGi0RVKEKC1oZ19K9-WingE-wA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GethnJieQqfulTrXeyKXG_Xb1O63yH4RQeIui6H2gWtVMNV0Jdw1Bg5r0ErUSG8R2CWWVKktc3mNnIn9TDyJfmQWxFRgSNngnSu0CI93KONV4xMpBEloGhJVSwySfoTt1mNqaJns3ZYVplrRyytleaBZzgnSpU0fX1IPgIMQmGFGm_Gspifi2TgnSpk8shqxnxrXi4qPLIK4q1cV7qTGOxOIFNP2qGi0RVKEKC1oZ19K9-WingE-wA&name=E%E7%8F%B9"
-      }
-    },
-    {
-      "rank": 40,
+      "rank": 48,
       "player": "R0R0",
       "score": 1418,
       "month_games": 65,
@@ -699,11 +834,29 @@
       }
     },
     {
-      "rank": 41,
-      "player": "血魔者",
+      "rank": 49,
+      "player": "1板蓝根",
       "score": 1418,
-      "month_games": 100,
-      "month_win_rate": 67.0,
+      "month_games": 188,
+      "month_win_rate": 63.829787234042556,
+      "deck": {
+        "name": "狱神奥义耀圣",
+        "main_category": "耀圣",
+        "categories": [
+          "狱神",
+          "奥义",
+          "耀圣"
+        ],
+        "code": "GfhhnJiaJymp9FLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R1-4r3UkssqVQvNUBbORP6mHkS9RgSNi-o6P_BOldyONV4XsCHU4J0rVLfQPCZ7N2UKmqJNDi1WWPagKnaxF5fMmMKdjEcVU5HfMFDBdVCvjG1r1mhwTpUqD4CDGJ-LZJ5ZDVjPjWvIK4q3oJWomCmn7VShCgpXvy0U8An3UNLgA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GfhhnJiaJymp9FLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R1-4r3UkssqVQvNUBbORP6mHkS9RgSNi-o6P_BOldyONV4XsCHU4J0rVLfQPCZ7N2UKmqJNDi1WWPagKnaxF5fMmMKdjEcVU5HfMFDBdVCvjG1r1mhwTpUqD4CDGJ-LZJ5ZDVjPjWvIK4q3oJWomCmn7VShCgpXvy0U8An3UNLgA&name=1%E6%9D%BF%E8%93%9D%E6%A0%B9"
+      }
+    },
+    {
+      "rank": 50,
+      "player": "chatLDS ",
+      "score": 1416,
+      "month_games": 18,
+      "month_win_rate": 77.77777777777777,
       "deck": {
         "name": "鹰身亚马逊",
         "main_category": "亚马逊",
@@ -711,12 +864,12 @@
           "鹰身",
           "亚马逊"
         ],
-        "code": "EujYEuCNgnSfrBOlAagwc1aE_EB4J0n-G8R2G4r3U0ssqVtnIn-7mGVkn0m6dwTpVu2qETbBOlXYmUgj7kZnT4J0sJLbWtNgnSmF-5sxNDi1WZN2mSi-rYVDVIT6-8_3WGgv9po-vqXy96-3I6h9wTpVSv8r64z41tdBK1EwU0_aoaLRFUoQoK4MQUVPAJ-cp-6f",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=EujYEuCNgnSfrBOlAagwc1aE_EB4J0n-G8R2G4r3U0ssqVtnIn-7mGVkn0m6dwTpVu2qETbBOlXYmUgj7kZnT4J0sJLbWtNgnSmF-5sxNDi1WZN2mSi-rYVDVIT6-8_3WGgv9po-vqXy96-3I6h9wTpVSv8r64z41tdBK1EwU0_aoaLRFUoQoK4MQUVPAJ-cp-6f&name=%E8%A1%80%E9%AD%94%E8%80%85"
+        "code": "E-nvz78ewJcEbBOk_OCdKA1Bg5q0J-IDwTpP8N4jsJxXuppZZUrbORP9XMMrNPpN1DgnSrdtUIm2CdKuxMpBF3IzOnwTpYSW2taXBOlM2CdKYayEMumiaJdeBnRKndYQ1dR3gt2U67Y8L3q3SNBFN-NZbgnSqlf5X1xnxrZ6CVqIxjsTmBTT9qpQhQWe7owJXvy0U8An5Sn7p8A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E-nvz78ewJcEbBOk_OCdKA1Bg5q0J-IDwTpP8N4jsJxXuppZZUrbORP9XMMrNPpN1DgnSrdtUIm2CdKuxMpBF3IzOnwTpYSW2taXBOlM2CdKYayEMumiaJdeBnRKndYQ1dR3gt2U67Y8L3q3SNBFN-NZbgnSqlf5X1xnxrZ6CVqIxjsTmBTT9qpQhQWe7owJXvy0U8An5Sn7p8A&name=chatLDS%20"
       }
     },
     {
-      "rank": 42,
+      "rank": 51,
       "player": "时雨沢",
       "score": 1416,
       "month_games": 40,
@@ -734,58 +887,7 @@
       }
     },
     {
-      "rank": 43,
-      "player": "w87209",
-      "score": 1415,
-      "month_games": 140,
-      "month_win_rate": 67.14285714285714,
-      "deck": {
-        "name": "狱神奥义耀圣",
-        "main_category": "耀圣",
-        "categories": [
-          "狱神",
-          "奥义",
-          "耀圣"
-        ],
-        "code": "GPihnJicZ8a2tFLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2KWWVK4XmqAtnIn-7mGVkmHkS9XPaldgnSu5HGq8L2BDqxMpBGlvoHhCpqiTQ4tVk7WIvL5kxiaZMtcsJgbhOxiOKqcjvmChguqhXxja16zQh8mNxwTpUqD4CDE8shqonKanjHAd7UErUSjHYnECmn7VPAJ-Mp-6fqGlwCA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GPihnJicZ8a2tFLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2KWWVK4XmqAtnIn-7mGVkmHkS9XPaldgnSu5HGq8L2BDqxMpBGlvoHhCpqiTQ4tVk7WIvL5kxiaZMtcsJgbhOxiOKqcjvmChguqhXxja16zQh8mNxwTpUqD4CDE8shqonKanjHAd7UErUSjHYnECmn7VPAJ-Mp-6fqGlwCA&name=w87209"
-      }
-    },
-    {
-      "rank": 44,
-      "player": "超高校级の雷火大王",
-      "score": 1414,
-      "month_games": 57,
-      "month_win_rate": 70.17543859649123,
-      "deck": {
-        "name": "黑魔导混沌",
-        "main_category": "混沌",
-        "categories": [
-          "黑魔导",
-          "混沌"
-        ],
-        "code": "GfhWZ6WqXFR5q8OaeNR3iTS3yLBqDBzXoJWoiGwYYYbxHXpZZUq7nlLQ2cif1ujeI7DJLiVT7Vkouyr1y6oBcoAsW1KoB4mmXzJdO3qIsneRAVoR4QvhoG6LzTRyQcXp1IIjVtEelSXFMV0v3NmJocWqyHPgqmkKJiJo-vqQmGFGq7Jv9N-NZSjuShF9ZHtK_yvri4qPNApp-3VhmCvd6ic1ShCgpXvy0U8An3Sn7p8",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GfhWZ6WqXFR5q8OaeNR3iTS3yLBqDBzXoJWoiGwYYYbxHXpZZUq7nlLQ2cif1ujeI7DJLiVT7Vkouyr1y6oBcoAsW1KoB4mmXzJdO3qIsneRAVoR4QvhoG6LzTRyQcXp1IIjVtEelSXFMV0v3NmJocWqyHPgqmkKJiJo-vqQmGFGq7Jv9N-NZSjuShF9ZHtK_yvri4qPNApp-3VhmCvd6ic1ShCgpXvy0U8An3Sn7p8&name=%E8%B6%85%E9%AB%98%E6%A0%A1%E7%BA%A7%E3%81%AE%E9%9B%B7%E7%81%AB%E5%A4%A7%E7%8E%8B"
-      }
-    },
-    {
-      "rank": 45,
-      "player": "ZreaKenny",
-      "score": 1414,
-      "month_games": 326,
-      "month_win_rate": 61.65644171779141,
-      "deck": {
-        "name": "城之内",
-        "main_category": "城之内",
-        "categories": [
-          "城之内"
-        ],
-        "code": "FqZXYeGWZ8a18JT3q8nkqqZI3uk4J0onUGDmsN4jr1jQWUrivdSYx2JxRsQWdSgiDyWWVKmzkT-9zDKyl3qJxgvwLfTL5ktJFLHF8NA3IJ8VRyDi9N4J0pysXVdaD4CDFJIdfoK5qkTfjWUvrI9pvMmNKoDbtFM0cHdBK1EaYuWDApp-3VhmCvKfunw",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FqZXYeGWZ8a18JT3q8nkqqZI3uk4J0onUGDmsN4jr1jQWUrivdSYx2JxRsQWdSgiDyWWVKmzkT-9zDKyl3qJxgvwLfTL5ktJFLHF8NA3IJ8VRyDi9N4J0pysXVdaD4CDFJIdfoK5qkTfjWUvrI9pvMmNKoDbtFM0cHdBK1EaYuWDApp-3VhmCvKfunw&name=ZreaKenny"
-      }
-    },
-    {
-      "rank": 46,
+      "rank": 52,
       "player": "dn有素质",
       "score": 1414,
       "month_games": 122,
@@ -801,42 +903,7 @@
       }
     },
     {
-      "rank": 47,
-      "player": "南工程小新",
-      "score": 1414,
-      "month_games": 143,
-      "month_win_rate": 62.93706293706294,
-      "deck": {
-        "name": "鹰身亚马逊",
-        "main_category": "亚马逊",
-        "categories": [
-          "鹰身",
-          "亚马逊"
-        ],
-        "code": "FPbYEuCNgnSfrBOlAagwc1aE_EB4J0n-G8R184r3UmMdicpZZUrbORP6n0m6ZwTpVu2qETbBOlXeCdK7hMpBF3IzOnwTpYTgnSw0tta0uCdKYaQa6C0OLVZF9WwrYcr5ENUhPoyXn8bsp12w0F_tfL3r6b8ay3BOlVK_yvrW_13ZGfGtfoJWojGOxOYuvunKeAT7pT90-A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FPbYEuCNgnSfrBOlAagwc1aE_EB4J0n-G8R184r3UmMdicpZZUrbORP6n0m6ZwTpVu2qETbBOlXeCdK7hMpBF3IzOnwTpYTgnSw0tta0uCdKYaQa6C0OLVZF9WwrYcr5ENUhPoyXn8bsp12w0F_tfL3r6b8ay3BOlVK_yvrW_13ZGfGtfoJWojGOxOYuvunKeAT7pT90-A&name=%E5%8D%97%E5%B7%A5%E7%A8%8B%E5%B0%8F%E6%96%B0"
-      }
-    },
-    {
-      "rank": 48,
-      "player": "无限泡影啊",
-      "score": 1414,
-      "month_games": 122,
-      "month_win_rate": 62.295081967213115,
-      "deck": {
-        "name": "烙印阿不思星辰",
-        "main_category": "星辰",
-        "categories": [
-          "烙印",
-          "阿不思",
-          "星辰"
-        ],
-        "code": "FsrM-NbOqa_-mHLQ44Ft1R48O5owUvuyjMzGq0toWe2LpHIcIv7hvEdfOK91JoSCxCWWVKu5hlZoXeP6T4Uu8qk7IOObzPPgnSu0KXDVMx-Fh0Bk2MqhnnhkjrdTVsHs0GgUOpfC_dYpuqMp3Ti5Yg5eFTrmiGYHzLsrEDdcE6UbqDBzWjHYnLZyJ_UFNP2qGi0RbvUTnhAgBhUoQoLCsT9w",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FsrM-NbOqa_-mHLQ44Ft1R48O5owUvuyjMzGq0toWe2LpHIcIv7hvEdfOK91JoSCxCWWVKu5hlZoXeP6T4Uu8qk7IOObzPPgnSu0KXDVMx-Fh0Bk2MqhnnhkjrdTVsHs0GgUOpfC_dYpuqMp3Ti5Yg5eFTrmiGYHzLsrEDdcE6UbqDBzWjHYnLZyJ_UFNP2qGi0RbvUTnhAgBhUoQoLCsT9w&name=%E6%97%A0%E9%99%90%E6%B3%A1%E5%BD%B1%E5%95%8A"
-      }
-    },
-    {
-      "rank": 49,
+      "rank": 53,
       "player": "羽焰",
       "score": 1413,
       "month_games": 60,
@@ -852,82 +919,131 @@
       }
     },
     {
-      "rank": 50,
-      "player": "zaijiuke",
+      "rank": 54,
+      "player": "玖十",
+      "score": 1413,
+      "month_games": 187,
+      "month_win_rate": 60.42780748663102,
+      "deck": {
+        "name": "奥义狱神神艺",
+        "main_category": "神艺",
+        "categories": [
+          "奥义",
+          "狱神",
+          "神艺"
+        ],
+        "code": "H-dhnJiaJymp4hU_dKnWu9UUuN-u3qd1vkPwig8RdF0PtAtaqYaroS7hKDBzWoJWojc68gobxHYJZZUqhyLeilrm8xs5E_yYeRL1GBI2MaVSITQKyZ4J0rtAiPd0jjVeGOiuFJaBoSa0M6-4J0sdVSwySfoTt1mNqaJBxenTPZuymdy1ZhWmWrTsWvqOWVsuCdKlQfAQYhMMKNwTpUy-sj208shq5cVHlwU0_bqwzBWu9ROapQhQZ-WzAJXvy0A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=H-dhnJiaJymp4hU_dKnWu9UUuN-u3qd1vkPwig8RdF0PtAtaqYaroS7hKDBzWoJWojc68gobxHYJZZUqhyLeilrm8xs5E_yYeRL1GBI2MaVSITQKyZ4J0rtAiPd0jjVeGOiuFJaBoSa0M6-4J0sdVSwySfoTt1mNqaJBxenTPZuymdy1ZhWmWrTsWvqOWVsuCdKlQfAQYhMMKNwTpUy-sj208shq5cVHlwU0_bqwzBWu9ROapQhQZ-WzAJXvy0A&name=%E7%8E%96%E5%8D%81"
+      }
+    },
+    {
+      "rank": 55,
+      "player": "めぐみん",
+      "score": 1413,
+      "month_games": 100,
+      "month_win_rate": 66.0,
+      "deck": {
+        "name": "升月",
+        "main_category": "升月",
+        "categories": [
+          "升月"
+        ],
+        "code": "EtlM-Na8XFR5aNjGiQoeyhV_D15yGq_zFZ3qmtnMZdazOkw3iOvnFe6klllSps5E_vcwystZnV9RzeZ54sxztiO3NNp1zRDQ4tVk7WIvMrEDdTsYji1kIZdNgmHylONk17Q_CoXoiEa-BlxRbRhqEhb_soMHNaglaiMY7E4gU0_a3eonOSgnB64MQUVPAJ90p-6f",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=EtlM-Na8XFR5aNjGiQoeyhV_D15yGq_zFZ3qmtnMZdazOkw3iOvnFe6klllSps5E_vcwystZnV9RzeZ54sxztiO3NNp1zRDQ4tVk7WIvMrEDdTsYji1kIZdNgmHylONk17Q_CoXoiEa-BlxRbRhqEhb_soMHNaglaiMY7E4gU0_a3eonOSgnB64MQUVPAJ90p-6f&name=%E3%82%81%E3%81%90%E3%81%BF%E3%82%93"
+      }
+    },
+    {
+      "rank": 56,
+      "player": "第一枪，相思！",
+      "score": 1413,
+      "month_games": 103,
+      "month_win_rate": 63.10679611650485,
+      "deck": {
+        "name": "60黑魔导城之内混沌",
+        "main_category": "混沌",
+        "categories": [
+          "黑魔导",
+          "城之内",
+          "混沌"
+        ],
+        "code": "JehM-Na6XFR5e8OaedR3iUi3yLApEVuHCU96tJ5KqnBOlEq_BAhVBg5r0ErUSG8R164r3U2MdicJZZUq7nlLQ2cif1ujeI7DJLilT7VlIuyr1y6oBdIAsW1BfgW6VQDxEr6G8RzeZ50y-ZLp29RGkiljjJ3kQLBOldq0I8IXw0DcgnxVFLzTRyQcXp1IIjVNEelSb8_FSuKYrqwTpTjTrmiGViBupo-vqQmGFGm_GstR3JQi-sj2lf5X1xnxrXi4qPLIK4q2UGDmsCmn7a71E5qlCFBpT90-",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=JehM-Na6XFR5e8OaedR3iUi3yLApEVuHCU96tJ5KqnBOlEq_BAhVBg5r0ErUSG8R164r3U2MdicJZZUq7nlLQ2cif1ujeI7DJLilT7VlIuyr1y6oBdIAsW1BfgW6VQDxEr6G8RzeZ50y-ZLp29RGkiljjJ3kQLBOldq0I8IXw0DcgnxVFLzTRyQcXp1IIjVNEelSb8_FSuKYrqwTpTjTrmiGViBupo-vqQmGFGm_GstR3JQi-sj2lf5X1xnxrXi4qPLIK4q2UGDmsCmn7a71E5qlCFBpT90-&name=%E7%AC%AC%E4%B8%80%E6%9E%AA%EF%BC%8C%E7%9B%B8%E6%80%9D%EF%BC%81"
+      }
+    },
+    {
+      "rank": 57,
+      "player": "光子卿",
       "score": 1412,
       "month_games": 59,
-      "month_win_rate": 72.88135593220339,
+      "month_win_rate": 69.49152542372882,
       "deck": {
-        "name": "烙印阿不思星辰",
-        "main_category": "星辰",
+        "name": "刻魔破械",
+        "main_category": "破械",
         "categories": [
-          "烙印",
-          "阿不思",
-          "星辰"
+          "刻魔",
+          "破械"
         ],
-        "code": "F9pM-Na8qa_-qHLQ44Ft1R48O5owUvuujMzGs0toWK2LpG6gwc1Q4Rf3DeI69LLKlTZyJ_q5hlZwHkhqQu8f0nwpd5VJ2Qcc3mefBOldoUuGqZj8LCn6E7eQGTYyqGed2SOt1NWwezQaBQ6xTdUZTunFyxBy8KnXNEMwPmXWbxP-ysQN2M-Na7gnSjVAkpQdBK1E6YuWC3MMrNA8kNSCmn7W71E5sKxP3A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=F9pM-Na8qa_-qHLQ44Ft1R48O5owUvuujMzGs0toWK2LpG6gwc1Q4Rf3DeI69LLKlTZyJ_q5hlZwHkhqQu8f0nwpd5VJ2Qcc3mefBOldoUuGqZj8LCn6E7eQGTYyqGed2SOt1NWwezQaBQ6xTdUZTunFyxBy8KnXNEMwPmXWbxP-ysQN2M-Na7gnSjVAkpQdBK1E6YuWC3MMrNA8kNSCmn7W71E5sKxP3A&name=zaijiuke"
+        "code": "HOxA8AszBck19OhIDtRzvEXPmODnhI4ptXWaabeAXpQYOatBK1ETIK0gniANxZke5KSHuEIbxHXpZZUqS6-6c2cif3NEkHyqC8IWIjdaIQIAYUPP2yvqOj_wTpXdAqXm8TKQRrLxbfZypX2rHrChNa3jDL386F95_utmot3Xybme2MW81KNq1ifdoRIuSpEq-Ox7YiUdEglmDKM-Na6oMHNYFNP2qGi0QbvUTmhAgBhCWfGMmfyS1ShCgpXvy0U1yu2yn7p8",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HOxA8AszBck19OhIDtRzvEXPmODnhI4ptXWaabeAXpQYOatBK1ETIK0gniANxZke5KSHuEIbxHXpZZUqS6-6c2cif3NEkHyqC8IWIjdaIQIAYUPP2yvqOj_wTpXdAqXm8TKQRrLxbfZypX2rHrChNa3jDL386F95_utmot3Xybme2MW81KNq1ifdoRIuSpEq-Ox7YiUdEglmDKM-Na6oMHNYFNP2qGi0QbvUTmhAgBhCWfGMmfyS1ShCgpXvy0U1yu2yn7p8&name=%E5%85%89%E5%AD%90%E5%8D%BF"
       }
     },
     {
-      "rank": 51,
-      "player": "帕梅拉",
-      "score": 1411,
-      "month_games": 161,
-      "month_win_rate": 64.59627329192547,
+      "rank": 58,
+      "player": "bst大师",
+      "score": 1408,
+      "month_games": 109,
+      "month_win_rate": 62.38532110091743,
       "deck": {
-        "name": "狱神奥义耀圣",
-        "main_category": "耀圣",
+        "name": "三幻魔",
+        "main_category": "三幻魔",
         "categories": [
-          "狱神",
-          "奥义",
-          "耀圣"
+          "三幻魔"
         ],
-        "code": "HPphnJiaZ8a19FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2C4r3UlxXuprivdUSyypUiUqcDF5qgLZyJ_e5hlZJh5EvUYEjYrntSuwTpXajjVeF7Ah1Jb6B4Qqaok0OLVZY9qAqdrEXl8yYwtMmWuRHUtUnYxHFVOR37BQwXVQr4xqPuODcE6VKg-AgxPLIaqZ8a10TlNTyCuKti4zBXGOA72oJWokCmn7VShCgqeAT7ZT90-A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HPphnJiaZ8a19FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2C4r3UlxXuprivdUSyypUiUqcDF5qgLZyJ_e5hlZJh5EvUYEjYrntSuwTpXajjVeF7Ah1Jb6B4Qqaok0OLVZY9qAqdrEXl8yYwtMmWuRHUtUnYxHFVOR37BQwXVQr4xqPuODcE6VKg-AgxPLIaqZ8a10TlNTyCuKti4zBXGOA72oJWokCmn7VShCgqeAT7ZT90-A&name=%E5%B8%95%E6%A2%85%E6%8B%89"
+        "code": "E_xXYeGUZ8a19f2KS9vhxgS2AmWla58_UGDmsN4jr1KCIPJZZUq3DMOE2cif3uYZWWk-tierMMD4EzmLn2ey1iZSCJX6Y86Hh2slxTFdI6VToaHFqsn59TBF9Wwq__ZEWxwDINhyvkYaC_2vl719N-NZav8r606VGwqgNu0bw5p4lvkWDoJWoi4r3U655S0N0bxHVPtWSmCNx5QBYtqpQhQUvNNHKeAT8A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E_xXYeGUZ8a19f2KS9vhxgS2AmWla58_UGDmsN4jr1KCIPJZZUq3DMOE2cif3uYZWWk-tierMMD4EzmLn2ey1iZSCJX6Y86Hh2slxTFdI6VToaHFqsn59TBF9Wwq__ZEWxwDINhyvkYaC_2vl719N-NZav8r606VGwqgNu0bw5p4lvkWDoJWoi4r3U655S0N0bxHVPtWSmCNx5QBYtqpQhQUvNNHKeAT8A&name=bst%E5%A4%A7%E5%B8%88"
       }
     },
     {
-      "rank": 52,
-      "player": "世10086",
-      "score": 1410,
-      "month_games": 84,
-      "month_win_rate": 61.904761904761905,
-      "deck": {
-        "name": "60阿不思烙印",
-        "main_category": "烙印",
-        "categories": [
-          "阿不思",
-          "烙印"
-        ],
-        "code": "J9mM-NbMYRbd1pSxzrlzkvZ1WD9vAu8dgpfdtGZmNUk0ftKtgkrVeD3NNLaFpcwUpLbF0jm0C6ApI2SW1Bg5rUErUSG8R16WWVKlFxFFtnIn-wPJDUipiLtMEbjyhX7otDRaIyoLwhVSdkGyACv7OR8w0c3meVF4VfS3mleZ3PaxCZSCNUoQoLN-t0Ih28WqUDfCVQzzxSR1uphoiYiXwv3WKbqjNOxa-cE6U0p3Ti5Yg5eFTrmiGN6vLsrEDdi4qPNoK4q2BTT9qRTc_K71E5qUE4QbyAqGp4BPulP3T4A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=J9mM-NbMYRbd1pSxzrlzkvZ1WD9vAu8dgpfdtGZmNUk0ftKtgkrVeD3NNLaFpcwUpLbF0jm0C6ApI2SW1Bg5rUErUSG8R16WWVKlFxFFtnIn-wPJDUipiLtMEbjyhX7otDRaIyoLwhVSdkGyACv7OR8w0c3meVF4VfS3mleZ3PaxCZSCNUoQoLN-t0Ih28WqUDfCVQzzxSR1uphoiYiXwv3WKbqjNOxa-cE6U0p3Ti5Yg5eFTrmiGN6vLsrEDdi4qPNoK4q2BTT9qRTc_K71E5qUE4QbyAqGp4BPulP3T4A&name=%E4%B8%9610086"
-      }
-    },
-    {
-      "rank": 53,
-      "player": "此恨绵绵无绝期",
-      "score": 1407,
-      "month_games": 71,
-      "month_win_rate": 69.01408450704226,
-      "deck": {
-        "name": "狱神奥义耀圣",
-        "main_category": "耀圣",
-        "categories": [
-          "狱神",
-          "奥义",
-          "耀圣"
-        ],
-        "code": "GvtXYeGTDOTE9FLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R16xoLKmNiCzqUEQeSyypVi81QFs5E_tcwyskw8iXqMCRssE6V3I41XhewIdSW-geEKmqJNDi1WWPagKnaxF5fMmMSdjEcVU5HfMFDBdVCvjG1r1mhD5MbjgnSpUHwEGJvxrLTyyGqmfGteLio8yJymp5BXFW1BK1EXFe6mxjsTmBTT9qpQhQWtDOvqeAT7A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GvtXYeGTDOTE9FLjfzt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R16xoLKmNiCzqUEQeSyypVi81QFs5E_tcwyskw8iXqMCRssE6V3I41XhewIdSW-geEKmqJNDi1WWPagKnaxF5fMmMSdjEcVU5HfMFDBdVCvjG1r1mhD5MbjgnSpUHwEGJvxrLTyyGqmfGteLio8yJymp5BXFW1BK1EXFe6mxjsTmBTT9qpQhQWtDOvqeAT7A&name=%E6%AD%A4%E6%81%A8%E7%BB%B5%E7%BB%B5%E6%97%A0%E7%BB%9D%E6%9C%9F"
-      }
-    },
-    {
-      "rank": 54,
-      "player": "chatLDS ",
-      "score": 1403,
-      "month_games": 17,
+      "rank": 59,
+      "player": "wwt111",
+      "score": 1408,
+      "month_games": 68,
       "month_win_rate": 76.47058823529412,
+      "deck": {
+        "name": "黑魔导罪宝混沌归光",
+        "main_category": "归光",
+        "categories": [
+          "黑魔导",
+          "罪宝",
+          "混沌",
+          "归光"
+        ],
+        "code": "H_lSmK6Ssz0u1dh4ZZcVHlbw5p5ROwgNLfIsGoMHNWhMfrIbBhhhvEdepQRB5LLKlXc8paGzkT-t0bxH1nT0ewyS4pU-1ZSLsq9USnr78TuI-bTnUooAsW1KoB4mnb1EWaMx1T9BdIVhCsrJn8ktLzTRykERqlxTFdIJji7Yv760rD8zpGS8_iHPgqk0fX1ITDCjVdk3-h-GqlN-NZSjuShF9ZHtq_yvrSwPEJUErUSBTT9urDMFW71E5yUE4PZO8iAqUIUFcGIKIA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=H_lSmK6Ssz0u1dh4ZZcVHlbw5p5ROwgNLfIsGoMHNWhMfrIbBhhhvEdepQRB5LLKlXc8paGzkT-t0bxH1nT0ewyS4pU-1ZSLsq9USnr78TuI-bTnUooAsW1KoB4mnb1EWaMx1T9BdIVhCsrJn8ktLzTRykERqlxTFdIJji7Yv760rD8zpGS8_iHPgqk0fX1ITDCjVdk3-h-GqlN-NZSjuShF9ZHtq_yvrSwPEJUErUSBTT9urDMFW71E5yUE4PZO8iAqUIUFcGIKIA&name=wwt111"
+      }
+    },
+    {
+      "rank": 60,
+      "player": "ZreaKenny",
+      "score": 1407,
+      "month_games": 340,
+      "month_win_rate": 61.470588235294116,
+      "deck": {
+        "name": "城之内",
+        "main_category": "城之内",
+        "categories": [
+          "城之内"
+        ],
+        "code": "FaVXYeGWZ8a18JT3q8nkqqZI3uk4J0onUGDmsN4jr1jQWU0Y7E4o2ILOpQRB5LLKlTZyJ_e5hlZS71E4wX4Fvpl8yWkilji-GgbkE-Ko5Bxem8E6U5WLqutB8BBikkOv0Fc1SJvxrKX1ke03mTGlUBt2imaODuglaiQKaft1YZgryn7p8A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FaVXYeGWZ8a18JT3q8nkqqZI3uk4J0onUGDmsN4jr1jQWU0Y7E4o2ILOpQRB5LLKlTZyJ_e5hlZS71E4wX4Fvpl8yWkilji-GgbkE-Ko5Bxem8E6U5WLqutB8BBikkOv0Fc1SJvxrKX1ke03mTGlUBt2imaODuglaiQKaft1YZgryn7p8A&name=ZreaKenny"
+      }
+    },
+    {
+      "rank": 61,
+      "player": "嘟噜大铺",
+      "score": 1406,
+      "month_games": 80,
+      "month_win_rate": 72.5,
       "deck": {
         "name": "鹰身亚马逊",
         "main_category": "亚马逊",
@@ -935,12 +1051,29 @@
           "鹰身",
           "亚马逊"
         ],
-        "code": "E-jvz78ewJcEbBOk_OCdKA1Bg5q0J-IDwTpP8N4jsJxXuppZZUrbORP9XMMrNPpN1DgnSrdtUIm2CdKuxMpBF3IzOnwTpYSW2taXBOlM2CdKYayEMumiaJdTusIauo7wW7KddseF71V2pbsnUEAxN-NZbgnSqlf5X1xnxrZ6CVqJApp-1UoQoLPd0YEr35aKeAT8pT90-A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E-jvz78ewJcEbBOk_OCdKA1Bg5q0J-IDwTpP8N4jsJxXuppZZUrbORP9XMMrNPpN1DgnSrdtUIm2CdKuxMpBF3IzOnwTpYSW2taXBOlM2CdKYayEMumiaJdTusIauo7wW7KddseF71V2pbsnUEAxN-NZbgnSqlf5X1xnxrZ6CVqJApp-1UoQoLPd0YEr35aKeAT8pT90-A&name=chatLDS%20"
+        "code": "E-aM-Na-wJcEbBOk_WCdKAaE_EB4J0n-G8R184r3UqMdicJZZUqbORP73MMrJPpN1DgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2taWnYtfWCdKYQ1SE-vvP91GS8_jdlOu2PC96t0jQRTfjWUi9-RdwTpVS-sj21f5X1pnxrX1Bg5rApp-1UoQoKngE--U_dPg",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E-aM-Na-wJcEbBOk_WCdKAaE_EB4J0n-G8R184r3UqMdicJZZUqbORP73MMrJPpN1DgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2taWnYtfWCdKYQ1SE-vvP91GS8_jdlOu2PC96t0jQRTfjWUi9-RdwTpVS-sj21f5X1pnxrX1Bg5rApp-1UoQoKngE--U_dPg&name=%E5%98%9F%E5%99%9C%E5%A4%A7%E9%93%BA"
       }
     },
     {
-      "rank": 55,
+      "rank": 62,
+      "player": "在雨后醒来",
+      "score": 1405,
+      "month_games": 152,
+      "month_win_rate": 63.81578947368421,
+      "deck": {
+        "name": "鹰身亚马逊",
+        "main_category": "亚马逊",
+        "categories": [
+          "鹰身",
+          "亚马逊"
+        ],
+        "code": "FeNM-Na-wJcEbBOk_OCdKAXyOLu0J-IDwTpP8N4jr1jQWU0Y7E5SyypU2cif3uYZWSfSbpnBOlW7aoRNsE6VdYJ0rvEykEXcjM6fBOlhJba1psE6Uw0OLVZF9WwrYcr5ENUhPr7z_dbsp10w0F_tfL3r6b8aynBOlVL6yPaV_lfWmfGtfUGDmqCmn7Q",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FeNM-Na-wJcEbBOk_OCdKAXyOLu0J-IDwTpP8N4jr1jQWU0Y7E5SyypU2cif3uYZWSfSbpnBOlW7aoRNsE6VdYJ0rvEykEXcjM6fBOlhJba1psE6Uw0OLVZF9WwrYcr5ENUhPr7z_dbsp10w0F_tfL3r6b8aynBOlVL6yPaV_lfWmfGtfUGDmqCmn7Q&name=%E5%9C%A8%E9%9B%A8%E5%90%8E%E9%86%92%E6%9D%A5"
+      }
+    },
+    {
+      "rank": 63,
       "player": "我想吃火锅",
       "score": 1403,
       "month_games": 54,
@@ -957,190 +1090,55 @@
       }
     },
     {
-      "rank": 56,
-      "player": "原石人",
-      "score": 1402,
-      "month_games": 121,
-      "month_win_rate": 62.8099173553719,
-      "deck": {
-        "name": "鹰身亚马逊",
-        "main_category": "亚马逊",
-        "categories": [
-          "鹰身",
-          "亚马逊"
-        ],
-        "code": "E-mM-Na-wJcEbBOk_WCdKAaE_EB4J0n-G8R1-4r3UmMdicJZZUqbORP73MMrJPpN1LgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2tabBOlMIapCfX3n-6jJefxuynXbSFExFJIdgIK5qkbpGgim_GstwTpVS-sj21f5X2K7DwyTPjWvqDBzWjHYnDGxBZ1KCIPQKaftU8An3yn7p8A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E-mM-Na-wJcEbBOk_WCdKAaE_EB4J0n-G8R1-4r3UmMdicJZZUqbORP73MMrJPpN1LgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2tabBOlMIapCfX3n-6jJefxuynXbSFExFJIdgIK5qkbpGgim_GstwTpVS-sj21f5X2K7DwyTPjWvqDBzWjHYnDGxBZ1KCIPQKaftU8An3yn7p8A&name=%E5%8E%9F%E7%9F%B3%E4%BA%BA"
-      }
-    },
-    {
-      "rank": 57,
-      "player": "可爱的小杏酱",
-      "score": 1401,
-      "month_games": 237,
-      "month_win_rate": 62.869198312236286,
-      "deck": {
-        "name": "60珠泪混沌影依",
-        "main_category": "影依",
-        "categories": [
-          "珠泪",
-          "混沌",
-          "影依"
-        ],
-        "code": "IqeM-Na_eHNPK1Vj0Jb5FgQcXEIyh9_tARe2Wc7GvFfggQ5ukfzboARpqDBzVYVGWCEtgcobxHYzivdSSyypX3PKWhs5E_vcwysmGSXEqn2rJRUxF3l1QC5VKzm-6gQCWbVTjqALFtgw9lUyd5EDwTpXehVMMEoE0yReaaOz3tQGx1sxmJth4UwjJNkQ4lfVqTz1bkccg3ZTrppdJuiv8r6-glaiUY7E4gU0_b3eonNUoQoKngE_OU_dPg",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=IqeM-Na_eHNPK1Vj0Jb5FgQcXEIyh9_tARe2Wc7GvFfggQ5ukfzboARpqDBzVYVGWCEtgcobxHYzivdSSyypX3PKWhs5E_vcwysmGSXEqn2rJRUxF3l1QC5VKzm-6gQCWbVTjqALFtgw9lUyd5EDwTpXehVMMEoE0yReaaOz3tQGx1sxmJth4UwjJNkQ4lfVqTz1bkccg3ZTrppdJuiv8r6-glaiUY7E4gU0_b3eonNUoQoKngE_OU_dPg&name=%E5%8F%AF%E7%88%B1%E7%9A%84%E5%B0%8F%E6%9D%8F%E9%85%B1"
-      }
-    },
-    {
-      "rank": 58,
-      "player": "光子卿",
-      "score": 1401,
-      "month_games": 51,
-      "month_win_rate": 70.58823529411765,
-      "deck": {
-        "name": "刻魔破械",
-        "main_category": "破械",
-        "categories": [
-          "刻魔",
-          "破械"
-        ],
-        "code": "HOxA8AszBck19OhIDtRzvEXPmODnhI4ptXWaabeAXpQYOatBK1ETIK0gniANxZke5KSHuEIbxHXpZZUqS6-6c2cif3NEkHyqC8IWIjdaIQIAYUPP2yvqOj_wTpXdAqXm8TKQRrLxbfZypX2rHrChNa3jDL386F95_utmot3Xybme2MW81KNq1ifdoRIuSpEq-Ox7YiUdEglmDKM-Na6oMHNYFNP2qGi0QbvUTmhAgBhCWfGMmfyS1ShCgpXvy0U1yu2yn7p8",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HOxA8AszBck19OhIDtRzvEXPmODnhI4ptXWaabeAXpQYOatBK1ETIK0gniANxZke5KSHuEIbxHXpZZUqS6-6c2cif3NEkHyqC8IWIjdaIQIAYUPP2yvqOj_wTpXdAqXm8TKQRrLxbfZypX2rHrChNa3jDL386F95_utmot3Xybme2MW81KNq1ifdoRIuSpEq-Ox7YiUdEglmDKM-Na6oMHNYFNP2qGi0QbvUTmhAgBhCWfGMmfyS1ShCgpXvy0U1yu2yn7p8&name=%E5%85%89%E5%AD%90%E5%8D%BF"
-      }
-    },
-    {
-      "rank": 59,
-      "player": "嘟噜大铺",
-      "score": 1400,
-      "month_games": 77,
-      "month_win_rate": 72.72727272727273,
-      "deck": {
-        "name": "鹰身亚马逊",
-        "main_category": "亚马逊",
-        "categories": [
-          "鹰身",
-          "亚马逊"
-        ],
-        "code": "E-aM-Na-wJcEbBOk_WCdKAaE_EB4J0n-G8R184r3UqMdicJZZUqbORP73MMrJPpN1DgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2taWnYtfWCdKYQ1SE-vvP91GS8_jdlOu2PC96t0jQRTfjWUi9-RdwTpVS-sj21f5X1pnxrX1Bg5rApp-1UoQoKngE--U_dPg",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E-aM-Na-wJcEbBOk_WCdKAaE_EB4J0n-G8R184r3UqMdicJZZUqbORP73MMrJPpN1DgnSrdtUIm2CdKuxMpBF3IzOrwTpYSW2taWnYtfWCdKYQ1SE-vvP91GS8_jdlOu2PC96t0jQRTfjWUi9-RdwTpVS-sj21f5X1pnxrX1Bg5rApp-1UoQoKngE--U_dPg&name=%E5%98%9F%E5%99%9C%E5%A4%A7%E9%93%BA"
-      }
-    },
-    {
-      "rank": 60,
-      "player": "bst大师",
-      "score": 1400,
-      "month_games": 108,
-      "month_win_rate": 62.03703703703704,
-      "deck": {
-        "name": "三幻魔",
-        "main_category": "三幻魔",
-        "categories": [
-          "三幻魔"
-        ],
-        "code": "E_xXYeGUZ8a19f2KS9vhxgS2AmWla58_UGDmsN4jr1KCIPJZZUq3DMOE2cif3uYZWWk-tierMMD4EzmLn2ey1iZSCJX6Y86Hh2slxTFdI6VToaHFqsn59TBF9Wwq__ZEWxwDINhyvkYaC_2vl719N-NZav8r606VGwqgNu0bw5p4lvkWDoJWoi4r3U655S0N0bxHVPtWSmCNx5QBYtqpQhQUvNNHKeAT8A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E_xXYeGUZ8a19f2KS9vhxgS2AmWla58_UGDmsN4jr1KCIPJZZUq3DMOE2cif3uYZWWk-tierMMD4EzmLn2ey1iZSCJX6Y86Hh2slxTFdI6VToaHFqsn59TBF9Wwq__ZEWxwDINhyvkYaC_2vl719N-NZav8r606VGwqgNu0bw5p4lvkWDoJWoi4r3U655S0N0bxHVPtWSmCNx5QBYtqpQhQUvNNHKeAT8A&name=bst%E5%A4%A7%E5%B8%88"
-      }
-    },
-    {
-      "rank": 61,
-      "player": "まじゅつし",
-      "score": 1399,
-      "month_games": 76,
-      "month_win_rate": 76.3157894736842,
-      "deck": {
-        "name": "罪宝",
-        "main_category": "罪宝",
-        "categories": [
-          "罪宝"
-        ],
-        "code": "HfdSRxtlE7CBYDQ0b6RZVcZTK_3qDBzWG8R2NGOxOUssqVWCdKBbORP63RvEewTpRTGN7WWpzH_RzeZ50y-ZKp29RJjCFXbNGY6rBOldoLFs78E6VniZSCNSCxJUmfyTF8NA3Nc1ZjcE6WMkHF6dcUxXTgnSmmnXNEKw_M6aHFqskDtjpO1iLy-ZMYlS0MVMrEDdTsYjiqnI75wTpT6b8ay4z41s5cVHm6CVqJApp-2u9ROapQhQaU_dPg",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HfdSRxtlE7CBYDQ0b6RZVcZTK_3qDBzWG8R2NGOxOUssqVWCdKBbORP63RvEewTpRTGN7WWpzH_RzeZ50y-ZKp29RJjCFXbNGY6rBOldoLFs78E6VniZSCNSCxJUmfyTF8NA3Nc1ZjcE6WMkHF6dcUxXTgnSmmnXNEKw_M6aHFqskDtjpO1iLy-ZMYlS0MVMrEDdTsYjiqnI75wTpT6b8ay4z41s5cVHm6CVqJApp-2u9ROapQhQaU_dPg&name=%E3%81%BE%E3%81%98%E3%82%85%E3%81%A4%E3%81%97"
-      }
-    },
-    {
-      "rank": 62,
-      "player": "Busbuster",
-      "score": 1397,
-      "month_games": 63,
-      "month_win_rate": 63.492063492063494,
-      "deck": {
-        "name": "三幻魔",
-        "main_category": "三幻魔",
-        "categories": [
-          "三幻魔"
-        ],
-        "code": "E_rX9ikvb4cYEtgJlpWufP1Bg5rDeI6-cV7qS4r3U0ssqV7hmHCbORP93MMrJDW-6Wk-tierMMD4EzmLn2ey1iZSCJX6Y86Hh2skdKp0MNdIMRkvP43ZTrpDnwVSEzzQlWC6Kpo-vqW6yAKm_GspQrysqc77vFQG3aNnkmxTPjWvlxUeWQVxVrGOxOEFNP2qlCFBU8An2yn7p9oaXADQ0uAQ",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E_rX9ikvb4cYEtgJlpWufP1Bg5rDeI6-cV7qS4r3U0ssqV7hmHCbORP93MMrJDW-6Wk-tierMMD4EzmLn2ey1iZSCJX6Y86Hh2skdKp0MNdIMRkvP43ZTrpDnwVSEzzQlWC6Kpo-vqW6yAKm_GspQrysqc77vFQG3aNnkmxTPjWvlxUeWQVxVrGOxOEFNP2qlCFBU8An2yn7p9oaXADQ0uAQ&name=Busbuster"
-      }
-    },
-    {
-      "rank": 63,
-      "player": "dzdzdomo",
-      "score": 1396,
-      "month_games": 226,
-      "month_win_rate": 62.389380530973455,
-      "deck": {
-        "name": "阿不思混沌",
-        "main_category": "混沌",
-        "categories": [
-          "阿不思",
-          "混沌"
-        ],
-        "code": "FufvDmnnC14aYt8iwMFL7rozMxqtLaFjX4IEOoMHNWglaiQ3iOvSyypV3PKWhs5E_rDJLiVT7Vk5dUAukAWLbHN5nnTL5krJ3kQF8NA3ReaaOSDi9MqhnndkjrdSndOLliDl4NOuaIWbxP-lcrI5ii0-zKxA3aSLGZN3xXXbGfWir_K-uM-NbOXFR5ZBXFW1BK1ErvUTnhAgBhTwCfY",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FufvDmnnC14aYt8iwMFL7rozMxqtLaFjX4IEOoMHNWglaiQ3iOvSyypV3PKWhs5E_rDJLiVT7Vk5dUAukAWLbHN5nnTL5krJ3kQF8NA3ReaaOSDi9MqhnndkjrdSndOLliDl4NOuaIWbxP-lcrI5ii0-zKxA3aSLGZN3xXXbGfWir_K-uM-NbOXFR5ZBXFW1BK1ErvUTnhAgBhTwCfY&name=dzdzdomo"
-      }
-    },
-    {
       "rank": 64,
-      "player": "乾紗凪一番可愛",
-      "score": 1396,
-      "month_games": 221,
-      "month_win_rate": 61.990950226244344,
+      "player": "上海碇真",
+      "score": 1399,
+      "month_games": 108,
+      "month_win_rate": 68.51851851851852,
       "deck": {
-        "name": "杀手旋律耀圣",
+        "name": "狱神奥义耀圣",
         "main_category": "耀圣",
         "categories": [
-          "杀手旋律",
+          "狱神",
+          "奥义",
           "耀圣"
         ],
-        "code": "HORXYeGTAvfMEZ74srjSQoaP8wYtgcMqifIYWoMHNaglaiNVAaqR9BvHDeI7BjHYnLGxBZ1KCIPKne6-SyypXD76E-F5qgKQaYbGzkT-9zDKyb1KgMynFLnwTpXc9gQ6kbi-spb6B4X3PqwhU1RJocWqydrEXk7GI4qpyO-T0e0GhKovBgoYLqoV8Y1OVY2I7ws5agr4tKMyeyjHYnMhotEG71E5yUE4QA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HORXYeGTAvfMEZ74srjSQoaP8wYtgcMqifIYWoMHNaglaiNVAaqR9BvHDeI7BjHYnLGxBZ1KCIPKne6-SyypXD76E-F5qgKQaYbGzkT-9zDKyb1KgMynFLnwTpXc9gQ6kbi-spb6B4X3PqwhU1RJocWqydrEXk7GI4qpyO-T0e0GhKovBgoYLqoV8Y1OVY2I7ws5agr4tKMyeyjHYnMhotEG71E5yUE4QA&name=%E4%B9%BE%E7%B4%97%E5%87%AA%E4%B8%80%E7%95%AA%E5%8F%AF%E6%84%9B"
+        "code": "GflhnJieilxv129Tut8h-ERnviyuNJCho_zBm2BwymtVMNV0Jdw1Bg5rDeI69LLKlSJSpwMXmqAtnIn-7mGVkmHkS9RgSNlgnSu1HGq8L2BDqcE6VriZSCJLfQPCFTVEmhxarLHtQFTtYi8vmTGFpky1ydjEcVU5HfKhXxjUfccGh8mNxwTpUqD4CDE341lp5ZDVjPjWuicpqfoJWom4r3UkFNP2qlCFBSvflop4BPyoaXAA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GflhnJieilxv129Tut8h-ERnviyuNJCho_zBm2BwymtVMNV0Jdw1Bg5rDeI69LLKlSJSpwMXmqAtnIn-7mGVkmHkS9RgSNlgnSu1HGq8L2BDqcE6VriZSCJLfQPCFTVEmhxarLHtQFTtYi8vmTGFpky1ydjEcVU5HfKhXxjUfccGh8mNxwTpUqD4CDE341lp5ZDVjPjWuicpqfoJWom4r3UkFNP2qlCFBSvflop4BPyoaXAA&name=%E4%B8%8A%E6%B5%B7%E7%A2%87%E7%9C%9F"
       }
     },
     {
       "rank": 65,
-      "player": "风",
-      "score": 1396,
-      "month_games": 161,
-      "month_win_rate": 60.24844720496895,
+      "player": "鄠县桑诗云",
+      "score": 1399,
+      "month_games": 99,
+      "month_win_rate": 68.68686868686869,
       "deck": {
-        "name": "黑魔导黄金柜自奏",
-        "main_category": "自奏",
+        "name": "升月",
+        "main_category": "升月",
         "categories": [
-          "黑魔导",
-          "黄金柜",
-          "自奏"
+          "升月"
         ],
-        "code": "HumLio8tRAZilWw0ftmRykQRzY0g94SlNUADuCYr-OFJ7_bcoDElBg5qlHLFFG8R16N4jsFjQWVUY7E6SyypU2cif5m1U4qVQDxFO3qIssIy6ryAqGj8MzVmDDgzWKpbcTKQRKZ_JLUz-SYgKvZlSCI1TRHpUlxTFdMWyWPbMDlax1qtxkTw-zdjQOkPw1Ux1RP_TfjWWs2gtdfWR7auksF-glaiLivdTS6-6dApp-1Q0WiNd6ic1ShCgrgxBRZT90-A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HumLio8tRAZilWw0ftmRykQRzY0g94SlNUADuCYr-OFJ7_bcoDElBg5qlHLFFG8R16N4jsFjQWVUY7E6SyypU2cif5m1U4qVQDxFO3qIssIy6ryAqGj8MzVmDDgzWKpbcTKQRKZ_JLUz-SYgKvZlSCI1TRHpUlxTFdMWyWPbMDlax1qtxkTw-zdjQOkPw1Ux1RP_TfjWWs2gtdfWR7auksF-glaiLivdTS6-6dApp-1Q0WiNd6ic1ShCgrgxBRZT90-A&name=%E9%A3%8E"
+        "code": "FMtM-Na_GxjRMUPZQq_h695DVf5is71TWzmMutZnSYbxHXrGgspSyypU2cif1MEbj0hoNP1EJMUKubco1mdX1HN5nnizHO0I7c02nXNENwoRjaHFqsysQN1rIQzTYO2KE2CYfSU42TXtD8KheiISi2jDUJC3_Uz41rpcVHlUFcVbqDBzWoJWoi4r3UmMdidQKaftQgQAwqUIUFlP3T4",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FMtM-Na_GxjRMUPZQq_h695DVf5is71TWzmMutZnSYbxHXrGgspSyypU2cif1MEbj0hoNP1EJMUKubco1mdX1HN5nnizHO0I7c02nXNENwoRjaHFqsysQN1rIQzTYO2KE2CYfSU42TXtD8KheiISi2jDUJC3_Uz41rpcVHlUFcVbqDBzWoJWoi4r3UmMdidQKaftQgQAwqUIUFlP3T4&name=%E9%84%A0%E5%8E%BF%E6%A1%91%E8%AF%97%E4%BA%91"
       }
     },
     {
       "rank": 66,
-      "player": "玖十",
-      "score": 1396,
-      "month_games": 186,
-      "month_win_rate": 60.215053763440864,
+      "player": "帕梅拉",
+      "score": 1397,
+      "month_games": 179,
+      "month_win_rate": 63.687150837988824,
       "deck": {
-        "name": "奥义狱神神艺",
-        "main_category": "神艺",
+        "name": "狱神奥义耀圣",
+        "main_category": "耀圣",
         "categories": [
-          "奥义",
           "狱神",
-          "神艺"
+          "奥义",
+          "耀圣"
         ],
-        "code": "H-dhnJiaJymp4hU_dKnWu9UUuN-u3qd1vkPwig8RdF0PtAtaqYaroS7hKDBzWoJWojc68gobxHYJZZUqhyLeilrm8xs5E_yYeRL1GBI2MaVSITQKyZ4J0rtAiPd0jjVeGOiuFJaBoSa0M6-4J0sdVSwySfoTt1mNqaJBxenTPZuymdy1ZhWmWrTsWvqOWVsuCdKlQfAQYhMMKNwTpUy-sj208shq5cVHlwU0_bqwzBWu9ROapQhQZ-WzAJXvy0A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=H-dhnJiaJymp4hU_dKnWu9UUuN-u3qd1vkPwig8RdF0PtAtaqYaroS7hKDBzWoJWojc68gobxHYJZZUqhyLeilrm8xs5E_yYeRL1GBI2MaVSITQKyZ4J0rtAiPd0jjVeGOiuFJaBoSa0M6-4J0sdVSwySfoTt1mNqaJBxenTPZuymdy1ZhWmWrTsWvqOWVsuCdKlQfAQYhMMKNwTpUy-sj208shq5cVHlwU0_bqwzBWu9ROapQhQZ-WzAJXvy0A&name=%E7%8E%96%E5%8D%81"
+        "code": "HPphnJiaZ8a19FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2C4r3UlxXuprivdUSyypUiUqcDF5qgLZyJ_e5hlZJh5EvUYEjYrntSuwTpXajjVeF7Ah1Jb6B4Qqaok0OLVZY9qAqdrEXl8yYwtMmWuRHUtUnYxHFVOR37BQwXVQr4xqPuODcE6VKg-AgxPLIaqZ8a10TlNTyCuKti4zBXGOA72oJWokCmn7VShCgqeAT7ZT90-A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HPphnJiaZ8a19FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2C4r3UlxXuprivdUSyypUiUqcDF5qgLZyJ_e5hlZJh5EvUYEjYrntSuwTpXajjVeF7Ah1Jb6B4Qqaok0OLVZY9qAqdrEXl8yYwtMmWuRHUtUnYxHFVOR37BQwXVQr4xqPuODcE6VKg-AgxPLIaqZ8a10TlNTyCuKti4zBXGOA72oJWokCmn7VShCgqeAT7ZT90-A&name=%E5%B8%95%E6%A2%85%E6%8B%89"
       }
     },
     {
@@ -1161,6 +1159,24 @@
     },
     {
       "rank": 68,
+      "player": "风",
+      "score": 1394,
+      "month_games": 163,
+      "month_win_rate": 60.122699386503065,
+      "deck": {
+        "name": "黑魔导黄金柜自奏",
+        "main_category": "自奏",
+        "categories": [
+          "黑魔导",
+          "黄金柜",
+          "自奏"
+        ],
+        "code": "HumLio8tRAZilWw0ftmRykQRzY0g94SlNUADuCYr-OFJ7_bcoDElBg5qlHLFFG8R16N4jsFjQWVUY7E6SyypU2cif5m1U4qVQDxFO3qIssIy6ryAqGj8MzVmDDgzWKpbcTKQRKZ_JLUz-SYgKvZlSCI1TRHpUlxTFdMWyWPbMDlax1qtxkTw-zdjQOkPw1Ux1RP_TfjWWs2gtdfWR7auksF-glaiLivdTS6-6dApp-1Q0WiNd6ic1ShCgrgxBRZT90-A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HumLio8tRAZilWw0ftmRykQRzY0g94SlNUADuCYr-OFJ7_bcoDElBg5qlHLFFG8R16N4jsFjQWVUY7E6SyypU2cif5m1U4qVQDxFO3qIssIy6ryAqGj8MzVmDDgzWKpbcTKQRKZ_JLUz-SYgKvZlSCI1TRHpUlxTFdMWyWPbMDlax1qtxkTw-zdjQOkPw1Ux1RP_TfjWWs2gtdfWR7auksF-glaiLivdTS6-6dApp-1Q0WiNd6ic1ShCgrgxBRZT90-A&name=%E9%A3%8E"
+      }
+    },
+    {
+      "rank": 69,
       "player": "洛琪希・米格路迪亚",
       "score": 1394,
       "month_games": 104,
@@ -1177,7 +1193,7 @@
       }
     },
     {
-      "rank": 69,
+      "rank": 70,
       "player": "混沌梓龙",
       "score": 1394,
       "month_games": 37,
@@ -1195,11 +1211,95 @@
       }
     },
     {
-      "rank": 70,
-      "player": "在雨后醒来",
-      "score": 1391,
-      "month_games": 151,
-      "month_win_rate": 63.57615894039735,
+      "rank": 71,
+      "player": "闪刀姬-零二",
+      "score": 1393,
+      "month_games": 49,
+      "month_win_rate": 71.42857142857143,
+      "deck": {
+        "name": "黑魔导黯蜜",
+        "main_category": "黯蜜",
+        "categories": [
+          "黑魔导",
+          "黯蜜"
+        ],
+        "code": "GPxqO8SbKZX-9QYOa9BK1EhvEdeuK91RjHYnKWWVKqDPthop1WnggKMZnfhMhs5E_zdG8R0XZV6yBWFfTgEXHp29RFfUdH9eQFQ7BOldr_fXlbISYRiZSCJcUxXTQ4tVk7WIvISqLwZfWhqq-yQVnBwWq__ZEWxwDIJ4jpZbzJjSoSVZpOlRsKoDbtFzBPGpnxrXX8zrWibAEGBTT9qYI3HlArCvqGi0RrvUTmqUIUFK9-WingE-6U_dPg",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GPxqO8SbKZX-9QYOa9BK1EhvEdeuK91RjHYnKWWVKqDPthop1WnggKMZnfhMhs5E_zdG8R0XZV6yBWFfTgEXHp29RFfUdH9eQFQ7BOldr_fXlbISYRiZSCJcUxXTQ4tVk7WIvISqLwZfWhqq-yQVnBwWq__ZEWxwDIJ4jpZbzJjSoSVZpOlRsKoDbtFzBPGpnxrXX8zrWibAEGBTT9qYI3HlArCvqGi0RrvUTmqUIUFK9-WingE-6U_dPg&name=%E9%97%AA%E5%88%80%E5%A7%AC-%E9%9B%B6%E4%BA%8C"
+      }
+    },
+    {
+      "rank": 72,
+      "player": "一群好事之徒",
+      "score": 1393,
+      "month_games": 98,
+      "month_win_rate": 68.36734693877551,
+      "deck": {
+        "name": "黑魔导黯蜜",
+        "main_category": "黯蜜",
+        "categories": [
+          "黑魔导",
+          "黯蜜"
+        ],
+        "code": "GftqO8SbKZX-9QYOa9BK1EhvEdeuK91RjHYnSWWVKqDPthop1WnggKMZnfhMhs5E_rcwysm6N4jouyr1kCsK-nAIuPTt6iK-o6P68gKh2CdK7X--vK2QkwiEykES4piumhxarJ2sReQlUXgy-tDVV9kgrODgtV_-yItjgGQTxHSy3mTGlQkqzSdKjYVQG3aLmCeNTPjWuv5nWtBTT9qRTc_EwRuPKGi0RrvUTmqUIUFK9-WingE_KU_dPg",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GftqO8SbKZX-9QYOa9BK1EhvEdeuK91RjHYnSWWVKqDPthop1WnggKMZnfhMhs5E_rcwysm6N4jouyr1kCsK-nAIuPTt6iK-o6P68gKh2CdK7X--vK2QkwiEykES4piumhxarJ2sReQlUXgy-tDVV9kgrODgtV_-yItjgGQTxHSy3mTGlQkqzSdKjYVQG3aLmCeNTPjWuv5nWtBTT9qRTc_EwRuPKGi0RrvUTmqUIUFK9-WingE_KU_dPg&name=%E4%B8%80%E7%BE%A4%E5%A5%BD%E4%BA%8B%E4%B9%8B%E5%BE%92"
+      }
+    },
+    {
+      "rank": 73,
+      "player": "世10086",
+      "score": 1388,
+      "month_games": 89,
+      "month_win_rate": 60.674157303370784,
+      "deck": {
+        "name": "60阿不思烙印",
+        "main_category": "烙印",
+        "categories": [
+          "阿不思",
+          "烙印"
+        ],
+        "code": "J9mM-NbMYRbd1pSxzrlzkvZ1WD9vAu8dgpfdtGZmNUk0ftKtgkrVeD3NNLaFpcwUpLbF0jm0C6ApI2SW1Bg5rUErUSG8R16WWVKlFxFFtnIn-wPJDUipiLtMEbjyhX7otDRaIyoLwhVSdkGyACv7OR8w0c3meVF4VfS3mleZ3PaxCZSCNUoQoLN-t0Ih28WqUDfCVQzzxSR1uphoiYiXwv3WKbqjNOxa-cE6U0p3Ti5Yg5eFTrmiGN6vLsrEDdi4qPNoK4q2BTT9qRTc_K71E5qUE4QbyAqGp4BPulP3T4A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=J9mM-NbMYRbd1pSxzrlzkvZ1WD9vAu8dgpfdtGZmNUk0ftKtgkrVeD3NNLaFpcwUpLbF0jm0C6ApI2SW1Bg5rUErUSG8R16WWVKlFxFFtnIn-wPJDUipiLtMEbjyhX7otDRaIyoLwhVSdkGyACv7OR8w0c3meVF4VfS3mleZ3PaxCZSCNUoQoLN-t0Ih28WqUDfCVQzzxSR1uphoiYiXwv3WKbqjNOxa-cE6U0p3Ti5Yg5eFTrmiGN6vLsrEDdi4qPNoK4q2BTT9qRTc_K71E5qUE4QbyAqGp4BPulP3T4A&name=%E4%B8%9610086"
+      }
+    },
+    {
+      "rank": 74,
+      "player": "dagazao",
+      "score": 1387,
+      "month_games": 68,
+      "month_win_rate": 69.11764705882354,
+      "deck": {
+        "name": "三幻魔",
+        "main_category": "三幻魔",
+        "categories": [
+          "三幻魔"
+        ],
+        "code": "E_lM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R184r3UmMdicJZZUq3DMOE2cif3uYZWWk-tierMMD-CdK7wJnMXPs9lpX6Y86Hh2skdKp0MNdIMRkvP43ZTrpDnwVSEzzQlWC6Kpo-vqW6yAKm_GspQrysqc77vFzBPGtnkmxTPjWv0ErURE2AIMCmn7YwRuPKlCFBXBiCip4BPtoaXAA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E_lM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R184r3UmMdicJZZUq3DMOE2cif3uYZWWk-tierMMD-CdK7wJnMXPs9lpX6Y86Hh2skdKp0MNdIMRkvP43ZTrpDnwVSEzzQlWC6Kpo-vqW6yAKm_GspQrysqc77vFzBPGtnkmxTPjWv0ErURE2AIMCmn7YwRuPKlCFBXBiCip4BPtoaXAA&name=dagazao"
+      }
+    },
+    {
+      "rank": 75,
+      "player": "黑暗之星",
+      "score": 1387,
+      "month_games": 93,
+      "month_win_rate": 62.365591397849464,
+      "deck": {
+        "name": "城之内混沌",
+        "main_category": "混沌",
+        "categories": [
+          "城之内",
+          "混沌"
+        ],
+        "code": "GNSM-Na_eHNPEt8iwYSnvVpPJVVYJ0onUGDmvQStRIbxHYTivdSYx2JwlllSrueUtFcwysmGSXFKn2rJUAWLbAvwLdSgnCGmXzJaSKWOMneRAXw0Dcl5po5IOL07VsHs0zuWrMK0y1sE6U4iziEhaHEvy_c2YlzU_MpXKyPTtYi8xRafasZ9aLGOxONWGYKyUE4QlvNK8A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GNSM-Na_eHNPEt8iwYSnvVpPJVVYJ0onUGDmvQStRIbxHYTivdSYx2JwlllSrueUtFcwysmGSXFKn2rJUAWLbAvwLdSgnCGmXzJaSKWOMneRAXw0Dcl5po5IOL07VsHs0zuWrMK0y1sE6U4iziEhaHEvy_c2YlzU_MpXKyPTtYi8xRafasZ9aLGOxONWGYKyUE4QlvNK8A&name=%E9%BB%91%E6%9A%97%E4%B9%8B%E6%98%9F"
+      }
+    },
+    {
+      "rank": 76,
+      "player": "火渡凯",
+      "score": 1385,
+      "month_games": 128,
+      "month_win_rate": 67.96875,
       "deck": {
         "name": "鹰身亚马逊",
         "main_category": "亚马逊",
@@ -1207,181 +1307,28 @@
           "鹰身",
           "亚马逊"
         ],
-        "code": "FeNM-Na-wJcEbBOk_OCdKAXyOLu0J-IDwTpP8N4jr1jQWU0Y7E5SyypU2cif3uYZWSfSbpnBOlW7aoRNsE6VdYJ0rvEykEXcjM6fBOlhJba1psE6Uw0OLVZF9WwrYcr5ENUhPr7z_dbsp10w0F_tfL3r6b8aynBOlVL6yPaV_lfWmfGtfUGDmqCmn7Q",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FeNM-Na-wJcEbBOk_OCdKAXyOLu0J-IDwTpP8N4jr1jQWU0Y7E5SyypU2cif3uYZWSfSbpnBOlW7aoRNsE6VdYJ0rvEykEXcjM6fBOlhJba1psE6Uw0OLVZF9WwrYcr5ENUhPr7z_dbsp10w0F_tfL3r6b8aynBOlVL6yPaV_lfWmfGtfUGDmqCmn7Q&name=%E5%9C%A8%E9%9B%A8%E5%90%8E%E9%86%92%E6%9D%A5"
-      }
-    },
-    {
-      "rank": 71,
-      "player": "lengsisi",
-      "score": 1389,
-      "month_games": 90,
-      "month_win_rate": 64.44444444444444,
-      "deck": {
-        "name": "莫忘",
-        "main_category": "莫忘",
-        "categories": [
-          "莫忘"
-        ],
-        "code": "FdlLGtLa0tka1nZFh83ktiyKmDbqDBzWX3KTe0Bht4bxHXrJ3cQSyypVERyudnEyJjZyJ_UEYNIRcsfCjeGYLv2_e3mfcNHgnSu1SqUoIrL8Bxu2fOkkr2xOXwe7dlOumPC96tIUTEVdk3-iFL7JN-NZSv8r61ZhZ8tnkmx6CVqJApp-1Q0WiDd6ic5KCcIKk2t6VKEKCp4BPvlP3T4",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FdlLGtLa0tka1nZFh83ktiyKmDbqDBzWX3KTe0Bht4bxHXrJ3cQSyypVERyudnEyJjZyJ_UEYNIRcsfCjeGYLv2_e3mfcNHgnSu1SqUoIrL8Bxu2fOkkr2xOXwe7dlOumPC96tIUTEVdk3-iFL7JN-NZSv8r61ZhZ8tnkmx6CVqJApp-1Q0WiDd6ic5KCcIKk2t6VKEKCp4BPvlP3T4&name=lengsisi"
-      }
-    },
-    {
-      "rank": 72,
-      "player": "青柠客",
-      "score": 1389,
-      "month_games": 85,
-      "month_win_rate": 64.70588235294117,
-      "deck": {
-        "name": "黑魔导混沌",
-        "main_category": "混沌",
-        "categories": [
-          "黑魔导",
-          "混沌"
-        ],
-        "code": "GvlWZ6WsXFR5u8OaeNR3iUi3yLAr8ECHUGDmqGwYYYbxHXsY7E5SyypV3PKWhs5E_zdG8R2GSXFKn2rKRdlXrl1QC5QBYtqVQDxI5vM86dvUSZO8iArQjwmTP5JkXmmjlIIjVtEelSXFMV0065ohfubMSVysj2hxarMrEDdQ58FU0hRMRV2Tf6H4aqU341lqO5KFV_lfXIK4q2oJWokCmn7dWGYK13qJzcE6V2qUIUFcGIKKngE-wA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GvlWZ6WsXFR5u8OaeNR3iUi3yLAr8ECHUGDmqGwYYYbxHXsY7E5SyypV3PKWhs5E_zdG8R2GSXFKn2rKRdlXrl1QC5QBYtqVQDxI5vM86dvUSZO8iArQjwmTP5JkXmmjlIIjVtEelSXFMV0065ohfubMSVysj2hxarMrEDdQ58FU0hRMRV2Tf6H4aqU341lqO5KFV_lfXIK4q2oJWokCmn7dWGYK13qJzcE6V2qUIUFcGIKKngE-wA&name=%E9%9D%92%E6%9F%A0%E5%AE%A2"
-      }
-    },
-    {
-      "rank": 73,
-      "player": "rnrztnj",
-      "score": 1388,
-      "month_games": 187,
-      "month_win_rate": 58.8235294117647,
-      "deck": {
-        "name": "升月",
-        "main_category": "升月",
-        "categories": [
-          "升月"
-        ],
-        "code": "FMqExLaHGxjRIUPZQ8hqv8xWd6prZzGXWszpMN4jsFxXuppZZUrbmGVk3MMrNBTT9qYI3HlDQafqISYo1mdX1HN5nnizHO2I7c02nXNENDi1WZWIG61kIZhNgmHylONk17Q_Cq5frFQvREI18DLii2jDWJC3_W_Pv1agwc1qCVqIuK91Rs5E_zcwys4FNP2qlCFBU8An5Sn7p8A",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FMqExLaHGxjRIUPZQ8hqv8xWd6prZzGXWszpMN4jsFxXuppZZUrbmGVk3MMrNBTT9qYI3HlDQafqISYo1mdX1HN5nnizHO2I7c02nXNENDi1WZWIG61kIZhNgmHylONk17Q_Cq5frFQvREI18DLii2jDWJC3_W_Pv1agwc1qCVqIuK91Rs5E_zcwys4FNP2qlCFBU8An5Sn7p8A&name=rnrztnj"
-      }
-    },
-    {
-      "rank": 74,
-      "player": "哼╯^╰",
-      "score": 1388,
-      "month_games": 82,
-      "month_win_rate": 63.41463414634146,
-      "deck": {
-        "name": "黑魔导黯蜜",
-        "main_category": "黯蜜",
-        "categories": [
-          "黑魔导",
-          "黯蜜"
-        ],
-        "code": "GfRM-NbTUd4k2Uyv96gwc1qCVqJDeI7BcV7qjGOxOUssqV0GfbDRTqtPBAUYzO_CZDZyJ_e5hlZN0bxHRdlXqmCNx6QKwr6cAi49O3qIr6jpA8E6V2v99eVshJhC4piumhxarJ2sReQlUXgy-tDVV9kgq__ZEWxwDIJ4jpZUdyUI3mTGlQkqzadKjYlQG3aLmCeNQU0_aoaLRBu9ROcJlIIg",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GfRM-NbTUd4k2Uyv96gwc1qCVqJDeI7BcV7qjGOxOUssqV0GfbDRTqtPBAUYzO_CZDZyJ_e5hlZN0bxHRdlXqmCNx6QKwr6cAi49O3qIr6jpA8E6V2v99eVshJhC4piumhxarJ2sReQlUXgy-tDVV9kgq__ZEWxwDIJ4jpZUdyUI3mTGlQkqzadKjYlQG3aLmCeNQU0_aoaLRBu9ROcJlIIg&name=%E5%93%BC%E2%95%AF%5E%E2%95%B0"
-      }
-    },
-    {
-      "rank": 75,
-      "player": "鄠县桑诗云",
-      "score": 1386,
-      "month_games": 98,
-      "month_win_rate": 68.36734693877551,
-      "deck": {
-        "name": "升月",
-        "main_category": "升月",
-        "categories": [
-          "升月"
-        ],
-        "code": "FMtM-Na_GxjRMUPZQq_h695DVf5is71TWzmMutZnSYbxHXrGgspSyypU2cif1MEbj0hoNP1EJMUKubco1mdX1HN5nnizHO0I7c02nXNENwoRjaHFqsysQN1rIQzTYO2KE2CYfSU42TXtD8KheiISi2jDUJC3_Uz41rpcVHlUFcVbqDBzWoJWoi4r3UmMdidQKaftQgQAwqUIUFlP3T4",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FMtM-Na_GxjRMUPZQq_h695DVf5is71TWzmMutZnSYbxHXrGgspSyypU2cif1MEbj0hoNP1EJMUKubco1mdX1HN5nnizHO0I7c02nXNENwoRjaHFqsysQN1rIQzTYO2KE2CYfSU42TXtD8KheiISi2jDUJC3_Uz41rpcVHlUFcVbqDBzWoJWoi4r3UmMdidQKaftQgQAwqUIUFlP3T4&name=%E9%84%A0%E5%8E%BF%E6%A1%91%E8%AF%97%E4%BA%91"
-      }
-    },
-    {
-      "rank": 76,
-      "player": "上海碇真",
-      "score": 1385,
-      "month_games": 104,
-      "month_win_rate": 68.26923076923077,
-      "deck": {
-        "name": "狱神奥义耀圣",
-        "main_category": "耀圣",
-        "categories": [
-          "狱神",
-          "奥义",
-          "耀圣"
-        ],
-        "code": "GfdhnJieilxv129Tut8h-ERnviyuNJCho_zBm2BwymtVMNV0Jdw1Bg5rDeI69LLKlSJSpwMXmqAtnIn-7mGVkmHkS9RgSNlgnSu1HGq8L2BDqcE6VriZSCJLfQPCFTVEmhxarLHtQFTtYi8vmTGFpky1ydjEcVU5HfKhXxjUfccGh8mNxwTpUqD4CDE341lp5ZDVjPjWuicpqdBTT9qpQhQUr35aKeAT8qGlwAA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GfdhnJieilxv129Tut8h-ERnviyuNJCho_zBm2BwymtVMNV0Jdw1Bg5rDeI69LLKlSJSpwMXmqAtnIn-7mGVkmHkS9RgSNlgnSu1HGq8L2BDqcE6VriZSCJLfQPCFTVEmhxarLHtQFTtYi8vmTGFpky1ydjEcVU5HfKhXxjUfccGh8mNxwTpUqD4CDE341lp5ZDVjPjWuicpqdBTT9qpQhQUr35aKeAT8qGlwAA&name=%E4%B8%8A%E6%B5%B7%E7%A2%87%E7%9C%9F"
+        "code": "E-jYEuCNgnSfvBOlAagwc1aE_EB4J0n-G8R164r3U2MdicpZZUqbORP83MMrKuYZWbgnSrdtUIm-CdKu8E6V3iZSCLwTpYSW2tabBOlMNgkLXaHFqshqkJ9fef7rZO9IEZLz-N2U66Q58FUx4XvVN-NZTgnSqlf5X15nxrZYx2JzApp-2u9ROalBOD1ShCgqeAT85T90-A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E-jYEuCNgnSfvBOlAagwc1aE_EB4J0n-G8R164r3U2MdicpZZUqbORP83MMrKuYZWbgnSrdtUIm-CdKu8E6V3iZSCLwTpYSW2tabBOlMNgkLXaHFqshqkJ9fef7rZO9IEZLz-N2U66Q58FUx4XvVN-NZTgnSqlf5X15nxrZYx2JzApp-2u9ROalBOD1ShCgqeAT85T90-A&name=%E7%81%AB%E6%B8%A1%E5%87%AF"
       }
     },
     {
       "rank": 77,
-      "player": "微小的祈祷",
-      "score": 1385,
-      "month_games": 324,
-      "month_win_rate": 55.24691358024691,
+      "player": "墨山河",
+      "score": 1382,
+      "month_games": 120,
+      "month_win_rate": 65.83333333333333,
       "deck": {
-        "name": "狱神奥义耀圣",
-        "main_category": "耀圣",
+        "name": "K9",
+        "main_category": "K9",
         "categories": [
-          "狱神",
-          "奥义",
-          "耀圣"
+          "K9"
         ],
-        "code": "GvehnJieXFR5kTlNT6KXG_Xb1O63yH4RGe-LK40kKGj_MGbYHDKa1Uw03Ql3DUGDmsN4jr0ssqVIlKnAxeaoC2cif5MPIl6jAkbFc9qV-CdK7UcarwvYEOpwTpWqW-geEz2bsoVNUSaHFqsse1AVO1iLy-ZMYlhMDcJ2MRxVTkd-vw8eVUK-Maj7jg3BOlSoPgIMTyyGrGfGteQVxVqXGYK6mLlgpdfdOgU0_aqUIUE",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GvehnJieXFR5kTlNT6KXG_Xb1O63yH4RGe-LK40kKGj_MGbYHDKa1Uw03Ql3DUGDmsN4jr0ssqVIlKnAxeaoC2cif5MPIl6jAkbFc9qV-CdK7UcarwvYEOpwTpWqW-geEz2bsoVNUSaHFqsse1AVO1iLy-ZMYlhMDcJ2MRxVTkd-vw8eVUK-Maj7jg3BOlSoPgIMTyyGrGfGteQVxVqXGYK6mLlgpdfdOgU0_aqUIUE&name=%E5%BE%AE%E5%B0%8F%E7%9A%84%E7%A5%88%E7%A5%B7"
+        "code": "GfiW-ER7IRtvGSeVa5CHLka2eOmrb0Amr_MlSbUMnZo9rBMyFOFwJDUetg1XjTOb9uoMHNYbxHXzivdTSyypUztUFVs5E_rX8v2lO3qIrNNCisE6V2zHeZGEykES4piullltaNYer7YDGpmpsoj1NE0S6cJLHEOfBVMeF71aQomI2INjNLfTGSb8aykqM0Wr6yPai4qPN0ErUSjHYnMCmn7a71E5qlCFBU8An3UNLgA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GfiW-ER7IRtvGSeVa5CHLka2eOmrb0Amr_MlSbUMnZo9rBMyFOFwJDUetg1XjTOb9uoMHNYbxHXzivdTSyypUztUFVs5E_rX8v2lO3qIrNNCisE6V2zHeZGEykES4piullltaNYer7YDGpmpsoj1NE0S6cJLHEOfBVMeF71aQomI2INjNLfTGSb8aykqM0Wr6yPai4qPN0ErUSjHYnMCmn7a71E5qlCFBU8An3UNLgA&name=%E5%A2%A8%E5%B1%B1%E6%B2%B3"
       }
     },
     {
       "rank": 78,
-      "player": "闪刀姬-零二",
-      "score": 1385,
-      "month_games": 46,
-      "month_win_rate": 71.73913043478261,
-      "deck": {
-        "name": "黑魔导黯蜜",
-        "main_category": "黯蜜",
-        "categories": [
-          "黑魔导",
-          "黯蜜"
-        ],
-        "code": "GPNqO8SbKZX-9QYOa9BK1EhvEdeuK91RjHYnKWWVKqDPthop1WnggKMZnfhMhs5E_zdG8R0XZV6yBWFfTgEXHp29RFfUdH9eQFQ7BOldr_fXlbISYRiZSCJcUxXTQ4tVk7WIvISqLwZfWhqq-yQVnBwWq__ZEWxwDIJ4jpZbzJjSoSVZpOlRsKoDbtFzBPGpnxrXgU0_bXeonMA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GPNqO8SbKZX-9QYOa9BK1EhvEdeuK91RjHYnKWWVKqDPthop1WnggKMZnfhMhs5E_zdG8R0XZV6yBWFfTgEXHp29RFfUdH9eQFQ7BOldr_fXlbISYRiZSCJcUxXTQ4tVk7WIvISqLwZfWhqq-yQVnBwWq__ZEWxwDIJ4jpZbzJjSoSVZpOlRsKoDbtFzBPGpnxrXgU0_bXeonMA&name=%E9%97%AA%E5%88%80%E5%A7%AC-%E9%9B%B6%E4%BA%8C"
-      }
-    },
-    {
-      "rank": 79,
-      "player": "めぐみん",
-      "score": 1384,
-      "month_games": 97,
-      "month_win_rate": 64.94845360824742,
-      "deck": {
-        "name": "升月",
-        "main_category": "升月",
-        "categories": [
-          "升月"
-        ],
-        "code": "EtlM-Na9GxjRIUPZQq_h685DVf5is71TWzmMutZnSaglaiQ3iOvnFe6klllSps5E_vcwystZnV9RzeZ54sxztiO3NNp1zRDQ4tVk7WIvMrEDdTsYji1kIZdsXVdabBMPl7Q_CoXoiEa-BlxRbRhqEhb_sXFR5ZQYOa0Y7E4gU0_a3eonOCBADC4MQUVPAJ90p-6f",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=EtlM-Na9GxjRIUPZQq_h685DVf5is71TWzmMutZnSaglaiQ3iOvnFe6klllSps5E_vcwystZnV9RzeZ54sxztiO3NNp1zRDQ4tVk7WIvMrEDdTsYji1kIZdsXVdabBMPl7Q_CoXoiEa-BlxRbRhqEhb_sXFR5ZQYOa0Y7E4gU0_a3eonOCBADC4MQUVPAJ90p-6f&name=%E3%82%81%E3%81%90%E3%81%BF%E3%82%93"
-      }
-    },
-    {
-      "rank": 80,
-      "player": "第一枪，相思！",
-      "score": 1384,
-      "month_games": 95,
-      "month_win_rate": 62.10526315789474,
-      "deck": {
-        "name": "60黑魔导城之内混沌",
-        "main_category": "混沌",
-        "categories": [
-          "黑魔导",
-          "城之内",
-          "混沌"
-        ],
-        "code": "JehM-Na6XFR5e8OaedR3iUi3yLApEVuHCU96tJ5KqnBOlEq_BAhVBg5r0ErUSG8R164r3U2MdicJZZUq7nlLQ2cif1ujeI7DJLilT7VlIuyr1y6oBdIAsW1BfgW6VQDxEr6G8RzeZ50y-ZLp29RGkiljjJ3kQLBOldq0I8IXw0DcgnxVFLzTRyQcXp1IIjVNEelSb8_FSuKYrqwTpTjTrmiGViBupo-vqQmGFGm_GstR3JQi-sj2lf5X1xnxrXi4qPLIK4q2UGDmsCmn7a71E5qlCFBpT90-",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=JehM-Na6XFR5e8OaedR3iUi3yLApEVuHCU96tJ5KqnBOlEq_BAhVBg5r0ErUSG8R164r3U2MdicJZZUq7nlLQ2cif1ujeI7DJLilT7VlIuyr1y6oBdIAsW1BfgW6VQDxEr6G8RzeZ50y-ZLp29RGkiljjJ3kQLBOldq0I8IXw0DcgnxVFLzTRyQcXp1IIjVNEelSb8_FSuKYrqwTpTjTrmiGViBupo-vqQmGFGm_GstR3JQi-sj2lf5X1xnxrXi4qPLIK4q2UGDmsCmn7a71E5qlCFBpT90-&name=%E7%AC%AC%E4%B8%80%E6%9E%AA%EF%BC%8C%E7%9B%B8%E6%80%9D%EF%BC%81"
-      }
-    },
-    {
-      "rank": 81,
       "player": "你害怕就对了",
       "score": 1380,
       "month_games": 183,
@@ -1398,24 +1345,24 @@
       }
     },
     {
-      "rank": 82,
-      "player": "凤尾侠",
-      "score": 1378,
-      "month_games": 65,
-      "month_win_rate": 75.38461538461539,
+      "rank": 79,
+      "player": "まじゅつし",
+      "score": 1380,
+      "month_games": 88,
+      "month_win_rate": 72.72727272727273,
       "deck": {
-        "name": "鹰身亚马逊",
-        "main_category": "亚马逊",
+        "name": "阿不思罪宝",
+        "main_category": "罪宝",
         "categories": [
-          "鹰身",
-          "亚马逊"
+          "阿不思",
+          "罪宝"
         ],
-        "code": "F-VM-Na8wJcEbBOk_eCdKAlBg5q0ErURoT8QHgnSf4bxHX0Y7E4RTYDAlllSps5E_rQT3j3BOlW7aoRNaV6q1YJ0q7wTpXcJlIIq5GZ1WCdLCcE6WGltrWmwTpTCLOISGkGugrQ4l-bF1XWg22ulPgvPa-8_3UZLz-N2U66Xybmem_GspX-V9aZ8a11QYOatBK1ElvNK6le_LQA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=F-VM-Na8wJcEbBOk_eCdKAlBg5q0ErURoT8QHgnSf4bxHX0Y7E4RTYDAlllSps5E_rQT3j3BOlW7aoRNaV6q1YJ0q7wTpXcJlIIq5GZ1WCdLCcE6WGltrWmwTpTCLOISGkGugrQ4l-bF1XWg22ulPgvPa-8_3UZLz-N2U66Xybmem_GspX-V9aZ8a11QYOatBK1ElvNK6le_LQA&name=%E5%87%A4%E5%B0%BE%E4%BE%A0"
+        "code": "HfVSRxtlE7CBUDQ0b6RZVc4zMxqtLaFhlMr_eoMHNYbxHY0Y7E5SyypVYJ0oFs5E_rdG8R7BOlFMY3tZanMf9HN5nlTt6iTGEKu2aMx1eCdK7QWLZ34J0rPEykEakFiSpM_kmNc1ZjcE6WM0SANdcUxXTgnSmmnXNEKw_M6aHFqskDtjpO1iLy-ZMYlS0MVMrEDdTsYjiqnI75wTpT6b8ay4z41s5cVHmaCVqIqUIUGlP3T4",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HfVSRxtlE7CBUDQ0b6RZVc4zMxqtLaFhlMr_eoMHNYbxHY0Y7E5SyypVYJ0oFs5E_rdG8R7BOlFMY3tZanMf9HN5nlTt6iTGEKu2aMx1eCdK7QWLZ34J0rPEykEakFiSpM_kmNc1ZjcE6WM0SANdcUxXTgnSmmnXNEKw_M6aHFqskDtjpO1iLy-ZMYlS0MVMrEDdTsYjiqnI75wTpT6b8ay4z41s5cVHmaCVqIqUIUGlP3T4&name=%E3%81%BE%E3%81%98%E3%82%85%E3%81%A4%E3%81%97"
       }
     },
     {
-      "rank": 83,
+      "rank": 80,
       "player": "上弦之酸",
       "score": 1378,
       "month_games": 58,
@@ -1432,7 +1379,7 @@
       }
     },
     {
-      "rank": 84,
+      "rank": 81,
       "player": "逃往别个星球",
       "score": 1377,
       "month_games": 60,
@@ -1450,7 +1397,7 @@
       }
     },
     {
-      "rank": 85,
+      "rank": 82,
       "player": "一之瀨帆波",
       "score": 1376,
       "month_games": 241,
@@ -1467,24 +1414,110 @@
       }
     },
     {
-      "rank": 86,
-      "player": "一群好事之徒",
-      "score": 1376,
-      "month_games": 97,
-      "month_win_rate": 68.04123711340206,
+      "rank": 83,
+      "player": "aiharatokimi",
+      "score": 1372,
+      "month_games": 87,
+      "month_win_rate": 66.66666666666667,
       "deck": {
-        "name": "黑魔导黯蜜",
-        "main_category": "黯蜜",
+        "name": "狱神奥义耀圣",
+        "main_category": "耀圣",
         "categories": [
-          "黑魔导",
-          "黯蜜"
+          "狱神",
+          "奥义",
+          "耀圣"
         ],
-        "code": "GfxqO8SjKZX-9QYOa9BK1EhvEdeuK91NjHYnKWWVKqDPthop1WnggKMZnfhMhs5E_rcwysm6N4jouyr1kCsK-nAIuPTt6iS-o6P68gKh2CdK7X--vK2QkwiEykES4piumhxarJ2sReQlUXgy-tDVV9kgrODgtV_-yItjgGQTxHSy3mTGlQkqzadKjYVQG3aLmCeNTPjWurGh2JE2AIKCmn7UwRuPKBWFfUNFohXeonNUoQoKV78tFPAJ90p-6fA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GfxqO8SjKZX-9QYOa9BK1EhvEdeuK91NjHYnKWWVKqDPthop1WnggKMZnfhMhs5E_rcwysm6N4jouyr1kCsK-nAIuPTt6iS-o6P68gKh2CdK7X--vK2QkwiEykES4piumhxarJ2sReQlUXgy-tDVV9kgrODgtV_-yItjgGQTxHSy3mTGlQkqzadKjYVQG3aLmCeNTPjWurGh2JE2AIKCmn7UwRuPKBWFfUNFohXeonNUoQoKV78tFPAJ90p-6fA&name=%E4%B8%80%E7%BE%A4%E5%A5%BD%E4%BA%8B%E4%B9%8B%E5%BE%92"
+        "code": "GfhhnJieilxv129Tut8h-ERnviyuNJCho_zBm2BwymtVMNV0Jdw1Bg5rDeI6_cV7qSWWVKkSlTgQvNUBbORP73MMrJMPIl6jAkbFc9qVqONV4XsCHViZSCJLfQPCZ7N2UefAAoVNUSaHFqsse1AVO1iLy-ZMYk7GI4qpyO-VCvjGo-44NwTpUqD4CDHBOlTp5ZDVjPjWv0ErUSjHYnECmn7VHGq8KlCFBU8An3UNLgA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GfhhnJieilxv129Tut8h-ERnviyuNJCho_zBm2BwymtVMNV0Jdw1Bg5rDeI6_cV7qSWWVKkSlTgQvNUBbORP73MMrJMPIl6jAkbFc9qVqONV4XsCHViZSCJLfQPCZ7N2UefAAoVNUSaHFqsse1AVO1iLy-ZMYk7GI4qpyO-VCvjGo-44NwTpUqD4CDHBOlTp5ZDVjPjWv0ErUSjHYnECmn7VHGq8KlCFBU8An3UNLgA&name=aiharatokimi"
+      }
+    },
+    {
+      "rank": 84,
+      "player": "盖尔睡觉好耶",
+      "score": 1371,
+      "month_games": 57,
+      "month_win_rate": 70.17543859649123,
+      "deck": {
+        "name": "混沌",
+        "main_category": "混沌",
+        "categories": [
+          "混沌"
+        ],
+        "code": "FvNM-Na-XFR5e8OaecLXhpi3yLAr8ECGG8R2E4r3UqMdicJZZUq7nlLQ2cif5ujeI7DJLiVT7Vk5dUAuUAWLbpl8yVk7yIHfn3-F8NA3JeaaOSDi9MuKYrpfubMSVysj2hxarMUWn2bviuu2M-tFl9aGrYuq60JhhRofhqpTfjWUvrI9ps8k2Pfn39VShCgrgxBR",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FvNM-Na-XFR5e8OaecLXhpi3yLAr8ECGG8R2E4r3UqMdicJZZUq7nlLQ2cif5ujeI7DJLiVT7Vk5dUAuUAWLbpl8yVk7yIHfn3-F8NA3JeaaOSDi9MuKYrpfubMSVysj2hxarMUWn2bviuu2M-tFl9aGrYuq60JhhRofhqpTfjWUvrI9ps8k2Pfn39VShCgrgxBR&name=%E7%9B%96%E5%B0%94%E7%9D%A1%E8%A7%89%E5%A5%BD%E8%80%B6"
+      }
+    },
+    {
+      "rank": 85,
+      "player": "泰阿",
+      "score": 1371,
+      "month_games": 28,
+      "month_win_rate": 85.71428571428571,
+      "deck": {
+        "name": "狱神奥义耀圣",
+        "main_category": "耀圣",
+        "categories": [
+          "狱神",
+          "奥义",
+          "耀圣"
+        ],
+        "code": "GvhhnJiaJymp9FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R2C4r3UqMdidJZZUrRKVOBi81QFs5E_vcwyskw8iXqMCRsbyAqHI41XhewIdSW-geEKmqJNDi1WWPagKnaxF5fMmMSwmBuE7GI4qpyO-T8-pgqFfGNR9xwaHyY3EHwEGJvxrKTyyGrlxUeboJWokCmn7a71E5qlCFBU8An4yn7p-oaXAI",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GvhhnJiaJymp9FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R2C4r3UqMdidJZZUrRKVOBi81QFs5E_vcwyskw8iXqMCRsbyAqHI41XhewIdSW-geEKmqJNDi1WWPagKnaxF5fMmMSwmBuE7GI4qpyO-T8-pgqFfGNR9xwaHyY3EHwEGJvxrKTyyGrlxUeboJWokCmn7a71E5qlCFBU8An4yn7p-oaXAI&name=%E6%B3%B0%E9%98%BF"
+      }
+    },
+    {
+      "rank": 86,
+      "player": "lengsisi",
+      "score": 1371,
+      "month_games": 95,
+      "month_win_rate": 63.1578947368421,
+      "deck": {
+        "name": "莫忘",
+        "main_category": "莫忘",
+        "categories": [
+          "莫忘"
+        ],
+        "code": "FdlLGtLa0tka1nZFh83ktiyKmDbqDBzWX3KTe0Bht4bxHXrJ3cQSyypVERyudnEyJjZyJ_UEYNIRcsfCjeGYLv2_e3mfcNHgnSu1SqUoIrL8Bxu2fOkkr2xOXwe7dlOumPC96tIUTEVdk3-iFL7JN-NZSv8r61ZhZ8tnkmx6CVqJApp-1Q0WiDd6ic5KCcIKk2t6VKEKCp4BPvlP3T4",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FdlLGtLa0tka1nZFh83ktiyKmDbqDBzWX3KTe0Bht4bxHXrJ3cQSyypVERyudnEyJjZyJ_UEYNIRcsfCjeGYLv2_e3mfcNHgnSu1SqUoIrL8Bxu2fOkkr2xOXwe7dlOumPC96tIUTEVdk3-iFL7JN-NZSv8r61ZhZ8tnkmx6CVqJApp-1Q0WiDd6ic5KCcIKk2t6VKEKCp4BPvlP3T4&name=lengsisi"
       }
     },
     {
       "rank": 87,
+      "player": "管理员@终末地",
+      "score": 1371,
+      "month_games": 58,
+      "month_win_rate": 65.51724137931035,
+      "deck": {
+        "name": "60黑魔导罪宝混沌",
+        "main_category": "混沌",
+        "categories": [
+          "黑魔导",
+          "罪宝",
+          "混沌"
+        ],
+        "code": "J_tWZ6X6uNTkK8OaeNR3iUYnYQGxOwgRidhArgnShEt8iwagwc16CVqJDeI7BLLKlSJOdMqsHx-WCdKB7nlLQ2cif5ujeI7DJLilT7VlIuyr1y6oBcmCNx5olPrrU5j_m051KKALFtSqAeJp29RJk7yIDNGY6vBOldr9BdI8E6VniZSCKTP5JjgnSxkvNNHKQRGrXFMV04J0ppi_vrSsPzOkZLz-Ic-CqY8L3qmj6-pV2Tf6b8ay1HclCq_yvsS0fG4qA27RM-Na6Z8a2Uz41tL-Z1rnFe6kuK91NQ4f3kCmn7Ut7sSqS6MWVKEKCA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=J_tWZ6X6uNTkK8OaeNR3iUYnYQGxOwgRidhArgnShEt8iwagwc16CVqJDeI7BLLKlSJOdMqsHx-WCdKB7nlLQ2cif5ujeI7DJLilT7VlIuyr1y6oBcmCNx5olPrrU5j_m051KKALFtSqAeJp29RJk7yIDNGY6vBOldr9BdI8E6VniZSCKTP5JjgnSxkvNNHKQRGrXFMV04J0ppi_vrSsPzOkZLz-Ic-CqY8L3qmj6-pV2Tf6b8ay1HclCq_yvsS0fG4qA27RM-Na6Z8a2Uz41tL-Z1rnFe6kuK91NQ4f3kCmn7Ut7sSqS6MWVKEKCA&name=%E7%AE%A1%E7%90%86%E5%91%98%40%E7%BB%88%E6%9C%AB%E5%9C%B0"
+      }
+    },
+    {
+      "rank": 88,
+      "player": "凤尾侠",
+      "score": 1370,
+      "month_games": 73,
+      "month_win_rate": 72.6027397260274,
+      "deck": {
+        "name": "鹰身亚马逊",
+        "main_category": "亚马逊",
+        "categories": [
+          "鹰身",
+          "亚马逊"
+        ],
+        "code": "F-lM-Na8wJcEbBOk_eCdKAlBg5q0ErURoT8QHgnSf4bxHX0Y7E4RTYDAlllSps5E_rQT3j3BOlW7aoRNaV6q1YJ0q7wTpXcJlIIq5GZ1WCdLCcE6WGltrWmwTpTCLOISGkGugrQ4l-bF1XWg22ulPgvPa-8_3UZLz-N2U66Xybmem_GspX-V9aZ8a11QYOatBK1ElvNK6qUIUFcGIKKV78tFPAJ91DS4BA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=F-lM-Na8wJcEbBOk_eCdKAlBg5q0ErURoT8QHgnSf4bxHX0Y7E4RTYDAlllSps5E_rQT3j3BOlW7aoRNaV6q1YJ0q7wTpXcJlIIq5GZ1WCdLCcE6WGltrWmwTpTCLOISGkGugrQ4l-bF1XWg22ulPgvPa-8_3UZLz-N2U66Xybmem_GspX-V9aZ8a11QYOatBK1ElvNK6qUIUFcGIKKV78tFPAJ91DS4BA&name=%E5%87%A4%E5%B0%BE%E4%BE%A0"
+      }
+    },
+    {
+      "rank": 89,
       "player": "幸运守恒BalanceLuck",
       "score": 1369,
       "month_games": 45,
@@ -1500,47 +1533,11 @@
       }
     },
     {
-      "rank": 88,
-      "player": "wwt111",
-      "score": 1368,
-      "month_games": 61,
-      "month_win_rate": 75.40983606557377,
-      "deck": {
-        "name": "黑魔导罪宝混沌归光",
-        "main_category": "归光",
-        "categories": [
-          "黑魔导",
-          "罪宝",
-          "混沌",
-          "归光"
-        ],
-        "code": "H_lSmK6Ssz0u1dh4ZZcVHlbw5p5ROwgNLfIsGoMHNWhMfrIbBhhhvEdepQRB5LLKlXc8paGzkT-t0bxH1nT0ewyS4pU-1ZSLsq9USnr78TuI-bTnUooAsW1KoB4mnb1EWaMx1T9BdIVhCsrJn8ktLzTRykERqlxTFdIJji7Yv760rD8zpGS8_iHPgqk0fX1ITDCjVdk3-h-GqlN-NZSjuShF9ZHtq_yvrSwPEJUErUSBTT9urDMFW71E5yUE4PZO8iAqUIUFcGIKIA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=H_lSmK6Ssz0u1dh4ZZcVHlbw5p5ROwgNLfIsGoMHNWhMfrIbBhhhvEdepQRB5LLKlXc8paGzkT-t0bxH1nT0ewyS4pU-1ZSLsq9USnr78TuI-bTnUooAsW1KoB4mnb1EWaMx1T9BdIVhCsrJn8ktLzTRykERqlxTFdIJji7Yv760rD8zpGS8_iHPgqk0fX1ITDCjVdk3-h-GqlN-NZSjuShF9ZHtq_yvrSwPEJUErUSBTT9urDMFW71E5yUE4PZO8iAqUIUFcGIKIA&name=wwt111"
-      }
-    },
-    {
-      "rank": 89,
-      "player": "黑暗之星",
-      "score": 1367,
-      "month_games": 86,
-      "month_win_rate": 61.627906976744185,
-      "deck": {
-        "name": "城之内混沌",
-        "main_category": "混沌",
-        "categories": [
-          "城之内",
-          "混沌"
-        ],
-        "code": "GNOM-Na_eHNPEt8iwYSnvVpPJVVYJ0onUGDmvQStRIbxHYTivdSYx2JwlllSrueUtFcwysmGSXFKn2rJUAWLbAvwLdSgnCGmXzJaSKWOMneRAXw0Dcl5po5IOL07VsHs0zuWrMK0y1sE6U4iziEhaHEvy_c2YlzU_MpXKyPTtYi8xRafasZ9aLGOxONWGYKy3mle",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GNOM-Na_eHNPEt8iwYSnvVpPJVVYJ0onUGDmvQStRIbxHYTivdSYx2JwlllSrueUtFcwysmGSXFKn2rJUAWLbAvwLdSgnCGmXzJaSKWOMneRAXw0Dcl5po5IOL07VsHs0zuWrMK0y1sE6U4iziEhaHEvy_c2YlzU_MpXKyPTtYi8xRafasZ9aLGOxONWGYKy3mle&name=%E9%BB%91%E6%9A%97%E4%B9%8B%E6%98%9F"
-      }
-    },
-    {
       "rank": 90,
-      "player": "系统问题",
-      "score": 1366,
-      "month_games": 631,
-      "month_win_rate": 58.478605388272584,
+      "player": "飉",
+      "score": 1367,
+      "month_games": 179,
+      "month_win_rate": 56.42458100558659,
       "deck": {
         "name": "狱神奥义耀圣",
         "main_category": "耀圣",
@@ -1549,12 +1546,46 @@
           "奥义",
           "耀圣"
         ],
-        "code": "HPdhnJiaZ8a10uKjyonKanSFT90opcb9dvU7rfIfhEZ74srjSQoaP8wZtgcMprVTDVdCXcNQYOaw3iOvSyypVi81QFs5E_qYeRL1GBI2L6jo_8E6V3o41XhewIdTDjDcGtDOvpb6B4WY2poywwqxCpqiTQ4tVk7WIvL5kxhTsYjiqnI79UK-MamYxKE7JaQuCdKlQfAQY4J0qdPLIavQStROmLlgzivdSox2JwkHF6ZIpufWmXzJQA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HPdhnJiaZ8a10uKjyonKanSFT90opcb9dvU7rfIfhEZ74srjSQoaP8wZtgcMprVTDVdCXcNQYOaw3iOvSyypVi81QFs5E_qYeRL1GBI2L6jo_8E6V3o41XhewIdTDjDcGtDOvpb6B4WY2poywwqxCpqiTQ4tVk7WIvL5kxhTsYjiqnI79UK-MamYxKE7JaQuCdKlQfAQY4J0qdPLIavQStROmLlgzivdSox2JwkHF6ZIpufWmXzJQA&name=%E7%B3%BB%E7%BB%9F%E9%97%AE%E9%A2%98"
+        "code": "GvxhnJieXFR5ZFLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzXoJWokN4jr0ssqVIlKnAheaoC2cif1MPIl6ue1K2gnvH-CdK7kcarwvYEOpEykESW-geEz2bsoVNUSaHFqsse1AVO1iLy-ZMYU7GI4qpyO_YKGC6qFfGNR9xwbgnSpUHwEGMT8WyTyyGrGfGtdcV7qjGOxOq5hlZoKaftbvUTmiZSCJUoQoLWhnX0r35aKeAT8qGlwCA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GvxhnJieXFR5ZFLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzXoJWokN4jr0ssqVIlKnAheaoC2cif1MPIl6ue1K2gnvH-CdK7kcarwvYEOpEykESW-geEz2bsoVNUSaHFqsse1AVO1iLy-ZMYU7GI4qpyO_YKGC6qFfGNR9xwbgnSpUHwEGMT8WyTyyGrGfGtdcV7qjGOxOq5hlZoKaftbvUTmiZSCJUoQoLWhnX0r35aKeAT8qGlwCA&name=%E9%A3%89"
       }
     },
     {
       "rank": 91,
+      "player": "rnrztnj",
+      "score": 1367,
+      "month_games": 202,
+      "month_win_rate": 58.415841584158414,
+      "deck": {
+        "name": "升月",
+        "main_category": "升月",
+        "categories": [
+          "升月"
+        ],
+        "code": "FMqExLaHGxjRIUPZQ8hqv8xWd6prZzGXWszpMN4jsFxXuppZZUrbmGVk3MMrNBTT9qYI3HlDQafqISYo1mdX1HN5nnizHO2I7c02nXNENDi1WZWIG61kIZhNgmHylONk17Q_Cq5frFQvREI18DLii2jDWJC3_W_Pv1agwc1qCVqIuK91Rs5E_zcwys4FNP2qlCFBU8An5Sn7p8A",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FMqExLaHGxjRIUPZQ8hqv8xWd6prZzGXWszpMN4jsFxXuppZZUrbmGVk3MMrNBTT9qYI3HlDQafqISYo1mdX1HN5nnizHO2I7c02nXNENDi1WZWIG61kIZhNgmHylONk17Q_Cq5frFQvREI18DLii2jDWJC3_W_Pv1agwc1qCVqIuK91Rs5E_zcwys4FNP2qlCFBU8An5Sn7p8A&name=rnrztnj"
+      }
+    },
+    {
+      "rank": 92,
+      "player": "大开辟",
+      "score": 1365,
+      "month_games": 94,
+      "month_win_rate": 60.638297872340424,
+      "deck": {
+        "name": "狱神奥义耀圣",
+        "main_category": "耀圣",
+        "categories": [
+          "狱神",
+          "奥义",
+          "耀圣"
+        ],
+        "code": "HPxXYeGTDOTE0uKjzInKanUUuN-u3qd1vkPwiM98WVxpIUNH-YM2wOGU1qphquhLuGoMHNaglaiQ3iOvUoIg8lllSvF5qgLZyJ_W5hlZph5EvUYEjYrntSvwTpXcjjVeF7Ah1Jb6B4Qqaok0OLVZY9qAqdrEXl8yYxJ2MRxVTkd-yRYzNgoYLqoV8Y2tes0OCdKlTR9fUg-AgxPLIaqZ8a2kuKjzKCuKti4zBWuK91RjHYnSCmn7UuWPhKUE4QVKEKC1oZ19K9-WgA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HPxXYeGTDOTE0uKjzInKanUUuN-u3qd1vkPwiM98WVxpIUNH-YM2wOGU1qphquhLuGoMHNaglaiQ3iOvUoIg8lllSvF5qgLZyJ_W5hlZph5EvUYEjYrntSvwTpXcjjVeF7Ah1Jb6B4Qqaok0OLVZY9qAqdrEXl8yYxJ2MRxVTkd-yRYzNgoYLqoV8Y2tes0OCdKlTR9fUg-AgxPLIaqZ8a2kuKjzKCuKti4zBWuK91RjHYnSCmn7UuWPhKUE4QVKEKC1oZ19K9-WgA&name=%E5%A4%A7%E5%BC%80%E8%BE%9F"
+      }
+    },
+    {
+      "rank": 93,
       "player": "次元超越阿桃",
       "score": 1365,
       "month_games": 147,
@@ -1570,7 +1601,25 @@
       }
     },
     {
-      "rank": 92,
+      "rank": 94,
+      "player": "米宝躺平ing ",
+      "score": 1365,
+      "month_games": 203,
+      "month_win_rate": 61.576354679802954,
+      "deck": {
+        "name": "60绚岚闪刀混沌",
+        "main_category": "混沌",
+        "categories": [
+          "绚岚",
+          "闪刀",
+          "混沌"
+        ],
+        "code": "JOVM-Na_eHNPEt8iwZjejNUc92_qDBzVoJWojMzpv1nRS6w3iOvnFe6lRjsTpLLKlXc8paGzkT-1zDKybo3iOqfasrLqgFyYI3HlDRaITw9aQUAWLahRJ-_Eo1vOTjw0Y5vM8qDWrqkoJwgvqOj9gAMPrJ3kQK7kK0-CdK7RMpBEl5po5cUxXTTrmiGViBu0iMZxTfjWWvBgdtj1UhLd5pVUQMiWJfpPDXi2n6vFtP5rPIRKBadEYz41r5cVHmkFcVbApp-3u9ROYA",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=JOVM-Na_eHNPEt8iwZjejNUc92_qDBzVoJWojMzpv1nRS6w3iOvnFe6lRjsTpLLKlXc8paGzkT-1zDKybo3iOqfasrLqgFyYI3HlDRaITw9aQUAWLahRJ-_Eo1vOTjw0Y5vM8qDWrqkoJwgvqOj9gAMPrJ3kQK7kK0-CdK7RMpBEl5po5cUxXTTrmiGViBu0iMZxTfjWWvBgdtj1UhLd5pVUQMiWJfpPDXi2n6vFtP5rPIRKBadEYz41r5cVHmkFcVbApp-3u9ROYA&name=%E7%B1%B3%E5%AE%9D%E8%BA%BA%E5%B9%B3ing%20"
+      }
+    },
+    {
+      "rank": 95,
       "player": "KlavinSY",
       "score": 1365,
       "month_games": 26,
@@ -1588,39 +1637,41 @@
       }
     },
     {
-      "rank": 93,
-      "player": "盖尔睡觉好耶",
-      "score": 1365,
-      "month_games": 51,
-      "month_win_rate": 72.54901960784314,
-      "deck": {
-        "name": "混沌",
-        "main_category": "混沌",
-        "categories": [
-          "混沌"
-        ],
-        "code": "FvNM-Na-XFR5e8OaecLXhpi3yLAr8ECGG8R2E4r3UqMdicJZZUq7nlLQ2cif5ujeI7DJLiVT7Vk5dUAuUAWLbpl8yVk7yIHfn3-F8NA3JeaaOSDi9MuKYrpfubMSVysj2hxarMUWn2bviuu2M-tFl9aGrYuq60JhhRofhqpTfjWUvrI9ps8k2Pfn39VShCgrgxBR",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FvNM-Na-XFR5e8OaecLXhpi3yLAr8ECGG8R2E4r3UqMdicJZZUq7nlLQ2cif5ujeI7DJLiVT7Vk5dUAuUAWLbpl8yVk7yIHfn3-F8NA3JeaaOSDi9MuKYrpfubMSVysj2hxarMUWn2bviuu2M-tFl9aGrYuq60JhhRofhqpTfjWUvrI9ps8k2Pfn39VShCgrgxBR&name=%E7%9B%96%E5%B0%94%E7%9D%A1%E8%A7%89%E5%A5%BD%E8%80%B6"
-      }
-    },
-    {
-      "rank": 94,
-      "player": "_Orochi_",
-      "score": 1361,
-      "month_games": 85,
-      "month_win_rate": 64.70588235294117,
+      "rank": 96,
+      "player": "Busbuster",
+      "score": 1364,
+      "month_games": 69,
+      "month_win_rate": 60.869565217391305,
       "deck": {
         "name": "三幻魔",
         "main_category": "三幻魔",
         "categories": [
           "三幻魔"
         ],
-        "code": "FPlXYeGWv7FJe3w4wJbATLStc-fqDBzWG8R16lBEHkssqVbhmHCbORP73MMrJDW-6Wk-tiarMMD-CdK7wJnMXPs9lqEykESv0x50PDtZo6VToYa6QYjJefxuynXaHPgqkJnmhKsF0VTR9fUt1kAVD8NVKb8aylCvKypzvu8VAbdpGfGtmLio81QStRIFNP2xgjceaswwOqUIUFTwCfdQ0uAA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FPlXYeGWv7FJe3w4wJbATLStc-fqDBzWG8R16lBEHkssqVbhmHCbORP73MMrJDW-6Wk-tiarMMD-CdK7wJnMXPs9lqEykESv0x50PDtZo6VToYa6QYjJefxuynXaHPgqkJnmhKsF0VTR9fUt1kAVD8NVKb8aylCvKypzvu8VAbdpGfGtmLio81QStRIFNP2xgjceaswwOqUIUFTwCfdQ0uAA&name=_Orochi_"
+        "code": "FPlM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R164r3UlxXuppZZUr3DMOE2cif7uYZWSGt90tJ9bE9WYYHwJnMXPs9lrEykESv0x50PDtZI6VToYa6QYjJefxuynXSHPgqkJnmhKsF0VTR9fUt1kAVN-NZShXlZU533eKgNu0bPJNimfGtfLio8rGOxOIFNP2qlCFBU8An2yn7p9oaXADQ0uAQ",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FPlM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R164r3UlxXuppZZUr3DMOE2cif7uYZWSGt90tJ9bE9WYYHwJnMXPs9lrEykESv0x50PDtZI6VToYa6QYjJefxuynXSHPgqkJnmhKsF0VTR9fUt1kAVN-NZShXlZU533eKgNu0bPJNimfGtfLio8rGOxOIFNP2qlCFBU8An2yn7p9oaXADQ0uAQ&name=Busbuster"
       }
     },
     {
-      "rank": 95,
+      "rank": 97,
+      "player": "布吚布吚",
+      "score": 1361,
+      "month_games": 181,
+      "month_win_rate": 62.430939226519335,
+      "deck": {
+        "name": "60城之内道化混沌",
+        "main_category": "混沌",
+        "categories": [
+          "城之内",
+          "道化",
+          "混沌"
+        ],
+        "code": "I-rvDmnlOWn3-Frw0xb5FgSUtIRhKe9Vk8lVSvwQIZQYOa9BK1EhvEdglllSrueUtDZyJ_m6N4jsMkuKVPtWVKMdxlFTEXaMcamEnAHL5dUAubh_QZIAsW2ObzPOmXzJaSKWOMneRAp7BERNnVmJblW8q-GgbmFoFMtAjj4i800csxtTRIOL064piumnXNEJ4SmhSuVkexRafZlYgbtY2012X1oati6rra4Ft6nLbwVR3JQsZ8a2YuKjzKgwc1qYuWCsaCypc6scSCmn7azC74N3qJzsE6V2",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=I-rvDmnlOWn3-Frw0xb5FgSUtIRhKe9Vk8lVSvwQIZQYOa9BK1EhvEdglllSrueUtDZyJ_m6N4jsMkuKVPtWVKMdxlFTEXaMcamEnAHL5dUAubh_QZIAsW2ObzPOmXzJaSKWOMneRAp7BERNnVmJblW8q-GgbmFoFMtAjj4i800csxtTRIOL064piumnXNEJ4SmhSuVkexRafZlYgbtY2012X1oati6rra4Ft6nLbwVR3JQsZ8a2YuKjzKgwc1qYuWCsaCypc6scSCmn7azC74N3qJzsE6V2&name=%E5%B8%83%E5%90%9A%E5%B8%83%E5%90%9A"
+      }
+    },
+    {
+      "rank": 98,
       "player": "海豹球i",
       "score": 1361,
       "month_games": 42,
@@ -1637,7 +1688,25 @@
       }
     },
     {
-      "rank": 96,
+      "rank": 99,
+      "player": "蜜柑的蜜瓜包",
+      "score": 1360,
+      "month_games": 157,
+      "month_win_rate": 58.59872611464968,
+      "deck": {
+        "name": "狱神奥义耀圣",
+        "main_category": "耀圣",
+        "categories": [
+          "狱神",
+          "奥义",
+          "耀圣"
+        ],
+        "code": "HPthnJiaQqfutFLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2C4r3UlxXuppZZUqRKVOBC81QFs5E_3cwys0w8iXqMCRsVz2pX4J0rtRxqvC9gQ6nBOlapb6B4Y5ZWyhU1RJocWqyx7UBU7WIvL5kxhTsYjiqnI75goYLqoV8Y1H3HBofJjccE6VKg-AgxPLIaqZ8a10TlNTuCdKNox2JzApp-1Q0WiGJlIIlShCgtaGdfU8An22DoXE",
+        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=HPthnJiaQqfutFLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaboS7hqDBzWG8R2C4r3UlxXuppZZUqRKVOBC81QFs5E_3cwys0w8iXqMCRsVz2pX4J0rtRxqvC9gQ6nBOlapb6B4Y5ZWyhU1RJocWqyx7UBU7WIvL5kxhTsYjiqnI75goYLqoV8Y1H3HBofJjccE6VKg-AgxPLIaqZ8a10TlNTuCdKNox2JzApp-1Q0WiGJlIIlShCgtaGdfU8An22DoXE&name=%E8%9C%9C%E6%9F%91%E7%9A%84%E8%9C%9C%E7%93%9C%E5%8C%85"
+      }
+    },
+    {
+      "rank": 100,
       "player": "一只鸮",
       "score": 1360,
       "month_games": 165,
@@ -1652,76 +1721,6 @@
         ],
         "code": "FepM-Na7Wzx06_Pvx1f5kq2BLgjYJ0n5wTpQGoMHNV8ji8NCfiA8E6T_DeI69LLKlTZyJ_XBOlW7aoRNsE6Vd4J0ruEykEdcjM6vBOlhJba1psE6Uw0g10FgMamaCfRI00TRLp8F57Q1SE-vvP91jwveqD4CDEFc1SLkogdV_lfWmfGteQVxVtQStRKMdidIKaftrvUTmqUIUFK9-WingE-6U_dPgA",
         "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=FepM-Na7Wzx06_Pvx1f5kq2BLgjYJ0n5wTpQGoMHNV8ji8NCfiA8E6T_DeI69LLKlTZyJ_XBOlW7aoRNsE6Vd4J0ruEykEdcjM6vBOlhJba1psE6Uw0g10FgMamaCfRI00TRLp8F57Q1SE-vvP91jwveqD4CDEFc1SLkogdV_lfWmfGteQVxVtQStRKMdidIKaftrvUTmqUIUFK9-WingE-6U_dPgA&name=%E4%B8%80%E5%8F%AA%E9%B8%AE"
-      }
-    },
-    {
-      "rank": 97,
-      "player": "十香の鏖杀公",
-      "score": 1359,
-      "month_games": 31,
-      "month_win_rate": 64.51612903225806,
-      "deck": {
-        "name": "阿不思烙印星辰",
-        "main_category": "星辰",
-        "categories": [
-          "阿不思",
-          "烙印",
-          "星辰"
-        ],
-        "code": "GNiVNf_VDloccC26o8eHc0YKX3XRmZjVV4Pcy0toWK2LpG6gwc1Q4Rf3DeI69oSCxCWWVKmzkT-9zDKyQu8f0nwpd5VJ2Qecj5ho5vM8oUuGqYVifuzH4WGQGTYylA3wlUM87skdbqatg9ml8L91im6oyndOLliDl4VOuaIZgfMuysQN1wTpVSgSUoKglaiTivdSgU0_b3eonPCBADCpQhQVPAJ9gA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GNiVNf_VDloccC26o8eHc0YKX3XRmZjVV4Pcy0toWK2LpG6gwc1Q4Rf3DeI69oSCxCWWVKmzkT-9zDKyQu8f0nwpd5VJ2Qecj5ho5vM8oUuGqYVifuzH4WGQGTYylA3wlUM87skdbqatg9ml8L91im6oyndOLliDl4VOuaIZgfMuysQN1wTpVSgSUoKglaiTivdSgU0_b3eonPCBADCpQhQVPAJ9gA&name=%E5%8D%81%E9%A6%99%E3%81%AE%E9%8F%96%E6%9D%80%E5%85%AC"
-      }
-    },
-    {
-      "rank": 98,
-      "player": " 骑人至猛虎",
-      "score": 1359,
-      "month_games": 83,
-      "month_win_rate": 68.67469879518072,
-      "deck": {
-        "name": "三幻魔",
-        "main_category": "三幻魔",
-        "categories": [
-          "三幻魔"
-        ],
-        "code": "E_iM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R184r3UkssqVbhmHCbORP73MMrLSfWxNVmGB7BOld4EzmLn2ey1CZSCJX6Y86Hh2skdKp0JjjLIWyMKuw10gxGS8_jdlOukOfBVITPNFVYLoqmj6-pbrIAqhXlZU533eNnkmxqCVqJRjsTiBTT9sYI3Hq71E5qlCFBU8An20NLgAA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=E_iM-Na-v7FJe3w4wJbATLStc-fqDBzWG8R184r3UkssqVbhmHCbORP73MMrLSfWxNVmGB7BOld4EzmLn2ey1CZSCJX6Y86Hh2skdKp0JjjLIWyMKuw10gxGS8_jdlOukOfBVITPNFVYLoqmj6-pbrIAqhXlZU533eNnkmxqCVqJRjsTiBTT9sYI3Hq71E5qlCFBU8An20NLgAA&name=%20%E9%AA%91%E4%BA%BA%E8%87%B3%E7%8C%9B%E8%99%8E"
-      }
-    },
-    {
-      "rank": 99,
-      "player": "你的卑微",
-      "score": 1359,
-      "month_games": 75,
-      "month_win_rate": 72.0,
-      "deck": {
-        "name": "耀圣奥义狱神",
-        "main_category": "狱神",
-        "categories": [
-          "耀圣",
-          "奥义",
-          "狱神"
-        ],
-        "code": "GOThnJiaJymp4hU_dSnWu9Uy6QDIpcb9dvU7rfIfhFxpIUNaqYaroS7glxmCvUGDmsN4jr0ssqVNnIn-TDyJfmQWxFRgSNiue1K_BOldyONV4cE6VriZSCJZjamjHLK2WGukGIc-CqcE6VKg-AgxsQbGaW-mMk341lMT8WySozRanLbwVX-V9ceWQ1WglaidzDKygU0_ale_LQA",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GOThnJiaJymp4hU_dSnWu9Uy6QDIpcb9dvU7rfIfhFxpIUNaqYaroS7glxmCvUGDmsN4jr0ssqVNnIn-TDyJfmQWxFRgSNiue1K_BOldyONV4cE6VriZSCJZjamjHLK2WGukGIc-CqcE6VKg-AgxsQbGaW-mMk341lMT8WySozRanLbwVX-V9ceWQ1WglaidzDKygU0_ale_LQA&name=%E4%BD%A0%E7%9A%84%E5%8D%91%E5%BE%AE"
-      }
-    },
-    {
-      "rank": 100,
-      "player": "泰阿",
-      "score": 1358,
-      "month_games": 27,
-      "month_win_rate": 85.18518518518519,
-      "deck": {
-        "name": "狱神奥义耀圣",
-        "main_category": "耀圣",
-        "categories": [
-          "狱神",
-          "奥义",
-          "耀圣"
-        ],
-        "code": "GvhhnJiaJymp9FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R2C4r3UqMdidJZZUrRKVOBi81QFs5E_vcwyskw8iXqMCRsbyAqHI41XhewIdSW-geEKmqJNDi1WWPagKnaxF5fMmMSwmBuE7GI4qpyO-T8-pgqFfGNR9xwaHyY3EHwEGJvxrKTyyGrlxUeboJWokCmn7a71E5qlCFBU8An4yn7p-oaXAI",
-        "link": "http://deck.ourygo.top/?ygotype=deck&v=1&d=GvhhnJiaJymp9FLjfrt6ndb5D8IjPfFlcaSFDR_mDNsDhlNaqYaroS7hqDBzWG8R2C4r3UqMdidJZZUrRKVOBi81QFs5E_vcwyskw8iXqMCRsbyAqHI41XhewIdSW-geEKmqJNDi1WWPagKnaxF5fMmMSwmBuE7GI4qpyO-T8-pgqFfGNR9xwaHyY3EHwEGJvxrKTyyGrlxUeboJWokCmn7a71E5qlCFBU8An4yn7p-oaXAI&name=%E6%B3%B0%E9%98%BF"
       }
     }
   ],
