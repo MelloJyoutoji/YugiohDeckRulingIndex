@@ -116,61 +116,127 @@
     }
 }
 
-/* 悬浮卡片信息 */
+/* API 详情浮窗：文字独立显示，卡图加载不遮挡正文。 */
 #card-hover {
     position: fixed;
     display: none;
-    width: 80vw;
-    height: 80vh;
-    max-width: 420px;
-    max-height: 600px;
-    overflow: hidden;
+    box-sizing: border-box;
+    width: min(420px, calc(100vw - 16px));
+    height: min(80vh, 600px);
+    padding: 16px;
+    overflow: auto;
+    overscroll-behavior: contain;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
     background: rgba(255, 255, 255, 0.98);
     border-radius: 8px;
     z-index: 9999;
     box-shadow: 0 10px 40px rgba(0,0,0,.45);
 }
 
-#card-hover iframe {
+.card-hover__name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.card-hover__date {
+    display: block;
+    font-size: 12px;
+}
+
+.card-hover__meta {
+    margin: 10px 0;
+    color: #666;
+    font-size: 12px;
+    white-space: pre-wrap;
+}
+
+.card-hover__section {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #e0e4e8;
+}
+
+.card-hover__heading {
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.card-hover__date {
+    margin-bottom: 8px;
+    color: #777;
+}
+
+.card-hover__effect {
+    white-space: pre-wrap;
+}
+
+/* 各问答独立折叠，长资料可以在浮窗内滚动阅读。 */
+.card-hover__faq {
+    margin-top: 10px;
+}
+
+.card-hover__faq > summary {
+    cursor: pointer;
+    /* 每条问答标题使用粗体，便于扫描折叠列表。 */
+    font-weight: 700;
+}
+
+#card-hover ul,
+#card-hover ol {
+    margin: 8px 0;
+    padding-left: 22px;
+}
+
+#card-hover p {
+    margin: 8px 0;
+}
+
+.card-hover__picture {
     position: relative;
+    width: min(160px, 100%);
+    aspect-ratio: 160 / 233;
+    margin: 14px auto;
+    background: #f3f5f7;
+}
+
+#card-hover .card-hover__picture img {
+    display: block;
     width: 100%;
     height: 100%;
-    border: none;
-    background: transparent;
-    opacity: 1;
-    transition: opacity 0.2s ease;
+    margin: 0;
+    object-fit: contain;
+    visibility: hidden;
 }
 
-#card-hover.is-loading iframe {
-    opacity: 0;
+#card-hover .card-hover__picture.is-loaded img {
+    visibility: visible;
 }
 
-.card-hover__loading {
+.card-hover__image-status {
     position: absolute;
     inset: 0;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.96);
+    color: #777;
+    font-size: 12px;
 }
 
-#card-hover.is-loading .card-hover__loading {
-    display: flex;
+.card-hover__image-status[hidden] {
+    display: none;
 }
 
-.card-hover__spinner {
-    width: 36px;
-    height: 36px;
-    border: 3px solid rgba(31, 111, 235, 0.18);
-    border-top-color: #1f6feb;
-    border-radius: 50%;
-    animation: card-hover-spin 0.8s linear infinite;
+.card-hover__status {
+    padding: 20px 0;
 }
 
-@keyframes card-hover-spin {
-    to {
-        transform: rotate(360deg);
-    }
+.card-hover__retry {
+    display: block;
+    margin-top: 12px;
+    cursor: pointer;
 }
 
 .card-effect-trigger {
